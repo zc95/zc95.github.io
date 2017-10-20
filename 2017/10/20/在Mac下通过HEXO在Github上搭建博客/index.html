@@ -37,6 +37,8 @@
     
     <title>
         
+            在Mac下通过HEXO在Github上搭建博客（入门篇） | 
+        
         Blog | 秋刀鱼的滋味
     </title>
 
@@ -47,7 +49,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="张成">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",javascript,html&css">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -234,18 +236,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Blog | 秋刀鱼的滋味">
+    <meta property="og:title" content="在Mac下通过HEXO在Github上搭建博客（入门篇） | Blog | 秋刀鱼的滋味">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="html&amp;css"> 
 
     
-        <meta property="article:published_time" content="Fri Oct 20 2017 16:53:19 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Oct 20 2017 16:53:19 GMT+0800" />
+        <meta property="article:published_time" content="Fri Oct 20 2017 12:48:28 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Oct 20 2017 17:03:48 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Blog | 秋刀鱼的滋味">
+    <meta name="twitter:title" content="在Mac下通过HEXO在Github上搭建博客（入门篇） | Blog | 秋刀鱼的滋味">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -266,9 +268,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2017/10/20/在Mac下通过HEXO在Github上搭建博客/index.html",
-    "headline": "",
-    "datePublished": "Fri Oct 20 2017 16:53:19 GMT+0800",
-    "dateModified": "Fri Oct 20 2017 16:53:19 GMT+0800",
+    "headline": "在Mac下通过HEXO在Github上搭建博客（入门篇）",
+    "datePublished": "Fri Oct 20 2017 12:48:28 GMT+0800",
+    "dateModified": "Fri Oct 20 2017 17:03:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "张成",
@@ -286,7 +288,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",javascript,html&css",
     "description": "",
 }
 </script>
@@ -346,6 +348,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在Mac下通过HEXO在Github上搭建博客（入门篇）"><span class="post-toc-number">1.</span> <span class="post-toc-text">在Mac下通过HEXO在Github上搭建博客（入门篇）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关键词"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">关键词</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是-Hexo？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是 Hexo？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前期准备"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">前期准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Hexo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装Hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初始化"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">初始化</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关联Github"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">关联Github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于作者"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">关于作者</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -375,7 +386,7 @@
         
     
             <p class="article-headline-p">
-                
+                在Mac下通过HEXO在Github上搭建博客（入门篇）
             </p>
         </div>
 
@@ -412,6 +423,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/html-css/">html&css</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -426,7 +446,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2017/10/20/在Mac下通过HEXO在Github上搭建博客/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=在Mac下通过HEXO在Github上搭建博客（入门篇）&url=http://yoursite.com/2017/10/20/在Mac下通过HEXO在Github上搭建博客/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -460,85 +480,79 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>#��Mac��ͨ��HEXO��Github�ϴ���ͣ�����ƪ��</p>
-<p>##�ؼ���<br><code>Hexo</code> <code>github</code> <code>Node.js</code> <code>Git</code> <code>markdown</code> <code>themes</code> <code>bash����</code> <code>npm</code> <code>SSH</code></p>
-<p>##ʲô�� Hexo��</p>
-<ul>
-<li>Hexo ��һ�����١������Ҹ�Ч�Ĳ��Ϳ��ܡ�</li>
-<li>Hexo ʹ�� <a href="https://baike.baidu.com/item/markdown" target="_blank" rel="external">Markdown</a>����������Ⱦ���棬֮��������ʲô��Markdown���������£��ڼ����ڣ����������������������ɾ�̬��ҳ��</li>
+        <h1 id="在Mac下通过HEXO在Github上搭建博客（入门篇）"><a href="#在Mac下通过HEXO在Github上搭建博客（入门篇）" class="headerlink" title="在Mac下通过HEXO在Github上搭建博客（入门篇）"></a>在Mac下通过HEXO在Github上搭建博客（入门篇）</h1><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p><code>Hexo</code> <code>github</code> <code>Node.js</code> <code>Git</code> <code>markdown</code> <code>themes</code> <code>bash命令</code> <code>npm</code> <code>SSH</code></p>
+<h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><ul>
+<li>Hexo 是一个快速、简洁且高效的博客框架。</li>
+<li>Hexo 使用 <a href="https://baike.baidu.com/item/markdown" target="_blank" rel="external">Markdown</a>（或其他渲染引擎，之后会解释什么是Markdown）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
 </ul>
-<p>##ǰ��׼��<br>��װ Hexo �൱�򵥡�Ȼ���ڰ�װǰ�������������������Ƿ��Ѱ�װ����Ӧ�ó�����</p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
 <ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> ����װRecommended For Most Users�Ǹ��汾��</li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> （安装Recommended For Most Users那个版本）</li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Git</a></li>
 </ul>
-<p>##��װHexo</p>
-<ul>
-<li><p>��Node.js��Git����װ�ú��Ϳ�����ʽ��װHexo�ˣ��ն�ִ���������</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
+<li><p>当Node.js和Git都安装好后就可以正式安装Hexo了，终端执行如下命令：</p>
 <blockquote>
 <p>$ sudo npm install -g hexo</p>
 </blockquote>
 </li>
-<li><p>��������Ա���루Mac��¼���룩����ʼ��װ (sudo:linuxϵͳ����ָ��  -g:ȫ�ְ�װ)<br>Hexo�����ϵİ�װ������$ npm install -g hexo-cli����װʱ��Ҫ����ǰ������sudo����������ΪȨ�����ⱨ��</p>
+<li><p>输入管理员密码（Mac登录密码）即开始安装 (sudo:linux系统管理指令  -g:全局安装)<br>Hexo官网上的安装命令是$ npm install -g hexo-cli，安装时不要忘记前面加上sudo，否则会因为权限问题报错</p>
 </li>
 </ul>
-<p>##��ʼ��</p>
-<ul>
-<li><p>�ն�cd��һ����ѡ����Ŀ¼��ִ��hexo init���</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ul>
+<li><p>终端cd到一个你选定的目录，执行hexo init命令：</p>
 <blockquote>
 <p>$ hexo init blog</p>
 </blockquote>
 </li>
-<li><p>blog���㽨�����ļ������ơ�cd��blog�ļ����£�ִ�����������װnpm��</p>
+<li><p>blog是你建立的文件夹名称。cd到blog文件夹下，执行如下命令，安装npm：</p>
 <blockquote>
 <p>$ npm install</p>
 </blockquote>
 </li>
-<li><p>ִ�������������hexo��������</p>
+<li><p>执行如下命令，开启hexo服务器：</p>
 <blockquote>
 <p>$ hexo sever    </p>
 </blockquote>
 </li>
-<li><p>��ʱ�����ݷ��ص���ʾ������ַ<a href="http://localhost:4000�������ܿ���Hexo��ҳ����˵�����óɹ���" target="_blank" rel="external">http://localhost:4000�������ܿ���Hexo��ҳ����˵�����óɹ���</a></p>
+<li><p>此时，根据返回的提示打开网址<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，如果能看到Hexo的页面就说明配置成功了</p>
 </li>
-<li>֮��ÿ���޸������Ĳ��ͻ����������ݣ�����Ҫ��$ hexo sever������hexo������Ԥ��</li>
-<li>�� Ctrl+C ֹͣ���������Ա��ڽ�����������</li>
+<li>之后每次修改完你的博客或者配置内容，都需要用$ hexo sever来开启hexo服务器预览</li>
+<li>按 Ctrl+C 停止服务器，以便于进行其他操作</li>
 </ul>
-<p>##����Github</p>
-<ul>
-<li><p>�ڽ�����һ��ʱ����Ҫһ��github�˺ţ��� <a href="https://github.com/" target="_blank" rel="external">github����</a> ������ע�����У����־�������������<br>�ҵ�github��ַ��<a href="https://github.com/zc95" target="_blank" rel="external">https://github.com/zc95</a></p>
+<h2 id="关联Github"><a href="#关联Github" class="headerlink" title="关联Github"></a>关联Github</h2><ul>
+<li><p>在进行这一步时你需要一个github账号，到 <a href="https://github.com/" target="_blank" rel="external">github官网</a> 用邮箱注册就行，名字尽量简短有意义<br>我的github地址：<a href="https://github.com/zc95" target="_blank" rel="external">https://github.com/zc95</a></p>
 </li>
-<li><p>�����ֿ�<br>��¼����Github�ʺţ��½��ֿ⣬һ��Ҫ����Ϊ <code>�û���.github.io</code> �Ĺ̶�д������ <code>zc95.github.io</code> ��<br>�ҵĲֿ���ַ��<a href="https://github.com/zc95/zc95.github.io" target="_blank" rel="external">https://github.com/zc95/zc95.github.io</a></p>
+<li><p>创建仓库<br>登录你的Github帐号，新建仓库，一定要是名为 <code>用户名.github.io</code> 的固定写法（如 <code>zc95.github.io</code> ）<br>我的仓库地址：<a href="https://github.com/zc95/zc95.github.io" target="_blank" rel="external">https://github.com/zc95/zc95.github.io</a></p>
 </li>
-<li><p>�����½���blog�ļ��У��ҵ� <code>_config.yml</code> �����ļ����ü��±��򿪣�Ctrl+F������deploy</p>
+<li><p>打开新建的blog文件夹，找到 <code>_config.yml</code> 配置文件，用记事本打开，Ctrl+F来搜索deploy</p>
 <ul>
-<li>type��Ϊgit��repository��Ϊ���Լ��Ĳֿ���ַ</li>
-<li>�����ò���վ����_config.yml�ļ�ʱ������theme����վ���е�_config.yml���������е�ð��: ���߶�Ҫ��һ���ո񣬷���ִ��hexo�����ᱨ�����м� �м�<blockquote>
-<p>deploy:<br>type: git<br>repository: <a href="https://github.com/`github����`/`github����`.github.io.git" target="_blank" rel="external">https://github.com/`github����`/`github����`.github.io.git</a><br>branch: master</p>
+<li>type改为git，repository改为你自己的仓库地址</li>
+<li>在配置博客站点的_config.yml文件时（包括theme主题站点中的_config.yml），在所有的冒号: 后边都要加一个空格，否则执行hexo命令会报错，切记 切记<blockquote>
+<p>deploy:<br>type: git<br>repository: <a href="https://github.com/github名称/github名称.github.io.git" target="_blank" rel="external">https://github.com/github名称/github名称.github.io.git</a><br>branch: master</p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><p>��blog�ļ���Ŀ¼��ִ�����ɾ�̬ҳ�����</p>
+<li><p>在blog文件夹目录下执行生成静态页面命令：</p>
 <blockquote>
-<p>$ hexo generate ���ߣ�hexo g<br>����������ִ������������������Ӿ���<br>npm install hexo –save</p>
+<p>$ hexo generate 或者：hexo g<br>如果报错就执行下面的命令，否则无视就行<br>npm install hexo –save</p>
 </blockquote>
 </li>
-<li><p>���������ɵľ�̬ҳ��ͬ��������github�ֿ�</p>
+<li><p>将本地生成的静态页面同步至你的github仓库</p>
 <blockquote>
-<p>$ hexo deploy ���� hexo d<br>��ִ������hexo deploy��Ȼ�������޷�����git���Ҳ���git����ִ��������������װhexo-deployer-git��<br>npm install hexo-deployer-git –save<br>�ٴ�ִ��hexo generate��hexo deploy����ն˻���ʾ������Github���û��������롣</p>
+<p>$ hexo deploy 或者 hexo d<br>若执行命令hexo deploy仍然报错：无法连接git或找不到git，则执行如下命令来安装hexo-deployer-git：<br>npm install hexo-deployer-git –save<br>再次执行hexo generate和hexo deploy命令，终端会提示你输入Github的用户名和密码。</p>
 </blockquote>
 </li>
 </ul>
-<p>hexo deploy����ִ�гɹ�������Hexo����hexo deploy���������д�����ַ<a href="http://`����github�û���`.github.io" target="_blank" rel="external">http://`����github�û���`.github.io</a> �ܿ����ʹ���<a href="http://localhost:4000ʱһ����ҳ�档" target="_blank" rel="external">http://localhost:4000ʱһ����ҳ�档</a></p>
+<p>hexo deploy命令执行成功后开启Hexo服务hexo deploy，浏览器中打开网址<a href="http://`你的github用户名`.github.io" target="_blank" rel="external">http://`你的github用户名`.github.io</a> 能看到和打开<a href="http://localhost:4000时一样的页面。" target="_blank" rel="external">http://localhost:4000时一样的页面。</a></p>
 <ul>
-<li>֮����ÿ���и��»��߸��������ö���Ҫ����������<blockquote>
-<p>$ hexo clean<br>hexo generate �� hexo g<br>hexo server �� hexo s<br>hexo deploy �� hexo d</p>
+<li>之后你每次有更新或者更改了配置都需要做以下事情<blockquote>
+<p>$ hexo clean<br>hexo generate 或 hexo g<br>hexo server 或 hexo s<br>hexo deploy 或 hexo d</p>
 </blockquote>
 </li>
 </ul>
-<p>##��������</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> author = &#123;</div><div class="line">  Name  : <span class="string">"�ų�"</span>,</div><div class="line">  Blog : <span class="string">"http://zc95.github.io"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> author = &#123;</div><div class="line">  Name  : <span class="string">"张成"</span>,</div><div class="line">  Blog : <span class="string">"http://zc95.github.io"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
     
 
@@ -564,7 +578,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/10/20/模板测试/" id="post_nav-older" class="next-content">
+        <a href="/2017/10/19/blog/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -658,7 +672,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
@@ -690,7 +704,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">4</span>
+                <span class="sidebar-badge">3</span>
             </a>
         </li>
         
