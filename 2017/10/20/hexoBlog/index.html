@@ -625,17 +625,30 @@
                 <!-- Post Comments -->
                 
                     
-    <div id="comment" class="comment"></div>
-<script>
-    window.onload = function() {
-        new Valine({
-            av: AV, // source from av-min.js
-            el: '.comment',
-            app_id: "M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz",
-            app_key: "fvlhBW5UGPEBJeIH70tpAFkf",
-            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
-        });
+    <!-- 使用 gitcoment -->
+<div id="gitment-comment">
+    <!-- Gitment 评论框 -->
+<div id="container"></div>
+</div>
+<style>
+    #gitment-comment{
+        background-color: #eee;
+        padding: 2pc;
     }
+</style>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //id: '页面 ID', // 可选。默认为 location.href
+        owner: 'zc95',
+        repo: 'hahaha',
+        oauth: {
+            client_id: 'b164a07bc23db2afbe21',
+            client_secret: '70e38e7bbbba055819ab863eea21c09fa6c68ffd',
+        },
+    })
+    gitment.render('container')
 </script>
 
                 
@@ -1107,8 +1120,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/valine@1.1.1/dist/Valine.min.js"></script>
+   <!-- Gitment -->
 
 
 
