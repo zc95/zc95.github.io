@@ -3,6 +3,65 @@
   
     
     <entry>
+      <title><![CDATA[DOM]]></title>
+      <url>/2017/10/21/DOM/</url>
+      <content type="html"><![CDATA[<p>为什么我们要尽量少的去操作DOM结构？</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在前端开发的过程中，javascript极为重要的一个功能就是对DOM对象的操作，无论增删改查在前端页面操作这一范围内都是比较消耗性能的。如何高效率的，便捷的操作DOM，这就是本文要讲述的，希望看完全文，你能知道如何更高效的通过原生js以及jQuery操作DOM元素。</p>
+<h2 id="性能影响"><a href="#性能影响" class="headerlink" title="性能影响"></a>性能影响</h2><ol>
+<li>DOM修改导致的页面重绘<code>repaint</code>、重构<code>reflow</code>，重新排版是用户阻塞的操作，同时，如果频繁重排，CPU使用率也会猛涨。</li>
+<li>repaint意味着样式的改变比如div调整了背景色等，但是位置不变，只改变我们操作的元素</li>
+<li>reflow意味着结构的改变,比如一堆元素堆叠,改变其中一个的宽高,那么相应的所有元素的位置都要改变</li>
+<li>所以通常来看repaint的代价要远小于reflow，速度也更快</li>
+</ol>
+<h2 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h2><h3 id="能放到DOM操作之外的操作就放到外面-DOM操作要尽量少"><a href="#能放到DOM操作之外的操作就放到外面-DOM操作要尽量少" class="headerlink" title="能放到DOM操作之外的操作就放到外面,DOM操作要尽量少"></a>能放到DOM操作之外的操作就放到外面,DOM操作要尽量少</h3><p>这是一个不好的事例：</p>
+<pre><code class="javascript">var $obj = $(&quot;#obj&quot;);
+var data = [{&quot;id&quot;:0,&quot;name&quot;:&quot;a&quot;},{&quot;id&quot;:1,&quot;name&quot;:&quot;b&quot;}];
+for (var i = 0; i &lt; data.length; i++) {
+    $obj.append(&#39;&lt;option value=&quot;&#39;+data[i].id+&#39;&quot;&gt;&#39;+data[i].name+&#39;&lt;/option&gt;&#39;);
+};
+</code></pre>
+<p>更好的做法，使用容器存放临时变更， 最后再一次性更新DOM：</p>
+<pre><code class="javascript">var $obj = $(&quot;#obj&quot;);
+var data = [{&quot;id&quot;:0,&quot;name&quot;:&quot;a&quot;},{&quot;id&quot;:1,&quot;name&quot;:&quot;b&quot;}];
+var tempStr = &quot;&quot;;
+for (var i = 0; i &lt; data.length; i++) {
+    tempStr +=(&#39;&lt;option value=&quot;&#39;+data[i].id+&#39;&quot;&gt;&#39;+data[i].name+&#39;&lt;/option&gt;&#39;);
+};
+$obj.html(tempStr);
+</code></pre>
+<h3 id="大范围操作先把容器隐藏，在其中操作完成后再显示"><a href="#大范围操作先把容器隐藏，在其中操作完成后再显示" class="headerlink" title="大范围操作先把容器隐藏，在其中操作完成后再显示"></a>大范围操作先把容器隐藏，在其中操作完成后再显示</h3><p>这个也算是优化的一种，这原理涉及到浏览器加载和渲染的原理,简单说就是隐藏的元素其中不会产生reflow</p>
+<h3 id="样式操作不要注意修改属性-直接替换class"><a href="#样式操作不要注意修改属性-直接替换class" class="headerlink" title="样式操作不要注意修改属性,直接替换class"></a>样式操作不要注意修改属性,直接替换class</h3><p>这个还是比较容易理解的，你逐一修改要访问很多次，而替换class就相当于批量操作了，访问一次DOM就可以了,当然性能提高了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于性能方面，平时应注意积累。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 心得篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+            <tag> javascript </tag>
+            
+            <tag> jquery </tag>
+            
+            <tag> DOM操作 </tag>
+            
+            <tag> 循环 </tag>
+            
+            <tag> 渲染 </tag>
+            
+            <tag> 性能 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[input模糊查询]]></title>
       <url>/2017/10/21/input/</url>
       <content type="html"><![CDATA[<p>文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。</p>
@@ -187,11 +246,11 @@ input {
             
             <tag> html </tag>
             
-            <tag> css </tag>
-            
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
@@ -287,11 +346,11 @@ input {
             
             <tag> html </tag>
             
-            <tag> css </tag>
-            
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
