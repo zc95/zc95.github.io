@@ -3,13 +3,87 @@
   
     
     <entry>
-      <title><![CDATA[input]]></title>
+      <title><![CDATA[日常问题整理]]></title>
       <url>/2017/10/21/input/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>记录每天学到的知识点或者遇到的问题</p>
+<h2 id="从数组里随机取一个数"><a href="#从数组里随机取一个数" class="headerlink" title="从数组里随机取一个数"></a>从数组里随机取一个数</h2><pre><code class="javascript">arr[Math.floor(Math.random()*arr.length)]
+</code></pre>
+<h2 id="阻止浏览器默认的右键点击事件"><a href="#阻止浏览器默认的右键点击事件" class="headerlink" title="阻止浏览器默认的右键点击事件"></a>阻止浏览器默认的右键点击事件</h2><pre><code class="javascript">window.document.oncontextmenu = function () {  
+            return false;  
+        }
+</code></pre>
+<h2 id="左击右击事件"><a href="#左击右击事件" class="headerlink" title="左击右击事件"></a>左击右击事件</h2><pre><code class="javascript">function clickMe() {  
+            var event = event ? event : window.event;  
+            if (1 == event.which) {  
+                //左击  
+                }  
+            if (3 == event.which) {  
+                //右击  
+                }  
+            }
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+<p>## </p>
+<pre><code class="javascript">
+</code></pre>
+]]></content>
       
         <categories>
             
-            <category> 技术篇 </category>
+            <category> 汇总篇 </category>
             
         </categories>
         
@@ -17,6 +91,12 @@
         <tags>
             
             <tag> html </tag>
+            
+            <tag> css </tag>
+            
+            <tag> javascript </tag>
+            
+            <tag> jquery </tag>
             
         </tags>
         
