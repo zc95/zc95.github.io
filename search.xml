@@ -62,7 +62,7 @@ $obj.html(tempStr);
     </entry>
     
     <entry>
-      <title><![CDATA[input模糊查询]]></title>
+      <title><![CDATA[文本框模糊查询]]></title>
       <url>/2017/10/21/input/</url>
       <content type="html"><![CDATA[<p>文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。</p>
 <h2 id="Demo链接"><a href="#Demo链接" class="headerlink" title="Demo链接"></a>Demo链接</h2><ul>
