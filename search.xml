@@ -3,11 +3,11 @@
   
     
     <entry>
-      <title><![CDATA[amazingTable]]></title>
+      <title><![CDATA[表头固定]]></title>
       <url>/2017/10/24/amazingTable/</url>
       <content type="html"><![CDATA[<p>table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动</p>
 <h2 id="关于表格固定"><a href="#关于表格固定" class="headerlink" title="关于表格固定"></a>关于表格固定</h2><p>如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了</p>
-<h2 id="如果数据很多就要考虑左右滚动的情况了"><a href="#如果数据很多就要考虑左右滚动的情况了" class="headerlink" title="如果数据很多就要考虑左右滚动的情况了"></a>如果数据很多就要考虑左右滚动的情况了</h2><h3 id="方法一-scrollLeft："><a href="#方法一-scrollLeft：" class="headerlink" title="方法一 scrollLeft："></a>方法一 scrollLeft：</h3><ol>
+<h2 id="如果数据很多就要考虑左右滚动的情况了"><a href="#如果数据很多就要考虑左右滚动的情况了" class="headerlink" title="如果数据很多就要考虑左右滚动的情况了"></a>如果数据很多就要考虑左右滚动的情况了</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><ol>
 <li><p>demo: <a href="http://jsrun.net/biiKp/show" target="_blank" rel="external">http://jsrun.net/biiKp/show</a></p>
 </li>
 <li><p>同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来</p>
@@ -299,13 +299,13 @@ input {
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
@@ -682,13 +682,13 @@ Login();
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
