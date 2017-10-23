@@ -7,33 +7,26 @@
       <url>/2017/10/24/amazingTable/</url>
       <content type="html"><![CDATA[<p>table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动</p>
 <h2 id="关于表格固定"><a href="#关于表格固定" class="headerlink" title="关于表格固定"></a>关于表格固定</h2><p>如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了</p>
-<h2 id="如果数据很多就要考虑左右滚动的情况了"><a href="#如果数据很多就要考虑左右滚动的情况了" class="headerlink" title="如果数据很多就要考虑左右滚动的情况了"></a>如果数据很多就要考虑左右滚动的情况了</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><ol>
-<li><p>demo: <a href="http://jsrun.net/biiKp/show" target="_blank" rel="external">http://jsrun.net/biiKp/show</a></p>
-</li>
-<li><p>同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来</p>
-</li>
-<li><p>这两个div依赖于他们的的父容器进行absolute定位</p>
+<p>如果数据很多就要考虑左右滚动的情况了</p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>demo: <a href="http://jsrun.net/biiKp/show" target="_blank" rel="external">http://jsrun.net/biiKp/show</a></p>
+<p>同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来</p>
+<p>这两个div依赖于他们的的父容器进行absolute定位</p>
 <blockquote>
-<p> theadDiv {</p>
-<p>  position: absolute;<br>  left: 0;<br>  right: 0;<br>  overflow: hidden; //这里hidden是用于隐藏滚动条<br>}</p>
+<p>theadDiv {</p>
+<p> position: absolute;<br> left: 0;<br> right: 0;<br> overflow: hidden; //这里hidden是用于隐藏滚动条<br>}</p>
 <p>tbodyDiv {</p>
-<p>  position: absolute;<br>  top: 35px;<br>  left: 0;<br>  right: 0;<br>  bottom: 0;<br>  overflow: auto;<br>}</p>
+<p> position: absolute;<br> top: 35px;<br> left: 0;<br> right: 0;<br> bottom: 0;<br> overflow: auto;<br>}</p>
 </blockquote>
-</li>
-<li><p>给放置thead的div添加样式 <code>overflow: hidden;</code> ，表头不需要看到滚动条</p>
-</li>
-<li><p>给放置tbody的div添加样式 <code>overflow: auto;</code> ，表的主体需要滚动条</p>
-</li>
-<li><p>两个table均不设长度</p>
-</li>
-<li><p>这时只需要在滚动下面的tbody时，同样滚动上面的thead就行</p>
-</li>
-<li><blockquote>
-<p>$(‘#tbodyDiv’).on(‘scroll’, function () {<br>  $(“#theadDiv”).scrollLeft($(‘#tbodyDiv’).scrollLeft());<br>  });<br>})</p>
+<p>给放置thead的div添加样式 <code>overflow: hidden;</code> ，表头不需要看到滚动条</p>
+<p>给放置tbody的div添加样式 <code>overflow: auto;</code> ，表的主体需要滚动条</p>
+<p>这时只需要在滚动下面的tbody时，同样滚动上面的thead就行</p>
+<blockquote>
+<p>$(‘#tbodyDiv’).on(‘scroll’, function () {</p>
+<p>  $(“#theadDiv”).scrollLeft($(‘#tbodyDiv’).scrollLeft());</p>
+<p>  });</p>
+<p>})</p>
 </blockquote>
-</li>
-</ol>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>demo: <a href="http://jsrun.net/2iiKp/show" target="_blank" rel="external">http://jsrun.net/2iiKp/show</a></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>demo: <a href="http://jsrun.net/2iiKp/show" target="_blank" rel="external">http://jsrun.net/2iiKp/show</a></p>
 <ol>
 <li>大概思路就是  <code>容器A</code> 下面有 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li>
 <li>x轴滚动条属于 <code>容器A</code> ，滚动 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li>
