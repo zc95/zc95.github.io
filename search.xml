@@ -3,6 +3,216 @@
   
     
     <entry>
+      <title><![CDATA[原生javascript和jquery的用法对比]]></title>
+      <url>/2017/10/25/jsAndJq/</url>
+      <content type="html"><![CDATA[<h2 id="选取元素"><a href="#选取元素" class="headerlink" title="选取元素"></a>选取元素</h2><pre><code>// jQuery
+var els = $(&#39;.el&#39;);
+
+// Native
+var els = document.querySelectorAll(&#39;.el&#39;);
+
+// Shorthand
+var $ = function (el) {
+  return document.querySelectorAll(el);
+}
+</code></pre><p>querySelectorAll方法返回的是NodeList对象，需要转换为数组。</p>
+<pre><code>myList = Array.prototype.slice.call(myNodeList)
+</code></pre><h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><pre><code>// jQuery
+var newEl = $(&#39;&lt;div&gt;&lt;/div&gt;&#39;);
+
+// Native
+var newEl = document.createElement(&#39;div&#39;);
+</code></pre><h2 id="添加事件"><a href="#添加事件" class="headerlink" title="添加事件"></a>添加事件</h2><pre><code>// jQuery
+$(&#39;.el&#39;).on(&#39;event&#39;, function() {
+
+});
+
+// Native
+[].forEach.call(document.querySelectorAll(&#39;.el&#39;), function (el) {
+  el.addEventListener(&#39;event&#39;, function() {
+
+  }, false);
+});
+</code></pre><h2 id="get-set属性"><a href="#get-set属性" class="headerlink" title="get/set属性"></a>get/set属性</h2><pre><code>// jQuery
+$(&#39;.el&#39;).filter(&#39;:first&#39;).attr(&#39;key&#39;, &#39;value&#39;);
+$(&#39;.el&#39;).filter(&#39;:first&#39;).attr(&#39;key&#39;);
+
+// Native
+document.querySelector(&#39;.el&#39;).setAttribute(&#39;key&#39;, &#39;value&#39;);
+document.querySelector(&#39;.el&#39;).getAttribute(&#39;key&#39;);
+</code></pre><h2 id="添加和移除样式Class"><a href="#添加和移除样式Class" class="headerlink" title="添加和移除样式Class"></a>添加和移除样式Class</h2><p>DOM元素本身有一个可读写的className属性，可以用来操作class。</p>
+<p>HTML 5还提供一个classList对象，功能更强大（IE 9不支持）。</p>
+<pre><code>// jQuery
+$(&#39;.el&#39;).addClass(&#39;class&#39;);
+$(&#39;.el&#39;).removeClass(&#39;class&#39;);
+$(&#39;.el&#39;).toggleClass(&#39;class&#39;);
+
+// Native
+document.querySelector(&#39;.el&#39;).classList.add(&#39;class&#39;);
+document.querySelector(&#39;.el&#39;).classList.remove(&#39;class&#39;);
+document.querySelector(&#39;.el&#39;).classList.toggle(&#39;class&#39;);
+</code></pre><h2 id="追加元素"><a href="#追加元素" class="headerlink" title="追加元素"></a>追加元素</h2><p>尾部追加元素：</p>
+<pre><code>// jQuery
+$(&#39;.el&#39;).append($(&#39;&lt;div/&gt;&#39;));
+
+// Native
+document.querySelector(&#39;.el&#39;).appendChild(document.createElement(&#39;div&#39;));
+</code></pre><p>头部追加元素：</p>
+<pre><code>//jQuery
+$(‘.el’).prepend(&#39;&lt;div&gt;&lt;/div&gt;&#39;)
+
+//Native
+var parent = document.querySelector(&#39;.el&#39;);
+parent.insertBefore(&quot;&lt;div&gt;&lt;/div&gt;&quot;,parent.childNodes[0])
+</code></pre><h2 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a>克隆元素</h2><pre><code>// jQuery
+var clonedEl = $(&#39;.el&#39;).clone();
+
+// Native
+var clonedEl = document.querySelector(&#39;.el&#39;).cloneNode(true);
+</code></pre><h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><pre><code>Remove
+// jQuery
+$(&#39;.el&#39;).remove();
+
+// Native
+remove(&#39;.el&#39;);
+
+function remove(el) {
+  var toRemove = document.querySelector(el);
+
+  toRemove.parentNode.removeChild(toRemove);
+}
+</code></pre><h2 id="获取父级元素"><a href="#获取父级元素" class="headerlink" title="获取父级元素"></a>获取父级元素</h2><pre><code>// jQuery
+$(&#39;.el&#39;).parent();
+
+// Native
+document.querySelector(&#39;.el&#39;).parentNode;
+</code></pre><h2 id="获取上一个-下一个元素（Prev-next-element）"><a href="#获取上一个-下一个元素（Prev-next-element）" class="headerlink" title="获取上一个/下一个元素（Prev/next element）"></a>获取上一个/下一个元素（Prev/next element）</h2><pre><code>// jQuery
+$(&#39;.el&#39;).prev();
+$(&#39;.el&#39;).next();
+
+// Native
+document.querySelector(&#39;.el&#39;).previousElementSibling;
+document.querySelector(&#39;.el&#39;).nextElementSibling;
+</code></pre><h2 id="XHR-and-AJAX"><a href="#XHR-and-AJAX" class="headerlink" title="XHR and AJAX"></a>XHR and AJAX</h2><pre><code>// jQuery
+$.get(&#39;url&#39;, function (data) {
+
+});
+$.post(&#39;url&#39;, {data: data}, function (data) {
+
+});
+
+// Native
+
+// get
+var xhr = new XMLHttpRequest();
+
+xhr.open(&#39;GET&#39;, url);
+xhr.onreadystatechange = function (data) {
+
+}
+xhr.send();
+
+// post
+var xhr = new XMLHttpRequest()
+
+xhr.open(&#39;POST&#39;, url);
+xhr.onreadystatechange = function (data) {
+
+}
+xhr.send({data: data});
+</code></pre><h2 id="清空子元素"><a href="#清空子元素" class="headerlink" title="清空子元素"></a>清空子元素</h2><pre><code>//jQuery
+$(&quot;#elementID&quot;).empty()
+
+//Native
+var element = document.getElementById(&quot;elementID&quot;)
+while(element.firstChild) element.removeChild(element.firstChild);
+</code></pre><h2 id="检查是否有子元素"><a href="#检查是否有子元素" class="headerlink" title="检查是否有子元素"></a>检查是否有子元素</h2><pre><code>//jQuery
+if (!$(&quot;#elementID&quot;).is(&quot;:empty&quot;)){}
+
+//Native
+if (document.getElementById(&quot;elementID&quot;).hasChildNodes()){}
+</code></pre><h2 id="document-ready"><a href="#document-ready" class="headerlink" title="$(document).ready"></a>$(document).ready</h2><p>DOM加载完成，会触发DOMContentLoaded事件，等同于jQuery的$(document).ready方法。</p>
+<pre><code>document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+    // ...
+});
+</code></pre><h2 id="数据储存"><a href="#数据储存" class="headerlink" title="数据储存"></a>数据储存</h2><p>jQuery对象可以储存数据。</p>
+<pre><code>$(&quot;body&quot;).data(&quot;foo&quot;, 52);
+$(&quot;body&quot;).data(&quot;foo&quot;);
+</code></pre><p>HTML 5有一个dataset对象，也有类似的功能（IE 10不支持），不过只能保存字符串。</p>
+<pre><code>element.dataset.user = JSON.stringify(user);
+element.dataset.score = score;
+</code></pre><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>jQuery的animate方法，用于生成动画效果。</p>
+<pre><code>$foo.animate(&#39;slow&#39;, { x: &#39;+=10px&#39; })
+</code></pre><p>jQuery的动画效果，很大部分基于DOM。但是目前，CSS 3的动画远比DOM强大，所以可以把动画效果写进CSS，然后通过操作DOM元素的class，来展示动画。</p>
+<pre><code>foo.classList.add(&#39;animate&#39;)
+</code></pre><p>如果需要对动画使用回调函数，CSS 3也定义了相应的事件。</p>
+<pre><code>el.addEventListener(&quot;webkitTransitionEnd&quot;, transitionEnded);
+el.addEventListener(&quot;transitionend&quot;, transitionEnded);
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> 总结篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[css换行问题]]></title>
+      <url>/2017/10/25/wordBreak/</url>
+      <content type="html"><![CDATA[<p>css实现强制不换行/自动换行/强制换行</p>
+<h2 id="强制换行"><a href="#强制换行" class="headerlink" title="强制换行"></a>强制换行</h2><p><strong>按单词自动换行</strong></p>
+<blockquote>
+<p>p { word-wrap:break-word; }</p>
+</blockquote>
+<p><strong>强制按英文字母断行</strong> <code>需要将行内元素设置为块级元素</code> </p>
+<blockquote>
+<p>p { word-break:break-all; }</p>
+</blockquote>
+<h2 id="强制不换行"><a href="#强制不换行" class="headerlink" title="强制不换行"></a>强制不换行</h2><p><strong>强制不换行</strong></p>
+<blockquote>
+<p>p { white-space:nowrap; }</p>
+</blockquote>
+<p><strong>超出显示省略号</strong></p>
+<blockquote>
+<p>p { white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }</p>
+<p>一定要给文字的父容器</p>
+<p>如果父容器是行级，一定要转成块级（一定要是 block，设置为 inline-block 无效）</p>
+</blockquote>
+<p><strong>white-space: <code>normal</code> <code>pre</code> <code>nowrap</code> <code>pre-wrap</code> <code>pre-line</code> <code>inherit</code> ;</strong> </p>
+<blockquote>
+<p>white-space 属性设置如何处理元素内的空白 </p>
+</blockquote>
+<ul>
+<li>normal 默认。多个空白或者多个换行将被当一个空白或一个换行处理- pre 空白和换行会被浏览器保留。其行为方式类似 HTML 中的 pre 标签- nowrap 文本不会换行，文本会在在同一行上继续，直到遇到 br 标签为止- pre-wrap 保留空白符序列，但是正常地进行换行 - pre-line 合并空白符序列，但是保留换行符- inherit 规定应该从父元素继承 white-space 属性的值<br><strong>word-break: <code>normal</code> <code>break-all</code> <code>keep-all</code> ;</strong> &gt; word-break 属性用来标明怎么样进行单词内的断句</li>
+<li>normal：使用浏览器默认的换行规则- break-all:允许再单词内换行 - keep-all:只能在半角空格或连字符处换行</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 心得篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[表头固定]]></title>
       <url>/2017/10/24/amazingTable/</url>
       <content type="html"><![CDATA[<p>table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动</p>
@@ -292,13 +502,13 @@ input {
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
@@ -675,13 +885,13 @@ Login();
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
