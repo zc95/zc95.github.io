@@ -3,6 +3,168 @@
   
     
     <entry>
+      <title><![CDATA[column]]></title>
+      <url>/2017/11/11/column/</url>
+      <content type="html"><![CDATA[<p>##CSS3多列</p>
+<p>CSS3 可以将文本内容设计成像报纸一样的多列布局，如下实例：</p>
+<p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/fo2zxn7p.png" alt="示例"></p>
+<h2 id="CSS3-多列属性"><a href="#CSS3-多列属性" class="headerlink" title="CSS3 多列属性"></a>CSS3 多列属性</h2><ul>
+<li><code>column-count</code></li>
+<li><code>column-gap</code></li>
+<li><code>column-rule-style</code></li>
+<li><code>column-rule-width</code></li>
+<li><code>column-rule-color</code></li>
+<li><code>column-rule</code></li>
+<li><code>column-span</code></li>
+<li><code>column-width</code></li>
+</ul>
+<h2 id="CSS3-创建多列"><a href="#CSS3-创建多列" class="headerlink" title="CSS3 创建多列"></a>CSS3 创建多列</h2><p><code>column-count</code> 属性指定了需要分割的列数</p>
+<p>以下实例将 <code>&lt;div&gt;</code> 元素中的文本分为 3 列：</p>
+<pre><code class="css">.newspaper
+{
+    -moz-column-count:3; /* Firefox */
+    -webkit-column-count:3; /* Safari and Chrome */
+    column-count:3;
+}
+</code></pre>
+<pre><code class="html">&lt;div class=&quot;newspaper&quot;&gt;....................&lt;/div&gt;
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-count" target="_blank" rel="external">尝试一下 »</a></p>
+<h2 id="CSS3-多列中列与列间的间隙"><a href="#CSS3-多列中列与列间的间隙" class="headerlink" title="CSS3 多列中列与列间的间隙"></a>CSS3 多列中列与列间的间隙</h2><p><code>column-gap</code> 属性指定了列与列间的间隙</p>
+<p>以下实例指定了列与列间的间隙为 40 像素：</p>
+<pre><code class="css">.newspaper
+{
+    -moz-column-count:3; /* Firefox */
+    -webkit-column-count:3; /* Safari and Chrome */
+    column-count:3;
+
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+    column-gap:40px;
+}
+</code></pre>
+<pre><code class="html">&lt;div class=&quot;newspaper&quot;&gt;....................&lt;/div&gt;
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-gap" target="_blank" rel="external">尝试一下 »</a></p>
+<h2 id="CSS3-列边框"><a href="#CSS3-列边框" class="headerlink" title="CSS3 列边框"></a>CSS3 列边框</h2><p><code>column-rule-style</code> 属性指定了列与列间的边框样式：</p>
+<pre><code class="css">.newspaper
+{
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-style" target="_blank" rel="external">尝试一下 »</a></p>
+<p><code>column-rule-width</code> 属性指定了两列的边框厚度：</p>
+<pre><code class="css">div {
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-width" target="_blank" rel="external">尝试一下 »</a></p>
+<p><code>column-rule-color</code> 属性指定了两列的边框颜色：</p>
+<pre><code class="css">div {
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-color" target="_blank" rel="external">尝试一下 »</a></p>
+<p><code>column-rule</code> 属性是 column-rule-* 所有属性的简写。</p>
+<p>以下实例设置了列直接的边框的厚度，样式及颜色：</p>
+<pre><code class="css">div {
+    -webkit-column-rule: 1px solid lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule: 1px solid lightblue; /* Firefox */
+    column-rule: 1px solid lightblue;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule" target="_blank" rel="external">尝试一下 »</a></p>
+<h2 id="指定元素跨越多少列"><a href="#指定元素跨越多少列" class="headerlink" title="指定元素跨越多少列"></a>指定元素跨越多少列</h2><p>以下实例指定 <code>&lt;h2&gt;</code> 元素跨越所有列：</p>
+<pre><code class="css">h2 {
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-span" target="_blank" rel="external">尝试一下 »</a></p>
+<h2 id="指定列的宽度"><a href="#指定列的宽度" class="headerlink" title="指定列的宽度"></a>指定列的宽度</h2><p><code>column-width</code> 属性指定了列的宽度。</p>
+<pre><code class="css">div {
+    -webkit-column-width: 100px; /* Chrome, Safari, Opera */
+    column-width: 100px;
+}
+</code></pre>
+<p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-width" target="_blank" rel="external">尝试一下 »</a></p>
+<h2 id="CSS3-多列属性-1"><a href="#CSS3-多列属性-1" class="headerlink" title="CSS3 多列属性"></a>CSS3 多列属性</h2><p>下表列出了所有 CSS3 的多列属性：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-count.html" target="_blank" rel="external">column-count</a></td>
+<td>指定元素应该被分割的列数。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-fill.html" target="_blank" rel="external">column-fill</a></td>
+<td>指定如何填充列</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-gap.html" target="_blank" rel="external">column-gap</a></td>
+<td>指定列与列之间的间隙</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-rule.html" target="_blank" rel="external">column-rule</a></td>
+<td>所有 column-rule-* 属性的简写</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-rule-color.html" target="_blank" rel="external">column-rule-color</a></td>
+<td>指定两列间边框的颜色</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-rule-style.html" target="_blank" rel="external">column-rule-style</a></td>
+<td>指定两列间边框的样式</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-rule-width.html" target="_blank" rel="external">column-rule-width</a></td>
+<td>指定两列间边框的厚度</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-span.html" target="_blank" rel="external">column-span</a></td>
+<td>指定元素要跨越多少列</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-column-width.html" target="_blank" rel="external">column-width</a></td>
+<td>指定列的宽度</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://www.runoob.com/cssref/css3-pr-columns.html" target="_blank" rel="external">columns</a></td>
+<td>设置 column-width 和 column-count 的简写</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> css3 </tag>
+            
+            <tag> 布局 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[类似Windows文件的布局问题]]></title>
       <url>/2017/11/03/AdaptiveLayout/</url>
       <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>如何做到类似windows文件的布局：无论如何改变窗口（屏幕）的大小，文件或者文件夹的大小都是固定的，不同的是一行显示的数目会有所变化；</p>
