@@ -3,6 +3,156 @@
   
     
     <entry>
+      <title><![CDATA[数组复习]]></title>
+      <url>/2017/11/21/arrayReview/</url>
+      <content type="html"><![CDATA[<h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(typeof ary); //输出结果是Object
+</code></pre>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(ary instanceof Array)//true;
+</code></pre>
+<h3 id="原型链方法"><a href="#原型链方法" class="headerlink" title="原型链方法"></a>原型链方法</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(ary.__proto__.constructor==Array);//true
+console.log(ary.constructor==Array)//true 这两段代码是一样的
+</code></pre>
+<blockquote>
+<p>以上三种方法都不太好，<code>instanceof</code> 和 <code>constructor</code> 判断的变量，必须在当前页面声明的，比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个arr，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；</p>
+</blockquote>
+<h3 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h3><pre><code class="javascript">var ary = [1,2,3,4];
+function isArray(e){
+return Object.prototype.toString.call(e)==&#39;[object Array]&#39;;
+}
+console.log(isArray(ary));
+</code></pre>
+<h3 id="自己封装的基本数据类型验证"><a href="#自己封装的基本数据类型验证" class="headerlink" title="自己封装的基本数据类型验证"></a>自己封装的基本数据类型验证</h3><pre><code class="javascript">var type = {
+  isObj: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Object]&quot;;
+  },
+  isArray: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Array]&quot;;
+  },
+  isNull: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Null]&quot;;
+  },
+  isUndefined: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Undefined]&quot;;
+  },
+  isBoolean: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Boolean]&quot;;
+  },
+  isString: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object String]&quot;;
+  },
+  isNumber: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Number]&quot;;
+  },
+  isDocument: function() {
+    return Object.prototype.toString.call(o) == &quot;[object Document]&quot; || &quot;[object HTMLDocument]&quot;;
+  }
+}
+
+------------------------------
+&gt;console.log(type.isArray([1,2,3]));
+&gt;true
+</code></pre>
+<h2 id="push-和pop"><a href="#push-和pop" class="headerlink" title="push()和pop()"></a>push()和pop()</h2><ul>
+<li><code>push()</code> 向数组末尾添加任意个项并返回新数组的长度</li>
+<li><code>pop()</code> 从数组末尾移除最后一项，减少数组的length值 （返回的是移除的项）</li>
+</ul>
+<h2 id="shift-和unshift"><a href="#shift-和unshift" class="headerlink" title="shift()和unshift()"></a>shift()和unshift()</h2><ul>
+<li><p><code>unshift()</code> 向数组前端添加任意个项并返回新数组的长度</p>
+</li>
+<li><p><code>shift()</code> 从数组前端移除第一项，减少数组的length值 （返回的是移除的项）</p>
+</li>
+</ul>
+<h2 id="重排序-sort-reverse"><a href="#重排序-sort-reverse" class="headerlink" title="重排序 sort() reverse()"></a>重排序 sort() reverse()</h2><pre><code class="javascript">function compare(a,b){
+  return a-b;//升序
+  //return b-a; 或者在升序方法之后使用reverse()反转数组
+}
+arr.sort(compare);
+</code></pre>
+<h2 id="操作方法-concat-slice-splice"><a href="#操作方法-concat-slice-splice" class="headerlink" title="操作方法 concat() slice() splice()"></a>操作方法 concat() slice() splice()</h2><ul>
+<li><p><code>concat()</code> 方法用于连接两个或多个数组，不会改变原始数组。</p>
+</li>
+<li><p><code>slice()</code> 方法可从已有的数组中返回选定的元素，不会改变原始数组。</p>
+<blockquote>
+<p>arrayObject.slice(start,end)</p>
+</blockquote>
+<p>| 参数    | 描述                                       |<br>| —– | —————————————- |<br>| start | 必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。 |<br>| end   | 可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。 |</p>
+</li>
+<li><p><code>splice()</code> 方法向/从数组中添加/删除项目，然后返回被删除的项目，会改变原始数组。</p>
+<blockquote>
+<p>arrayObject.splice(index,howmany,item1,…..,itemX)</p>
+</blockquote>
+<p>| 参数                | 描述                                  |<br>| —————– | ———————————– |<br>| index             | 必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。 |<br>| howmany           | 必需。要删除的项目数量。如果设置为 0，则不会删除项目。        |<br>| item1, …, itemX | 可选。向数组添加的新项目。                       |</p>
+</li>
+</ul>
+<h2 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h2><p>###indexOF() </p>
+<blockquote>
+<p>indexOF() 从前往后查找，返回首次出现的位置（没有返回-1）</p>
+</blockquote>
+<p>###lastindexOf() </p>
+<blockquote>
+<p>lastindexOf() 从后往前查找，返回首次出现的位置（没有返回-1）</p>
+</blockquote>
+<p>##迭代方法</p>
+<blockquote>
+<p>迭代是重复反馈过程的活动，其目的通常是为了逼近所需目标或结果。每一次对过程的重复称为一次“迭代”，而每一次迭代得到的结果会作为下一次迭代的初始值。</p>
+</blockquote>
+<ol>
+<li>every(): 对数组中的每一项运行给定的函数，如果该函数对每一项都返回true，则结果返回true。</li>
+<li>filter(): 对数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组。</li>
+<li>forEach(): 对数组中的每一项运行给定函数，这个方法没有返回值。</li>
+<li>map(): 对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</li>
+<li>some(): 对数组中的每一项运行给定函数，如果该函数任意一项返回true，则返回true。</li>
+</ol>
+<h3 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var everyResult = numbers.every(function(item, index, array) {
+    return (item &gt; 2);
+});
+var someResult = numbers.some(function(item) {
+    return (item &gt; 2);
+});
+console.log(everyResult);      //false
+console.log(someResult);        //true
+</code></pre>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var filterResult = numbers.filter(function(item) {
+    return (item &gt; 2);
+});
+
+console.log(filterResult);  \\[3, 4, 5, 4, 3]
+</code></pre>
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var mapResult = numbers.map(function(item) {
+    return (item * 2);
+});
+
+console.log(mapResult);     //[2, 4, 6, 8, 10, 8, 6, 4, 2]
+</code></pre>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+numbers.forEach(function(item, index, arr) {
+    //这里执行一些操作
+});
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 汇总篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> array </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[自定义range滑块]]></title>
       <url>/2017/11/17/rangeUI/</url>
       <content type="html"><![CDATA[<h2 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h2><p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/range.png" alt="range.png"></p>
@@ -11,111 +161,103 @@
 <li><a href="http://jsrun.net/nciKp/edit" target="_blank" rel="external">源码</a></li>
 <li><a href="http://jsrun.net/IciKp/show" target="_blank" rel="external">简易版DEMO</a></li>
 </ul>
-<h2 id="导入jQuery-CSS和JS"><a href="#导入jQuery-CSS和JS" class="headerlink" title="导入jQuery, CSS和JS"></a>导入jQuery, CSS和JS</h2><ul>
-<li><p>jQuery</p>
-</li>
-<li><p><a href="http://jsrun.net/CciKp.css" target="_blank" rel="external">http://jsrun.net/CciKp.css</a></p>
-<pre><code class="css">p {
-  font-family: &quot;微软雅黑&quot;;
-  letter-spacing: -1px;
-  text-shadow: -2px -1px 1px #fff, 1px 2px 2px rgba(0, 0, 0, 0.2);
-  font-weight: 300;
-  font-size: 36px;
-  margin: 10px;
-}
+<h2 id="导入jQuery-CSS和JS"><a href="#导入jQuery-CSS和JS" class="headerlink" title="导入jQuery, CSS和JS"></a>导入jQuery, CSS和JS</h2><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><h3 id="http-jsrun-net-CciKp-css"><a href="#http-jsrun-net-CciKp-css" class="headerlink" title="http://jsrun.net/CciKp.css"></a><a href="http://jsrun.net/CciKp.css" target="_blank" rel="external">http://jsrun.net/CciKp.css</a></h3><pre><code class="css">  p {
+    font-family: &quot;微软雅黑&quot;;
+    letter-spacing: -1px;
+    text-shadow: -2px -1px 1px #fff, 1px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+    font-size: 36px;
+    margin: 10px;
+  }
 
-input[type=range] {
-    -webkit-appearance: none;
-    width: 300px;
-    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
-    background: -webkit-linear-gradient(#2EB969, #2EB969) no-repeat;/*进度条的颜色*/
-    background-size: 0% 100%;
-}
+  input[type=range] {
+      -webkit-appearance: none;
+      width: 300px;
+      border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+      background: -webkit-linear-gradient(#2EB969, #2EB969) no-repeat;/*进度条的颜色*/
+      background-size: 0% 100%;
+  }
 
-input[type=range]:focus {
-    outline: none;
-}
-input[type=range]:hover {
-    cursor:pointer;
-}
+  input[type=range]:focus {
+      outline: none;
+  }
+  input[type=range]:hover {
+      cursor:pointer;
+  }
 
-input[type=range]::-webkit-slider-runnable-track {
-    height: 6px;
-    border-radius: 10px; /*将轨道设为圆角的*/
-  box-shadow: 0.2px 0.2px 1px 0.8px #cec8c8 inset; /*添加底部阴影*/
-}
+  input[type=range]::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: 0.2px 0.2px 1px 0.8px #cec8c8 inset; /*添加底部阴影*/
+  }
 
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  margin-top:-6px;
-  border-radius: 50%;
-  background-color:white;
-  box-shadow: 0px 0px 3px 1px #DEDEDE;
-}
+  input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-top:-6px;
+    border-radius: 50%;
+    background-color:white;
+    box-shadow: 0px 0px 3px 1px #DEDEDE;
+  }
 </code></pre>
-<p>​</p>
-</li>
-<li><p><a href="http://jsrun.net/CciKp.js" target="_blank" rel="external">http://jsrun.net/CciKp.js</a></p>
-<pre><code class="javascript">$.fn.RangeSlider = function(cfg){
-    var userAgent = navigator.userAgent;
-    var isWebkit = (userAgent.indexOf(&quot;AppleWebKit&quot;) &gt;= 0);
-    var isIE = isIE();
+<p>  ​</p>
+<h3 id="http-jsrun-net-CciKp-js"><a href="#http-jsrun-net-CciKp-js" class="headerlink" title="http://jsrun.net/CciKp.js"></a><a href="http://jsrun.net/CciKp.js" target="_blank" rel="external">http://jsrun.net/CciKp.js</a></h3><pre><code class="javascript">  $.fn.RangeSlider = function(cfg){
+      var userAgent = navigator.userAgent;
+      var isWebkit = (userAgent.indexOf(&quot;AppleWebKit&quot;) &gt;= 0);
+      var isIE = isIE();
 
-    function isIE() {
-        var isIE = false;
-        if (window.ActiveXObject || &quot;ActiveXObject&quot; in window) {
-            isIE = true;
-        } else {
-            isIE = (userAgent.indexOf(&quot;compatible&quot;) &gt; -1 &amp;&amp; userAgent.indexOf(&quot;MSIE&quot;) &gt; -1
-                &amp;&amp; !(userAgent.indexOf(&quot;Opera&quot;) &gt; -1));
-            isIE = false;
-        }
-        return isIE;
-    }
+      function isIE() {
+          var isIE = false;
+          if (window.ActiveXObject || &quot;ActiveXObject&quot; in window) {
+              isIE = true;
+          } else {
+              isIE = (userAgent.indexOf(&quot;compatible&quot;) &gt; -1 &amp;&amp; userAgent.indexOf(&quot;MSIE&quot;) &gt; -1
+                  &amp;&amp; !(userAgent.indexOf(&quot;Opera&quot;) &gt; -1));
+              isIE = false;
+          }
+          return isIE;
+      }
 
-    this.sliderCfg = {
-        min: cfg &amp;&amp; !isNaN(parseFloat(cfg.min)) ? Number(cfg.min) : null, 
-        max: cfg &amp;&amp; !isNaN(parseFloat(cfg.max)) ? Number(cfg.max) : null,
-        step: cfg &amp;&amp; Number(cfg.step) ? cfg.step : 1,
-        callback: cfg &amp;&amp; cfg.callback ? cfg.callback : null
-    };
+      this.sliderCfg = {
+          min: cfg &amp;&amp; !isNaN(parseFloat(cfg.min)) ? Number(cfg.min) : null, 
+          max: cfg &amp;&amp; !isNaN(parseFloat(cfg.max)) ? Number(cfg.max) : null,
+          step: cfg &amp;&amp; Number(cfg.step) ? cfg.step : 1,
+          callback: cfg &amp;&amp; cfg.callback ? cfg.callback : null
+      };
 
-    var $input = $(this);
-    var min = this.sliderCfg.min;
-    var max = this.sliderCfg.max;
-    var step = this.sliderCfg.step;
-    var callback = this.sliderCfg.callback;
+      var $input = $(this);
+      var min = this.sliderCfg.min;
+      var max = this.sliderCfg.max;
+      var step = this.sliderCfg.step;
+      var callback = this.sliderCfg.callback;
 
-    $input.attr(&#39;min&#39;, min)
-        .attr(&#39;max&#39;, max)
-        .attr(&#39;step&#39;, step);
+      $input.attr(&#39;min&#39;, min)
+          .attr(&#39;max&#39;, max)
+          .attr(&#39;step&#39;, step);
 
-    var event = null;
-    if (isIE) {
-        event = &quot;change&quot;;
-    } else {
-        event = &quot;input&quot;;
-    }
+      var event = null;
+      if (isIE) {
+          event = &quot;change&quot;;
+      } else {
+          event = &quot;input&quot;;
+      }
 
-    $input.bind(event, function(e){
-        $input.attr(&#39;value&#39;, this.value);
+      $input.bind(event, function(e){
+          $input.attr(&#39;value&#39;, this.value);
 
-        if (isWebkit) {
-            $input.css( &#39;background-size&#39;, this.value + &#39;% 100%&#39; ); 
-        }
+          if (isWebkit) {
+              $input.css( &#39;background-size&#39;, this.value + &#39;% 100%&#39; ); 
+          }
 
-        if ($.isFunction(callback)) {
-            callback(this);
-        }
-    });
-};
+          if ($.isFunction(callback)) {
+              callback(this);
+          }
+      });
+  };
 </code></pre>
-<p>​</p>
-</li>
-</ul>
+<p>  ​</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="html">&lt;p&gt;
   进度条&amp;emsp;&lt;span id=&quot;num&quot;&gt;0&lt;/span&gt;%
 &lt;/p&gt;
@@ -866,13 +1008,13 @@ input {
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
@@ -944,7 +1086,7 @@ return newArr;
 <h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><pre><code class="javascript">function sortNumber(a,b)
 {
 return a - b;//升序
-//return b - a;//倒序 或者升序之后用&lt;span style=&quot;color: rgb(90, 103, 111); font-family: arial, STHeiti, &quot;Microsoft YaHei&quot;, 宋体; font-size: 14px;&quot;&gt;reverse()翻转数组&lt;/span&gt;
+//return b - a;//倒序 或者升序之后用 reverse() 翻转数组
 }
 arr.sort(sortNumber);
 </code></pre>
@@ -1249,13 +1391,13 @@ Login();
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
