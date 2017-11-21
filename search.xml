@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[我的收藏]]></title>
+      <url>/2017/11/21/Collection/</url>
+      <content type="html"><![CDATA[<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><h3 id="https-zc95-github-io"><a href="#https-zc95-github-io" class="headerlink" title="https://zc95.github.io"></a><a href="https://zc95.github.io">https://zc95.github.io</a></h3><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="jsrun在线代码编辑"><a href="#jsrun在线代码编辑" class="headerlink" title="jsrun在线代码编辑"></a><a href="http://jsrun.net" target="_blank" rel="external">jsrun在线代码编辑</a></h3><h3 id="tinypng压缩图片"><a href="#tinypng压缩图片" class="headerlink" title="tinypng压缩图片"></a><a href="https://tinypng.com" target="_blank" rel="external">tinypng压缩图片</a></h3><h3 id="Google翻译"><a href="#Google翻译" class="headerlink" title="Google翻译"></a><a href="https://translate.google.cn" target="_blank" rel="external">Google翻译</a></h3><h3 id="msdn-itellyou"><a href="#msdn-itellyou" class="headerlink" title="msdn.itellyou"></a><a href="https://msdn.itellyou.cn" target="_blank" rel="external">msdn.itellyou</a></h3><h3 id="MDN文档"><a href="#MDN文档" class="headerlink" title="MDN文档"></a><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">MDN文档</a></h3><h2 id="前端插件-amp-框架"><a href="#前端插件-amp-框架" class="headerlink" title="前端插件&amp;框架"></a>前端插件&amp;框架</h2><h3 id="echarts"><a href="#echarts" class="headerlink" title="echarts"></a><a href="hhttp://www.echartsjs.com" target="_blank" rel="external">echarts</a></h3><h3 id="layui"><a href="#layui" class="headerlink" title="layui"></a><a href="http://www.layui.com" target="_blank" rel="external">layui</a></h3><h3 id="阿里巴巴矢量图标图"><a href="#阿里巴巴矢量图标图" class="headerlink" title="阿里巴巴矢量图标图"></a><a href="http://www.iconfont.cn" target="_blank" rel="external">阿里巴巴矢量图标图</a></h3><h2 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h2><h3 id="freecodecamp"><a href="#freecodecamp" class="headerlink" title="freecodecamp"></a><a href="https://www.freecodecamp.cn" target="_blank" rel="external">freecodecamp</a></h3><h3 id="慕课网"><a href="#慕课网" class="headerlink" title="慕课网"></a><a href="https://www.imooc.com" target="_blank" rel="external">慕课网</a></h3><h3 id="前端菜鸟教程"><a href="#前端菜鸟教程" class="headerlink" title="前端菜鸟教程"></a><a href="http://www.runoob.com" target="_blank" rel="external">前端菜鸟教程</a></h3>]]></content>
+      
+        <categories>
+            
+            <category> 汇总篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 收藏 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[数组复习]]></title>
       <url>/2017/11/21/arrayReview/</url>
       <content type="html"><![CDATA[<h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><pre><code class="javascript">var ary = [1,23,4];
