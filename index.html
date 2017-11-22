@@ -1,650 +1,679 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Blog | 张成</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog | 秋刀鱼的滋味">
+<meta property="og:url" content="http://zc95.github.io/index.html">
+<meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Blog | 秋刀鱼的滋味">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://zc95.github.io/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Blog | 秋刀鱼的滋味" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
     
     
-    <title>Blog | 秋刀鱼的滋味</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.6.18">
-    <script type="text/javascript">
-        // Data Center
-        var DC = {
-            reward:	false,
-            lv: JSON.parse('{"enable":true,"app_id":null,"app_key":null,"icon":true}'),
-            v: JSON.parse('{"enable":true,"appid":null,"appkey":null,"notify":false,"verify":false,"placeholder":"give me some sugers plz...","avatar":"wavatar"}')
-        };
-    </script>
-    <script type="text/javascript">
-        window.lazyScripts=[];
-    </script>
+
 </head>
 
 
-<body>
-    <div id="loading" class="active"></div>
-
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+<body class="main-center theme-green" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://zc95.github.io" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.png" width="200" height="200">
         </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">张成</h5>
-          <a href="mailto:277133779@qq.com" title="277133779@qq.com" class="mail">277133779@qq.com</a>
-        </hgroup>
-        
-        <ul class="menu-link">
-          
-              <li>
-                <a href="https://github.com/codefine" target="_blank">
-                  <i class="icon icon-lg icon-github"></i>
-                </a>
-              </li>
-            
-        </ul>
-        
+        <h2 id="name" class="hidden-xs hidden-sm">张成</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="fa fa-map-marker"></i> SuZhou, China</small>
       </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <!-- <span class="ins-close ins-selectable"><i class="fa fa-times"></i></span> -->
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
         
-            <li class="waves-block waves-effect active">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                HOME
-              </a>
-            </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                CATEGORIES
-              </a>
-            </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                TAGS
-              </a>
-            </li>
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="fa fa-fw fa-dashboard"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                ARCHIVES
-              </a>
-            </li>
         
-            <li class="waves-block waves-effect">
-              <a href="/custom"  >
-                <i class="icon icon-lg icon-plus-square"></i>
-                CUSTOM
-              </a>
-            </li>
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="fa fa-fw fa-delicious"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="fa fa-fw fa-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="fa fa-fw fa-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="fa fa-fw fa-code"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="fa fa-fw fa-leanpub"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="fa fa-fw fa-gg"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about active">
+          <a href="/about">
+            
+            <i class="fa fa-fw fa-coffee"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/zc95" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
+        
+        <li><a href="http://weibo.com" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="fa fa-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="fa fa-twitter"></i></a></li>
+        
+        <li><a href="/" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="fa fa-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="fa fa-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            
+            <p>您好，您是第<span id="busuanzi_value_site_uv">0</span>位访客</p>
+            
+            <div class="content">
+                <p>nice to meet you </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/demo/">demo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术篇/">技术篇</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/汇总篇/">汇总篇</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM操作/">DOM操作</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端必备/">前端必备</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/循环/">循环</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/性能/">性能</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/收藏/">收藏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/渲染/">渲染</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/页面布局/">页面布局</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/DOM操作/" style="font-size: 13px;">DOM操作</a> <a href="/tags/Hexo/" style="font-size: 13px;">Hexo</a> <a href="/tags/Node-js/" style="font-size: 13px;">Node.js</a> <a href="/tags/array/" style="font-size: 13px;">array</a> <a href="/tags/css/" style="font-size: 14px;">css</a> <a href="/tags/css3/" style="font-size: 13px;">css3</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/html/" style="font-size: 14px;">html</a> <a href="/tags/javascript/" style="font-size: 13.5px;">javascript</a> <a href="/tags/jquery/" style="font-size: 13.5px;">jquery</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/npm/" style="font-size: 13px;">npm</a> <a href="/tags/前端必备/" style="font-size: 13px;">前端必备</a> <a href="/tags/博客/" style="font-size: 13px;">博客</a> <a href="/tags/布局/" style="font-size: 13px;">布局</a> <a href="/tags/循环/" style="font-size: 13px;">循环</a> <a href="/tags/性能/" style="font-size: 13px;">性能</a> <a href="/tags/收藏/" style="font-size: 13px;">收藏</a> <a href="/tags/渲染/" style="font-size: 13px;">渲染</a> <a href="/tags/页面布局/" style="font-size: 13px;">页面布局</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled ">
+        
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2017/11/21/Collection/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/汇总篇/">汇总篇</a>
+              </p>
+              <p class="item-title">
+                <a href="/2017/11/21/Collection/" class="title">我的收藏</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-11-21T11:30:45.000Z" itemprop="datePublished">2017-11-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2017/11/21/arrayReview/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/汇总篇/">汇总篇</a>
+              </p>
+              <p class="item-title">
+                <a href="/2017/11/21/arrayReview/" class="title">数组复习</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-11-21T10:44:45.000Z" itemprop="datePublished">2017-11-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2017/11/17/rangeUI/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/demo/">demo</a>
+              </p>
+              <p class="item-title">
+                <a href="/2017/11/17/rangeUI/" class="title">自定义range滑块</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-11-17T11:06:48.000Z" itemprop="datePublished">2017-11-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2017/11/11/column/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/技术篇/">技术篇</a>
+              </p>
+              <p class="item-title">
+                <a href="/2017/11/11/column/" class="title">column</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-11-10T16:30:14.000Z" itemprop="datePublished">2017-11-11</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-thumb">
+              <a href="/2017/11/03/AdaptiveLayout/" class="thumb">
+    
+    
+        <span class="thumb-image thumb-none"></span>
+    
+</a>
+
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/技术篇/">技术篇</a>
+              </p>
+              <p class="item-title">
+                <a href="/2017/11/03/AdaptiveLayout/" class="title">类似Windows文件的布局问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-11-03T10:40:24.000Z" itemprop="datePublished">2017-11-03</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
+  
+
+    
+  </div>
 </aside>
 
-    <main id="main">
-        
-    <header class="top-header" id="header">
-    <div class="flex-row clearfix">
-        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">
-            <span>Blog | 秋刀鱼的滋味</span>
+  
+  <main class="main" role="main">
+  
+  <div class="content article-list">
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/Collection/">我的收藏</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/11/21/Collection/" class="article-date">
+	  <time datetime="2017-11-21T11:30:45.000Z" itemprop="datePublished">11月 21</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/汇总篇/">汇总篇</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link" href="/tags/前端必备/">前端必备</a>, <a class="article-tag-link" href="/tags/收藏/">收藏</a>
+  </span>
+
+
+    <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/21/Collection/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/arrayReview/">数组复习</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/11/21/arrayReview/" class="article-date">
+	  <time datetime="2017-11-21T10:44:45.000Z" itemprop="datePublished">11月 21</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/汇总篇/">汇总篇</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link" href="/tags/array/">array</a>
+  </span>
+
+
+    <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/21/arrayReview/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/rangeUI/">自定义range滑块</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/11/17/rangeUI/" class="article-date">
+	  <time datetime="2017-11-17T11:06:48.000Z" itemprop="datePublished">11月 17</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/demo/">demo</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link" href="/tags/css/">css</a>
+  </span>
+
+
+    <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/17/rangeUI/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/column/">column</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/11/11/column/" class="article-date">
+	  <time datetime="2017-11-10T16:30:14.000Z" itemprop="datePublished">11月 11</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/技术篇/">技术篇</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link" href="/tags/css3/">css3</a>, <a class="article-tag-link" href="/tags/布局/">布局</a>
+  </span>
+
+
+    <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/11/column/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+      <article class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/03/AdaptiveLayout/">类似Windows文件的布局问题</a>
+    </h1>
+  
+
+  </div>
+  
+  <p class="article-meta">
+    <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/11/03/AdaptiveLayout/" class="article-date">
+	  <time datetime="2017-11-03T10:40:24.000Z" itemprop="datePublished">11月 3</time>
+	</a>
+</span>
+    
+  <span class="article-category">
+    <i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/技术篇/">技术篇</a>
+  </span>
+
+    
+  <span class="article-tag">
+    <i class="fa fa-tag"></i>
+	<a class="article-tag-link" href="/tags/css/">css</a>, <a class="article-tag-link" href="/tags/页面布局/">页面布局</a>
+  </span>
+
+
+    <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/03/AdaptiveLayout/#comments" class="article-comment-link">评论</a></span>
+    
+  </p>
+</article>
+
+    
+  </div>
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <div class="pager pull-left">
+            
+            <a class="prev disabled" href="javascript:;"><i class="fa fa-angle-left"></i> 上一页</a>
+            
+            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 <i class="fa fa-angle-right"></i></a>
             
         </div>
-        
-        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
-            <i class="icon icon-lg icon-search"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header index-header">
-    <div class="container fade-scale">
-        <h1 class="title">Blog | 秋刀鱼的滋味</h1>
-        <h5 class="subtitle">
-            
-                
-            
-        </h5>
-        
-    </div>
+        </div>
+        <div class="total-article bar-right">Page 1 of 3</div>
+    </nav>
     
-
-</header>
-
-<div id="site_search">
-    <div class="search-title clearfix">
-        <span class="pull-left">
-          <i class="icon icon-lg icon-search"></i>
-        </span>
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
-        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
-          <i class="icon icon-lg icon-close"></i>
-        </a>
-    </div>
-    <div id="local-search-result"></div>
-</div>
-
-    <div class="container body-wrap">
-        <ul class="post-list">
-        
-            <li class="post-list-item fade">
-                <article id="post-Collection"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/11/21/Collection/">我的收藏</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-11-21 19:30:45" datetime="2017-11-21T11:30:45.000Z"  itemprop="datePublished">2017-11-21</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/汇总篇/">汇总篇</a></li></ul>
-
-
-
-        
-	<span id="/2017/11/21/Collection/" class="leancloud_visitors" data-flag-title="我的收藏" title="我的收藏">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
  
+</main>
 
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/zc95" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
         
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/21/Collection/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/21/Collection/"></span>
-        </a>
-    </span>
-
-
+        <li><a href="http://weibo.com" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="fa fa-weibo"></i></a></li>
         
-    </div>
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        我的博客https://zc95.github.io工具jsrun在线代码编辑tinypng压缩图片Google翻译msdn.itellyouMDN文档前端插件&amp;框架echartslayui阿里巴巴矢量图标图学习网站freecodecamp慕课网前端菜鸟教程
-    
-        <a href="/2017/11/21/Collection/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="fa fa-twitter"></i></a></li>
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/收藏/">收藏</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
+        <li><a href="/" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="fa fa-behance"></i></a></li>
         
-            <li class="post-list-item fade">
-                <article id="post-arrayReview"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/11/21/arrayReview/">数组复习</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-11-21 18:44:45" datetime="2017-11-21T10:44:45.000Z"  itemprop="datePublished">2017-11-21</time>
-
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="fa fa-rss"></i></a></li>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/汇总篇/">汇总篇</a></li></ul>
+    </ul>
 
-
-
-        
-	<span id="/2017/11/21/arrayReview/" class="leancloud_visitors" data-flag-title="数组复习" title="数组复习">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/21/arrayReview/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/21/arrayReview/"></span>
-        </a>
-    </span>
-
-
-        
-    </div>
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        检测数组typeofvar ary = [1,23,4];
-console.log(typeof ary); //输出结果是Object
-
-instanceofvar ary = [1,23,4];
-console.log(ary instanceof Array)//true;
-
-原型链方法var ary = [1,23,4];
-console.log(ary.__proto__.cons...
-    
-        <a href="/2017/11/21/arrayReview/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-rangeUI"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/11/17/rangeUI/">自定义range滑块</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-11-17 19:06:48" datetime="2017-11-17T11:06:48.000Z"  itemprop="datePublished">2017-11-17</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/demo/">demo</a></li></ul>
-
-
-
-        
-	<span id="/2017/11/17/rangeUI/" class="leancloud_visitors" data-flag-title="自定义range滑块" title="自定义range滑块">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/17/rangeUI/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/17/rangeUI/"></span>
-        </a>
-    </span>
-
-
-        
-    </div>
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        Range
-开始
-DEMO
-源码
-简易版DEMO
-
-导入jQuery, CSS和JSjQueryhttp://jsrun.net/CciKp.css  p {
-    font-family: &quot;微软雅黑&quot;;
-    letter-spacing: -1px;
-    text-shadow: -2px -1px 1px #fff, 1px 2px 2px rgba(0,...
-    
-        <a href="/2017/11/17/rangeUI/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-column"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/11/11/column/">column</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-11-11 00:30:14" datetime="2017-11-10T16:30:14.000Z"  itemprop="datePublished">2017-11-11</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术篇/">技术篇</a></li></ul>
-
-
-
-        
-	<span id="/2017/11/11/column/" class="leancloud_visitors" data-flag-title="column" title="column">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/11/column/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/11/column/"></span>
-        </a>
-    </span>
-
-
-        
-    </div>
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        CSS3多列CSS3 可以将文本内容设计成像报纸一样的多列布局，如下实例：
-
-CSS3 多列属性
-column-count
-column-gap
-column-rule-style
-column-rule-width
-column-rule-color
-column-rule
-column-span
-column-width
-
-CSS3 创建多列column-count 属性指定了需要分割的...
-    
-        <a href="/2017/11/11/column/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-            <li class="post-list-item fade">
-                <article id="post-AdaptiveLayout"
-  class="article-card article-type-post" itemprop="blogPost">
-    
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/11/03/AdaptiveLayout/">类似Windows文件的布局问题</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time class="post-time" title="2017-11-03 18:40:24" datetime="2017-11-03T10:40:24.000Z"  itemprop="datePublished">2017-11-03</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术篇/">技术篇</a></li></ul>
-
-
-
-        
-	<span id="/2017/11/03/AdaptiveLayout/" class="leancloud_visitors" data-flag-title="类似Windows文件的布局问题" title="类似Windows文件的布局问题">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-    <span>
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/03/AdaptiveLayout/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/03/AdaptiveLayout/"></span>
-        </a>
-    </span>
-
-
-        
-    </div>
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        问题如何做到类似windows文件的布局：无论如何改变窗口（屏幕）的大小，文件或者文件夹的大小都是固定的，不同的是一行显示的数目会有所变化；
-百分比布局首先这类布局，肯定会先想到百分比的方法（最快的方法），在不同手机上看的话当然没区别，比如一行显示4个的话，那么一个就是25%，但如果放到ipad或者电脑上来看的话，就大的有些恐怖了
-百分比加@media布局同上，我们可以用@media的方法来...
-    
-        <a href="/2017/11/03/AdaptiveLayout/" class="post-more waves-effect waves-button">
-            more...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/页面布局/">页面布局</a></li></ul>
-
-    </div>
-    
-</article>
-
-            </li>
-        
-        </ul>
-        
-<nav id="page-nav">
-    <div class="inner">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-    </div>
-</nav>
-
-    </div>
-
-        <footer class="footer">
-    
-    <div class="top">
-        
-        
-            <p>
-    <span>Links：</span>
-    
-    <span class="blogroll-item">
-        <a href="https://www.github.com" target="_blank">github</a>
-    </span>
-    
-    <span class="blogroll-item">
-        <a href="https://www.gitee.com" target="_blank">gitee</a>
-    </span>
-    
-    <span class="blogroll-item">
-        <a href="https://www.coding.net" target="_blank">coding</a>
-    </span>
-    
-</p>
-
-        
-    </div>
-    
-    <div class="bottom">
-        <p>
-            <span>
-                张成 &copy; 2017
-            </span>
-        		
-           	
-            
-            
-            <span>
-	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
-            </span>
-            
-            
-            
-        </p>
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
     </div>
 </footer>
-
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/&title=Blog | 秋刀鱼的滋味&pic=http://zc95.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/&title=Blog | 秋刀鱼的滋味&source=" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://zc95.github.io/" alt="微信分享二维码">
-</div>
-
-
-    
-    <!-- main-js -->
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-
-<script type="text/javascript" src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script type="text/javascript" src="/js/method.js?v=1.6.18"></script>
-<script type="text/javascript" src="/js/blog.js?v=1.6.18"></script>
-
-<!-- third-party -->
-
-
-
-<script type="text/javascript" src="/js/plugins/local_search.js?v=1.6.18"></script>
-<script type="text/javascript">
-	var search_path = "search.xml";
-	if (search_path.length === 0) {
-		search_path = "search.xml";
-	}
-	var path = "/" + search_path;
-	searchFunc(path, "local-search-input", "local-search-result");
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-
-
-
+<script src="/js/plugin.js"></script>
+<script src="/js/application.js"></script>
+  
     
-        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript" src="/js/plugins/valine.js?v=1.6.18"></script>
     
-
-
-
-<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.6.18"></script>
-
-
-
-    <!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-            processEscapes: true,
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-    });
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
 </script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
+<script src="/js/insight.js"></script>
+    
+    
+    
+        
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
     
+    
+    
+
+
+
 </body>
 </html>
