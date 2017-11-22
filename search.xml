@@ -91,32 +91,62 @@ console.log(isArray(ary));
 }
 arr.sort(compare);
 </code></pre>
-<h2 id="操作方法-concat-slice-splice"><a href="#操作方法-concat-slice-splice" class="headerlink" title="操作方法 concat() slice() splice()"></a>操作方法 concat() slice() splice()</h2><ul>
-<li><p><code>concat()</code> 方法用于连接两个或多个数组，不会改变原始数组。</p>
-</li>
-<li><p><code>slice()</code> 方法可从已有的数组中返回选定的元素，不会改变原始数组。</p>
+<h2 id="操作方法-concat-slice-splice"><a href="#操作方法-concat-slice-splice" class="headerlink" title="操作方法 concat() slice() splice()"></a>操作方法 concat() slice() splice()</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat()</code> 方法用于连接两个或多个数组，不会改变原始数组。</p>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code> 方法可从已有的数组中返回选定的元素，不会改变原始数组。</p>
 <blockquote>
 <p>arrayObject.slice(start,end)</p>
 </blockquote>
-<p>| 参数    | 描述                                       |<br>| —– | —————————————- |<br>| start | 必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。 |<br>| end   | 可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。 |</p>
-</li>
-<li><p><code>splice()</code> 方法向/从数组中添加/删除项目，然后返回被删除的项目，会改变原始数组。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</td>
+</tr>
+<tr>
+<td>end</td>
+<td>可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p><code>splice()</code> 方法向/从数组中添加/删除项目，然后返回被删除的项目，会改变原始数组。</p>
 <blockquote>
 <p>arrayObject.splice(index,howmany,item1,…..,itemX)</p>
 </blockquote>
-<p>| 参数                | 描述                                  |<br>| —————– | ———————————– |<br>| index             | 必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。 |<br>| howmany           | 必需。要删除的项目数量。如果设置为 0，则不会删除项目。        |<br>| item1, …, itemX | 可选。向数组添加的新项目。                       |</p>
-</li>
-</ul>
-<h2 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h2><p>###indexOF() </p>
-<blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</td>
+</tr>
+<tr>
+<td>howmany</td>
+<td>必需。要删除的项目数量。如果设置为 0，则不会删除项目。</td>
+</tr>
+<tr>
+<td>item1, …, itemX</td>
+<td>可选。向数组添加的新项目。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h2><h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h3><blockquote>
 <p>indexOF() 从前往后查找，返回首次出现的位置（没有返回-1）</p>
 </blockquote>
-<p>###lastindexOf() </p>
-<blockquote>
+<h3 id="lastindexOf"><a href="#lastindexOf" class="headerlink" title="lastindexOf()"></a>lastindexOf()</h3><blockquote>
 <p>lastindexOf() 从后往前查找，返回首次出现的位置（没有返回-1）</p>
 </blockquote>
-<p>##迭代方法</p>
-<blockquote>
+<h2 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h2><blockquote>
 <p>迭代是重复反馈过程的活动，其目的通常是为了逼近所需目标或结果。每一次对过程的重复称为一次“迭代”，而每一次迭代得到的结果会作为下一次迭代的初始值。</p>
 </blockquote>
 <ol>
@@ -725,7 +755,7 @@ el.addEventListener(&quot;transitionend&quot;, transitionEnded);
       
         <categories>
             
-            <category> 心得篇 </category>
+            <category> 技术篇 </category>
             
         </categories>
         
@@ -820,7 +850,7 @@ $obj.html(tempStr);
       
         <categories>
             
-            <category> 心得篇 </category>
+            <category> 技术篇 </category>
             
         </categories>
         
