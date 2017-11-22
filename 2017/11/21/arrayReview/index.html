@@ -17,18 +17,18 @@
   
   
   <title>数组复习 | Blog | 张成</title>
-  <meta name="description" content="检测数组typeofvar ary = [1,23,4]; console.log(typeof ary); //输出结果是Object  instanceofvar ary = [1,23,4]; console.log(ary instanceof Array)//true;  原型链方法var ary = [1,23,4]; console.log(ary.__proto__.constru">
+  <meta name="description" content="检测数组typeof12var ary = [1,23,4];console.log(typeof ary); //输出结果是Object instanceof12var ary = [1,23,4];console.log(ary instanceof Array)//true; 原型链方法123var ary = [1,23,4];console.log(ary.__proto__.const">
 <meta name="keywords" content="array">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组复习">
 <meta property="og:url" content="http://zc95.github.io/2017/11/21/arrayReview/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="检测数组typeofvar ary = [1,23,4]; console.log(typeof ary); //输出结果是Object  instanceofvar ary = [1,23,4]; console.log(ary instanceof Array)//true;  原型链方法var ary = [1,23,4]; console.log(ary.__proto__.constru">
+<meta property="og:description" content="检测数组typeof12var ary = [1,23,4];console.log(typeof ary); //输出结果是Object instanceof12var ary = [1,23,4];console.log(ary instanceof Array)//true; 原型链方法123var ary = [1,23,4];console.log(ary.__proto__.const">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-11-22T12:00:23.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组复习">
-<meta name="twitter:description" content="检测数组typeofvar ary = [1,23,4]; console.log(typeof ary); //输出结果是Object  instanceofvar ary = [1,23,4]; console.log(ary instanceof Array)//true;  原型链方法var ary = [1,23,4]; console.log(ary.__proto__.constru">
+<meta name="twitter:description" content="检测数组typeof12var ary = [1,23,4];console.log(typeof ary); //输出结果是Object instanceof12var ary = [1,23,4];console.log(ary instanceof Array)//true; 原型链方法123var ary = [1,23,4];console.log(ary.__proto__.const">
   <!-- Canonical links -->
   <link rel="canonical" href="http://zc95.github.io/2017/11/21/arrayReview/index.html">
   
@@ -457,56 +457,14 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><pre><code class="javascript">var ary = [1,23,4];
-console.log(typeof ary); //输出结果是Object
-</code></pre>
-<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><pre><code class="javascript">var ary = [1,23,4];
-console.log(ary instanceof Array)//true;
-</code></pre>
-<h3 id="原型链方法"><a href="#原型链方法" class="headerlink" title="原型链方法"></a>原型链方法</h3><pre><code class="javascript">var ary = [1,23,4];
-console.log(ary.__proto__.constructor==Array);//true
-console.log(ary.constructor==Array)//true 这两段代码是一样的
-</code></pre>
+        <h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> ary); <span class="comment">//输出结果是Object</span></div></pre></td></tr></table></figure>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(ary <span class="keyword">instanceof</span> <span class="built_in">Array</span>)<span class="comment">//true;</span></div></pre></td></tr></table></figure>
+<h3 id="原型链方法"><a href="#原型链方法" class="headerlink" title="原型链方法"></a>原型链方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(ary.__proto__.constructor==<span class="built_in">Array</span>);<span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(ary.constructor==<span class="built_in">Array</span>)<span class="comment">//true 这两段代码是一样的</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>以上三种方法都不太好，<code>instanceof</code> 和 <code>constructor</code> 判断的变量，必须在当前页面声明的，比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个arr，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；</p>
 </blockquote>
-<h3 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h3><pre><code class="javascript">var ary = [1,2,3,4];
-function isArray(e){
-return Object.prototype.toString.call(e)==&#39;[object Array]&#39;;
-}
-console.log(isArray(ary));
-</code></pre>
-<h3 id="自己封装的基本数据类型验证"><a href="#自己封装的基本数据类型验证" class="headerlink" title="自己封装的基本数据类型验证"></a>自己封装的基本数据类型验证</h3><pre><code class="javascript">var type = {
-  isObj: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Object]&quot;;
-  },
-  isArray: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Array]&quot;;
-  },
-  isNull: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Null]&quot;;
-  },
-  isUndefined: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Undefined]&quot;;
-  },
-  isBoolean: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Boolean]&quot;;
-  },
-  isString: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object String]&quot;;
-  },
-  isNumber: function(o) {
-    return Object.prototype.toString.call(o) == &quot;[object Number]&quot;;
-  },
-  isDocument: function() {
-    return Object.prototype.toString.call(o) == &quot;[object Document]&quot; || &quot;[object HTMLDocument]&quot;;
-  }
-}
-
-------------------------------
-&gt;console.log(type.isArray([1,2,3]));
-&gt;true
-</code></pre>
+<h3 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">e</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(e)==<span class="string">'[object Array]'</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(isArray(ary));</div></pre></td></tr></table></figure>
+<h3 id="自己封装的基本数据类型验证"><a href="#自己封装的基本数据类型验证" class="headerlink" title="自己封装的基本数据类型验证"></a>自己封装的基本数据类型验证</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> type = &#123;</div><div class="line">  isObj: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Object]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isArray: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Array]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isNull: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Null]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isUndefined: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Undefined]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isBoolean: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Boolean]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isString: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object String]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isNumber: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Number]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isDocument: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Document]"</span> || <span class="string">"[object HTMLDocument]"</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">------------------------------</div><div class="line">&gt;<span class="built_in">console</span>.log(type.isArray([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]));</div><div class="line">&gt;<span class="literal">true</span></div></pre></td></tr></table></figure>
 <h2 id="push-和pop"><a href="#push-和pop" class="headerlink" title="push()和pop()"></a>push()和pop()</h2><ul>
 <li><code>push()</code> 向数组末尾添加任意个项并返回新数组的长度</li>
 <li><code>pop()</code> 从数组末尾移除最后一项，减少数组的length值 （返回的是移除的项）</li>
@@ -517,12 +475,7 @@ console.log(isArray(ary));
 <li><p><code>shift()</code> 从数组前端移除第一项，减少数组的length值 （返回的是移除的项）</p>
 </li>
 </ul>
-<h2 id="重排序-sort-reverse"><a href="#重排序-sort-reverse" class="headerlink" title="重排序 sort() reverse()"></a>重排序 sort() reverse()</h2><pre><code class="javascript">function compare(a,b){
-  return a-b;//升序
-  //return b-a; 或者在升序方法之后使用reverse()反转数组
-}
-arr.sort(compare);
-</code></pre>
+<h2 id="重排序-sort-reverse"><a href="#重排序-sort-reverse" class="headerlink" title="重排序 sort() reverse()"></a>重排序 sort() reverse()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a-b;<span class="comment">//升序</span></div><div class="line">  <span class="comment">//return b-a; 或者在升序方法之后使用reverse()反转数组</span></div><div class="line">&#125;</div><div class="line">arr.sort(compare);</div></pre></td></tr></table></figure>
 <h2 id="操作方法-concat-slice-splice"><a href="#操作方法-concat-slice-splice" class="headerlink" title="操作方法 concat() slice() splice()"></a>操作方法 concat() slice() splice()</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat()</code> 方法用于连接两个或多个数组，不会改变原始数组。</p>
 <h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code> 方法可从已有的数组中返回选定的元素，不会改变原始数组。</p>
 <blockquote>
@@ -588,35 +541,10 @@ arr.sort(compare);
 <li>map(): 对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</li>
 <li>some(): 对数组中的每一项运行给定函数，如果该函数任意一项返回true，则返回true。</li>
 </ol>
-<h3 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-var everyResult = numbers.every(function(item, index, array) {
-    return (item &gt; 2);
-});
-var someResult = numbers.some(function(item) {
-    return (item &gt; 2);
-});
-console.log(everyResult);      //false
-console.log(someResult);        //true
-</code></pre>
-<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-var filterResult = numbers.filter(function(item) {
-    return (item &gt; 2);
-});
-
-console.log(filterResult);  \\[3, 4, 5, 4, 3]
-</code></pre>
-<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-var mapResult = numbers.map(function(item) {
-    return (item * 2);
-});
-
-console.log(mapResult);     //[2, 4, 6, 8, 10, 8, 6, 4, 2]
-</code></pre>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
-numbers.forEach(function(item, index, arr) {
-    //这里执行一些操作
-});
-</code></pre>
+<h3 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> everyResult = numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> someResult = numbers.some(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(everyResult);      <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(someResult);        <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(filterResult);  \\[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>]</div></pre></td></tr></table></figure>
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> mapResult = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item * <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(mapResult);     <span class="comment">//[2, 4, 6, 8, 10, 8, 6, 4, 2]</span></div></pre></td></tr></table></figure>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>) </span>&#123;</div><div class="line">    <span class="comment">//这里执行一些操作</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>

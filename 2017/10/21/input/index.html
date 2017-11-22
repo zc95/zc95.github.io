@@ -468,147 +468,20 @@
 <li>getFilters(id, msg);（前面一个参数是input的id，后面一个参数是后台返的json字符串）</li>
 </ol>
 <h2 id="JS主要代码"><a href="#JS主要代码" class="headerlink" title="JS主要代码"></a>JS主要代码</h2><p><strong>创建需要的div包裹住文本框</strong></p>
-<pre><code class="javascript">function wraps(){
-  for(var i = 0 ; i&lt;$(&#39;.filter_input&#39;).length ; i++){
-    var id = $(&#39;.filter_input&#39;).eq(i).attr(&#39;id&#39;);
-    var $width = $(&#39;.filter_input&#39;).eq(i).css(&quot;width&quot;);
-    $(&#39;#&#39; + id).wrap(&quot;&lt;div class=&#39;filter_wrap&#39; id=&#39;filter_wrap&quot;+id+&quot;&#39;&gt;&lt;/div&gt;&quot;);
-  $(&#39;#&#39; + id).after(&quot;&lt;div style=\&quot;width:&quot; + $width + &quot;;\&quot; class=&#39;filter_case&#39; id=&#39;filter_&quot; + id + &quot;&#39;&gt;&lt;/div&gt;&lt;span class=&#39;arrowTip&#39;&gt;▼&lt;/span&gt;&quot;);
-  } 
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">wraps</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i&lt;$(<span class="string">'.filter_input'</span>).length ; i++)&#123;</div><div class="line">    <span class="keyword">var</span> id = $(<span class="string">'.filter_input'</span>).eq(i).attr(<span class="string">'id'</span>);</div><div class="line">    <span class="keyword">var</span> $width = $(<span class="string">'.filter_input'</span>).eq(i).css(<span class="string">"width"</span>);</div><div class="line">    $(<span class="string">'#'</span> + id).wrap(<span class="string">"&lt;div class='filter_wrap' id='filter_wrap"</span>+id+<span class="string">"'&gt;&lt;/div&gt;"</span>);</div><div class="line">  $(<span class="string">'#'</span> + id).after(<span class="string">"&lt;div style=\"width:"</span> + $width + <span class="string">";\" class='filter_case' id='filter_"</span> + id + <span class="string">"'&gt;&lt;/div&gt;&lt;span class='arrowTip'&gt;▼&lt;/span&gt;"</span>);</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>根据后台返回的数据加载数据</strong></p>
-<pre><code class="javascript">function getFilters(id,msg){
-  var html = &quot;&quot;;
-    $.each(eval(msg), function (i, n) {
-      for(key in n){
-        html += &quot;&lt;div onclick=\&quot;inme(&#39;&quot; + n[key] + &quot;&#39;)\&quot;  class=\&quot;div_item\&quot;&gt;&quot; + n[key] + &quot;&lt;/div&gt;&quot;;
-      };
-    });
-  $(&#39;#filter_&#39;+id).html(html);
-  $(&#39;#filter_&#39;+id).append(&quot;&lt;div onclick=&#39;NothingClick()&#39; class=\&quot;Nothing\&quot;&gt;无匹配项&lt;/div&gt;&quot;);
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFilters</span>(<span class="params">id,msg</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> html = <span class="string">""</span>;</div><div class="line">    $.each(<span class="built_in">eval</span>(msg), <span class="function"><span class="keyword">function</span> (<span class="params">i, n</span>) </span>&#123;</div><div class="line">      <span class="keyword">for</span>(key <span class="keyword">in</span> n)&#123;</div><div class="line">        html += <span class="string">"&lt;div onclick=\"inme('"</span> + n[key] + <span class="string">"')\"  class=\"div_item\"&gt;"</span> + n[key] + <span class="string">"&lt;/div&gt;"</span>;</div><div class="line">      &#125;;</div><div class="line">    &#125;);</div><div class="line">  $(<span class="string">'#filter_'</span>+id).html(html);</div><div class="line">  $(<span class="string">'#filter_'</span>+id).append(<span class="string">"&lt;div onclick='NothingClick()' class=\"Nothing\"&gt;无匹配项&lt;/div&gt;"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>弹出列表框</strong></p>
-<pre><code class="javascript">$(&quot;.filter_input&quot;).click(function() {
-  $(&quot;.arrowTip&quot;).text(&quot;▼&quot;);
-  $(&quot;.filter_case&quot;).hide();
-  $(&quot;#filter_&quot; + this.id).show();
-  $(&quot;#filter_&quot; + this.id).next().text(&quot;▲&quot;);
-  return false;
-});
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".filter_input"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">".arrowTip"</span>).text(<span class="string">"▼"</span>);</div><div class="line">  $(<span class="string">".filter_case"</span>).hide();</div><div class="line">  $(<span class="string">"#filter_"</span> + <span class="keyword">this</span>.id).show();</div><div class="line">  $(<span class="string">"#filter_"</span> + <span class="keyword">this</span>.id).next().text(<span class="string">"▲"</span>);</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p><strong>监听文本框输入</strong></p>
-<pre><code class="javascript">$(&quot;.filter_input&quot;).keyup(function() {
-  $(&quot;#filter_&quot; + this.id).show(); //只要输入就显示列表框 
-  if ($(&quot;#&quot;+ this.id).val().length &lt;= 0) {
-    $(&quot;#filter_&quot;+ this.id).find(&quot;.div_item&quot;).show(); //如果什么都没填，跳出，保持全部显示状态  
-    return;
-  }
-  $(&quot;#filter_&quot;+ this.id).find(&quot;.div_item&quot;).hide(); //如果填了，先将所有的选项隐藏  
-  var num=0;
-  for (var i = 0; i &lt; $(&quot;#filter_&quot;+ this.id).find(&quot;.div_item&quot;).length; i++) {
-    //模糊匹配，将所有匹配项显示  
-    if ($(&quot;#filter_&quot;+ this.id).find(&quot;.div_item&quot;).eq(i).text().toLowerCase().indexOf($(&quot;#&quot; + this.id).val().toLowerCase()) &gt;= 0) {
-      num++;
-      $(&quot;#filter_&quot;+ this.id).find(&quot;.div_item&quot;).eq(i).show();
-      $(&#39;.Nothing&#39;).hide();
-    }
-  }
-  if(num==0){
-    $(&#39;.Nothing&#39;).show();
-  }
-});
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".filter_input"</span>).keyup(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">"#filter_"</span> + <span class="keyword">this</span>.id).show(); <span class="comment">//只要输入就显示列表框 </span></div><div class="line">  <span class="keyword">if</span> ($(<span class="string">"#"</span>+ <span class="keyword">this</span>.id).val().length &lt;= <span class="number">0</span>) &#123;</div><div class="line">    $(<span class="string">"#filter_"</span>+ <span class="keyword">this</span>.id).find(<span class="string">".div_item"</span>).show(); <span class="comment">//如果什么都没填，跳出，保持全部显示状态  </span></div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  $(<span class="string">"#filter_"</span>+ <span class="keyword">this</span>.id).find(<span class="string">".div_item"</span>).hide(); <span class="comment">//如果填了，先将所有的选项隐藏  </span></div><div class="line">  <span class="keyword">var</span> num=<span class="number">0</span>;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; $(<span class="string">"#filter_"</span>+ <span class="keyword">this</span>.id).find(<span class="string">".div_item"</span>).length; i++) &#123;</div><div class="line">    <span class="comment">//模糊匹配，将所有匹配项显示  </span></div><div class="line">    <span class="keyword">if</span> ($(<span class="string">"#filter_"</span>+ <span class="keyword">this</span>.id).find(<span class="string">".div_item"</span>).eq(i).text().toLowerCase().indexOf($(<span class="string">"#"</span> + <span class="keyword">this</span>.id).val().toLowerCase()) &gt;= <span class="number">0</span>) &#123;</div><div class="line">      num++;</div><div class="line">      $(<span class="string">"#filter_"</span>+ <span class="keyword">this</span>.id).find(<span class="string">".div_item"</span>).eq(i).show();</div><div class="line">      $(<span class="string">'.Nothing'</span>).hide();</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span>(num==<span class="number">0</span>)&#123;</div><div class="line">    $(<span class="string">'.Nothing'</span>).show();</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p><strong>模糊项的点击</strong></p>
-<pre><code class="javascript">function inme(name) {
-   var event = event? event: window.event;      
-    var srcObj = ((event.srcElement)?event.srcElement:event.target);       
-  $(srcObj).parent().prev().val(name);
-};
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">inme</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> event = event? event: <span class="built_in">window</span>.event;      </div><div class="line">    <span class="keyword">var</span> srcObj = ((event.srcElement)?event.srcElement:event.target);       </div><div class="line">  $(srcObj).parent().prev().val(name);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p><strong>点击无匹配</strong></p>
-<pre><code class="javascript">function NothingClick(){
-  var event = event? event: window.event;      
-    var srcObj = ((event.srcElement)?event.srcElement:event.target);   
-  $(srcObj).parent().prev().val(&quot;&quot;);
-  $(&#39;.Nothing&#39;).hide();
-  $(&quot;.filter_case&quot;).hide();
-  $(&quot;.div_item&quot;).show();
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">NothingClick</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> event = event? event: <span class="built_in">window</span>.event;      </div><div class="line">    <span class="keyword">var</span> srcObj = ((event.srcElement)?event.srcElement:event.target);   </div><div class="line">  $(srcObj).parent().prev().val(<span class="string">""</span>);</div><div class="line">  $(<span class="string">'.Nothing'</span>).hide();</div><div class="line">  $(<span class="string">".filter_case"</span>).hide();</div><div class="line">  $(<span class="string">".div_item"</span>).show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>隐藏列表框</strong></p>
-<pre><code class="javascript">$(&quot;body&quot;).click(function() {
-  $(&quot;.filter_case&quot;).hide();
-  $(&quot;.arrowTip&quot;).text(&quot;▼&quot;);
-});
-</code></pre>
-<h2 id="CSS主要代码"><a href="#CSS主要代码" class="headerlink" title="CSS主要代码"></a>CSS主要代码</h2><pre><code class="css">.filter_wrap{
-  display:inline-block;
-  position:relative;
-}
-.arrowTip{
-  position:absolute;
-  right:5px;
-  top:4px;
-  color:#c2c2c2;
-  font-size:13px;
-}
-.Nothing{
-  height: 30px;
-  width: 260px;
-  line-height: 30px;
-  font-size: 14px;
-  text-align:center;
-  color:#999;
-  display:none;
-  cursor:pointer;
-}
-.filter_case {
-  padding:4px 0px 4px 0px;
-  position: absolute;
-  z-index: 100;
-  height:auto;
-  max-height: 200px;
-  border: 1px solid #999;
-  box-sizing:border-box;
-  overflow-x: hidden;
-  display: none;
-  background-color: white;
-  margin-top:3px;
-  box-shadow: 0 4px 6px rgba(0,0,0,.24);
-  border-radius: 2px;
-}
-
-.div_item {
-  text-indent: 8px;
-  height: 30px;
-  width: 260px;
-  white-space: nowrap;
-  line-height: 30px;
-  font-size: 13px;
-}
-
-.div_item:hover {
-  cursor: pointer;
-  background-color: #1C86EE;
-  color: white;
-}
-input {
-  text-indent: 8px;
-  box-sizing:border-box;
-  outline: none;
-  border:1px solid #999 !important;
-  text-indent: 8px;
-  height: 30px;
-  width: 258px;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box; /* Firefox */
-  -webkit-box-sizing:border-box; /* Safari */
-  outline: none;
-  border-radius: 2px;
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">".filter_case"</span>).hide();</div><div class="line">  $(<span class="string">".arrowTip"</span>).text(<span class="string">"▼"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="CSS主要代码"><a href="#CSS主要代码" class="headerlink" title="CSS主要代码"></a>CSS主要代码</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.filter_wrap</span>&#123;</div><div class="line">  <span class="attribute">display</span>:inline-block;</div><div class="line">  <span class="attribute">position</span>:relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.arrowTip</span>&#123;</div><div class="line">  <span class="attribute">position</span>:absolute;</div><div class="line">  <span class="attribute">right</span>:<span class="number">5px</span>;</div><div class="line">  <span class="attribute">top</span>:<span class="number">4px</span>;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#c2c2c2</span>;</div><div class="line">  <span class="attribute">font-size</span>:<span class="number">13px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.Nothing</span>&#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">260px</span>;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">text-align</span>:center;</div><div class="line">  <span class="attribute">color</span>:<span class="number">#999</span>;</div><div class="line">  <span class="attribute">display</span>:none;</div><div class="line">  <span class="attribute">cursor</span>:pointer;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.filter_case</span> &#123;</div><div class="line">  <span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">0px</span> <span class="number">4px</span> <span class="number">0px</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">z-index</span>: <span class="number">100</span>;</div><div class="line">  <span class="attribute">height</span>:auto;</div><div class="line">  <span class="attribute">max-height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">  <span class="attribute">box-sizing</span>:border-box;</div><div class="line">  <span class="attribute">overflow-x</span>: hidden;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">  <span class="attribute">background-color</span>: white;</div><div class="line">  <span class="attribute">margin-top</span>:<span class="number">3px</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">6px</span> <span class="built_in">rgba</span>(0,0,0,.24);</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">2px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.div_item</span> &#123;</div><div class="line">  <span class="attribute">text-indent</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">260px</span>;</div><div class="line">  <span class="attribute">white-space</span>: nowrap;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">13px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.div_item</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">cursor</span>: pointer;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#1C86EE</span>;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span> &#123;</div><div class="line">  <span class="attribute">text-indent</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">box-sizing</span>:border-box;</div><div class="line">  <span class="attribute">outline</span>: none;</div><div class="line">  <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#999</span> <span class="meta">!important</span>;</div><div class="line">  <span class="attribute">text-indent</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">258px</span>;</div><div class="line">  <span class="attribute">box-sizing</span>:border-box;</div><div class="line">  <span class="attribute">-moz-box-sizing</span>:border-box; <span class="comment">/* Firefox */</span></div><div class="line">  <span class="attribute">-webkit-box-sizing</span>:border-box; <span class="comment">/* Safari */</span></div><div class="line">  <span class="attribute">outline</span>: none;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">2px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="html和CSS部分的一些细节"><a href="#html和CSS部分的一些细节" class="headerlink" title="html和CSS部分的一些细节"></a>html和CSS部分的一些细节</h2><ol>
 <li><blockquote>
 <p>outline: none;  </p>

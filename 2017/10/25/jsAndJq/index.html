@@ -17,18 +17,18 @@
   
   
   <title>原生javascript和jquery的用法对比 | Blog | 张成</title>
-  <meta name="description" content="选取元素// jQuery var els = $(&amp;#39;.el&amp;#39;);  // Native var els = document.querySelectorAll(&amp;#39;.el&amp;#39;);  // Shorthand var $ = function (el) {   return document.querySelectorAll(el); } querySelectorAl">
+  <meta name="description" content="选取元素12345678910// jQueryvar els = $(&apos;.el&apos;);// Nativevar els = document.querySelectorAll(&apos;.el&apos;);// Shorthandvar $ = function (el) &amp;#123;  return document.querySelectorAll(el);&amp;#125; querySelectorAll方法返">
 <meta name="keywords" content="html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生javascript和jquery的用法对比">
 <meta property="og:url" content="http://zc95.github.io/2017/10/25/jsAndJq/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="选取元素// jQuery var els = $(&amp;#39;.el&amp;#39;);  // Native var els = document.querySelectorAll(&amp;#39;.el&amp;#39;);  // Shorthand var $ = function (el) {   return document.querySelectorAll(el); } querySelectorAl">
+<meta property="og:description" content="选取元素12345678910// jQueryvar els = $(&apos;.el&apos;);// Nativevar els = document.querySelectorAll(&apos;.el&apos;);// Shorthandvar $ = function (el) &amp;#123;  return document.querySelectorAll(el);&amp;#125; querySelectorAll方法返">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-11-03T10:46:31.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生javascript和jquery的用法对比">
-<meta name="twitter:description" content="选取元素// jQuery var els = $(&amp;#39;.el&amp;#39;);  // Native var els = document.querySelectorAll(&amp;#39;.el&amp;#39;);  // Shorthand var $ = function (el) {   return document.querySelectorAll(el); } querySelectorAl">
+<meta name="twitter:description" content="选取元素12345678910// jQueryvar els = $(&apos;.el&apos;);// Nativevar els = document.querySelectorAll(&apos;.el&apos;);// Shorthandvar $ = function (el) &amp;#123;  return document.querySelectorAll(el);&amp;#125; querySelectorAll方法返">
   <!-- Canonical links -->
   <link rel="canonical" href="http://zc95.github.io/2017/10/25/jsAndJq/index.html">
   
@@ -457,150 +457,38 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h2 id="选取元素"><a href="#选取元素" class="headerlink" title="选取元素"></a>选取元素</h2><pre><code>// jQuery
-var els = $(&#39;.el&#39;);
-
-// Native
-var els = document.querySelectorAll(&#39;.el&#39;);
-
-// Shorthand
-var $ = function (el) {
-  return document.querySelectorAll(el);
-}
-</code></pre><p>querySelectorAll方法返回的是NodeList对象，需要转换为数组。</p>
-<pre><code>myList = Array.prototype.slice.call(myNodeList)
-</code></pre><h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><pre><code>// jQuery
-var newEl = $(&#39;&lt;div&gt;&lt;/div&gt;&#39;);
-
-// Native
-var newEl = document.createElement(&#39;div&#39;);
-</code></pre><h2 id="添加事件"><a href="#添加事件" class="headerlink" title="添加事件"></a>添加事件</h2><pre><code>// jQuery
-$(&#39;.el&#39;).on(&#39;event&#39;, function() {
-
-});
-
-// Native
-[].forEach.call(document.querySelectorAll(&#39;.el&#39;), function (el) {
-  el.addEventListener(&#39;event&#39;, function() {
-
-  }, false);
-});
-</code></pre><h2 id="get-set属性"><a href="#get-set属性" class="headerlink" title="get/set属性"></a>get/set属性</h2><pre><code>// jQuery
-$(&#39;.el&#39;).filter(&#39;:first&#39;).attr(&#39;key&#39;, &#39;value&#39;);
-$(&#39;.el&#39;).filter(&#39;:first&#39;).attr(&#39;key&#39;);
-
-// Native
-document.querySelector(&#39;.el&#39;).setAttribute(&#39;key&#39;, &#39;value&#39;);
-document.querySelector(&#39;.el&#39;).getAttribute(&#39;key&#39;);
-</code></pre><h2 id="添加和移除样式Class"><a href="#添加和移除样式Class" class="headerlink" title="添加和移除样式Class"></a>添加和移除样式Class</h2><p>DOM元素本身有一个可读写的className属性，可以用来操作class。</p>
+        <h2 id="选取元素"><a href="#选取元素" class="headerlink" title="选取元素"></a>选取元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line"><span class="keyword">var</span> els = $(<span class="string">'.el'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="keyword">var</span> els = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.el'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Shorthand</span></div><div class="line"><span class="keyword">var</span> $ = <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">document</span>.querySelectorAll(el);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>querySelectorAll方法返回的是NodeList对象，需要转换为数组。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myList = Array<span class="selector-class">.prototype</span><span class="selector-class">.slice</span><span class="selector-class">.call</span>(myNodeList)</div></pre></td></tr></table></figure>
+<h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line"><span class="keyword">var</span> <span class="keyword">new</span><span class="type">El</span> = $(<span class="string">'&lt;div&gt;&lt;/div&gt;'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="keyword">var</span> <span class="keyword">new</span><span class="type">El</span> = document.createElement(<span class="string">'div'</span>);</div></pre></td></tr></table></figure>
+<h2 id="添加事件"><a href="#添加事件" class="headerlink" title="添加事件"></a>添加事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).on(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line">[].forEach.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'.el'</span>), <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</div><div class="line">  el.addEventListener(<span class="string">'event'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">  &#125;, <span class="literal">false</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="get-set属性"><a href="#get-set属性" class="headerlink" title="get/set属性"></a>get/set属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).filter(<span class="string">':first'</span>).attr(<span class="string">'key'</span>, <span class="string">'value'</span>);</div><div class="line">$(<span class="string">'.el'</span>).filter(<span class="string">':first'</span>).attr(<span class="string">'key'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).setAttribute(<span class="string">'key'</span>, <span class="string">'value'</span>);</div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).getAttribute(<span class="string">'key'</span>);</div></pre></td></tr></table></figure>
+<h2 id="添加和移除样式Class"><a href="#添加和移除样式Class" class="headerlink" title="添加和移除样式Class"></a>添加和移除样式Class</h2><p>DOM元素本身有一个可读写的className属性，可以用来操作class。</p>
 <p>HTML 5还提供一个classList对象，功能更强大（IE 9不支持）。</p>
-<pre><code>// jQuery
-$(&#39;.el&#39;).addClass(&#39;class&#39;);
-$(&#39;.el&#39;).removeClass(&#39;class&#39;);
-$(&#39;.el&#39;).toggleClass(&#39;class&#39;);
-
-// Native
-document.querySelector(&#39;.el&#39;).classList.add(&#39;class&#39;);
-document.querySelector(&#39;.el&#39;).classList.remove(&#39;class&#39;);
-document.querySelector(&#39;.el&#39;).classList.toggle(&#39;class&#39;);
-</code></pre><h2 id="追加元素"><a href="#追加元素" class="headerlink" title="追加元素"></a>追加元素</h2><p>尾部追加元素：</p>
-<pre><code>// jQuery
-$(&#39;.el&#39;).append($(&#39;&lt;div/&gt;&#39;));
-
-// Native
-document.querySelector(&#39;.el&#39;).appendChild(document.createElement(&#39;div&#39;));
-</code></pre><p>头部追加元素：</p>
-<pre><code>//jQuery
-$(‘.el’).prepend(&#39;&lt;div&gt;&lt;/div&gt;&#39;)
-
-//Native
-var parent = document.querySelector(&#39;.el&#39;);
-parent.insertBefore(&quot;&lt;div&gt;&lt;/div&gt;&quot;,parent.childNodes[0])
-</code></pre><h2 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a>克隆元素</h2><pre><code>// jQuery
-var clonedEl = $(&#39;.el&#39;).clone();
-
-// Native
-var clonedEl = document.querySelector(&#39;.el&#39;).cloneNode(true);
-</code></pre><h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><pre><code>Remove
-// jQuery
-$(&#39;.el&#39;).remove();
-
-// Native
-remove(&#39;.el&#39;);
-
-function remove(el) {
-  var toRemove = document.querySelector(el);
-
-  toRemove.parentNode.removeChild(toRemove);
-}
-</code></pre><h2 id="获取父级元素"><a href="#获取父级元素" class="headerlink" title="获取父级元素"></a>获取父级元素</h2><pre><code>// jQuery
-$(&#39;.el&#39;).parent();
-
-// Native
-document.querySelector(&#39;.el&#39;).parentNode;
-</code></pre><h2 id="获取上一个-下一个元素（Prev-next-element）"><a href="#获取上一个-下一个元素（Prev-next-element）" class="headerlink" title="获取上一个/下一个元素（Prev/next element）"></a>获取上一个/下一个元素（Prev/next element）</h2><pre><code>// jQuery
-$(&#39;.el&#39;).prev();
-$(&#39;.el&#39;).next();
-
-// Native
-document.querySelector(&#39;.el&#39;).previousElementSibling;
-document.querySelector(&#39;.el&#39;).nextElementSibling;
-</code></pre><h2 id="XHR-and-AJAX"><a href="#XHR-and-AJAX" class="headerlink" title="XHR and AJAX"></a>XHR and AJAX</h2><pre><code>// jQuery
-$.get(&#39;url&#39;, function (data) {
-
-});
-$.post(&#39;url&#39;, {data: data}, function (data) {
-
-});
-
-// Native
-
-// get
-var xhr = new XMLHttpRequest();
-
-xhr.open(&#39;GET&#39;, url);
-xhr.onreadystatechange = function (data) {
-
-}
-xhr.send();
-
-// post
-var xhr = new XMLHttpRequest()
-
-xhr.open(&#39;POST&#39;, url);
-xhr.onreadystatechange = function (data) {
-
-}
-xhr.send({data: data});
-</code></pre><h2 id="清空子元素"><a href="#清空子元素" class="headerlink" title="清空子元素"></a>清空子元素</h2><pre><code>//jQuery
-$(&quot;#elementID&quot;).empty()
-
-//Native
-var element = document.getElementById(&quot;elementID&quot;)
-while(element.firstChild) element.removeChild(element.firstChild);
-</code></pre><h2 id="检查是否有子元素"><a href="#检查是否有子元素" class="headerlink" title="检查是否有子元素"></a>检查是否有子元素</h2><pre><code>//jQuery
-if (!$(&quot;#elementID&quot;).is(&quot;:empty&quot;)){}
-
-//Native
-if (document.getElementById(&quot;elementID&quot;).hasChildNodes()){}
-</code></pre><h2 id="document-ready"><a href="#document-ready" class="headerlink" title="$(document).ready"></a>$(document).ready</h2><p>DOM加载完成，会触发DOMContentLoaded事件，等同于jQuery的$(document).ready方法。</p>
-<pre><code>document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
-    // ...
-});
-</code></pre><h2 id="数据储存"><a href="#数据储存" class="headerlink" title="数据储存"></a>数据储存</h2><p>jQuery对象可以储存数据。</p>
-<pre><code>$(&quot;body&quot;).data(&quot;foo&quot;, 52);
-$(&quot;body&quot;).data(&quot;foo&quot;);
-</code></pre><p>HTML 5有一个dataset对象，也有类似的功能（IE 10不支持），不过只能保存字符串。</p>
-<pre><code>element.dataset.user = JSON.stringify(user);
-element.dataset.score = score;
-</code></pre><h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>jQuery的animate方法，用于生成动画效果。</p>
-<pre><code>$foo.animate(&#39;slow&#39;, { x: &#39;+=10px&#39; })
-</code></pre><p>jQuery的动画效果，很大部分基于DOM。但是目前，CSS 3的动画远比DOM强大，所以可以把动画效果写进CSS，然后通过操作DOM元素的class，来展示动画。</p>
-<pre><code>foo.classList.add(&#39;animate&#39;)
-</code></pre><p>如果需要对动画使用回调函数，CSS 3也定义了相应的事件。</p>
-<pre><code>el.addEventListener(&quot;webkitTransitionEnd&quot;, transitionEnded);
-el.addEventListener(&quot;transitionend&quot;, transitionEnded);
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).addClass(<span class="string">'class'</span>);</div><div class="line">$(<span class="string">'.el'</span>).removeClass(<span class="string">'class'</span>);</div><div class="line">$(<span class="string">'.el'</span>).toggleClass(<span class="string">'class'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).classList.add(<span class="string">'class'</span>);</div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).classList.remove(<span class="string">'class'</span>);</div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).classList.toggle(<span class="string">'class'</span>);</div></pre></td></tr></table></figure>
+<h2 id="追加元素"><a href="#追加元素" class="headerlink" title="追加元素"></a>追加元素</h2><p>尾部追加元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).append($(<span class="string">'&lt;div/&gt;'</span>));</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).appendChild(<span class="built_in">document</span>.createElement(<span class="string">'div'</span>));</div></pre></td></tr></table></figure>
+<p>头部追加元素：</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//jQuery</span></div><div class="line">$(‘.el’).prepend(<span class="string">'&lt;div&gt;&lt;/div&gt;'</span>)</div><div class="line"></div><div class="line"><span class="comment">//Native</span></div><div class="line"><span class="keyword">var</span> <span class="built_in">parent</span> = <span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>);</div><div class="line"><span class="built_in">parent</span>.insertBefore(<span class="string">"&lt;div&gt;&lt;/div&gt;"</span>,<span class="built_in">parent</span>.childNodes[<span class="number">0</span>])</div></pre></td></tr></table></figure>
+<h2 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a>克隆元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line"><span class="keyword">var</span> clonedEl = $(<span class="string">'.el'</span>).clone();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="keyword">var</span> clonedEl = <span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).cloneNode(<span class="literal">true</span>);</div></pre></td></tr></table></figure>
+<h2 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Remove</div><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).remove();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line">remove(<span class="string">'.el'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">el</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> toRemove = <span class="built_in">document</span>.querySelector(el);</div><div class="line"></div><div class="line">  toRemove.parentNode.removeChild(toRemove);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="获取父级元素"><a href="#获取父级元素" class="headerlink" title="获取父级元素"></a>获取父级元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).parent();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).parentNode;</div></pre></td></tr></table></figure>
+<h2 id="获取上一个-下一个元素（Prev-next-element）"><a href="#获取上一个-下一个元素（Prev-next-element）" class="headerlink" title="获取上一个/下一个元素（Prev/next element）"></a>获取上一个/下一个元素（Prev/next element）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$(<span class="string">'.el'</span>).prev();</div><div class="line">$(<span class="string">'.el'</span>).next();</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).previousElementSibling;</div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'.el'</span>).nextElementSibling;</div></pre></td></tr></table></figure>
+<h2 id="XHR-and-AJAX"><a href="#XHR-and-AJAX" class="headerlink" title="XHR and AJAX"></a>XHR and AJAX</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// jQuery</span></div><div class="line">$.get(<span class="string">'url'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">$.post(<span class="string">'url'</span>, &#123;<span class="attr">data</span>: data&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// Native</span></div><div class="line"></div><div class="line"><span class="comment">// get</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"></div><div class="line">xhr.open(<span class="string">'GET'</span>, url);</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">xhr.send();</div><div class="line"></div><div class="line"><span class="comment">// post</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</div><div class="line"></div><div class="line">xhr.open(<span class="string">'POST'</span>, url);</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">xhr.send(&#123;<span class="attr">data</span>: data&#125;);</div></pre></td></tr></table></figure>
+<h2 id="清空子元素"><a href="#清空子元素" class="headerlink" title="清空子元素"></a>清空子元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//jQuery</span></div><div class="line">$(<span class="string">"#elementID"</span>).empty()</div><div class="line"></div><div class="line"><span class="comment">//Native</span></div><div class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"elementID"</span>)</div><div class="line"><span class="keyword">while</span>(element.firstChild) element.removeChild(element.firstChild);</div></pre></td></tr></table></figure>
+<h2 id="检查是否有子元素"><a href="#检查是否有子元素" class="headerlink" title="检查是否有子元素"></a>检查是否有子元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//jQuery</span></div><div class="line"><span class="keyword">if</span> (!$(<span class="string">"#elementID"</span>).is(<span class="string">":empty"</span>))&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//Native</span></div><div class="line"><span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">"elementID"</span>).hasChildNodes())&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="document-ready"><a href="#document-ready" class="headerlink" title="$(document).ready"></a>$(document).ready</h2><p>DOM加载完成，会触发DOMContentLoaded事件，等同于jQuery的$(document).ready方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="数据储存"><a href="#数据储存" class="headerlink" title="数据储存"></a>数据储存</h2><p>jQuery对象可以储存数据。</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>, <span class="number">52</span>)<span class="comment">;</span></div><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>HTML 5有一个dataset对象，也有类似的功能（IE 10不支持），不过只能保存字符串。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">element.dataset.<span class="keyword">user</span> <span class="title">= JSON</span>.stringify(user);</div><div class="line">element.dataset.score = score;</div></pre></td></tr></table></figure>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>jQuery的animate方法，用于生成动画效果。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">foo.animate(<span class="string">'slow'</span>, &#123; x: <span class="string">'+=10px'</span> &#125;)</span></div></pre></td></tr></table></figure>
+<p>jQuery的动画效果，很大部分基于DOM。但是目前，CSS 3的动画远比DOM强大，所以可以把动画效果写进CSS，然后通过操作DOM元素的class，来展示动画。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">foo<span class="selector-class">.classList</span><span class="selector-class">.add</span>(<span class="string">'animate'</span>)</div></pre></td></tr></table></figure>
+<p>如果需要对动画使用回调函数，CSS 3也定义了相应的事件。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">el</span><span class="selector-class">.addEventListener</span>(<span class="string">"webkitTransitionEnd"</span>, transitionEnded);</div><div class="line"><span class="selector-tag">el</span><span class="selector-class">.addEventListener</span>(<span class="string">"transitionend"</span>, transitionEnded);</div></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">

@@ -17,18 +17,18 @@
   
   
   <title>日常问题整理 | Blog | 张成</title>
-  <meta name="description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项arr[Math.floor(Math.random()*arr.length)]  阻止浏览器默认的右键点击事件window.document.oncontextmenu = function () { return false; }  左击右击事件function clickMe() { var event = event ? event">
+  <meta name="description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项1arr[Math.floor(Math.random()*arr.length)] 阻止浏览器默认的右键点击事件123window.document.oncontextmenu = function () &amp;#123;return false;&amp;#125; 左击右击事件123456789function clickMe() &amp;#123;var">
 <meta name="keywords" content="css,html,javascript,jquery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日常问题整理">
 <meta property="og:url" content="http://zc95.github.io/2017/10/21/dailySummary/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项arr[Math.floor(Math.random()*arr.length)]  阻止浏览器默认的右键点击事件window.document.oncontextmenu = function () { return false; }  左击右击事件function clickMe() { var event = event ? event">
+<meta property="og:description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项1arr[Math.floor(Math.random()*arr.length)] 阻止浏览器默认的右键点击事件123window.document.oncontextmenu = function () &amp;#123;return false;&amp;#125; 左击右击事件123456789function clickMe() &amp;#123;var">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2017-11-21T10:51:17.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常问题整理">
-<meta name="twitter:description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项arr[Math.floor(Math.random()*arr.length)]  阻止浏览器默认的右键点击事件window.document.oncontextmenu = function () { return false; }  左击右击事件function clickMe() { var event = event ? event">
+<meta name="twitter:description" content="记录每天学到的知识点或者遇到的问题 从数组里随机取一项1arr[Math.floor(Math.random()*arr.length)] 阻止浏览器默认的右键点击事件123window.document.oncontextmenu = function () &amp;#123;return false;&amp;#125; 左击右击事件123456789function clickMe() &amp;#123;var">
   <!-- Canonical links -->
   <link rel="canonical" href="http://zc95.github.io/2017/10/21/dailySummary/index.html">
   
@@ -458,362 +458,55 @@
     <div class="article-entry markdown-body" itemprop="articleBody">
       
         <p>记录每天学到的知识点或者遇到的问题</p>
-<h2 id="从数组里随机取一项"><a href="#从数组里随机取一项" class="headerlink" title="从数组里随机取一项"></a>从数组里随机取一项</h2><pre><code class="javascript">arr[Math.floor(Math.random()*arr.length)]
-</code></pre>
-<h2 id="阻止浏览器默认的右键点击事件"><a href="#阻止浏览器默认的右键点击事件" class="headerlink" title="阻止浏览器默认的右键点击事件"></a>阻止浏览器默认的右键点击事件</h2><pre><code class="javascript">window.document.oncontextmenu = function () {
-return false;
-}
-</code></pre>
-<h2 id="左击右击事件"><a href="#左击右击事件" class="headerlink" title="左击右击事件"></a>左击右击事件</h2><pre><code class="javascript">function clickMe() {
-var event = event ? event : window.event;
-if (1 == event.which) {
-//左击
-}
-if (3 == event.which) {
-//右击
-}
-}
-</code></pre>
-<h2 id="循环时候去掉最后一个逗号"><a href="#循环时候去掉最后一个逗号" class="headerlink" title="循环时候去掉最后一个逗号"></a>循环时候去掉最后一个逗号</h2><pre><code class="javascript">var json = eval(msg), arr = [];
-for (var k in json[0]) {
-arr.push(k + &quot;：&quot; + json[0][k] + &quot;条&quot;);
-}
-$(&#39;#dataNum&#39;).html(arr.join(&#39;，&#39;));
-</code></pre>
-<h2 id="判断是否存在id为item元素"><a href="#判断是否存在id为item元素" class="headerlink" title="判断是否存在id为item元素"></a>判断是否存在id为item元素</h2><pre><code class="javascript">if($(&#39;#item&#39;).length!=0){//因为jquery获取的元素是一个集合，看长度是否为0就可以知道是不是存在
-//有元素
-}else{
-//没有元素
-}
-</code></pre>
-<h2 id="生成区间随机数"><a href="#生成区间随机数" class="headerlink" title="生成区间随机数"></a>生成区间随机数</h2><pre><code class="javascript">function getRandom(m,n){
-return Math.floor(Math.random()*(n-m+1)+m)
-}
-</code></pre>
-<h2 id="小数转为百分数"><a href="#小数转为百分数" class="headerlink" title="小数转为百分数"></a>小数转为百分数</h2><pre><code class="javascript">Number(point*100).toFixed(2)+&quot;%&quot;;
-</code></pre>
-<h2 id="trim-去掉前后空白"><a href="#trim-去掉前后空白" class="headerlink" title="trim() 去掉前后空白"></a>trim() 去掉前后空白</h2><pre><code class="javascript">//去左空格;
-function ltrim(s){
-return s.replace(/(^\s*)/g, &quot;&quot;);
-}
-//去右空格;
-function rtrim(s){
-return s.replace(/(\s*$)/g, &quot;&quot;);
-}
-//去左右空格;
-function trim(s){
-return s.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);
-}
-</code></pre>
-<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><pre><code class="javascript">function QuChong(arr){
-var newArr =[];
-for(i in arr){
-if(!newArr.includes(arr[i])){
-newArr.push(arr[i]);
-}
-}
-return newArr;
-}
-</code></pre>
-<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h2><pre><code class="javascript">reverse();用于翻转数组，该方法会改变原来的数组，而不会创建新的数组。
-</code></pre>
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><pre><code class="javascript">function sortNumber(a,b)
-{
-return a - b;//升序
-//return b - a;//倒序 或者升序之后用 reverse() 翻转数组
-}
-arr.sort(sortNumber);
-</code></pre>
-<h2 id="找出元素-item-在给定数组-arr-中的位置"><a href="#找出元素-item-在给定数组-arr-中的位置" class="headerlink" title="找出元素 item 在给定数组 arr 中的位置"></a>找出元素 item 在给定数组 arr 中的位置</h2><pre><code class="javascript">function indexOf(arr, item) {
-return arr.indexOf(item)
-}
-</code></pre>
-<h2 id="计算给定数组-arr-中所有元素的总和"><a href="#计算给定数组-arr-中所有元素的总和" class="headerlink" title="计算给定数组 arr 中所有元素的总和"></a>计算给定数组 arr 中所有元素的总和</h2><pre><code class="javascript">计算给定数组 arr 中所有元素的总和
-function sum(arr) {
-var hehe=0;
-for(e in arr){
-hehe += arr[e];
-}
-return hehe;
-}
-function sum(arr) {
-return eval(arr.join(&#39;+&#39;));
-}
-</code></pre>
-<h2 id="移除数组-arr-中的所有值与-item-相等的元素"><a href="#移除数组-arr-中的所有值与-item-相等的元素" class="headerlink" title="移除数组 arr 中的所有值与 item 相等的元素"></a>移除数组 arr 中的所有值与 item 相等的元素</h2><pre><code class="javascript">移除数组 arr 中的所有值与 item 相等的元素。不要直接修改数组 arr，结果返回新的数组
-function remove(arr, item) {
-var arr2 =[];
-for(e in arr){
-if(arr[e] != item){
-arr2.push(arr[e]);
-}
-}
-return arr2;
-}
-function remove(arr, item) {
-var newArr = arr.slice(0);
-while(newArr.indexOf(item)!=-1){
-newArr.splice(newArr.indexOf(item),1);
-}
-return newArr;
-}
-</code></pre>
-<h2 id="在数组-arr-末尾添加元素-item"><a href="#在数组-arr-末尾添加元素-item" class="headerlink" title="在数组 arr 末尾添加元素 item"></a>在数组 arr 末尾添加元素 item</h2><pre><code class="javascript">在数组 arr 末尾添加元素 item。不要直接修改数组 arr，结果返回新的数组
-function append(arr, item) {
-return arr.concat([item]);
-}
-function append(arr, item) {
-var newArr = arr.slice(0);
-return newArr.push(item);
-}
-</code></pre>
-<h2 id="删除数组-arr-最后一个元素"><a href="#删除数组-arr-最后一个元素" class="headerlink" title="删除数组 arr 最后一个元素"></a>删除数组 arr 最后一个元素</h2><pre><code class="javascript">删除数组 arr 最后一个元素。不要直接修改数组 arr，结果返回新的数组
-function truncate(arr) {
-var newArr = arr.slice(0);
-newArr.pop();
-//newArr.splice(newArr.length-1,1);
-//newArr.splice(newArr.length-1);
-return newArr;
-}
-</code></pre>
-<h2 id="在数组-arr-开头添加元素-item"><a href="#在数组-arr-开头添加元素-item" class="headerlink" title="在数组 arr 开头添加元素 item"></a>在数组 arr 开头添加元素 item</h2><pre><code class="javascript">在数组 arr 开头添加元素 item。不要直接修改数组 arr，结果返回新的数组
-function prepend(arr, item) {
-return [item].concat(arr);
-}
-function prepend(arr, item) {
-var newArr = arr.slice(0);
-newArr.unshift(item);
-return newArr;
-}
-</code></pre>
-<h2 id="删除数组-arr-第一个元素"><a href="#删除数组-arr-第一个元素" class="headerlink" title="删除数组 arr 第一个元素"></a>删除数组 arr 第一个元素</h2><pre><code class="javascript">删除数组 arr 第一个元素。不要直接修改数组 arr，结果返回新的数组
-function curtail(arr) {
-return arr.slice(1);
-}
-</code></pre>
-<h2 id="合并数组-arr1-和数组-arr2"><a href="#合并数组-arr1-和数组-arr2" class="headerlink" title="合并数组 arr1 和数组 arr2"></a>合并数组 arr1 和数组 arr2</h2><pre><code class="javascript">合并数组 arr1 和数组 arr2。不要直接修改数组 arr，结果返回新的数组
-function concat(arr1, arr2) {
-return arr1.concat(arr2);
-}
-</code></pre>
-<h2 id="在数组-arr-的-index-处添加元素-item"><a href="#在数组-arr-的-index-处添加元素-item" class="headerlink" title="在数组 arr 的 index 处添加元素 item"></a>在数组 arr 的 index 处添加元素 item</h2><pre><code class="javascript">在数组 arr 的 index 处添加元素 item。不要直接修改数组 arr，结果返回新的数组
-function insert(arr, item, index) {
-var newArr = arr.slice(0);
-newArr.splice(index,0,item);
-return newArr;
-}
-</code></pre>
-<h2 id="统计数组-arr-中值等于-item-的元素出现的次数"><a href="#统计数组-arr-中值等于-item-的元素出现的次数" class="headerlink" title="统计数组 arr 中值等于 item 的元素出现的次数"></a>统计数组 arr 中值等于 item 的元素出现的次数</h2><pre><code class="javascript">统计数组 arr 中值等于 item 的元素出现的次数
-function count(arr, item) {
-var c=0;
-for(e in arr){
-if(arr[e]==item){
-c++;
-}
-}
-return c;
-}
-</code></pre>
-<h2 id="生成m到n的区间随机数"><a href="#生成m到n的区间随机数" class="headerlink" title="生成m到n的区间随机数"></a>生成m到n的区间随机数</h2><pre><code class="javascript">生成m到n的区间随机数
-function getRand(m, n) {
-var random = Math.floor(Math.random() * (n - m + 1) + m);
-return random;
-}
-</code></pre>
-<h2 id="检查数组里是否包含了某值"><a href="#检查数组里是否包含了某值" class="headerlink" title="检查数组里是否包含了某值"></a>检查数组里是否包含了某值</h2><pre><code class="javascript">检查数组里是否包含了某值
-arr.includes(item);//结果返回true和false
-</code></pre>
-<h2 id="编写一个javscript函数-fn"><a href="#编写一个javscript函数-fn" class="headerlink" title="编写一个javscript函数 fn"></a>编写一个javscript函数 fn</h2><pre><code class="javascript">编写一个javscript函数 fn，该函数有一个参数 n(数字类型)，其返回值是一个数组，该数组内是 n 个随机且不重复的整数，且整数取值范围是 [2, 32]。
-//fn函数
-function fn(n) {
-var arr = [];
-for (var i = 0; i &lt; n; i++) {
-var rnd = getRand(2, 32);
-if (arr.includes(rnd)) {
-i--;//减一是因为如果第i次循环的时候如果数组有了改值，就重新走一遍
-} else {
-arr.push(rnd);
-}
-}
-return arr;
-}
-//生成区间随机数
-function getRand(m, n) {
-var random = Math.floor(Math.random() * (n - m + 1) + m);
-return random;
-}
-//检查是否重复,这里直接用了 arr.includes(e)
-function checkInArr(e,arr){
-if(arr.indexOf(e)==-1){
-return false;
-}
-return true;
-}
-//console.log(fn(5));
-</code></pre>
-<h2 id="打乱一个数组"><a href="#打乱一个数组" class="headerlink" title="打乱一个数组"></a>打乱一个数组</h2><pre><code class="javascript">randomArr.sort(function () { return Math.random() &gt; 0.5 ? -1 : 1; });
-</code></pre>
-<h2 id="动态添加行"><a href="#动态添加行" class="headerlink" title="动态添加行"></a>动态添加行</h2><pre><code class="javascript">function AddRow(json) {
-//json: [{&quot;OperatorNum&quot;:&quot;8000011&quot;,&quot;TollT&quot;:1,&quot;TollY&quot;:2,&quot;TollS&quot;:3,&quot;TollC&quot;:4,&quot;ArrearageNum&quot;:5,&quot;ArrearageToll&quot;:6,&quot;AddNum&quot;:7,&quot;AddToll&quot;:8},{&quot;OperatorNum&quot;:&quot;总计&quot;,&quot;TollT&quot;:1,&quot;TollY&quot;:2,&quot;TollS&quot;:3,&quot;TollC&quot;:4,&quot;ArrearageNum&quot;:5,&quot;ArrearageToll&quot;:6,&quot;AddNum&quot;:7,&quot;AddToll&quot;:8}]
-$(&#39;#tbody&#39;).html(&#39;&#39;);
-for (key in json) {
-var _tr = $(&quot;&lt;tr&gt;&lt;/tr&gt;&quot;);
-for (var k in json[key]) {
-var _td = $(&quot;&lt;td&gt;&quot; + json[key][k] + &quot;&lt;/td&gt;&quot;);
-_tr.append(_td);
-}
-$(&#39;#tbody&#39;).append(_tr);
-}
-}
-</code></pre>
-<h2 id="a标签的一些用法"><a href="#a标签的一些用法" class="headerlink" title="a标签的一些用法"></a>a标签的一些用法</h2><pre><code class="javascript">&lt;a href=&quot;javascript:void(alert(&#39;Warning!!!&#39;))&quot;&gt;点我弹窗&lt;/a&gt;
-&lt;a href=&quot;javascript:void(0)&quot;&gt;点我没效果&lt;/a&gt;
-&lt;a href=&quot;#pos&quot;&gt;点我定位到指定位置&lt;/a&gt;
-&lt;a href=&quot;#&quot;&gt;点我定位到顶部&lt;/a&gt;
-</code></pre>
-<h2 id="计算给定数组-arr-中所有元素的总和-1"><a href="#计算给定数组-arr-中所有元素的总和-1" class="headerlink" title="计算给定数组 arr 中所有元素的总和"></a>计算给定数组 arr 中所有元素的总和</h2><pre><code class="javascript">//一般的方法
-function sum(arr) {
-var sum = 0;
-for(var i =0;i&lt;arr.length;i++){
-sum = sum +arr[i];
-}
-return sum;
-}
-//或者可以这样
-function sum(arr) {
-return eval(arr.join(&quot;+&quot;))
-}
-</code></pre>
-<h2 id="checkbox的一些用法"><a href="#checkbox的一些用法" class="headerlink" title="checkbox的一些用法"></a>checkbox的一些用法</h2><pre><code class="javascript">$(&quot;input[name=&#39;WeiZhi&#39;]&quot;);  //选取name为xx的元素
-$(&quot;input[type=&#39;checkbox&#39;]&quot;).prop(&#39;checked&#39;,true);  //设置checkbox选中
-$(&quot;input[type=&#39;checkbox&#39;]&quot;).attr(&#39;checked&#39;);  //两种结果 &quot;checked&quot;和undefined，注意引号！
-$(&quot;input[name=&#39;WeiZhi&#39;]:checked&quot;).length;  // 选中的个数
-</code></pre>
-<h2 id="小数转百分数"><a href="#小数转百分数" class="headerlink" title="小数转百分数"></a>小数转百分数</h2><pre><code class="javascript">function toPercent(point) {
-return Number(point * 100).toFixed(2) + &quot;%&quot;;//保留2位小数
-}
-</code></pre>
-<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><pre><code class="javascript">.clearfix:after, {
-content: &quot;.&quot;;
-display: block;
-height: 0;
-clear: both;
-visibility: hidden;
-}
-</code></pre>
-<h2 id="获取事件源"><a href="#获取事件源" class="headerlink" title="获取事件源"></a>获取事件源</h2><pre><code class="javascript">function test(){
-var event = event? event: window.event;
-var srcObj = ((event.srcElement)?event.srcElement:event.target);
-alert($(srcObj));
-}
-</code></pre>
-<h2 id="阻止页面的表单元素自动联想填满"><a href="#阻止页面的表单元素自动联想填满" class="headerlink" title="阻止页面的表单元素自动联想填满"></a>阻止页面的表单元素自动联想填满</h2><pre><code class="javascript">&lt;form id=&quot;Content&quot; autocomplete=&quot;off&quot;&gt;
-autocomplete=&quot;off&quot;用来阻止浏览器自动填充（联想）
-</code></pre>
-<h2 id="动态创建table"><a href="#动态创建table" class="headerlink" title="动态创建table"></a>动态创建table</h2><pre><code class="javascript">var json = eval(msg);
-var tab = &quot;&quot;;
-if (json.length &gt; 0) {
-$.each(json, function (i, n) {
-var num = i + 1;
-tab += &quot;
-&lt;tr&gt;
-    &lt;td style=&#39;text-align:center;&#39;&gt;&quot; + num + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.NianFen + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.YueFen + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.SFZName + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.DFNum + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.PJF + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.ZongFenShu + &quot;&lt;/td&gt;
-    &lt;td&gt;&quot; + n.RenShu + &quot;&lt;/td&gt;
-&lt;/tr&gt;&quot;;
-})
-$(&quot;#tbody&quot;).html(tab);
-}
-</code></pre>
-<h2 id="查看的绑定"><a href="#查看的绑定" class="headerlink" title="查看的绑定"></a>查看的绑定</h2><pre><code class="javascript">var json = eval(msg);
-if (json.length &gt; 0) {
-for (var key in json[0]) {
-$(&quot;#&quot; + key).text(json[0][key]);
-}
-}
-</code></pre>
-<h2 id="让input只能输入正整数"><a href="#让input只能输入正整数" class="headerlink" title="让input只能输入正整数"></a>让input只能输入正整数</h2><pre><code class="javascript">&lt;input type=&quot;text&quot; onkeyup=&quot;this.value=this.value.replace(/\D/g,&#39;&#39;)&quot;
-注意：一般在JS中拼接的时候 符号 \  会被视为转义字符，最后页面显示的是.replace(/D/g,&#39;&#39;)&quot; 。 所以在JS拼接时可以这样：.replace(/\\D/g,&#39;&#39;)&quot;
-</code></pre>
-<h2 id="自适应屏幕大小"><a href="#自适应屏幕大小" class="headerlink" title="自适应屏幕大小"></a>自适应屏幕大小</h2><pre><code class="javascript">document.getElementById(&#39;InforList&#39;).style.width = document.body.clientWidth * 0.90 + &quot;px&quot;;
-document.getElementById(&#39;InforList&#39;).style.height = window.innerHeight * 0.75 + &quot;px&quot;;
-</code></pre>
-<h2 id="获取选中的下拉列表的value和text"><a href="#获取选中的下拉列表的value和text" class="headerlink" title="获取选中的下拉列表的value和text"></a>获取选中的下拉列表的value和text</h2><pre><code class="javascript">var index = $(&#39;#HuoJia&#39;)[0].selectedIndex; // 选中索引
-var HuoJia = $(&#39;#HuoJia&#39;)[0].options[index].text; // 选中文本
-$(&quot;#HuoJia&quot;).find(&quot;option:selected&quot;).text() //简洁
-</code></pre>
-<h2 id="join-split-splice-substring的区别"><a href="#join-split-splice-substring的区别" class="headerlink" title="join, split, splice, substring的区别"></a>join, split, splice, substring的区别</h2><pre><code class="javascript">join(&#39;,&#39;)是将数组用逗号隔开，转化为字符串
-split(&#39;-&#39;)是以字符串中的-符号转化为数组
-splice(3,1)是返回 从下标索引为3的位置切割出长度为1的字符
-str.substring(3,5)是截取两个指定下标位置的字符串，这个是下标为3和5的位置
-</code></pre>
-<h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h2><pre><code class="javascript">在写侧边栏点击变色的时候可以选择为li的点击事件加上addClass(&#39;active&#39;)和removeClass(&#39;active&#39;),但是在样式表里你不能直接写.active的样式
-注意看看之前有没有写过li的样式，比如你点击的这个li上级的class为.side，假如之前写过.side&gt;li{ background-color:red; }的样式，点击虽然可以为li加上class，但是
-.active{ background-color:black; }的样式不能体现，这时候这样写就行了.side&gt;.active{ background-color:black; }，因为子元素选择器的权重比较高，会覆盖其他单独class的样式
-</code></pre>
-<h2 id="背景图片充满屏幕"><a href="#背景图片充满屏幕" class="headerlink" title="背景图片充满屏幕"></a>背景图片充满屏幕</h2><pre><code class="javascript">/*背景图片充满屏幕的时候可以这样避免图片大小的因素*/
-&lt;div style=&quot;position: absolute; width: 100%; height: 100%; z-index: -1&quot;&gt;
-    &lt;img id=&quot;bgcolor&quot; style=&quot;position: fixed;&quot; src=&quot;~/Images/icon_login02.jpg&quot; width=&quot;100%&quot;/&gt;
-&lt;/div&gt;
-background: linear-gradient(#24a8e6, #44a9dc, #6bc5ec);/*渐变色。注意是background,不是background-color*/
-</code></pre>
-<h2 id="隐藏侧边导航的滚动条"><a href="#隐藏侧边导航的滚动条" class="headerlink" title="隐藏侧边导航的滚动条"></a>隐藏侧边导航的滚动条</h2><pre><code class="javascript">::-webkit-scrollbar{width:0px;} /*隐藏侧边导航的滚动条，只支持webkit内核的浏览器*/
-</code></pre>
-<h2 id="常用的返回上一页方法"><a href="#常用的返回上一页方法" class="headerlink" title="常用的返回上一页方法"></a>常用的返回上一页方法</h2><pre><code class="javascript">window.location.href = &quot;/XXX/XXX&quot;;
-window.location.href = document.referrer;
-history.back(-1);
-window.history.back();
-history.go(-1);
-</code></pre>
-<h2 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h2><pre><code class="javascript">$(window).scroll(function () {
-var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
-if ( scrollt &gt; 700 ){
-$(&quot;.to-top&quot;).fadeIn(500);
-} else {
-$(&quot;.to-top&quot;).fadeOut(500);
-}
-});
-
-$(&quot;.to-top&quot;).click(function(){
-$(&quot;html,body&quot;).animate({scrollTop: 0}, 1000);
-});
-</code></pre>
-<h2 id="防止用户选中文字"><a href="#防止用户选中文字" class="headerlink" title="防止用户选中文字"></a>防止用户选中文字</h2><pre><code class="javascript">onselectstart：return false;
--webkit-user-select:none;
-</code></pre>
-<h2 id="阴影和背景渐变色"><a href="#阴影和背景渐变色" class="headerlink" title="阴影和背景渐变色"></a>阴影和背景渐变色</h2><pre><code class="javascript">阴影：
-div{box-shadow: 10px 10px 5px #888888;}
-背景渐变色：
-background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#cdcdcd));
-</code></pre>
-<h2 id="悬浮放大"><a href="#悬浮放大" class="headerlink" title="悬浮放大"></a>悬浮放大</h2><pre><code class="javascript">.newSongBody div img,.singerBody div img{
-transition: transform 0.7s ;
-}
-.newSongBody div:hover img,.singerBody div:hover img {
-transform: scale(1.08,1.08);
-}
-</code></pre>
-<h2 id="超出div的部分省略号："><a href="#超出div的部分省略号：" class="headerlink" title="超出div的部分省略号："></a>超出div的部分省略号：</h2><pre><code class="javascript">.resourceDiv{
-width:80px;
-height:80px;
-overflow:hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-display:block;
-}
-</code></pre>
-<h2 id="enter键代替按钮点击"><a href="#enter键代替按钮点击" class="headerlink" title="enter键代替按钮点击"></a>enter键代替按钮点击</h2><pre><code class="javascript">document.onkeydown = function (event) {
-var e = event || window.event || arguments.callee.caller.arguments[0];
-if (e &amp;&amp; e.keyCode == 13) { // enter 键
-Login();
-}
-}
-</code></pre>
+<h2 id="从数组里随机取一项"><a href="#从数组里随机取一项" class="headerlink" title="从数组里随机取一项"></a>从数组里随机取一项</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr[<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*arr.length)]</div></pre></td></tr></table></figure>
+<h2 id="阻止浏览器默认的右键点击事件"><a href="#阻止浏览器默认的右键点击事件" class="headerlink" title="阻止浏览器默认的右键点击事件"></a>阻止浏览器默认的右键点击事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.document.oncontextmenu = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="左击右击事件"><a href="#左击右击事件" class="headerlink" title="左击右击事件"></a>左击右击事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">clickMe</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> event = event ? event : <span class="built_in">window</span>.event;</div><div class="line"><span class="keyword">if</span> (<span class="number">1</span> == event.which) &#123;</div><div class="line"><span class="comment">//左击</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="number">3</span> == event.which) &#123;</div><div class="line"><span class="comment">//右击</span></div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="循环时候去掉最后一个逗号"><a href="#循环时候去掉最后一个逗号" class="headerlink" title="循环时候去掉最后一个逗号"></a>循环时候去掉最后一个逗号</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(msg), arr = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> json[<span class="number">0</span>]) &#123;</div><div class="line">arr.push(k + <span class="string">"："</span> + json[<span class="number">0</span>][k] + <span class="string">"条"</span>);</div><div class="line">&#125;</div><div class="line">$(<span class="string">'#dataNum'</span>).html(arr.join(<span class="string">'，'</span>));</div></pre></td></tr></table></figure>
+<h2 id="判断是否存在id为item元素"><a href="#判断是否存在id为item元素" class="headerlink" title="判断是否存在id为item元素"></a>判断是否存在id为item元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>($(<span class="string">'#item'</span>).length!=<span class="number">0</span>)&#123;<span class="comment">//因为jquery获取的元素是一个集合，看长度是否为0就可以知道是不是存在</span></div><div class="line"><span class="comment">//有元素</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line"><span class="comment">//没有元素</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="生成区间随机数"><a href="#生成区间随机数" class="headerlink" title="生成区间随机数"></a>生成区间随机数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandom</span>(<span class="params">m,n</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(n-m+<span class="number">1</span>)+m)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="小数转为百分数"><a href="#小数转为百分数" class="headerlink" title="小数转为百分数"></a>小数转为百分数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Number</span>(point*<span class="number">100</span>).toFixed(<span class="number">2</span>)+<span class="string">"%"</span>;</div></pre></td></tr></table></figure>
+<h2 id="trim-去掉前后空白"><a href="#trim-去掉前后空白" class="headerlink" title="trim() 去掉前后空白"></a>trim() 去掉前后空白</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去左空格;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ltrim</span>(<span class="params">s</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> s.replace(<span class="regexp">/(^\s*)/g</span>, <span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//去右空格;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">rtrim</span>(<span class="params">s</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> s.replace(<span class="regexp">/(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//去左右空格;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">s</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> s.replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>, <span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">QuChong</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line"><span class="keyword">var</span> newArr =[];</div><div class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> arr)&#123;</div><div class="line"><span class="keyword">if</span>(!newArr.includes(arr[i]))&#123;</div><div class="line">newArr.push(arr[i]);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reverse();用于翻转数组，该方法会改变原来的数组，而不会创建新的数组。</div></pre></td></tr></table></figure>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortNumber</span>(<span class="params">a,b</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"><span class="keyword">return</span> a - b;<span class="comment">//升序</span></div><div class="line"><span class="comment">//return b - a;//倒序 或者升序之后用 reverse() 翻转数组</span></div><div class="line">&#125;</div><div class="line">arr.sort(sortNumber);</div></pre></td></tr></table></figure>
+<h2 id="找出元素-item-在给定数组-arr-中的位置"><a href="#找出元素-item-在给定数组-arr-中的位置" class="headerlink" title="找出元素 item 在给定数组 arr 中的位置"></a>找出元素 item 在给定数组 arr 中的位置</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">indexOf</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> arr.indexOf(item)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="计算给定数组-arr-中所有元素的总和"><a href="#计算给定数组-arr-中所有元素的总和" class="headerlink" title="计算给定数组 arr 中所有元素的总和"></a>计算给定数组 arr 中所有元素的总和</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">计算给定数组 arr 中所有元素的总和</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> hehe=<span class="number">0</span>;</div><div class="line"><span class="keyword">for</span>(e <span class="keyword">in</span> arr)&#123;</div><div class="line">hehe += arr[e];</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> hehe;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">eval</span>(arr.join(<span class="string">'+'</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="移除数组-arr-中的所有值与-item-相等的元素"><a href="#移除数组-arr-中的所有值与-item-相等的元素" class="headerlink" title="移除数组 arr 中的所有值与 item 相等的元素"></a>移除数组 arr 中的所有值与 item 相等的元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">移除数组 arr 中的所有值与 item 相等的元素。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> arr2 =[];</div><div class="line"><span class="keyword">for</span>(e <span class="keyword">in</span> arr)&#123;</div><div class="line"><span class="keyword">if</span>(arr[e] != item)&#123;</div><div class="line">arr2.push(arr[e]);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> arr2;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>);</div><div class="line"><span class="keyword">while</span>(newArr.indexOf(item)!=<span class="number">-1</span>)&#123;</div><div class="line">newArr.splice(newArr.indexOf(item),<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="在数组-arr-末尾添加元素-item"><a href="#在数组-arr-末尾添加元素-item" class="headerlink" title="在数组 arr 末尾添加元素 item"></a>在数组 arr 末尾添加元素 item</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">在数组 arr 末尾添加元素 item。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">append</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> arr.concat([item]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">append</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>);</div><div class="line"><span class="keyword">return</span> newArr.push(item);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="删除数组-arr-最后一个元素"><a href="#删除数组-arr-最后一个元素" class="headerlink" title="删除数组 arr 最后一个元素"></a>删除数组 arr 最后一个元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">删除数组 arr 最后一个元素。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">truncate</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>);</div><div class="line">newArr.pop();</div><div class="line"><span class="comment">//newArr.splice(newArr.length-1,1);</span></div><div class="line"><span class="comment">//newArr.splice(newArr.length-1);</span></div><div class="line"><span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="在数组-arr-开头添加元素-item"><a href="#在数组-arr-开头添加元素-item" class="headerlink" title="在数组 arr 开头添加元素 item"></a>在数组 arr 开头添加元素 item</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">在数组 arr 开头添加元素 item。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepend</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> [item].concat(arr);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">prepend</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>);</div><div class="line">newArr.unshift(item);</div><div class="line"><span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="删除数组-arr-第一个元素"><a href="#删除数组-arr-第一个元素" class="headerlink" title="删除数组 arr 第一个元素"></a>删除数组 arr 第一个元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">删除数组 arr 第一个元素。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curtail</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> arr.slice(<span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="合并数组-arr1-和数组-arr2"><a href="#合并数组-arr1-和数组-arr2" class="headerlink" title="合并数组 arr1 和数组 arr2"></a>合并数组 arr1 和数组 arr2</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">合并数组 arr1 和数组 arr2。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">concat</span>(<span class="params">arr1, arr2</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> arr1.concat(arr2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="在数组-arr-的-index-处添加元素-item"><a href="#在数组-arr-的-index-处添加元素-item" class="headerlink" title="在数组 arr 的 index 处添加元素 item"></a>在数组 arr 的 index 处添加元素 item</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">在数组 arr 的 index 处添加元素 item。不要直接修改数组 arr，结果返回新的数组</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">arr, item, index</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> newArr = arr.slice(<span class="number">0</span>);</div><div class="line">newArr.splice(index,<span class="number">0</span>,item);</div><div class="line"><span class="keyword">return</span> newArr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="统计数组-arr-中值等于-item-的元素出现的次数"><a href="#统计数组-arr-中值等于-item-的元素出现的次数" class="headerlink" title="统计数组 arr 中值等于 item 的元素出现的次数"></a>统计数组 arr 中值等于 item 的元素出现的次数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">统计数组 arr 中值等于 item 的元素出现的次数</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">count</span>(<span class="params">arr, item</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> c=<span class="number">0</span>;</div><div class="line"><span class="keyword">for</span>(e <span class="keyword">in</span> arr)&#123;</div><div class="line"><span class="keyword">if</span>(arr[e]==item)&#123;</div><div class="line">c++;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="生成m到n的区间随机数"><a href="#生成m到n的区间随机数" class="headerlink" title="生成m到n的区间随机数"></a>生成m到n的区间随机数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">生成m到n的区间随机数</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRand</span>(<span class="params">m, n</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> random = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (n - m + <span class="number">1</span>) + m);</div><div class="line"><span class="keyword">return</span> random;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="检查数组里是否包含了某值"><a href="#检查数组里是否包含了某值" class="headerlink" title="检查数组里是否包含了某值"></a>检查数组里是否包含了某值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">检查数组里是否包含了某值</div><div class="line">arr.includes(item);<span class="comment">//结果返回true和false</span></div></pre></td></tr></table></figure>
+<h2 id="编写一个javscript函数-fn"><a href="#编写一个javscript函数-fn" class="headerlink" title="编写一个javscript函数 fn"></a>编写一个javscript函数 fn</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">编写一个javscript函数 fn，该函数有一个参数 n(数字类型)，其返回值是一个数组，该数组内是 n 个随机且不重复的整数，且整数取值范围是 [<span class="number">2</span>, <span class="number">32</span>]。</div><div class="line"><span class="comment">//fn函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">n</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> arr = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line"><span class="keyword">var</span> rnd = getRand(<span class="number">2</span>, <span class="number">32</span>);</div><div class="line"><span class="keyword">if</span> (arr.includes(rnd)) &#123;</div><div class="line">i--;<span class="comment">//减一是因为如果第i次循环的时候如果数组有了改值，就重新走一遍</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">arr.push(rnd);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="comment">//生成区间随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRand</span>(<span class="params">m, n</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> random = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (n - m + <span class="number">1</span>) + m);</div><div class="line"><span class="keyword">return</span> random;</div><div class="line">&#125;</div><div class="line"><span class="comment">//检查是否重复,这里直接用了 arr.includes(e)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkInArr</span>(<span class="params">e,arr</span>)</span>&#123;</div><div class="line"><span class="keyword">if</span>(arr.indexOf(e)==<span class="number">-1</span>)&#123;</div><div class="line"><span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//console.log(fn(5));</span></div></pre></td></tr></table></figure>
+<h2 id="打乱一个数组"><a href="#打乱一个数组" class="headerlink" title="打乱一个数组"></a>打乱一个数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">randomArr.sort(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span> ? <span class="number">-1</span> : <span class="number">1</span>; &#125;);</div></pre></td></tr></table></figure>
+<h2 id="动态添加行"><a href="#动态添加行" class="headerlink" title="动态添加行"></a>动态添加行</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">AddRow</span>(<span class="params">json</span>) </span>&#123;</div><div class="line"><span class="comment">//json: [&#123;"OperatorNum":"8000011","TollT":1,"TollY":2,"TollS":3,"TollC":4,"ArrearageNum":5,"ArrearageToll":6,"AddNum":7,"AddToll":8&#125;,&#123;"OperatorNum":"总计","TollT":1,"TollY":2,"TollS":3,"TollC":4,"ArrearageNum":5,"ArrearageToll":6,"AddNum":7,"AddToll":8&#125;]</span></div><div class="line">$(<span class="string">'#tbody'</span>).html(<span class="string">''</span>);</div><div class="line"><span class="keyword">for</span> (key <span class="keyword">in</span> json) &#123;</div><div class="line"><span class="keyword">var</span> _tr = $(<span class="string">"&lt;tr&gt;&lt;/tr&gt;"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> json[key]) &#123;</div><div class="line"><span class="keyword">var</span> _td = $(<span class="string">"&lt;td&gt;"</span> + json[key][k] + <span class="string">"&lt;/td&gt;"</span>);</div><div class="line">_tr.append(_td);</div><div class="line">&#125;</div><div class="line">$(<span class="string">'#tbody'</span>).append(_tr);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="a标签的一些用法"><a href="#a标签的一些用法" class="headerlink" title="a标签的一些用法"></a>a标签的一些用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;a href=<span class="string">"javascript:void(alert('Warning!!!'))"</span>&gt;点我弹窗&lt;<span class="regexp">/a&gt;</span></div><div class="line"><span class="regexp">&lt;a href="javascript:void(0)"&gt;点我没效果&lt;/</span>a&gt;</div><div class="line">&lt;a href=<span class="string">"#pos"</span>&gt;点我定位到指定位置&lt;<span class="regexp">/a&gt;</span></div><div class="line"><span class="regexp">&lt;a href="#"&gt;点我定位到顶部&lt;/</span>a&gt;</div></pre></td></tr></table></figure>
+<h2 id="计算给定数组-arr-中所有元素的总和-1"><a href="#计算给定数组-arr-中所有元素的总和-1" class="headerlink" title="计算给定数组 arr 中所有元素的总和"></a>计算给定数组 arr 中所有元素的总和</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//一般的方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">sum = sum +arr[i];</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> sum;</div><div class="line">&#125;</div><div class="line"><span class="comment">//或者可以这样</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">eval</span>(arr.join(<span class="string">"+"</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="checkbox的一些用法"><a href="#checkbox的一些用法" class="headerlink" title="checkbox的一些用法"></a>checkbox的一些用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"input[name='WeiZhi']"</span>);  <span class="comment">//选取name为xx的元素</span></div><div class="line">$(<span class="string">"input[type='checkbox']"</span>).prop(<span class="string">'checked'</span>,<span class="literal">true</span>);  <span class="comment">//设置checkbox选中</span></div><div class="line">$(<span class="string">"input[type='checkbox']"</span>).attr(<span class="string">'checked'</span>);  <span class="comment">//两种结果 "checked"和undefined，注意引号！</span></div><div class="line">$(<span class="string">"input[name='WeiZhi']:checked"</span>).length;  <span class="comment">// 选中的个数</span></div></pre></td></tr></table></figure>
+<h2 id="小数转百分数"><a href="#小数转百分数" class="headerlink" title="小数转百分数"></a>小数转百分数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toPercent</span>(<span class="params">point</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Number</span>(point * <span class="number">100</span>).toFixed(<span class="number">2</span>) + <span class="string">"%"</span>;<span class="comment">//保留2位小数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clearfix:after, &#123;</div><div class="line">content: <span class="string">"."</span>;</div><div class="line">display: block;</div><div class="line">height: <span class="number">0</span>;</div><div class="line">clear: both;</div><div class="line">visibility: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="获取事件源"><a href="#获取事件源" class="headerlink" title="获取事件源"></a>获取事件源</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="keyword">var</span> event = event? event: <span class="built_in">window</span>.event;</div><div class="line"><span class="keyword">var</span> srcObj = ((event.srcElement)?event.srcElement:event.target);</div><div class="line">alert($(srcObj));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="阻止页面的表单元素自动联想填满"><a href="#阻止页面的表单元素自动联想填满" class="headerlink" title="阻止页面的表单元素自动联想填满"></a>阻止页面的表单元素自动联想填满</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;form id=<span class="string">"Content"</span> autocomplete=<span class="string">"off"</span>&gt;</div><div class="line">autocomplete=<span class="string">"off"</span>用来阻止浏览器自动填充（联想）</div></pre></td></tr></table></figure>
+<h2 id="动态创建table"><a href="#动态创建table" class="headerlink" title="动态创建table"></a>动态创建table</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(msg);</div><div class="line"><span class="keyword">var</span> tab = <span class="string">""</span>;</div><div class="line"><span class="keyword">if</span> (json.length &gt; <span class="number">0</span>) &#123;</div><div class="line">$.each(json, <span class="function"><span class="keyword">function</span> (<span class="params">i, n</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> num = i + <span class="number">1</span>;</div><div class="line">tab += <span class="string">"</span></div><div class="line"><span class="string">&lt;tr&gt;</span></div><div class="line"><span class="string">    &lt;td style='text-align:center;'&gt;"</span> + num + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.NianFen + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.YueFen + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.SFZName + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.DFNum + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.PJF + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.ZongFenShu + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">    &lt;td&gt;"</span> + n.RenShu + <span class="string">"&lt;/td&gt;</span></div><div class="line"><span class="string">&lt;/tr&gt;"</span>;</div><div class="line">&#125;)</div><div class="line">$(<span class="string">"#tbody"</span>).html(tab);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="查看的绑定"><a href="#查看的绑定" class="headerlink" title="查看的绑定"></a>查看的绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(msg);</div><div class="line"><span class="keyword">if</span> (json.length &gt; <span class="number">0</span>) &#123;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> json[<span class="number">0</span>]) &#123;</div><div class="line">$(<span class="string">"#"</span> + key).text(json[<span class="number">0</span>][key]);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="让input只能输入正整数"><a href="#让input只能输入正整数" class="headerlink" title="让input只能输入正整数"></a>让input只能输入正整数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"text"</span> onkeyup=<span class="string">"this.value=this.value.replace(/\D/g,'')"</span></div><div class="line">注意：一般在JS中拼接的时候 符号 \  会被视为转义字符，最后页面显示的是.replace(<span class="regexp">/D/g</span>,<span class="string">''</span>)<span class="string">" 。 所以在JS拼接时可以这样：.replace(/\\D/g,'')"</span></div></pre></td></tr></table></figure>
+<h2 id="自适应屏幕大小"><a href="#自适应屏幕大小" class="headerlink" title="自适应屏幕大小"></a>自适应屏幕大小</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'InforList'</span>).style.width = <span class="built_in">document</span>.body.clientWidth * <span class="number">0.90</span> + <span class="string">"px"</span>;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'InforList'</span>).style.height = <span class="built_in">window</span>.innerHeight * <span class="number">0.75</span> + <span class="string">"px"</span>;</div></pre></td></tr></table></figure>
+<h2 id="获取选中的下拉列表的value和text"><a href="#获取选中的下拉列表的value和text" class="headerlink" title="获取选中的下拉列表的value和text"></a>获取选中的下拉列表的value和text</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> index = $(<span class="string">'#HuoJia'</span>)[<span class="number">0</span>].selectedIndex; <span class="comment">// 选中索引</span></div><div class="line"><span class="keyword">var</span> HuoJia = $(<span class="string">'#HuoJia'</span>)[<span class="number">0</span>].options[index].text; <span class="comment">// 选中文本</span></div><div class="line">$(<span class="string">"#HuoJia"</span>).find(<span class="string">"option:selected"</span>).text() <span class="comment">//简洁</span></div></pre></td></tr></table></figure>
+<h2 id="join-split-splice-substring的区别"><a href="#join-split-splice-substring的区别" class="headerlink" title="join, split, splice, substring的区别"></a>join, split, splice, substring的区别</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">join(<span class="string">','</span>)是将数组用逗号隔开，转化为字符串</div><div class="line">split(<span class="string">'-'</span>)是以字符串中的-符号转化为数组</div><div class="line">splice(<span class="number">3</span>,<span class="number">1</span>)是返回 从下标索引为<span class="number">3</span>的位置切割出长度为<span class="number">1</span>的字符</div><div class="line">str.substring(<span class="number">3</span>,<span class="number">5</span>)是截取两个指定下标位置的字符串，这个是下标为<span class="number">3</span>和<span class="number">5</span>的位置</div></pre></td></tr></table></figure>
+<h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">在写侧边栏点击变色的时候可以选择为li的点击事件加上addClass(<span class="string">'active'</span>)和removeClass(<span class="string">'active'</span>),但是在样式表里你不能直接写.active的样式</div><div class="line">注意看看之前有没有写过li的样式，比如你点击的这个li上级的<span class="class"><span class="keyword">class</span>为.<span class="title">side</span>，假如之前写过.<span class="title">side</span>&gt;<span class="title">li</span></span>&#123; background-color:red; &#125;的样式，点击虽然可以为li加上<span class="class"><span class="keyword">class</span>，但是</span></div><div class="line"><span class="class">.<span class="title">active</span></span>&#123; background-color:black; &#125;的样式不能体现，这时候这样写就行了.side&gt;.active&#123; background-color:black; &#125;，因为子元素选择器的权重比较高，会覆盖其他单独<span class="class"><span class="keyword">class</span>的样式</span></div></pre></td></tr></table></figure>
+<h2 id="背景图片充满屏幕"><a href="#背景图片充满屏幕" class="headerlink" title="背景图片充满屏幕"></a>背景图片充满屏幕</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*背景图片充满屏幕的时候可以这样避免图片大小的因素*/</span></div><div class="line">&lt;div style=<span class="string">"position: absolute; width: 100%; height: 100%; z-index: -1"</span>&gt;</div><div class="line">    &lt;img id=<span class="string">"bgcolor"</span> style=<span class="string">"position: fixed;"</span> src=<span class="string">"~/Images/icon_login02.jpg"</span> width=<span class="string">"100%"</span>/&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">background: linear-gradient(#24a8e6, #44a9dc, #6bc5ec);/</span>*渐变色。注意是background,不是background-color*<span class="regexp">/</span></div></pre></td></tr></table></figure>
+<h2 id="隐藏侧边导航的滚动条"><a href="#隐藏侧边导航的滚动条" class="headerlink" title="隐藏侧边导航的滚动条"></a>隐藏侧边导航的滚动条</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">::-webkit-scrollbar&#123;<span class="attr">width</span>:<span class="number">0</span>px;&#125; <span class="comment">/*隐藏侧边导航的滚动条，只支持webkit内核的浏览器*/</span></div></pre></td></tr></table></figure>
+<h2 id="常用的返回上一页方法"><a href="#常用的返回上一页方法" class="headerlink" title="常用的返回上一页方法"></a>常用的返回上一页方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.location.href = <span class="string">"/XXX/XXX"</span>;</div><div class="line"><span class="built_in">window</span>.location.href = <span class="built_in">document</span>.referrer;</div><div class="line">history.back(<span class="number">-1</span>);</div><div class="line"><span class="built_in">window</span>.history.back();</div><div class="line">history.go(<span class="number">-1</span>);</div></pre></td></tr></table></figure>
+<h2 id="回到顶部"><a href="#回到顶部" class="headerlink" title="回到顶部"></a>回到顶部</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> scrollt = <span class="built_in">document</span>.documentElement.scrollTop + <span class="built_in">document</span>.body.scrollTop;</div><div class="line"><span class="keyword">if</span> ( scrollt &gt; <span class="number">700</span> )&#123;</div><div class="line">$(<span class="string">".to-top"</span>).fadeIn(<span class="number">500</span>);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">$(<span class="string">".to-top"</span>).fadeOut(<span class="number">500</span>);</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">".to-top"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">$(<span class="string">"html,body"</span>).animate(&#123;<span class="attr">scrollTop</span>: <span class="number">0</span>&#125;, <span class="number">1000</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="防止用户选中文字"><a href="#防止用户选中文字" class="headerlink" title="防止用户选中文字"></a>防止用户选中文字</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">onselectstart：<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">-webkit-user-select:none;</div></pre></td></tr></table></figure>
+<h2 id="阴影和背景渐变色"><a href="#阴影和背景渐变色" class="headerlink" title="阴影和背景渐变色"></a>阴影和背景渐变色</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">阴影：</div><div class="line">div&#123;box-shadow: 10px 10px 5px #888888;&#125;</div><div class="line">背景渐变色：</div><div class="line">background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#cdcdcd));</div></pre></td></tr></table></figure>
+<h2 id="悬浮放大"><a href="#悬浮放大" class="headerlink" title="悬浮放大"></a>悬浮放大</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.newSongBody div img,.singerBody div img&#123;</div><div class="line">transition: transform <span class="number">0.7</span>s ;</div><div class="line">&#125;</div><div class="line">.newSongBody div:hover img,.singerBody div:hover img &#123;</div><div class="line">transform: scale(<span class="number">1.08</span>,<span class="number">1.08</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="超出div的部分省略号："><a href="#超出div的部分省略号：" class="headerlink" title="超出div的部分省略号："></a>超出div的部分省略号：</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.resourceDiv&#123;</div><div class="line">width:<span class="number">80</span>px;</div><div class="line">height:<span class="number">80</span>px;</div><div class="line">overflow:hidden;</div><div class="line">white-space:nowrap;</div><div class="line">text-overflow:ellipsis;</div><div class="line">display:block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="enter键代替按钮点击"><a href="#enter键代替按钮点击" class="headerlink" title="enter键代替按钮点击"></a>enter键代替按钮点击</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.onkeydown = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> e = event || <span class="built_in">window</span>.event || <span class="built_in">arguments</span>.callee.caller.arguments[<span class="number">0</span>];</div><div class="line"><span class="keyword">if</span> (e &amp;&amp; e.keyCode == <span class="number">13</span>) &#123; <span class="comment">// enter 键</span></div><div class="line">Login();</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>

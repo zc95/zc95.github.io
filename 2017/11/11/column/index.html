@@ -473,79 +473,32 @@
 </ul>
 <h2 id="CSS3-创建多列"><a href="#CSS3-创建多列" class="headerlink" title="CSS3 创建多列"></a>CSS3 创建多列</h2><p><code>column-count</code> 属性指定了需要分割的列数</p>
 <p>以下实例将 <code>&lt;div&gt;</code> 元素中的文本分为 3 列：</p>
-<pre><code class="css">.newspaper
-{
-    -moz-column-count:3; /* Firefox */
-    -webkit-column-count:3; /* Safari and Chrome */
-    column-count:3;
-}
-</code></pre>
-<pre><code class="html">&lt;div class=&quot;newspaper&quot;&gt;....................&lt;/div&gt;
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.newspaper</span></div><div class="line">&#123;</div><div class="line">true<span class="attribute">-moz-column-count</span>:<span class="number">3</span>; <span class="comment">/* Firefox */</span></div><div class="line">true<span class="attribute">-webkit-column-count</span>:<span class="number">3</span>; <span class="comment">/* Safari and Chrome */</span></div><div class="line">true<span class="attribute">column-count</span>:<span class="number">3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"newspaper"</span>&gt;</span>....................<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-count" target="_blank" rel="external">尝试一下 »</a></p>
 <h2 id="CSS3-多列中列与列间的间隙"><a href="#CSS3-多列中列与列间的间隙" class="headerlink" title="CSS3 多列中列与列间的间隙"></a>CSS3 多列中列与列间的间隙</h2><p><code>column-gap</code> 属性指定了列与列间的间隙</p>
 <p>以下实例指定了列与列间的间隙为 40 像素：</p>
-<pre><code class="css">.newspaper
-{
-    -moz-column-count:3; /* Firefox */
-    -webkit-column-count:3; /* Safari and Chrome */
-    column-count:3;
-
-    -moz-column-gap:40px; /* Firefox */
-    -webkit-column-gap:40px; /* Safari and Chrome */
-    column-gap:40px;
-}
-</code></pre>
-<pre><code class="html">&lt;div class=&quot;newspaper&quot;&gt;....................&lt;/div&gt;
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.newspaper</span></div><div class="line">&#123;</div><div class="line">true<span class="attribute">-moz-column-count</span>:<span class="number">3</span>; <span class="comment">/* Firefox */</span></div><div class="line">true<span class="attribute">-webkit-column-count</span>:<span class="number">3</span>; <span class="comment">/* Safari and Chrome */</span></div><div class="line">true<span class="attribute">column-count</span>:<span class="number">3</span>;</div><div class="line"></div><div class="line">true<span class="attribute">-moz-column-gap</span>:<span class="number">40px</span>; <span class="comment">/* Firefox */</span></div><div class="line">true<span class="attribute">-webkit-column-gap</span>:<span class="number">40px</span>; <span class="comment">/* Safari and Chrome */</span></div><div class="line">true<span class="attribute">column-gap</span>:<span class="number">40px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"newspaper"</span>&gt;</span>....................<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-gap" target="_blank" rel="external">尝试一下 »</a></p>
 <h2 id="CSS3-列边框"><a href="#CSS3-列边框" class="headerlink" title="CSS3 列边框"></a>CSS3 列边框</h2><p><code>column-rule-style</code> 属性指定了列与列间的边框样式：</p>
-<pre><code class="css">.newspaper
-{
-    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
-    -moz-column-rule-style: solid; /* Firefox */
-    column-rule-style: solid;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.newspaper</span></div><div class="line">&#123;</div><div class="line">true<span class="attribute">-webkit-column-rule-style</span>: solid; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">-moz-column-rule-style</span>: solid; <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">column-rule-style</span>: solid;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-style" target="_blank" rel="external">尝试一下 »</a></p>
 <p><code>column-rule-width</code> 属性指定了两列的边框厚度：</p>
-<pre><code class="css">div {
-    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
-    -moz-column-rule-width: 1px; /* Firefox */
-    column-rule-width: 1px;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">-webkit-column-rule-width</span>: <span class="number">1px</span>; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">-moz-column-rule-width</span>: <span class="number">1px</span>; <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">column-rule-width</span>: <span class="number">1px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-width" target="_blank" rel="external">尝试一下 »</a></p>
 <p><code>column-rule-color</code> 属性指定了两列的边框颜色：</p>
-<pre><code class="css">div {
-    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
-    -moz-column-rule-color: lightblue; /* Firefox */
-    column-rule-color: lightblue;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">-webkit-column-rule-color</span>: lightblue; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">-moz-column-rule-color</span>: lightblue; <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">column-rule-color</span>: lightblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule-color" target="_blank" rel="external">尝试一下 »</a></p>
 <p><code>column-rule</code> 属性是 column-rule-* 所有属性的简写。</p>
 <p>以下实例设置了列直接的边框的厚度，样式及颜色：</p>
-<pre><code class="css">div {
-    -webkit-column-rule: 1px solid lightblue; /* Chrome, Safari, Opera */
-    -moz-column-rule: 1px solid lightblue; /* Firefox */
-    column-rule: 1px solid lightblue;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">-webkit-column-rule</span>: <span class="number">1px</span> solid lightblue; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">-moz-column-rule</span>: <span class="number">1px</span> solid lightblue; <span class="comment">/* Firefox */</span></div><div class="line">    <span class="attribute">column-rule</span>: <span class="number">1px</span> solid lightblue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-rule" target="_blank" rel="external">尝试一下 »</a></p>
 <h2 id="指定元素跨越多少列"><a href="#指定元素跨越多少列" class="headerlink" title="指定元素跨越多少列"></a>指定元素跨越多少列</h2><p>以下实例指定 <code>&lt;h2&gt;</code> 元素跨越所有列：</p>
-<pre><code class="css">h2 {
-    -webkit-column-span: all; /* Chrome, Safari, Opera */
-    column-span: all;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h2</span> &#123;</div><div class="line">    <span class="attribute">-webkit-column-span</span>: all; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">column-span</span>: all;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-span" target="_blank" rel="external">尝试一下 »</a></p>
 <h2 id="指定列的宽度"><a href="#指定列的宽度" class="headerlink" title="指定列的宽度"></a>指定列的宽度</h2><p><code>column-width</code> 属性指定了列的宽度。</p>
-<pre><code class="css">div {
-    -webkit-column-width: 100px; /* Chrome, Safari, Opera */
-    column-width: 100px;
-}
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">-webkit-column-width</span>: <span class="number">100px</span>; <span class="comment">/* Chrome, Safari, Opera */</span></div><div class="line">    <span class="attribute">column-width</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="http://www.runoob.com/try/try.php?filename=trycss3_column-width" target="_blank" rel="external">尝试一下 »</a></p>
 <h2 id="CSS3-多列属性-1"><a href="#CSS3-多列属性-1" class="headerlink" title="CSS3 多列属性"></a>CSS3 多列属性</h2><p>下表列出了所有 CSS3 的多列属性：</p>
 <table>

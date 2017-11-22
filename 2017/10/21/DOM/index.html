@@ -466,21 +466,9 @@
 <li>所以通常来看repaint的代价要远小于reflow，速度也更快</li>
 </ol>
 <h2 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h2><h3 id="能放到DOM操作之外的操作就放到外面，DOM操作要尽量少"><a href="#能放到DOM操作之外的操作就放到外面，DOM操作要尽量少" class="headerlink" title="能放到DOM操作之外的操作就放到外面，DOM操作要尽量少"></a>能放到DOM操作之外的操作就放到外面，DOM操作要尽量少</h3><p>这是一个不好的事例：</p>
-<pre><code class="javascript">var $obj = $(&quot;#obj&quot;);
-var data = [{&quot;id&quot;:0,&quot;name&quot;:&quot;a&quot;},{&quot;id&quot;:1,&quot;name&quot;:&quot;b&quot;}];
-for (var i = 0; i &lt; data.length; i++) {
-    $obj.append(&#39;&lt;option value=&quot;&#39;+data[i].id+&#39;&quot;&gt;&#39;+data[i].name+&#39;&lt;/option&gt;&#39;);
-};
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(<span class="string">"#obj"</span>);</div><div class="line"><span class="keyword">var</span> data = [&#123;<span class="string">"id"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"a"</span>&#125;,&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"b"</span>&#125;];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</div><div class="line">    $obj.append(<span class="string">'&lt;option value="'</span>+data[i].id+<span class="string">'"&gt;'</span>+data[i].name+<span class="string">'&lt;/option&gt;'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>更好的做法，使用容器存放临时变更，最后再一次性更新DOM：</p>
-<pre><code class="javascript">var $obj = $(&quot;#obj&quot;);
-var data = [{&quot;id&quot;:0,&quot;name&quot;:&quot;a&quot;},{&quot;id&quot;:1,&quot;name&quot;:&quot;b&quot;}];
-var tempStr = &quot;&quot;;
-for (var i = 0; i &lt; data.length; i++) {
-    tempStr +=(&#39;&lt;option value=&quot;&#39;+data[i].id+&#39;&quot;&gt;&#39;+data[i].name+&#39;&lt;/option&gt;&#39;);
-};
-$obj.html(tempStr);
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(<span class="string">"#obj"</span>);</div><div class="line"><span class="keyword">var</span> data = [&#123;<span class="string">"id"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"a"</span>&#125;,&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"b"</span>&#125;];</div><div class="line"><span class="keyword">var</span> tempStr = <span class="string">""</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</div><div class="line">    tempStr +=(<span class="string">'&lt;option value="'</span>+data[i].id+<span class="string">'"&gt;'</span>+data[i].name+<span class="string">'&lt;/option&gt;'</span>);</div><div class="line">&#125;;</div><div class="line">$obj.html(tempStr);</div></pre></td></tr></table></figure>
 <h3 id="大范围操作先把容器隐藏，在其中操作完成后再显示"><a href="#大范围操作先把容器隐藏，在其中操作完成后再显示" class="headerlink" title="大范围操作先把容器隐藏，在其中操作完成后再显示"></a>大范围操作先把容器隐藏，在其中操作完成后再显示</h3><p>这个也算是优化的一种，这原理涉及到浏览器加载和渲染的原理,简单说就是隐藏的元素其中不会产生reflow</p>
 <h3 id="样式操作不要注意修改属性，直接替换class"><a href="#样式操作不要注意修改属性，直接替换class" class="headerlink" title="样式操作不要注意修改属性，直接替换class"></a>样式操作不要注意修改属性，直接替换class</h3><p>这个还是比较容易理解的，你逐一修改要访问很多次，而替换class就相当于批量操作了，访问一次DOM就可以了,当然性能提高了</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于性能方面，平时应注意积累。</p>
