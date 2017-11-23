@@ -39,6 +39,7 @@
 <li>缺点<ul>
 <li>​每篇文章都需要手动点击initialize comments按钮来初始化评论，否则不能评论；</li>
 <li>不支持图片（可以尝试用markdown或者img标签来实现）和表情（emoji可以用）</li>
+<li>只能支持github登陆</li>
 </ul>
 </li>
 </ul>
