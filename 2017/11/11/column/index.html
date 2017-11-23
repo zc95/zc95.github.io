@@ -26,7 +26,7 @@
 <meta property="og:description" content="CSS3多列CSS3 可以将文本内容设计成像报纸一样的多列布局，如下实例：  CSS3 多列属性 column-count column-gap column-rule-style column-rule-width column-rule-color column-rule column-span column-width  CSS3 创建多列column-count 属性指定了需要分割的列数">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/fo2zxn7p.png">
-<meta property="og:updated_time" content="2017-11-17T11:28:09.800Z">
+<meta property="og:updated_time" content="2017-11-23T13:57:02.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="column">
 <meta name="twitter:description" content="CSS3多列CSS3 可以将文本内容设计成像报纸一样的多列布局，如下实例：  CSS3 多列属性 column-count column-gap column-rule-style column-rule-width column-rule-color column-rule column-span column-width  CSS3 创建多列column-count 属性指定了需要分割的列数">
@@ -44,6 +44,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
 </head>
@@ -124,7 +126,7 @@
         
         
         
-        <li class="menu-item menu-item-categories active">
+        <li class="menu-item menu-item-categories">
           <a href="/categories">
             
             <i class="fa fa-fw fa-folder"></i>
@@ -146,7 +148,7 @@
         
         
         
-        <li class="menu-item menu-item-repository">
+        <li class="menu-item menu-item-repository active">
           <a href="/repository">
             
             <i class="fa fa-fw fa-code"></i>
@@ -405,6 +407,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3多列"><span class="toc-number">1.</span> <span class="toc-text">CSS3多列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-多列属性"><span class="toc-number">2.</span> <span class="toc-text">CSS3 多列属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-创建多列"><span class="toc-number">3.</span> <span class="toc-text">CSS3 创建多列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-多列中列与列间的间隙"><span class="toc-number">4.</span> <span class="toc-text">CSS3 多列中列与列间的间隙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-列边框"><span class="toc-number">5.</span> <span class="toc-text">CSS3 列边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指定元素跨越多少列"><span class="toc-number">6.</span> <span class="toc-text">指定元素跨越多少列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指定列的宽度"><span class="toc-number">7.</span> <span class="toc-text">指定列的宽度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-多列属性-1"><span class="toc-number">8.</span> <span class="toc-text">CSS3 多列属性</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-column" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -455,6 +466,13 @@
 	
 	
 
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
@@ -595,8 +613,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -732,8 +751,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: 'column', 
+  owner: 'zc95', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'zc95.github.io',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     

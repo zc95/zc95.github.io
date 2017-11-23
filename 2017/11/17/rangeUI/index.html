@@ -26,7 +26,7 @@
 <meta property="og:description" content="Range 开始 DEMO 源码 简易版DEMO  导入jQuery, CSS和JSjQueryhttp://jsrun.net/CciKp.css  12345678910111213141516171819202122232425262728293031323334353637383940p &amp;#123;  font-family: &quot;微软雅黑&quot;;  letter-spacing: -1px;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/range.png">
-<meta property="og:updated_time" content="2017-11-21T10:52:02.448Z">
+<meta property="og:updated_time" content="2017-11-23T13:56:46.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义range滑块">
 <meta name="twitter:description" content="Range 开始 DEMO 源码 简易版DEMO  导入jQuery, CSS和JSjQueryhttp://jsrun.net/CciKp.css  12345678910111213141516171819202122232425262728293031323334353637383940p &amp;#123;  font-family: &quot;微软雅黑&quot;;  letter-spacing: -1px;">
@@ -44,6 +44,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
 </head>
@@ -124,7 +126,7 @@
         
         
         
-        <li class="menu-item menu-item-categories active">
+        <li class="menu-item menu-item-categories">
           <a href="/categories">
             
             <i class="fa fa-fw fa-folder"></i>
@@ -146,7 +148,7 @@
         
         
         
-        <li class="menu-item menu-item-repository">
+        <li class="menu-item menu-item-repository active">
           <a href="/repository">
             
             <i class="fa fa-fw fa-code"></i>
@@ -405,6 +407,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Range"><span class="toc-number">1.</span> <span class="toc-text">Range</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入jQuery-CSS和JS"><span class="toc-number">3.</span> <span class="toc-text">导入jQuery, CSS和JS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery"><span class="toc-number">3.1.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http-jsrun-net-CciKp-css"><span class="toc-number">3.2.</span> <span class="toc-text">http://jsrun.net/CciKp.css</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http-jsrun-net-CciKp-js"><span class="toc-number">3.3.</span> <span class="toc-text">http://jsrun.net/CciKp.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-rangeUI" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -455,6 +466,13 @@
 	
 	
 
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
@@ -515,8 +533,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -652,8 +671,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: '自定义range滑块', 
+  owner: 'zc95', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'zc95.github.io',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     

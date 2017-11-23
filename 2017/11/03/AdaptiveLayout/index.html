@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/buju1.png">
 <meta property="og:image" content="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/buju2.png">
-<meta property="og:updated_time" content="2017-11-03T10:47:21.136Z">
+<meta property="og:updated_time" content="2017-11-23T13:57:09.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类似Windows文件的布局问题">
 <meta name="twitter:description" content="问题如何做到类似windows文件的布局：无论如何改变窗口（屏幕）的大小，文件或者文件夹的大小都是固定的，不同的是一行显示的数目会有所变化； 百分比布局首先这类布局，肯定会先想到百分比的方法（最快的方法），在不同手机上看的话当然没区别，比如一行显示4个的话，那么一个就是25%，但如果放到ipad或者电脑上来看的话，就大的有些恐怖了 百分比加@media布局同上，我们可以用@media的方法来解决不">
@@ -45,6 +45,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
 </head>
@@ -125,7 +127,7 @@
         
         
         
-        <li class="menu-item menu-item-categories active">
+        <li class="menu-item menu-item-categories">
           <a href="/categories">
             
             <i class="fa fa-fw fa-folder"></i>
@@ -147,7 +149,7 @@
         
         
         
-        <li class="menu-item menu-item-repository">
+        <li class="menu-item menu-item-repository active">
           <a href="/repository">
             
             <i class="fa fa-fw fa-code"></i>
@@ -406,6 +408,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#百分比布局"><span class="toc-number">2.</span> <span class="toc-text">百分比布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#百分比加-media布局"><span class="toc-number">3.</span> <span class="toc-text">百分比加@media布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的方法"><span class="toc-number">4.</span> <span class="toc-text">我的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#效果图"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-AdaptiveLayout" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -456,6 +467,13 @@
 	
 	
 
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
@@ -521,8 +539,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -658,8 +677,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: '类似Windows文件的布局问题', 
+  owner: 'zc95', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'zc95.github.io',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     

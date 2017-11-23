@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
 <meta property="og:description" content="选取元素12345678910// jQueryvar els = $(&apos;.el&apos;);// Nativevar els = document.querySelectorAll(&apos;.el&apos;);// Shorthandvar $ = function (el) &amp;#123;  return document.querySelectorAll(el);&amp;#125; querySelectorAll方法返">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-03T10:46:31.416Z">
+<meta property="og:updated_time" content="2017-11-23T13:57:14.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生javascript和jquery的用法对比">
 <meta name="twitter:description" content="选取元素12345678910// jQueryvar els = $(&apos;.el&apos;);// Nativevar els = document.querySelectorAll(&apos;.el&apos;);// Shorthandvar $ = function (el) &amp;#123;  return document.querySelectorAll(el);&amp;#125; querySelectorAll方法返">
@@ -42,6 +42,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
 </head>
@@ -122,7 +124,7 @@
         
         
         
-        <li class="menu-item menu-item-categories active">
+        <li class="menu-item menu-item-categories">
           <a href="/categories">
             
             <i class="fa fa-fw fa-folder"></i>
@@ -144,7 +146,7 @@
         
         
         
-        <li class="menu-item menu-item-repository">
+        <li class="menu-item menu-item-repository active">
           <a href="/repository">
             
             <i class="fa fa-fw fa-code"></i>
@@ -403,6 +405,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#选取元素"><span class="toc-number">1.</span> <span class="toc-text">选取元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建元素"><span class="toc-number">2.</span> <span class="toc-text">创建元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加事件"><span class="toc-number">3.</span> <span class="toc-text">添加事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#get-set属性"><span class="toc-number">4.</span> <span class="toc-text">get/set属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加和移除样式Class"><span class="toc-number">5.</span> <span class="toc-text">添加和移除样式Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#追加元素"><span class="toc-number">6.</span> <span class="toc-text">追加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆元素"><span class="toc-number">7.</span> <span class="toc-text">克隆元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除元素"><span class="toc-number">8.</span> <span class="toc-text">移除元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取父级元素"><span class="toc-number">9.</span> <span class="toc-text">获取父级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取上一个-下一个元素（Prev-next-element）"><span class="toc-number">10.</span> <span class="toc-text">获取上一个/下一个元素（Prev/next element）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XHR-and-AJAX"><span class="toc-number">11.</span> <span class="toc-text">XHR and AJAX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清空子元素"><span class="toc-number">12.</span> <span class="toc-text">清空子元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检查是否有子元素"><span class="toc-number">13.</span> <span class="toc-text">检查是否有子元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#document-ready"><span class="toc-number">14.</span> <span class="toc-text">$(document).ready</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据储存"><span class="toc-number">15.</span> <span class="toc-text">数据储存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">16.</span> <span class="toc-text">动画</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-jsAndJq" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -453,6 +464,13 @@
 	
 	
 
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
@@ -532,8 +550,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -669,8 +688,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: '原生javascript和jquery的用法对比', 
+  owner: 'zc95', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'zc95.github.io',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     

@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
 <meta property="og:description" content="为什么我们要尽量少的去操作DOM结构？ 前言在前端开发的过程中，javascript极为重要的一个功能就是对DOM对象的操作，无论增删改查在前端页面操作这一范围内都是比较消耗性能的。如何高效率的，便捷的操作DOM，这就是本文要讲述的，希望看完全文，你能知道如何更高效的通过原生js以及jQuery操作DOM元素。 性能影响 DOM修改导致的页面重绘repaint、重构reflow，重新排版是用户阻塞">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-22T11:47:51.671Z">
+<meta property="og:updated_time" content="2017-11-23T13:57:32.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="为什么我们要尽量少的去操作DOM结构？ 前言在前端开发的过程中，javascript极为重要的一个功能就是对DOM对象的操作，无论增删改查在前端页面操作这一范围内都是比较消耗性能的。如何高效率的，便捷的操作DOM，这就是本文要讲述的，希望看完全文，你能知道如何更高效的通过原生js以及jQuery操作DOM元素。 性能影响 DOM修改导致的页面重绘repaint、重构reflow，重新排版是用户阻塞">
@@ -42,6 +42,8 @@
   <link rel="stylesheet" href="/css/style.css">
   
     
+    
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     
 
 </head>
@@ -122,7 +124,7 @@
         
         
         
-        <li class="menu-item menu-item-categories active">
+        <li class="menu-item menu-item-categories">
           <a href="/categories">
             
             <i class="fa fa-fw fa-folder"></i>
@@ -144,7 +146,7 @@
         
         
         
-        <li class="menu-item menu-item-repository">
+        <li class="menu-item menu-item-repository active">
           <a href="/repository">
             
             <i class="fa fa-fw fa-code"></i>
@@ -403,6 +405,15 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能影响"><span class="toc-number">2.</span> <span class="toc-text">性能影响</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何避免"><span class="toc-number">3.</span> <span class="toc-text">如何避免</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#能放到DOM操作之外的操作就放到外面，DOM操作要尽量少"><span class="toc-number">3.1.</span> <span class="toc-text">能放到DOM操作之外的操作就放到外面，DOM操作要尽量少</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大范围操作先把容器隐藏，在其中操作完成后再显示"><span class="toc-number">3.2.</span> <span class="toc-text">大范围操作先把容器隐藏，在其中操作完成后再显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样式操作不要注意修改属性，直接替换class"><span class="toc-number">3.3.</span> <span class="toc-text">样式操作不要注意修改属性，直接替换class</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
   <article id="post-DOM" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -453,6 +464,13 @@
 	
 	
 
+      </div>
+      
+      <div class="toggle-toc hidden-xs" data-stick-top>
+        <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+          <i class="text-collapsed fa fa-anchor"></i>
+          <i class="text-in fa fa-close"></i>
+        </a>
       </div>
       
     </div>
@@ -516,8 +534,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -653,8 +672,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: 'DOM', 
+  owner: 'zc95', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'zc95.github.io',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     
