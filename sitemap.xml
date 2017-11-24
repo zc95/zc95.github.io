@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
+    <loc>http://zc95.github.io/about/index.html</loc>
     
-    <lastmod>2017-11-23T17:31:53.835Z</lastmod>
+    <lastmod>2017-11-24T14:41:28.357Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zc95.github.io/about/index.html</loc>
+    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
     
-    <lastmod>2017-11-23T14:29:26.122Z</lastmod>
+    <lastmod>2017-11-24T14:34:16.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
+    
+    <lastmod>2017-11-24T14:26:18.735Z</lastmod>
     
   </url>
   
@@ -86,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
-    
-    <lastmod>2017-11-23T13:56:46.728Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zc95.github.io/2017/11/21/arrayReview/</loc>
     
     <lastmod>2017-11-23T13:56:11.084Z</lastmod>
@@ -117,6 +117,13 @@
     <loc>http://zc95.github.io/repository/index.html</loc>
     
     <lastmod>2017-11-23T12:32:07.222Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/links/index.html</loc>
+    
+    <lastmod>2017-11-22T15:19:34.803Z</lastmod>
     
   </url>
   

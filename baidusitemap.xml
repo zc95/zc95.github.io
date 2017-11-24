@@ -3,9 +3,30 @@
 
 
     
+    
+  <url>
+    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
+    <lastmod>2017-11-24T14:34:16.023Z</lastmod>
+    <data>
+        <display>
+        <title>自定义range滑块</title>
+        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
-    <lastmod>2017-11-23T17:31:53.835Z</lastmod>
+    <lastmod>2017-11-24T14:26:18.735Z</lastmod>
     <data>
         <display>
         <title>基于 GitHub Issues 的评论系统：gitment</title>
@@ -26,7 +47,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
@@ -269,26 +289,6 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
-    <lastmod>2017-11-23T13:56:46.728Z</lastmod>
-    <data>
-        <display>
-        <title>自定义range滑块</title>
-        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2017/11/21/arrayReview/</loc>
     <lastmod>2017-11-23T13:56:11.084Z</lastmod>
     <data>
@@ -307,6 +307,7 @@
     </data>
     </url>
 
+    
     
     
     
