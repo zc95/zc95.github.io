@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/links/index.html</loc>
+    
+    <lastmod>2017-11-24T15:48:00.870Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/about/index.html</loc>
     
     <lastmod>2017-11-24T14:41:28.357Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://zc95.github.io/repository/index.html</loc>
     
     <lastmod>2017-11-23T12:32:07.222Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/links/index.html</loc>
-    
-    <lastmod>2017-11-22T15:19:34.803Z</lastmod>
     
   </url>
   
