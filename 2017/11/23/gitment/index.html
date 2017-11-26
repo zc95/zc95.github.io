@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://zc95.github.io/images/myImages/gitmentYD.png">
 <meta property="og:image" content="http://zc95.github.io/images/myImages/OAuthApplication.png">
 <meta property="og:image" content="http://zc95.github.io/images/myImages/OAuthApplicationId.png">
-<meta property="og:updated_time" content="2017-11-24T14:26:18.735Z">
+<meta property="og:updated_time" content="2017-11-26T14:15:59.711Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于 GitHub Issues 的评论系统：gitment">
 <meta name="twitter:description" content="如何为hexo博客添加评论功能多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙 本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitH">
@@ -401,7 +401,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何为hexo博客添加评论功能"><span class="toc-number">1.</span> <span class="toc-text">如何为hexo博客添加评论功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gitment"><span class="toc-number">2.</span> <span class="toc-text">gitment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC端"><span class="toc-number">2.1.</span> <span class="toc-text">PC端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端"><span class="toc-number">2.2.</span> <span class="toc-text">移动端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础配置"><span class="toc-number">3.</span> <span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册OAuth-Application"><span class="toc-number">4.</span> <span class="toc-text">注册OAuth Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取ClientID与ClientSecret"><span class="toc-number">5.</span> <span class="toc-text">获取ClientID与ClientSecret</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何为hexo博客添加评论功能"><span class="toc-number">1.</span> <span class="toc-text">如何为hexo博客添加评论功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gitment"><span class="toc-number">2.</span> <span class="toc-text">gitment</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC端"><span class="toc-number">2.1.</span> <span class="toc-text">PC端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动端"><span class="toc-number">2.2.</span> <span class="toc-text">移动端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础配置"><span class="toc-number">3.</span> <span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册OAuth-Application"><span class="toc-number">4.</span> <span class="toc-text">注册OAuth Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取ClientID与ClientSecret"><span class="toc-number">5.</span> <span class="toc-text">获取ClientID与ClientSecret</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后更新"><span class="toc-number">7.</span> <span class="toc-text">最后更新</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -452,7 +452,7 @@
         <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/23/gitment/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 414(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 496(字)</span>
 	
 	
 
@@ -468,7 +468,7 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为hexo博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p>
+        <h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为<a href="https://zc95.github.io/2017/10/20/hexoBlog/">hexo</a>博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p>
 <p>本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。</p>
 <hr>
 <h2 id="gitment"><a href="#gitment" class="headerlink" title="gitment"></a>gitment</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/gitmentPC.png" width="90%;"><br></p>        
@@ -506,6 +506,8 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h2 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h2><p>最后还是选择了<a href="https://livere.com" target="_blank" rel="external">livere 来必力</a>，注册登陆需要翻墙（或许因为我网不好。。），一旦注册之后评论之类的就不需翻墙了，支持QQ、微信、微博、百度等登陆方式，本页拉到最底下就是来必力了，体验还是可以的。</p>
 
       
     </div>
