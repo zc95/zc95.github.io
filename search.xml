@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[关于float清除浮动和inline-block出现空隙的问题]]></title>
+      <url>/2017/11/26/floatAndInlineBlock/</url>
+      <content type="html"><![CDATA[<p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p>
+<p>但我们都知道 <code>display:inline-block</code> 布局会出现空隙的问题，<code>float:left</code>  又要清除浮动，本文就这两个问题整理出解决方案。</p>
+<p>## </p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[基于 GitHub Issues 的评论系统：gitment]]></title>
       <url>/2017/11/23/gitment/</url>
       <content type="html"><![CDATA[<h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为<a href="https://zc95.github.io/2017/10/20/hexoBlog/">hexo</a>博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p>

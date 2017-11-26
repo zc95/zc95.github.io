@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2017-11-26T14:23:24.606Z</updated>
+  <updated>2017-11-26T15:27:37.917Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于float清除浮动和inline-block出现空隙的问题</title>
+    <link href="http://zc95.github.io/2017/11/26/floatAndInlineBlock/"/>
+    <id>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</id>
+    <published>2017-11-26T15:21:45.000Z</published>
+    <updated>2017-11-26T15:27:37.917Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p><p>但我们都知道 <code>display:inline-block</code> 布局会出现空隙的问题，<code>float:left</code>  又要清除浮动，本文就这两个问题整理出解决方案。</p><p>## </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; &lt;/p&gt;
+&lt;p&gt;但我们都知道 &lt;code&gt;display:inline-block&lt;/code&gt; 布局会出现空隙的问题，&lt;c
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>基于 GitHub Issues 的评论系统：gitment</title>
