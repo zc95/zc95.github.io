@@ -3,6 +3,55 @@
   
     
     <entry>
+      <title><![CDATA[更改hosts文件来更好地使用github]]></title>
+      <url>/2017/11/28/hostsChange/</url>
+      <content type="html"><![CDATA[<p>最近可能是网不太好，hexo d的时候总是提交不了，很苦恼，试了n多种方法。。。</p>
+<h2 id="hexo-d时报错"><a href="#hexo-d时报错" class="headerlink" title="hexo d时报错"></a>hexo d时报错</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fatal: unable to access<span class="string">'https://github.com/zc95/zc95.github.io.git/ '</span>: Could not</div><div class="line">resolve host: github.com</div><div class="line">FATAL Something<span class="string">'s wrong.Maybe you can find the solution here:http:hexo.io/docs/troubleshooting.html</span></div><div class="line"><span class="string">...</span></div></pre></td></tr></table></figure>
+<h2 id="命令行终端-ping-github-com"><a href="#命令行终端-ping-github-com" class="headerlink" title="命令行终端 ping github.com"></a>命令行终端 ping github.com</h2><p>打开命令行终端，输入 <code>ping github.com</code> 并回车</p>
+<blockquote>
+<p>ping github.com</p>
+</blockquote>
+<p>如果像下面这样ping不出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ping github.com</div><div class="line">PING github.com (192.30.255.113): 56 data bytes</div><div class="line">Request timeout</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 0</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 1</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 2</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 3</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 4</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 5</div><div class="line">...</div></pre></td></tr></table></figure>
+<h2 id="Ping-github-com"><a href="#Ping-github-com" class="headerlink" title="Ping github.com"></a>Ping github.com</h2><ol>
+<li>打开链接 <a href="http://ping.chinaz.com" target="_blank" rel="external">http://ping.chinaz.com</a> 输入 <code>github.com</code> ,点击Ping 检测</li>
+<li>选择一条TTL值最小的ip地址，例如：<code>192.30.255.113</code> </li>
+</ol>
+<h2 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h2><ol>
+<li>点击Finder - 前往 - 前往文件夹… - 输入 <code>/etc/hosts</code> 点击前往</li>
+<li>找到hosts文件，修改hosts文件需要管理员权限，所以不能单纯修改，先按住hosts文件拖到桌面，双击打开桌面上的hosts文件</li>
+<li>在 <code>127.0.0.1 localhost</code> 下面另起一行输入 <code>192.30.255.113 github.com</code> ，保存并退出</li>
+<li>将桌面的hosts文件拖回直原来的位置，他会提示你 <strong>修改”etc”需要管理员密码</strong> ，点击”鉴定”，会提示你是否覆盖原文件，点击”是”，输入密码或指纹，ok了</li>
+<li>再次在命令行终端  <code>ping github.com</code>  就能看到ping成功了</li>
+<li>可以愉快的deploy了</li>
+</ol>
+<hr>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><h3 id="什么是hosts？"><a href="#什么是hosts？" class="headerlink" title="什么是hosts？"></a>什么是hosts？</h3><blockquote>
+<p>Hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，其作用就是将一些常用的网址<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D" target="_blank" rel="external">域名</a>与其对应的<a href="https://baike.baidu.com/item/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="external">IP地址</a>建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从<a href="https://baike.baidu.com/item/Hosts%E6%96%87%E4%BB%B6" target="_blank" rel="external">Hosts文件</a>中寻找对应的<a href="https://baike.baidu.com/item/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="external">IP地址</a>，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90" target="_blank" rel="external">域名解析</a>服务器进行IP地址的解析。</p>
+</blockquote>
+<h3 id="每次改完配置需要重启机器吗？"><a href="#每次改完配置需要重启机器吗？" class="headerlink" title="每次改完配置需要重启机器吗？"></a>每次改完配置需要重启机器吗？</h3><blockquote>
+<p>不需要，它实质上是个文本文件，当计算机需要解析地址时，会首先检查此文件，读取后再确定是本地解析还是要发送到DNS服务器来解析。<br>改后，只要再上网，就会生效。</p>
+</blockquote>
+<h3 id="hosts文件在哪里"><a href="#hosts文件在哪里" class="headerlink" title="hosts文件在哪里?"></a>hosts文件在哪里?</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">Linux:</span><span class="regexp">/etc/</span>hosts</div><div class="line">Mac OS <span class="string">X:</span><span class="regexp">/etc/</span>hosts</div><div class="line"><span class="string">Android:</span><span class="regexp">/etc/</span>hosts</div><div class="line"><span class="string">Windows:</span><span class="string">C:</span><span class="regexp">/windows/</span>System32<span class="regexp">/drivers/</span>etc/hosts</div></pre></td></tr></table></figure>
+<h3 id="hosts文件规则"><a href="#hosts文件规则" class="headerlink" title="hosts文件规则?"></a>hosts文件规则?</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#ip</span>地址           域名</div><div class="line">127<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span>	     <span class="selector-tag">localhost</span></div><div class="line">192<span class="selector-class">.30</span><span class="selector-class">.255</span><span class="selector-class">.113</span>   <span class="selector-tag">github</span><span class="selector-class">.com</span></div><div class="line">255<span class="selector-class">.255</span><span class="selector-class">.255</span><span class="selector-class">.255</span>	 <span class="selector-tag">broadcasthost</span></div><div class="line"><span class="selector-pseudo">::1</span>              <span class="selector-tag">localhost</span></div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于float清除浮动和inline-block出现空隙的问题]]></title>
       <url>/2017/11/26/floatAndInlineBlock/</url>
       <content type="html"><![CDATA[<p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p>
