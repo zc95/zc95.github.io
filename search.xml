@@ -11,10 +11,10 @@
 <blockquote>
 <p>ping github.com</p>
 </blockquote>
-<p>如果像下面这样ping不出</p>
+<p>如果像下面这样ping不出，就继续往下看吧</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ping github.com</div><div class="line">PING github.com (192.30.255.113): 56 data bytes</div><div class="line">Request timeout</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 0</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 1</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 2</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 3</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 4</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 5</div><div class="line">...</div></pre></td></tr></table></figure>
 <h2 id="Ping-github-com"><a href="#Ping-github-com" class="headerlink" title="Ping github.com"></a>Ping github.com</h2><ol>
-<li>打开链接 <a href="http://ping.chinaz.com" target="_blank" rel="external">http://ping.chinaz.com</a> 输入 <code>github.com</code> ,点击Ping 检测</li>
+<li>打开链接 <a href="http://ping.chinaz.com" target="_blank" rel="external">http://ping.chinaz.com</a> 输入 <code>github.com</code> ,点击Ping检测</li>
 <li>选择一条TTL值最小的ip地址，例如：<code>192.30.255.113</code> </li>
 </ol>
 <h2 id="修改hosts"><a href="#修改hosts" class="headerlink" title="修改hosts"></a>修改hosts</h2><ol>
