@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[点击查看大图]]></title>
+      <title><![CDATA[用最简单的代码实现点击查看大图]]></title>
       <url>/2017/11/29/enlargeImg/</url>
       <content type="html"><![CDATA[<p>今天做了个点击查看大图的功能，只需要给img加一个class，不用写额外的html代码</p>
 <h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><ul>
