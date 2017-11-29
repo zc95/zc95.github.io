@@ -17,18 +17,18 @@
   
   
   <title>文本框模糊查询 | Blog | 张成</title>
-  <meta name="description" content="文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。 Demo链接 Demo 源码  开始使用 引入css和js: http://jsrun.net/EXiKp.css 和  http://jsrun.net/sXiKp.js （点开链接拷到你的项目中） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilter">
+  <meta name="description" content="文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。 链接 demo地址 github地址  开始使用 引入css和js（github里面有） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilters(id, msg);（前面一个参数是input的id，后面一个参数是后台返的json字符串）  JS主">
 <meta name="keywords" content="css,html,javascript,jquery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本框模糊查询">
 <meta property="og:url" content="http://zc95.github.io/2017/10/21/input/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。 Demo链接 Demo 源码  开始使用 引入css和js: http://jsrun.net/EXiKp.css 和  http://jsrun.net/sXiKp.js （点开链接拷到你的项目中） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilter">
+<meta property="og:description" content="文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。 链接 demo地址 github地址  开始使用 引入css和js（github里面有） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilters(id, msg);（前面一个参数是input的id，后面一个参数是后台返的json字符串）  JS主">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-23T13:57:44.472Z">
+<meta property="og:updated_time" content="2017-11-29T17:15:35.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本框模糊查询">
-<meta name="twitter:description" content="文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。 Demo链接 Demo 源码  开始使用 引入css和js: http://jsrun.net/EXiKp.css 和  http://jsrun.net/sXiKp.js （点开链接拷到你的项目中） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilter">
+<meta name="twitter:description" content="文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。 链接 demo地址 github地址  开始使用 引入css和js（github里面有） 给需要加模糊查询的input加上class=&amp;quot;filter_input&amp;quot;，id必需 getFilters(id, msg);（前面一个参数是input的id，后面一个参数是后台返的json字符串）  JS主">
   <!-- Canonical links -->
   <link rel="canonical" href="http://zc95.github.io/2017/10/21/input/index.html">
   
@@ -396,7 +396,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo链接"><span class="toc-number">1.</span> <span class="toc-text">Demo链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始使用"><span class="toc-number">2.</span> <span class="toc-text">开始使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS主要代码"><span class="toc-number">3.</span> <span class="toc-text">JS主要代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS主要代码"><span class="toc-number">4.</span> <span class="toc-text">CSS主要代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html和CSS部分的一些细节"><span class="toc-number">5.</span> <span class="toc-text">html和CSS部分的一些细节</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">1.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始使用"><span class="toc-number">2.</span> <span class="toc-text">开始使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS主要代码"><span class="toc-number">3.</span> <span class="toc-text">JS主要代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS主要代码"><span class="toc-number">4.</span> <span class="toc-text">CSS主要代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html和CSS部分的一些细节"><span class="toc-number">5.</span> <span class="toc-text">html和CSS部分的一些细节</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -447,7 +447,7 @@
         <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/10/21/input/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 744(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 729(字)</span>
 	
 	
 
@@ -463,13 +463,13 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p>文本框模糊匹配(纯html+jquery简单实现) ，自己写的一个小组件。</p>
-<h2 id="Demo链接"><a href="#Demo链接" class="headerlink" title="Demo链接"></a>Demo链接</h2><ul>
-<li><a href="http://jsrun.net/NXiKp/show" target="_blank" rel="external">Demo</a></li>
-<li><a href="http://jsrun.net/NXiKp/edit" target="_blank" rel="external">源码</a></li>
+        <p>文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li><a href="https://htmlpreview.github.io/?https://github.com/zc95/Fuzzy-Query/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
+<li><a href="https://github.com/zc95/Fuzzy-Query" target="_blank" rel="external">github地址</a></li>
 </ul>
 <h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ol>
-<li>引入<code>css</code>和<code>js</code>: <a href="http://jsrun.net/EXiKp.css" target="_blank" rel="external">http://jsrun.net/EXiKp.css</a> 和  <a href="http://jsrun.net/sXiKp.js" target="_blank" rel="external">http://jsrun.net/sXiKp.js</a> （点开链接拷到你的项目中）</li>
+<li>引入<code>css</code>和<code>js</code>（github里面有）</li>
 <li>给需要加模糊查询的input加上<code>class=&quot;filter_input&quot;</code>，id必需</li>
 <li>getFilters(id, msg);（前面一个参数是input的id，后面一个参数是后台返的json字符串）</li>
 </ol>

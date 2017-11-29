@@ -4,14 +4,60 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
+    <lastmod>2017-11-29T17:18:51.896Z</lastmod>
+    <data>
+        <display>
+        <title>自定义range滑块</title>
+        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
-    <lastmod>2017-11-29T16:01:41.544Z</lastmod>
+    <lastmod>2017-11-29T17:16:37.095Z</lastmod>
     <data>
         <display>
         <title>用最简单的代码实现点击查看大图</title>
         <pubTime>2017-11-29T13:03:34.000Z</pubTime>
         
         <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2017/10/21/input/</loc>
+    <lastmod>2017-11-29T17:15:35.007Z</lastmod>
+    <data>
+        <display>
+        <title>文本框模糊查询</title>
+        <pubTime>2017-10-21T05:14:08.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>html</tag>
+         
+        <tag>javascript</tag>
+         
+        <tag>jquery</tag>
          
          
            
@@ -90,26 +136,6 @@
     
     
   <url>
-    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
-    <lastmod>2017-11-24T14:34:16.023Z</lastmod>
-    <data>
-        <display>
-        <title>自定义range滑块</title>
-        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
     <lastmod>2017-11-23T13:58:05.135Z</lastmod>
     <data>
@@ -159,32 +185,6 @@
            
              
               <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2017/10/21/input/</loc>
-    <lastmod>2017-11-23T13:57:44.472Z</lastmod>
-    <data>
-        <display>
-        <title>文本框模糊查询</title>
-        <pubTime>2017-10-21T05:14:08.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-        <tag>html</tag>
-         
-        <tag>javascript</tag>
-         
-        <tag>jquery</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
           
         </display>
     </data>
