@@ -3,15 +3,16 @@
 
 
     
+    
   <url>
-    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
-    <lastmod>2017-11-29T17:18:51.896Z</lastmod>
+    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
+    <lastmod>2017-11-29T17:23:01.374Z</lastmod>
     <data>
         <display>
-        <title>自定义range滑块</title>
-        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
+        <title>用最简单的代码实现点击查看大图</title>
+        <pubTime>2017-11-29T13:03:34.000Z</pubTime>
         
-        <tag>css</tag>
+        <tag>html</tag>
          
          
            
@@ -24,14 +25,14 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
-    <lastmod>2017-11-29T17:16:37.095Z</lastmod>
+    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
+    <lastmod>2017-11-29T17:22:57.030Z</lastmod>
     <data>
         <display>
-        <title>用最简单的代码实现点击查看大图</title>
-        <pubTime>2017-11-29T13:03:34.000Z</pubTime>
+        <title>自定义range滑块</title>
+        <pubTime>2017-11-17T11:06:48.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>css</tag>
          
          
            
@@ -132,7 +133,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
