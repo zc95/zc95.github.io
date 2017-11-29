@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
+    <lastmod>2017-11-29T13:10:56.595Z</lastmod>
+    <data>
+        <display>
+        <title>点击查看大图</title>
+        <pubTime>2017-11-29T13:03:34.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2017/11/28/hostsChange/</loc>
-    <lastmod>2017-11-28T15:54:01.684Z</lastmod>
+    <lastmod>2017-11-29T11:42:17.192Z</lastmod>
     <data>
         <display>
         <title>更改hosts文件来更好地使用github</title>
