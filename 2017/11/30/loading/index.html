@@ -16,21 +16,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>表头固定 | Blog | 张成</title>
-  <meta name="description" content="table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动 关于表格固定如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了 如果数据很多就要考虑左右滚动的情况了 方法一demo: http://jsrun.net/biiKp/show 同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来 这两个div依赖于他">
-<meta name="keywords" content="css">
+  <title>loading加载等待框 | Blog | 张成</title>
+  <meta name="description" content="链接 demo地址 github地址  调用 LoadShow(); LoadHide();  主要代码JS12345678function LoadShow() &amp;#123;  var str = &quot;&amp;lt;div id=&apos;loading_wrapper&apos; class=&apos;loaders_wrapper&apos;&amp;gt;&amp;lt;div class=&apos;loader&apos;&amp;gt;&amp;lt;div class=&apos;lo">
+<meta name="keywords" content="html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表头固定">
-<meta property="og:url" content="http://zc95.github.io/2017/10/24/amazingTable/index.html">
+<meta property="og:title" content="loading加载等待框">
+<meta property="og:url" content="http://zc95.github.io/2017/11/30/loading/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动 关于表格固定如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了 如果数据很多就要考虑左右滚动的情况了 方法一demo: http://jsrun.net/biiKp/show 同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来 这两个div依赖于他">
+<meta property="og:description" content="链接 demo地址 github地址  调用 LoadShow(); LoadHide();  主要代码JS12345678function LoadShow() &amp;#123;  var str = &quot;&amp;lt;div id=&apos;loading_wrapper&apos; class=&apos;loaders_wrapper&apos;&amp;gt;&amp;lt;div class=&apos;loader&apos;&amp;gt;&amp;lt;div class=&apos;lo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-23T13:57:25.396Z">
+<meta property="og:updated_time" content="2017-11-30T11:23:01.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表头固定">
-<meta name="twitter:description" content="table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动 关于表格固定如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了 如果数据很多就要考虑左右滚动的情况了 方法一demo: http://jsrun.net/biiKp/show 同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来 这两个div依赖于他">
+<meta name="twitter:title" content="loading加载等待框">
+<meta name="twitter:description" content="链接 demo地址 github地址  调用 LoadShow(); LoadHide();  主要代码JS12345678function LoadShow() &amp;#123;  var str = &quot;&amp;lt;div id=&apos;loading_wrapper&apos; class=&apos;loaders_wrapper&apos;&amp;gt;&amp;lt;div class=&apos;loader&apos;&amp;gt;&amp;lt;div class=&apos;lo">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://zc95.github.io/2017/10/24/amazingTable/index.html">
+  <link rel="canonical" href="http://zc95.github.io/2017/11/30/loading/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Blog | 秋刀鱼的滋味" type="application/atom+xml">
   
@@ -385,21 +385,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于表格固定"><span class="toc-number">1.</span> <span class="toc-text">关于表格固定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法一"><span class="toc-number">2.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法二"><span class="toc-number">3.</span> <span class="toc-text">方法二</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-number">1.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调用"><span class="toc-number">2.</span> <span class="toc-text">调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要代码"><span class="toc-number">3.</span> <span class="toc-text">主要代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JS"><span class="toc-number">3.1.</span> <span class="toc-text">JS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">3.2.</span> <span class="toc-text">CSS</span></a></li></ol></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-amazingTable" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-loading" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      表头固定
+      loading加载等待框
     </h1>
   
 
@@ -407,8 +407,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="fa fa-calendar-check-o"></i>
-	<a href="/2017/10/24/amazingTable/" class="article-date">
-	  <time datetime="2017-10-23T16:15:16.000Z" itemprop="datePublished">2017-10-24</time>
+	<a href="/2017/11/30/loading/" class="article-date">
+	  <time datetime="2017-11-30T11:07:04.000Z" itemprop="datePublished">2017-11-30</time>
 	</a>
 </span>
         
@@ -420,7 +420,7 @@
         
   <span class="article-tag">
     <i class="fa fa-tag"></i>
-	<a class="article-tag-link" href="/tags/css/">css</a>
+	<a class="article-tag-link" href="/tags/html/">html</a>
   </span>
 
 
@@ -433,10 +433,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/10/24/amazingTable/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/11/30/loading/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 392(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 499(字)</span>
 	
 	
 
@@ -452,34 +452,16 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p>table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动</p>
-<h2 id="关于表格固定"><a href="#关于表格固定" class="headerlink" title="关于表格固定"></a>关于表格固定</h2><p>如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了</p>
-<p>如果数据很多就要考虑左右滚动的情况了</p>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>demo: <a href="http://jsrun.net/biiKp/show" target="_blank" rel="external">http://jsrun.net/biiKp/show</a></p>
-<p>同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来</p>
-<p>这两个div依赖于他们的的父容器进行absolute定位</p>
-<blockquote>
-<p>theadDiv {</p>
-<p> position: absolute;<br> left: 0;<br> right: 0;<br> overflow: hidden; //这里hidden是用于隐藏滚动条<br>}</p>
-<p>tbodyDiv {</p>
-<p> position: absolute;<br> top: 35px;<br> left: 0;<br> right: 0;<br> bottom: 0;<br> overflow: auto;<br>}</p>
-</blockquote>
-<p>给放置thead的div添加样式 <code>overflow: hidden;</code> ，表头不需要看到滚动条</p>
-<p>给放置tbody的div添加样式 <code>overflow: auto;</code> ，表的主体需要滚动条</p>
-<p>这时只需要在滚动下面的tbody时，同样滚动上面的thead就行</p>
-<blockquote>
-<p>$(‘#tbodyDiv’).on(‘scroll’, function () {</p>
-<p>  $(“#theadDiv”).scrollLeft($(‘#tbodyDiv’).scrollLeft());</p>
-<p>  });</p>
-<p>})</p>
-</blockquote>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>demo: <a href="http://jsrun.net/2iiKp/show" target="_blank" rel="external">http://jsrun.net/2iiKp/show</a></p>
-<ol>
-<li>大概思路就是  <code>容器A</code> 下面有 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li>
-<li>x轴滚动条属于 <code>容器A</code> ，滚动 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li>
-<li>y轴属于 <code>容器2</code> ，滚动 <code>tbody</code></li>
-</ol>
-<p>这个方法有缺陷，就是y轴的滚动条必须要当x轴滚到最右边才看得到，当然Mac下无差（Mac下的滚动条不滚动的时候是隐藏的，而win系统下就会影响美观，但都不影响操作，毕竟我们有鼠标滚轮）</p>
+        <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li><a href="https://htmlpreview.github.io/?https://github.com/zc95/loading/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
+<li><a href="https://github.com/zc95/loading" target="_blank" rel="external">github地址</a></li>
+</ul>
+<h2 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h2><ul>
+<li>LoadShow();</li>
+<li>LoadHide();</li>
+</ul>
+<h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">LoadShow</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> str = <span class="string">"&lt;div id='loading_wrapper' class='loaders_wrapper'&gt;&lt;div class='loader'&gt;&lt;div class='loader-inner ball-spin-fade-loader'&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"</span>;</div><div class="line">  $(<span class="string">"body"</span>).append(str);</div><div class="line">  $(<span class="string">"#loading_wrapper"</span>).show();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">LoadHide</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">"#loading_wrapper"</span>).hide().remove();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*在线预览等待框*/</span></div><div class="line"><span class="selector-class">.loaders_wrapper</span> &#123;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</div><div class="line">  <span class="attribute">filter</span>: <span class="built_in">alpha</span>(opacity=50);</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0.4</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">'Source Sans Pro'</span>;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">  <span class="attribute">z-index</span>: <span class="number">99999</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.loaders_wrapper</span> <span class="selector-class">.loader</span> &#123;</div><div class="line">  <span class="attribute">max-width</span>: <span class="number">70px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">70px</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">margin-left</span>: -<span class="number">35px</span>;</div><div class="line">  <span class="attribute">margin-top</span>: -<span class="number">35px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> ball-spin-fade-loader &#123;</div><div class="line">  50% &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">0.3</span>;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0.4);</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0.4);</div><div class="line">  &#125;</div><div class="line">  100% &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1);</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">keyframes</span> ball-spin-fade-loader &#123;</div><div class="line">  50% &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">0.3</span>;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0.4);</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(0.4);</div><div class="line">  &#125;</div><div class="line">  100% &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">    <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1);</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(1);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="number">25px</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(2)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.12s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.12s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">25px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.24s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.24s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(4)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: -<span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.36s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.36s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(5)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: -<span class="number">25px</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.48s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.48s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(6)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: -<span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">left</span>: -<span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.6s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.6s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(7)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: -<span class="number">25px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.72s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.72s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(8)</span> &#123;</div><div class="line">  <span class="attribute">top</span>: <span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">left</span>: -<span class="number">17.04545px</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.84s</span> infinite linear;</div><div class="line">  <span class="attribute">animation</span>: ball-spin-fade-loader <span class="number">1s</span> <span class="number">0.84s</span> infinite linear;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ball-spin-fade-loader</span> &gt; <span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">15px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">15px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">100%</span><span class="meta">!important</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</div><div class="line">  <span class="attribute">-webkit-animation-fill-mode</span>: both;</div><div class="line">  <span class="attribute">animation-fill-mode</span>: both;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*在线预览等待框*/</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -489,7 +471,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://zc95.github.io/2017/10/24/amazingTable/" title="表头固定" target="_blank" rel="external">http://zc95.github.io/2017/10/24/amazingTable/</a>
+      <a href="http://zc95.github.io/2017/11/30/loading/" title="loading加载等待框" target="_blank" rel="external">http://zc95.github.io/2017/11/30/loading/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -539,13 +521,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2017/10/25/wordBreak/" title="css换行问题"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2017/10/21/DOM/" title="DOM">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+      <a href="/2017/11/29/enlargeImg/" title="用最简单的代码实现点击查看大图">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
     </li>
     
   </ul>
