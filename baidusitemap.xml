@@ -4,14 +4,96 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
+    <lastmod>2017-12-20T11:25:07.231Z</lastmod>
+    <data>
+        <display>
+        <title>关于float清除浮动和inline-block出现空隙的问题</title>
+        <pubTime>2017-11-26T15:21:45.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2017/11/28/hostsChange/</loc>
+    <lastmod>2017-12-20T11:24:58.101Z</lastmod>
+    <data>
+        <display>
+        <title>更改hosts文件来更好地使用github</title>
+        <pubTime>2017-11-28T15:49:00.000Z</pubTime>
+        
+        <tag>hosts</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2017/11/30/loading/</loc>
+    <lastmod>2017-12-20T11:24:23.932Z</lastmod>
+    <data>
+        <display>
+        <title>loading加载等待框</title>
+        <pubTime>2017-11-30T11:07:04.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
+    <lastmod>2017-12-20T11:24:14.920Z</lastmod>
+    <data>
+        <display>
+        <title>用最简单的代码实现点击查看大图</title>
+        <pubTime>2017-11-29T13:03:34.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2017/12/20/RegularExpression/</loc>
-    <lastmod>2017-12-20T11:06:36.426Z</lastmod>
+    <lastmod>2017-12-20T11:20:13.395Z</lastmod>
     <data>
         <display>
         <title>正则表达式</title>
         <pubTime>2017-12-20T10:48:26.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>正则表达式</tag>
          
          
            
@@ -39,46 +121,6 @@
 
     
     
-  <url>
-    <loc>http://zc95.github.io/2017/11/30/loading/</loc>
-    <lastmod>2017-11-30T11:23:01.317Z</lastmod>
-    <data>
-        <display>
-        <title>loading加载等待框</title>
-        <pubTime>2017-11-30T11:07:04.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
-    <lastmod>2017-11-29T17:23:01.374Z</lastmod>
-    <data>
-        <display>
-        <title>用最简单的代码实现点击查看大图</title>
-        <pubTime>2017-11-29T13:03:34.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
@@ -120,46 +162,6 @@
            
              
               <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2017/11/28/hostsChange/</loc>
-    <lastmod>2017-11-29T11:42:17.192Z</lastmod>
-    <data>
-        <display>
-        <title>更改hosts文件来更好地使用github</title>
-        <pubTime>2017-11-28T15:49:00.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
-    <lastmod>2017-11-28T10:46:38.543Z</lastmod>
-    <data>
-        <display>
-        <title>关于float清除浮动和inline-block出现空隙的问题</title>
-        <pubTime>2017-11-26T15:21:45.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
           
         </display>
     </data>
