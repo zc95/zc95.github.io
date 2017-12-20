@@ -17,19 +17,20 @@
   
   
   <title>正则表达式 | Blog | 张成</title>
-  <meta name="description" content="推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   PART 1-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹配字母 abc 结尾 $ 为匹配输入字符串的结束位置  匹配以数字开头，并以abc结尾的字符串： 12345var str = &quot;123abc&quot;;var patt1 = /^">
+  <meta name="description" content="PART 1-前言我们可以在console控制台，regexper 或者 IDE 去练习正则表达式  推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   现在大部分IDE都会支持正则表达式匹配，如sublime：       PART 2-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹">
 <meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式">
 <meta property="og:url" content="http://zc95.github.io/2017/12/20/RegularExpression/index.html">
 <meta property="og:site_name" content="Blog | 秋刀鱼的滋味">
-<meta property="og:description" content="推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   PART 1-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹配字母 abc 结尾 $ 为匹配输入字符串的结束位置  匹配以数字开头，并以abc结尾的字符串： 12345var str = &quot;123abc&quot;;var patt1 = /^">
+<meta property="og:description" content="PART 1-前言我们可以在console控制台，regexper 或者 IDE 去练习正则表达式  推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   现在大部分IDE都会支持正则表达式匹配，如sublime：       PART 2-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://zc95.github.io/images/myImages/regexper.png">
-<meta property="og:updated_time" content="2017-12-20T14:55:53.795Z">
+<meta property="og:image" content="http://zc95.github.io/images/myImages/sublimeRegexper.png">
+<meta property="og:updated_time" content="2017-12-20T15:35:29.479Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
-<meta name="twitter:description" content="推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   PART 1-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹配字母 abc 结尾 $ 为匹配输入字符串的结束位置  匹配以数字开头，并以abc结尾的字符串： 12345var str = &quot;123abc&quot;;var patt1 = /^">
+<meta name="twitter:description" content="PART 1-前言我们可以在console控制台，regexper 或者 IDE 去练习正则表达式  推荐一个JS正则可视化的在线工具，简单易懂：regexper.com   现在大部分IDE都会支持正则表达式匹配，如sublime：       PART 2-正则表达式实例 ^[0-9]+abc$   ^ 为匹配输入字符串的开始位置 [0-9]+ 匹配单个数字，+ 匹配一个或者多个 abc$ 匹">
 <meta name="twitter:image" content="http://zc95.github.io/images/myImages/regexper.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://zc95.github.io/2017/12/20/RegularExpression/index.html">
@@ -387,7 +388,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-1-正则表达式"><span class="toc-number">1.</span> <span class="toc-text">PART 1-正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-number">1.1.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么使用正则表达式？"><span class="toc-number">1.2.</span> <span class="toc-text">为什么使用正则表达式？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-2-正则字符简单介绍"><span class="toc-number">2.</span> <span class="toc-text">PART 2-正则字符简单介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础字符含义"><span class="toc-number">2.1.</span> <span class="toc-text">基础字符含义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-3-使用正则表达式"><span class="toc-number">3.</span> <span class="toc-text">PART 3-使用正则表达式</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-1-前言"><span class="toc-number">1.</span> <span class="toc-text">PART 1-前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-2-正则表达式"><span class="toc-number">2.</span> <span class="toc-text">PART 2-正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-number">2.1.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么使用正则表达式？"><span class="toc-number">2.2.</span> <span class="toc-text">为什么使用正则表达式？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-3-正则字符简单介绍"><span class="toc-number">3.</span> <span class="toc-text">PART 3-正则字符简单介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础字符含义"><span class="toc-number">3.1.</span> <span class="toc-text">基础字符含义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-4-使用正则表达式"><span class="toc-number">4.</span> <span class="toc-text">PART 4-使用正则表达式</span></a></li></ol>
     </nav>
   </div>
 </aside>
@@ -438,7 +439,7 @@
         <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/12/20/RegularExpression/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,230(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,274(字)</span>
 	
 	
 
@@ -454,10 +455,19 @@
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <p>推荐一个JS正则可视化的在线工具，简单易懂：<a href="https://regexper.com" target="_blank" rel="external">regexper.com</a></p>
+        <h2 id="PART-1-前言"><a href="#PART-1-前言" class="headerlink" title="PART 1-前言"></a>PART 1-前言</h2><p>我们可以在console控制台，regexper 或者 <code>IDE</code> 去练习正则表达式</p>
+<ul>
+<li><p>推荐一个JS正则可视化的在线工具，简单易懂：<a href="https://regexper.com" target="_blank" rel="external">regexper.com</a></p>
 <p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/regexper.png" width="90%;"><br></p>
+</li>
+<li><p>现在大部分IDE都会支持正则表达式匹配，如sublime：</p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/sublimeRegexper.png" width="90%;"><br></p>
 
-<h2 id="PART-1-正则表达式"><a href="#PART-1-正则表达式" class="headerlink" title="PART 1-正则表达式"></a>PART 1-正则表达式</h2><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+
+</li>
+</ul>
+<hr>
+<h2 id="PART-2-正则表达式"><a href="#PART-2-正则表达式" class="headerlink" title="PART 2-正则表达式"></a>PART 2-正则表达式</h2><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
 <p>^[0-9]+abc$</p>
 </blockquote>
 <ul>
@@ -479,7 +489,8 @@
 <p>可以查找文档内或输入域内特定的文本</p>
 </li>
 </ul>
-<h2 id="PART-2-正则字符简单介绍"><a href="#PART-2-正则字符简单介绍" class="headerlink" title="PART 2-正则字符简单介绍"></a>PART 2-正则字符简单介绍</h2><h3 id="基础字符含义"><a href="#基础字符含义" class="headerlink" title="基础字符含义"></a>基础字符含义</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="external">MDN Regular Expressions</a></p>
+<hr>
+<h2 id="PART-3-正则字符简单介绍"><a href="#PART-3-正则字符简单介绍" class="headerlink" title="PART 3-正则字符简单介绍"></a>PART 3-正则字符简单介绍</h2><h3 id="基础字符含义"><a href="#基础字符含义" class="headerlink" title="基础字符含义"></a>基础字符含义</h3><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="external">MDN Regular Expressions</a></p>
 <table>
 <thead>
 <tr>
@@ -598,7 +609,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="PART-3-使用正则表达式"><a href="#PART-3-使用正则表达式" class="headerlink" title="PART 3-使用正则表达式"></a>PART 3-使用正则表达式</h2><p>正则表达式可以被用于<code>RegExp</code>的<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec" target="_blank" rel="external"><code>exec</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/test" target="_blank" rel="external"><code>test</code></a>方法以及 <a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String" target="_blank" rel="external"><code>String</code></a>的<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/match" target="_blank" rel="external"><code>match</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="external"><code>replace</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/search" target="_blank" rel="external"><code>search</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split" target="_blank" rel="external"><code>split</code></a>方法。这些方法在<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference" target="_blank" rel="external">JavaScript 手册</a>中有详细的解释。</p>
+<hr>
+<h2 id="PART-4-使用正则表达式"><a href="#PART-4-使用正则表达式" class="headerlink" title="PART 4-使用正则表达式"></a>PART 4-使用正则表达式</h2><p>正则表达式可以被用于<code>RegExp</code>的<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec" target="_blank" rel="external"><code>exec</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/test" target="_blank" rel="external"><code>test</code></a>方法以及 <a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String" target="_blank" rel="external"><code>String</code></a>的<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/match" target="_blank" rel="external"><code>match</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="external"><code>replace</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/search" target="_blank" rel="external"><code>search</code></a>和<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split" target="_blank" rel="external"><code>split</code></a>方法。这些方法在<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference" target="_blank" rel="external">JavaScript 手册</a>中有详细的解释。</p>
 <table>
 <thead>
 <tr>
