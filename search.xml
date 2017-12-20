@@ -5,7 +5,10 @@
     <entry>
       <title><![CDATA[正则表达式]]></title>
       <url>/2017/12/20/RegularExpression/</url>
-      <content type="html"><![CDATA[<h2 id="PART-1-正则表达式"><a href="#PART-1-正则表达式" class="headerlink" title="PART 1-正则表达式"></a>PART 1-正则表达式</h2><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+      <content type="html"><![CDATA[<p>推荐一个JS正则可视化的在线工具，简单易懂：<a href="https://regexper.com" target="_blank" rel="external">regexper.com</a></p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/regexper.png" width="90%;"><br></p>
+
+<h2 id="PART-1-正则表达式"><a href="#PART-1-正则表达式" class="headerlink" title="PART 1-正则表达式"></a>PART 1-正则表达式</h2><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
 <p>^[0-9]+abc$</p>
 </blockquote>
 <ul>
