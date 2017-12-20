@@ -31,7 +31,7 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">字符              ———</th>
+<th style="text-align:center">字符</th>
 <th>描述</th>
 </tr>
 </thead>
@@ -65,8 +65,7 @@
 <td>匹配除换行符之外的任何单个字符<br><br> 例如，/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td>
 </tr>
 <tr>
-<td style="text-align:center">x\</td>
-<td>y</td>
+<td style="text-align:center">x&#124;y</td>
 <td>匹配x或y</td>
 </tr>
 <tr>
