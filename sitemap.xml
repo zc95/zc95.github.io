@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zc95.github.io/2017/12/20/RegularExpression/</loc>
+    <loc>http://zc95.github.io/tags/index.html</loc>
     
-    <lastmod>2017-12-20T15:35:29.479Z</lastmod>
+    <lastmod>2017-12-20T17:26:27.836Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zc95.github.io/about/index.html</loc>
     
-    <lastmod>2017-12-20T14:07:01.097Z</lastmod>
+    <lastmod>2017-12-20T17:25:10.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/12/20/RegularExpression/</loc>
+    
+    <lastmod>2017-12-20T15:35:29.479Z</lastmod>
     
   </url>
   
@@ -145,13 +152,6 @@
     <loc>http://zc95.github.io/2017/11/21/arrayReview/</loc>
     
     <lastmod>2017-11-23T13:56:11.084Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-11-23T12:44:39.583Z</lastmod>
     
   </url>
   
