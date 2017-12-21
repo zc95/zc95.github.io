@@ -20,10 +20,10 @@
 <h2 id="PART-2-练习正则表达式"><a href="#PART-2-练习正则表达式" class="headerlink" title="PART 2-练习正则表达式"></a>PART 2-练习正则表达式</h2><p>我们可以在console控制台，regexper 或者 <code>IDE</code> 去练习正则表达式</p>
 <ul>
 <li><p>推荐一个JS正则可视化的在线工具，简单易懂：<a href="https://regexper.com" target="_blank" rel="external">regexper.com</a></p>
-<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/regexper.png" width="90%;"><br></p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/regexper.png" width="90%;"><br></p>
 </li>
 <li><p>现在大部分IDE都会支持正则表达式匹配，如sublime：</p>
-<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/sublimeRegexper.png" width="90%;"><br></p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/sublimeRegexper.png" width="90%;"><br></p>
 
 
 </li>
@@ -248,7 +248,7 @@
       <title><![CDATA[用最简单的代码实现点击查看大图]]></title>
       <url>/2017/11/29/enlargeImg/</url>
       <content type="html"><![CDATA[<p>今天做了个点击查看大图的功能，只需要给img加一个class，不用写额外的html代码</p>
-<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/enlargeImg.png" width="90%;"><br></p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/enlargeImg.png" width="90%;"><br></p>
 
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
 <li><a href="https://htmlpreview.github.io/?https://github.com/zc95/enlargeImg/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
@@ -353,7 +353,7 @@
       <title><![CDATA[关于float清除浮动和inline-block出现空隙的问题]]></title>
       <url>/2017/11/26/floatAndInlineBlock/</url>
       <content type="html"><![CDATA[<p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p>
-<p></p><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/inlineBlockKX.png" width="90%;"><br></p><br>但我们都知道 <code>display:inline-block</code> 布局会出现空隙的问题，<code>float:left</code>  又要清除浮动，本文就这两个问题整理出解决方案。<br><a id="more"></a><p></p>
+<p></p><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/inlineBlockKX.png" width="90%;"><br></p><br>但我们都知道 <code>display:inline-block</code> 布局会出现空隙的问题，<code>float:left</code>  又要清除浮动，本文就这两个问题整理出解决方案。<br><a id="more"></a><p></p>
 <h2 id="display-inline-block去掉空隙"><a href="#display-inline-block去掉空隙" class="headerlink" title="display:inline-block去掉空隙"></a>display:inline-block去掉空隙</h2><h3 id="移除标签间的空格"><a href="#移除标签间的空格" class="headerlink" title="移除标签间的空格"></a>移除标签间的空格</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tab-wrapper"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item active"</span>&gt;</span>项目一<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目二<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目三<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目四<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这个方法是我最初学html时知道的方法，当时觉得挺方便的，现在工作了觉得这个方法好蠢😂，一个代码格式化就能毁了它，这样不易维护的代码太脆弱了；</p>
 <h3 id="去掉闭合标签"><a href="#去掉闭合标签" class="headerlink" title="去掉闭合标签"></a>去掉闭合标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tab-wrapper"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item active"</span>&gt;</span>项目一</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目二</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目三</div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目四</div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -385,12 +385,12 @@
       <url>/2017/11/23/gitment/</url>
       <content type="html"><![CDATA[<h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为<a href="https://zc95.github.io/2017/10/20/hexoBlog/">hexo</a>博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p>
 <p>本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="gitment"><a href="#gitment" class="headerlink" title="gitment"></a>gitment</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/gitmentPC.png" width="90%;"><br></p>        
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="gitment"><a href="#gitment" class="headerlink" title="gitment"></a>gitment</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentPC.png" width="90%;"><br></p>        
 
 
 
 <hr>
-<h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/gitmentYD.png" width="90%;"><br></p>
+<h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentYD.png" width="90%;"><br></p>
 
 <hr>
 <h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>打开博客主题文件夹下的 <code>_config.yml</code> 文件，以我的为例：</p>
@@ -398,10 +398,10 @@
 <p><code>githubID</code> 和 <code>repo</code> 都有了，就剩 <code>ClientID</code> 和 <code>ClientSecret</code> 了</p>
 <hr>
 <h2 id="注册OAuth-Application"><a href="#注册OAuth-Application" class="headerlink" title="注册OAuth Application"></a>注册OAuth Application</h2><p>通过地址<a href="https://github.com/settings/applications/new" target="_blank" rel="external">OAuth Application注册传送门</a>申请配置，注册一个新的 OAuth Application，其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="https://zc95.github.io">https://zc95.github.io</a>）</p>
-<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/OAuthApplication.png" width="90%;"><br></p>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplication.png" width="90%;"><br></p>
 
 <hr>
-<h2 id="获取ClientID与ClientSecret"><a href="#获取ClientID与ClientSecret" class="headerlink" title="获取ClientID与ClientSecret"></a>获取ClientID与ClientSecret</h2><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/images/myImages/OAuthApplicationId.png" width="90%;"><br></p>
+<h2 id="获取ClientID与ClientSecret"><a href="#获取ClientID与ClientSecret" class="headerlink" title="获取ClientID与ClientSecret"></a>获取ClientID与ClientSecret</h2><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplicationId.png" width="90%;"><br></p>
 
 
 <hr>
