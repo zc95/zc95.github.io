@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://zc95.github.io/2017/12/21/javascriptClosure/</loc>
     <lastmod>2017-12-21T12:51:04.884Z</lastmod>
@@ -411,9 +412,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            
@@ -444,7 +445,6 @@
     </data>
     </url>
 
-    
     
     
     
