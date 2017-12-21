@@ -2,58 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zc95.github.io/tags/index.html</loc>
+    <loc>http://zc95.github.io/categories/index.html</loc>
     
-    <lastmod>2017-12-20T17:26:27.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/about/index.html</loc>
-    
-    <lastmod>2017-12-20T17:25:10.794Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/12/20/RegularExpression/</loc>
-    
-    <lastmod>2017-12-20T15:35:29.479Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/30/loading/</loc>
-    
-    <lastmod>2017-12-20T13:55:51.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
-    
-    <lastmod>2017-12-20T11:25:07.231Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/28/hostsChange/</loc>
-    
-    <lastmod>2017-12-20T11:24:58.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
-    
-    <lastmod>2017-12-20T11:24:14.920Z</lastmod>
+    <lastmod>2017-12-21T12:20:30.370Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zc95.github.io/2017/10/19/hello-world/</loc>
     
-    <lastmod>2017-12-07T17:28:07.390Z</lastmod>
+    <lastmod>2017-12-21T12:18:09.638Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/20/hexoBlog/</loc>
+    
+    <lastmod>2017-12-21T12:17:50.595Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
+    
+    <lastmod>2017-12-21T12:17:31.831Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/21/input/</loc>
+    
+    <lastmod>2017-12-21T12:17:07.541Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/21/DOM/</loc>
+    
+    <lastmod>2017-12-21T12:16:39.916Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/24/amazingTable/</loc>
+    
+    <lastmod>2017-12-21T12:16:19.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/25/wordBreak/</loc>
+    
+    <lastmod>2017-12-21T12:15:55.326Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
+    
+    <lastmod>2017-12-21T12:15:37.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/03/AdaptiveLayout/</loc>
+    
+    <lastmod>2017-12-21T12:15:20.306Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/11/column/</loc>
+    
+    <lastmod>2017-12-21T12:15:00.202Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
+    
+    <lastmod>2017-12-21T12:14:34.300Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/21/arrayReview/</loc>
+    
+    <lastmod>2017-12-21T12:14:17.731Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/21/Collection/</loc>
+    
+    <lastmod>2017-12-21T12:13:56.048Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
+    
+    <lastmod>2017-12-21T12:13:23.783Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
+    
+    <lastmod>2017-12-21T12:12:49.365Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/28/hostsChange/</loc>
+    
+    <lastmod>2017-12-21T12:12:16.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
+    
+    <lastmod>2017-12-21T12:10:59.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/11/30/loading/</loc>
+    
+    <lastmod>2017-12-21T12:08:52.817Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/about/index.html</loc>
+    
+    <lastmod>2017-12-21T12:07:09.351Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-12-21T12:03:36.959Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/12/20/RegularExpression/</loc>
+    
+    <lastmod>2017-12-21T12:00:01.519Z</lastmod>
     
   </url>
   
@@ -61,104 +159,6 @@
     <loc>http://zc95.github.io/links/index.html</loc>
     
     <lastmod>2017-11-30T11:37:25.982Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/17/rangeUI/</loc>
-    
-    <lastmod>2017-11-29T17:22:57.030Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/21/input/</loc>
-    
-    <lastmod>2017-11-29T17:15:35.007Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
-    
-    <lastmod>2017-11-26T14:23:24.606Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
-    
-    <lastmod>2017-11-23T13:58:05.135Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/20/hexoBlog/</loc>
-    
-    <lastmod>2017-11-23T13:57:58.374Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/21/DOM/</loc>
-    
-    <lastmod>2017-11-23T13:57:32.861Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/24/amazingTable/</loc>
-    
-    <lastmod>2017-11-23T13:57:25.396Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/25/wordBreak/</loc>
-    
-    <lastmod>2017-11-23T13:57:20.478Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
-    
-    <lastmod>2017-11-23T13:57:14.177Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/03/AdaptiveLayout/</loc>
-    
-    <lastmod>2017-11-23T13:57:09.395Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/11/column/</loc>
-    
-    <lastmod>2017-11-23T13:57:02.472Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/21/Collection/</loc>
-    
-    <lastmod>2017-11-23T13:56:54.562Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/11/21/arrayReview/</loc>
-    
-    <lastmod>2017-11-23T13:56:11.084Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-11-23T12:44:19.837Z</lastmod>
     
   </url>
   
@@ -173,13 +173,6 @@
     <loc>http://zc95.github.io/timeline/index.html</loc>
     
     <lastmod>2017-10-20T16:03:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/friends/index.html</loc>
-    
-    <lastmod>2017-10-19T17:37:19.000Z</lastmod>
     
   </url>
   
