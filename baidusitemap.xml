@@ -4,35 +4,38 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2017/12/26/VMware/</loc>
-    <lastmod>2017-12-26T13:01:49.638Z</lastmod>
+    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
+    <lastmod>2017-12-26T13:11:47.795Z</lastmod>
     <data>
         <display>
-        <title>VMware服务器虚拟化</title>
-        <pubTime>2017-12-26T12:49:24.000Z</pubTime>
+        <title>原生javascript和jquery的用法对比</title>
+        <pubTime>2017-10-25T04:39:12.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>javascript</tag>
+         
+        <tag>jquery</tag>
          
          
            
              
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
           
         </display>
     </data>
     </url>
 
     
-    
   <url>
     <loc>http://zc95.github.io/2017/12/21/javascriptClosure/</loc>
-    <lastmod>2017-12-21T12:51:04.884Z</lastmod>
+    <lastmod>2017-12-26T13:11:21.185Z</lastmod>
     <data>
         <display>
         <title>JavaScript闭包</title>
         <pubTime>2017-12-21T12:48:17.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>javascript</tag>
+         
+        <tag>正则表达式</tag>
          
          
            
@@ -43,6 +46,35 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://zc95.github.io/2017/12/26/VMware/</loc>
+    <lastmod>2017-12-26T13:10:59.659Z</lastmod>
+    <data>
+        <display>
+        <title>VMware服务器虚拟化</title>
+        <pubTime>2017-12-26T12:49:24.000Z</pubTime>
+        
+        <tag>VMware</tag>
+         
+        <tag>服务器虚拟化</tag>
+         
+        <tag>堡垒机</tag>
+         
+        <tag>磁盘阵列</tag>
+         
+        <tag>交换机</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://zc95.github.io/2017/11/23/gitment/</loc>
@@ -292,26 +324,6 @@
            
              
               <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
-    <lastmod>2017-12-21T12:15:37.881Z</lastmod>
-    <data>
-        <display>
-        <title>原生javascript和jquery的用法对比</title>
-        <pubTime>2017-10-25T04:39:12.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
           
         </display>
     </data>

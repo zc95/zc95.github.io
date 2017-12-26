@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
+    
+    <lastmod>2017-12-26T13:11:47.795Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2017/12/21/javascriptClosure/</loc>
+    
+    <lastmod>2017-12-26T13:11:21.185Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2017/12/26/VMware/</loc>
     
-    <lastmod>2017-12-26T13:01:49.638Z</lastmod>
+    <lastmod>2017-12-26T13:10:59.659Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>http://zc95.github.io/about/index.html</loc>
     
     <lastmod>2017-12-21T15:01:52.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/12/21/javascriptClosure/</loc>
-    
-    <lastmod>2017-12-21T12:51:04.884Z</lastmod>
     
   </url>
   
@@ -103,13 +110,6 @@
     <loc>http://zc95.github.io/2017/10/25/wordBreak/</loc>
     
     <lastmod>2017-12-21T12:15:55.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
-    
-    <lastmod>2017-12-21T12:15:37.881Z</lastmod>
     
   </url>
   
