@@ -3,6 +3,41 @@
   
     
     <entry>
+      <title><![CDATA[ToDo 待办事宜app]]></title>
+      <url>/2018/01/07/ToDo/</url>
+      <content type="html"><![CDATA[<h2 id="ToDo"><a href="#ToDo" class="headerlink" title="ToDo"></a>ToDo</h2><p>最近做事情总是丢三落四，老忘记一些重要的事情，就突发奇想写了这个 <code>ToDo</code> 待办事宜的app。</p>
+<ol>
+<li><a href="https://htmlpreview.github.io/?https://github.com/zc95/ToDo/blob/master/index.html#" target="_blank" rel="external">项目地址</a></li>
+<li><a href="https://github.com/zc95/ToDo" target="_blank" rel="external">github地址</a></li>
+</ol>
+<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="https://ws1.sinaimg.cn/large/006tNc79gy1fn87kbo8mmj30xr1o014t.jpg" width="90%;"><br></p>
+
+
+<a id="more"></a>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><ol>
+<li>可以添加待办事项到首页中，数据都是保存在本地localStorage的，只要不是手动删除或者换了设备，数据是永久保存的</li>
+<li>点击事项可以将待办事项的状态改为 <code>选中</code> 和 <code>未选中</code> ，每次改变状态都会保存到localStorage，每天的开始都可以点 <code>重置所有状态</code> 的按钮来设置所有的待办事项为未选中</li>
+<li>可以删除已添加的待办事项或者彻底删除所有本地localStorage数据</li>
+</ol>
+<h2 id="本地存储localStorage"><a href="#本地存储localStorage" class="headerlink" title="本地存储localStorage"></a>本地存储localStorage</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">[&#123;</div><div class="line">  <span class="string">"text"</span>: <span class="string">"待办事项1"</span>,</div><div class="line">  <span class="string">"id"</span>: <span class="string">"3e54ca37-ca25-4cf8-a5a8-f92a2137dd0d"</span>,</div><div class="line">  <span class="string">"checked"</span>: <span class="string">"0"</span></div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">  <span class="string">"text"</span>: <span class="string">"待办2"</span>,</div><div class="line">  <span class="string">"id"</span>: <span class="string">"77b5044f-c352-e028-e2eb-8706fb27be2c"</span>,</div><div class="line">  <span class="string">"checked"</span>: <span class="string">"0"</span></div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">  <span class="string">"text"</span>: <span class="string">"哈哈哈哈"</span>,</div><div class="line">  <span class="string">"id"</span>: <span class="string">"282ca71e-ae17-afc2-9d49-0c6d30c676fa"</span>,</div><div class="line">  <span class="string">"checked"</span>: <span class="string">"0"</span></div><div class="line">&#125;]</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> demo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> localStorage </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[VMware服务器虚拟化]]></title>
       <url>/2017/12/26/VMware/</url>
       <content type="html"><![CDATA[<p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="https://ws2.sinaimg.cn/large/006tNc79gy1fmucwl7r2aj31hc0u0dng.jpg" width="90%;"><br></p>
@@ -488,9 +523,9 @@
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         

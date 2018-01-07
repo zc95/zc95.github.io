@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/01/07/ToDo/</loc>
+    <lastmod>2018-01-07T10:34:10.684Z</lastmod>
+    <data>
+        <display>
+        <title>ToDo 待办事宜app</title>
+        <pubTime>2018-01-07T10:29:58.000Z</pubTime>
+        
+        <tag>localStorage</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2017/10/25/jsAndJq/</loc>
     <lastmod>2017-12-26T13:11:47.795Z</lastmod>
     <data>
@@ -444,9 +464,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            
