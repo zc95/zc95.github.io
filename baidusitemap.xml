@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zc95.github.io/2018/01/07/ToDo/</loc>
-    <lastmod>2018-01-07T10:34:10.684Z</lastmod>
+    <lastmod>2018-01-07T12:54:37.260Z</lastmod>
     <data>
         <display>
         <title>ToDo 待办事宜app</title>
@@ -204,9 +204,9 @@
         <title>在Mac下通过Hexo在Github上搭建博客（入门篇）</title>
         <pubTime>2017-10-20T13:48:28.000Z</pubTime>
         
-        <tag>Hexo</tag>
-         
         <tag>github</tag>
+         
+        <tag>Hexo</tag>
          
         <tag>Node.js</tag>
          
