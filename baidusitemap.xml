@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/01/11/nodejsFirstTry/</loc>
+    <lastmod>2018-01-10T16:16:13.020Z</lastmod>
+    <data>
+        <display>
+        <title>nodejs搭建本地服务器环境</title>
+        <pubTime>2018-01-10T16:09:48.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>node.js</tag>
+         
+        <tag>本地服务器</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/01/10/999/</loc>
     <lastmod>2018-01-10T14:26:38.099Z</lastmod>
     <data>
@@ -141,9 +165,9 @@
         <title>JavaScript闭包</title>
         <pubTime>2017-12-21T12:48:17.000Z</pubTime>
         
-        <tag>正则表达式</tag>
-         
         <tag>javascript</tag>
+         
+        <tag>正则表达式</tag>
          
          
            
