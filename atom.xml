@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-01-10T16:16:13.020Z</updated>
+  <updated>2018-01-10T16:19:54.333Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="http://zc95.github.io/2018/01/11/nodejsFirstTry/"/>
     <id>http://zc95.github.io/2018/01/11/nodejsFirstTry/</id>
     <published>2018-01-10T16:09:48.000Z</published>
-    <updated>2018-01-10T16:16:13.020Z</updated>
+    <updated>2018-01-10T16:19:54.333Z</updated>
     
-    <content type="html"><![CDATA[<p>Node.js® is a JavaScript runtime built on <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome’s V8 JavaScript engine</a>. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>, is the largest ecosystem of open source libraries in the world.</p><p>Node.js® 是一个基于 <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome V8 引擎</a>的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>，是目前世界上最大的开源库生态系统。</p><p></p><p style="text-align:center;"><br> <img style="box-shadow:1px 1px 10px #888888;" src="" width="90%;"><br></p>    <p></p><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol><li>点击 <a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a> 进入nodejs官网</li><li>有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠</li><li>next到底</li><li>打开终端，输入 <code>node -v</code> ，回车，如果出现类似这样 <code>v6.11.4</code> 的版本号就说明安装成功</li></ol><a id="more"></a><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol><li><p>在根目录下新建一个 <code>nodetest</code> 的文件夹</p></li><li><p>在 <code>nodetest</code> 下新建一个 <code>server.js</code> 的文件</p></li><li><p>拷贝粘贴这段代码，保存：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">    response.writeHead(<span class="number">200</span>, &#123;</div><div class="line">        <span class="string">"Content-Type"</span> : <span class="string">"text/plain"</span></div><div class="line">    &#125;);</div><div class="line">    response.write(<span class="string">"Welcome to Nodejs"</span>);</div><div class="line">    response.end();</div><div class="line">&#125;).listen(<span class="number">8000</span>, <span class="string">"127.0.0.1"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Creat server on http://127.0.0.1:8000/"</span>);</div></pre></td></tr></table></figure></li><li><p>打开终端 输入 <code>cd nodetest</code> 回车，<code>ls</code> 回车，确保返回的是你新建的那个 <code>server.js</code> 文件</p></li><li><p>输入 <code>node nodetest server.js</code> 回车，返回 <code>Creat server on http://127.0.0.1:8000/</code></p></li><li><p>打开浏览器输入 <code>http://127.0.0.1:8000/</code> 或者 <code>http://localhost:8000</code> </p></li><li><p>Welcome to Nodejs</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>Node.js® is a JavaScript runtime built on <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome’s V8 JavaScript engine</a>. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>, is the largest ecosystem of open source libraries in the world.</p><p>Node.js® 是一个基于 <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome V8 引擎</a>的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>，是目前世界上最大的开源库生态系统。</p><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol><li>点击 <a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a> 进入nodejs官网</li><li>有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠</li><li>next到底</li><li>打开终端，输入 <code>node -v</code> ，回车，如果出现类似这样 <code>v6.11.4</code> 的版本号就说明安装成功</li></ol><a id="more"></a><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol><li><p>在根目录下新建一个 <code>nodetest</code> 的文件夹</p></li><li><p>在 <code>nodetest</code> 下新建一个 <code>server.js</code> 的文件</p></li><li><p>拷贝粘贴这段代码，保存：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">    response.writeHead(<span class="number">200</span>, &#123;</div><div class="line">        <span class="string">"Content-Type"</span> : <span class="string">"text/plain"</span></div><div class="line">    &#125;);</div><div class="line">    response.write(<span class="string">"Welcome to Nodejs"</span>);</div><div class="line">    response.end();</div><div class="line">&#125;).listen(<span class="number">8000</span>, <span class="string">"127.0.0.1"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Creat server on http://127.0.0.1:8000/"</span>);</div></pre></td></tr></table></figure></li><li><p>打开终端 输入 <code>cd nodetest</code> 回车，<code>ls</code> 回车，确保返回的是你新建的那个 <code>server.js</code> 文件</p></li><li><p>输入 <code>node nodetest server.js</code> 回车，返回 <code>Creat server on http://127.0.0.1:8000/</code></p></li><li><p>打开浏览器输入 <code>http://127.0.0.1:8000/</code> 或者 <code>http://localhost:8000</code> </p></li><li><p>Welcome to Nodejs</p></li></ol>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;Node.js® is a JavaScript runtime built on &lt;a href=&quot;https://developers.google.com/v8/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome’s V8 JavaScript engine&lt;/a&gt;. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, &lt;a href=&quot;https://www.npmjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;, is the largest ecosystem of open source libraries in the world.&lt;/p&gt;
 &lt;p&gt;Node.js® 是一个基于 &lt;a href=&quot;https://developers.google.com/v8/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome V8 引擎&lt;/a&gt;的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，&lt;a href=&quot;https://www.npmjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;，是目前世界上最大的开源库生态系统。&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;br&gt; &lt;img style=&quot;box-shadow:1px 1px 10px #888888;&quot; src=&quot;&quot; width=&quot;90%;&quot;&gt;&lt;br&gt;&lt;/p&gt;    &lt;p&gt;&lt;/p&gt;
 &lt;h2 id=&quot;安装nodejs&quot;&gt;&lt;a href=&quot;#安装nodejs&quot; class=&quot;headerlink&quot; title=&quot;安装nodejs&quot;&gt;&lt;/a&gt;安装nodejs&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;点击 &lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org&lt;/a&gt; 进入nodejs官网&lt;/li&gt;
 &lt;li&gt;有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠&lt;/li&gt;
@@ -184,9 +183,9 @@
       <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
     
     
-      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
-    
       <category term="正则表达式" scheme="http://zc95.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
     
   </entry>
   
@@ -295,9 +294,9 @@
       <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
     
     
-      <category term="hosts" scheme="http://zc95.github.io/tags/hosts/"/>
-    
       <category term="github" scheme="http://zc95.github.io/tags/github/"/>
+    
+      <category term="hosts" scheme="http://zc95.github.io/tags/hosts/"/>
     
   </entry>
   

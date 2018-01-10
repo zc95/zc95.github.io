@@ -7,7 +7,6 @@
       <url>/2018/01/11/nodejsFirstTry/</url>
       <content type="html"><![CDATA[<p>Node.js® is a JavaScript runtime built on <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome’s V8 JavaScript engine</a>. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>, is the largest ecosystem of open source libraries in the world.</p>
 <p>Node.js® 是一个基于 <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome V8 引擎</a>的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>，是目前世界上最大的开源库生态系统。</p>
-<p></p><p style="text-align:center;"><br> <img style="box-shadow:1px 1px 10px #888888;" src="" width="90%;"><br></p>    <p></p>
 <h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
 <li>点击 <a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a> 进入nodejs官网</li>
 <li>有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠</li>
@@ -290,9 +289,9 @@
         
         <tags>
             
-            <tag> javascript </tag>
-            
             <tag> 正则表达式 </tag>
+            
+            <tag> javascript </tag>
             
         </tags>
         
@@ -637,9 +636,9 @@
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         

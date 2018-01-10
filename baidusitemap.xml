@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zc95.github.io/2018/01/11/nodejsFirstTry/</loc>
-    <lastmod>2018-01-10T16:16:13.020Z</lastmod>
+    <lastmod>2018-01-10T16:19:54.333Z</lastmod>
     <data>
         <display>
         <title>nodejs搭建本地服务器环境</title>
@@ -165,9 +165,9 @@
         <title>JavaScript闭包</title>
         <pubTime>2017-12-21T12:48:17.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>正则表达式</tag>
+         
+        <tag>javascript</tag>
          
          
            
@@ -530,9 +530,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>hosts</tag>
-         
         <tag>github</tag>
+         
+        <tag>hosts</tag>
          
          
            
