@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
+    <lastmod>2018-01-10T13:27:57.923Z</lastmod>
+    <data>
+        <display>
+        <title>关于float清除浮动和inline-block出现空隙的问题</title>
+        <pubTime>2017-11-26T15:21:45.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2018/01/10/centerAndmiddle/</loc>
+    <lastmod>2018-01-10T13:25:07.035Z</lastmod>
+    <data>
+        <display>
+        <title>水平垂直居中</title>
+        <pubTime>2018-01-10T13:17:24.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
+    <lastmod>2018-01-10T11:40:39.568Z</lastmod>
+    <data>
+        <display>
+        <title>日常问题整理</title>
+        <pubTime>2017-10-21T04:14:08.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>html</tag>
+         
+        <tag>javascript</tag>
+         
+        <tag>jquery</tag>
+         
+         
+           
+             
+              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/01/07/ToDo/</loc>
     <lastmod>2018-01-07T12:54:37.260Z</lastmod>
     <data>
@@ -121,26 +187,6 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2017/11/26/floatAndInlineBlock/</loc>
-    <lastmod>2017-12-21T12:43:13.336Z</lastmod>
-    <data>
-        <display>
-        <title>关于float清除浮动和inline-block出现空隙的问题</title>
-        <pubTime>2017-11-26T15:21:45.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2017/11/29/enlargeImg/</loc>
     <lastmod>2017-12-21T12:42:50.170Z</lastmod>
     <data>
@@ -204,9 +250,9 @@
         <title>在Mac下通过Hexo在Github上搭建博客（入门篇）</title>
         <pubTime>2017-10-20T13:48:28.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>Hexo</tag>
+         
+        <tag>github</tag>
          
         <tag>Node.js</tag>
          
@@ -220,32 +266,6 @@
            
              
               <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2017/10/21/dailySummary/</loc>
-    <lastmod>2017-12-21T12:17:31.831Z</lastmod>
-    <data>
-        <display>
-        <title>日常问题整理</title>
-        <pubTime>2017-10-21T04:14:08.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-        <tag>html</tag>
-         
-        <tag>javascript</tag>
-         
-        <tag>jquery</tag>
-         
-         
-           
-             
-              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
           
         </display>
     </data>
@@ -464,9 +484,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>hosts</tag>
-         
         <tag>github</tag>
+         
+        <tag>hosts</tag>
          
          
            
