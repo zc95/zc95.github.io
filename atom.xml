@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-01-10T14:26:38.099Z</updated>
+  <updated>2018-01-11T10:51:45.085Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nodejs搭建本地服务器环境</title>
+    <link href="http://zc95.github.io/2018/01/11/nodejsFirstTry/"/>
+    <id>http://zc95.github.io/2018/01/11/nodejsFirstTry/</id>
+    <published>2018-01-11T10:09:48.000Z</published>
+    <updated>2018-01-11T10:51:45.085Z</updated>
+    
+    <content type="html"><![CDATA[<p>Node.js® is a JavaScript runtime built on <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome’s V8 JavaScript engine</a>. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>, is the largest ecosystem of open source libraries in the world.</p><p>Node.js® 是一个基于 <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome V8 引擎</a>的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，<a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>，是目前世界上最大的开源库生态系统。</p><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol><li>点击 <a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a> 进入nodejs官网</li><li>有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠</li><li>next到底</li><li>打开终端，输入 <code>node -v</code> ，回车，如果出现类似这样 <code>v6.11.4</code> 的版本号就说明安装成功</li></ol><a id="more"></a><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol><li><p>在根目录下新建一个 <code>nodetest</code> 的文件夹</p></li><li><p>在 <code>nodetest</code> 下新建一个 <code>server.js</code> 的文件</p></li><li><p>拷贝粘贴这段代码，保存：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">"http"</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">    response.writeHead(<span class="number">200</span>, &#123;</div><div class="line">        <span class="string">"Content-Type"</span> : <span class="string">"text/plain"</span></div><div class="line">    &#125;);</div><div class="line">    response.write(<span class="string">"Welcome to Nodejs"</span>);</div><div class="line">    response.end();</div><div class="line">&#125;).listen(<span class="number">8000</span>, <span class="string">"127.0.0.1"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"Creat server on http://127.0.0.1:8000/"</span>);</div></pre></td></tr></table></figure></li><li><p>打开终端 输入 <code>cd nodetest</code> 回车，<code>ls</code> 回车，确保返回的是你新建的那个 <code>server.js</code> 文件</p></li><li><p>输入 <code>node nodetest server.js</code> 回车，返回 <code>Creat server on http://127.0.0.1:8000/</code></p></li><li><p>打开浏览器输入 <code>http://127.0.0.1:8000/</code> 或者 <code>http://localhost:8000</code> </p></li><li><p>Welcome to Nodejs</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Node.js® is a JavaScript runtime built on &lt;a href=&quot;https://developers.google.com/v8/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome’s V8 JavaScript engine&lt;/a&gt;. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, &lt;a href=&quot;https://www.npmjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;, is the largest ecosystem of open source libraries in the world.&lt;/p&gt;
+&lt;p&gt;Node.js® 是一个基于 &lt;a href=&quot;https://developers.google.com/v8/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Chrome V8 引擎&lt;/a&gt;的 JavaScript 运行时。 Node.js 使用高效、轻量级的事件驱动、非阻塞 I/O 模型。它的包生态系统，&lt;a href=&quot;https://www.npmjs.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;，是目前世界上最大的开源库生态系统。&lt;/p&gt;
+&lt;h2 id=&quot;安装nodejs&quot;&gt;&lt;a href=&quot;#安装nodejs&quot; class=&quot;headerlink&quot; title=&quot;安装nodejs&quot;&gt;&lt;/a&gt;安装nodejs&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;点击 &lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://nodejs.org&lt;/a&gt; 进入nodejs官网&lt;/li&gt;
+&lt;li&gt;有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠&lt;/li&gt;
+&lt;li&gt;next到底&lt;/li&gt;
+&lt;li&gt;打开终端，输入 &lt;code&gt;node -v&lt;/code&gt; ，回车，如果出现类似这样 &lt;code&gt;v6.11.4&lt;/code&gt; 的版本号就说明安装成功&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="nodejs" scheme="http://zc95.github.io/tags/nodejs/"/>
+    
+      <category term="node.js" scheme="http://zc95.github.io/tags/node-js/"/>
+    
+      <category term="本地服务器" scheme="http://zc95.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>到底谁在看我的博客哈哈哈</title>
@@ -530,46 +563,6 @@
     
     
       <category term="css" scheme="http://zc95.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DOM</title>
-    <link href="http://zc95.github.io/2017/10/21/DOM/"/>
-    <id>http://zc95.github.io/2017/10/21/DOM/</id>
-    <published>2017-10-21T06:37:42.000Z</published>
-    <updated>2017-12-21T12:16:39.916Z</updated>
-    
-    <content type="html"><![CDATA[<p>为什么我们要尽量少的去操作DOM结构？</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在前端开发的过程中，javascript极为重要的一个功能就是对DOM对象的操作，无论增删改查在前端页面操作这一范围内都是比较消耗性能的。如何高效率的，便捷的操作DOM，这就是本文要讲述的，希望看完全文，你能知道如何更高效的通过原生js以及jQuery操作DOM元素。</p><h2 id="性能影响"><a href="#性能影响" class="headerlink" title="性能影响"></a>性能影响</h2><ol><li>DOM修改导致的页面重绘<code>repaint</code>、重构<code>reflow</code>，重新排版是用户阻塞的操作，同时，如果频繁重排，CPU使用率也会猛涨</li><li>repaint意味着样式的改变比如div调整了背景色等，但是位置不变，只改变我们操作的元素</li><li>reflow意味着结构的改变，比如一堆元素堆叠，改变其中一个的宽高，那么相应的所有元素的位置都要改变</li><li>所以通常来看repaint的代价要远小于reflow，速度也更快<a id="more"></a><h2 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h2></li></ol><h3 id="能放到DOM操作之外的操作就放到外面，DOM操作要尽量少"><a href="#能放到DOM操作之外的操作就放到外面，DOM操作要尽量少" class="headerlink" title="能放到DOM操作之外的操作就放到外面，DOM操作要尽量少"></a>能放到DOM操作之外的操作就放到外面，DOM操作要尽量少</h3><p>这是一个不好的事例：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(<span class="string">"#obj"</span>);</div><div class="line"><span class="keyword">var</span> data = [&#123;<span class="string">"id"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"a"</span>&#125;,&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"b"</span>&#125;];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</div><div class="line">    $obj.append(<span class="string">'&lt;option value="'</span>+data[i].id+<span class="string">'"&gt;'</span>+data[i].name+<span class="string">'&lt;/option&gt;'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure><p>更好的做法，使用容器存放临时变更，最后再一次性更新DOM：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(<span class="string">"#obj"</span>);</div><div class="line"><span class="keyword">var</span> data = [&#123;<span class="string">"id"</span>:<span class="number">0</span>,<span class="string">"name"</span>:<span class="string">"a"</span>&#125;,&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"b"</span>&#125;];</div><div class="line"><span class="keyword">var</span> tempStr = <span class="string">""</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</div><div class="line">    tempStr +=(<span class="string">'&lt;option value="'</span>+data[i].id+<span class="string">'"&gt;'</span>+data[i].name+<span class="string">'&lt;/option&gt;'</span>);</div><div class="line">&#125;;</div><div class="line">$obj.html(tempStr);</div></pre></td></tr></table></figure><h3 id="大范围操作先把容器隐藏，在其中操作完成后再显示"><a href="#大范围操作先把容器隐藏，在其中操作完成后再显示" class="headerlink" title="大范围操作先把容器隐藏，在其中操作完成后再显示"></a>大范围操作先把容器隐藏，在其中操作完成后再显示</h3><p>这个也算是优化的一种，这原理涉及到浏览器加载和渲染的原理,简单说就是隐藏的元素其中不会产生reflow</p><h3 id="样式操作不要注意修改属性，直接替换class"><a href="#样式操作不要注意修改属性，直接替换class" class="headerlink" title="样式操作不要注意修改属性，直接替换class"></a>样式操作不要注意修改属性，直接替换class</h3><p>这个还是比较容易理解的，你逐一修改要访问很多次，而替换class就相当于批量操作了，访问一次DOM就可以了,当然性能提高了</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>对于性能方面，平时应注意积累。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;为什么我们要尽量少的去操作DOM结构？&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在前端开发的过程中，javascript极为重要的一个功能就是对DOM对象的操作，无论增删改查在前端页面操作这一范围内都是比较消耗性能的。如何高效率的，便捷的操作DOM，这就是本文要讲述的，希望看完全文，你能知道如何更高效的通过原生js以及jQuery操作DOM元素。&lt;/p&gt;
-&lt;h2 id=&quot;性能影响&quot;&gt;&lt;a href=&quot;#性能影响&quot; class=&quot;headerlink&quot; title=&quot;性能影响&quot;&gt;&lt;/a&gt;性能影响&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;DOM修改导致的页面重绘&lt;code&gt;repaint&lt;/code&gt;、重构&lt;code&gt;reflow&lt;/code&gt;，重新排版是用户阻塞的操作，同时，如果频繁重排，CPU使用率也会猛涨&lt;/li&gt;
-&lt;li&gt;repaint意味着样式的改变比如div调整了背景色等，但是位置不变，只改变我们操作的元素&lt;/li&gt;
-&lt;li&gt;reflow意味着结构的改变，比如一堆元素堆叠，改变其中一个的宽高，那么相应的所有元素的位置都要改变&lt;/li&gt;
-&lt;li&gt;所以通常来看repaint的代价要远小于reflow，速度也更快
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
-    
-      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
-    
-      <category term="jquery" scheme="http://zc95.github.io/tags/jquery/"/>
-    
-      <category term="DOM操作" scheme="http://zc95.github.io/tags/DOM%E6%93%8D%E4%BD%9C/"/>
-    
-      <category term="循环" scheme="http://zc95.github.io/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-      <category term="渲染" scheme="http://zc95.github.io/tags/%E6%B8%B2%E6%9F%93/"/>
-    
-      <category term="性能" scheme="http://zc95.github.io/tags/%E6%80%A7%E8%83%BD/"/>
     
   </entry>
   
