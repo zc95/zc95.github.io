@@ -1315,13 +1315,13 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
@@ -1331,6 +1331,7 @@
       <title><![CDATA[日常问题整理]]></title>
       <url>/2017/10/21/dailySummary/</url>
       <content type="html"><![CDATA[<p>记录每天学到的知识点或者遇到的问题<br><a id="more"></a></p>
+<h2 id="textarea换行的保存和赋值"><a href="#textarea换行的保存和赋值" class="headerlink" title="textarea换行的保存和赋值"></a>textarea换行的保存和赋值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">str.replace(<span class="regexp">/\n/g</span>, <span class="string">"&lt;br/&gt;"</span>);</div><div class="line">str.replace(<span class="regexp">/&lt;br\s*\/?&gt;/gi</span>, <span class="string">"\n"</span>));</div></pre></td></tr></table></figure>
 <h2 id="连接起来的字符串变成一个变量"><a href="#连接起来的字符串变成一个变量" class="headerlink" title="连接起来的字符串变成一个变量"></a>连接起来的字符串变成一个变量</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> index = <span class="number">1</span>;</div><div class="line"><span class="built_in">eval</span>(<span class="string">"xx"</span>+index)</div><div class="line"><span class="comment">//这样取到的的就不是"xx1"这样的字符串，而是变量xx1的值</span></div></pre></td></tr></table></figure>
 <h2 id="从数组里随机取一项"><a href="#从数组里随机取一项" class="headerlink" title="从数组里随机取一项"></a>从数组里随机取一项</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr[<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*arr.length)]</div></pre></td></tr></table></figure>
 <h2 id="阻止浏览器默认的右键点击事件"><a href="#阻止浏览器默认的右键点击事件" class="headerlink" title="阻止浏览器默认的右键点击事件"></a>阻止浏览器默认的右键点击事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.document.oncontextmenu = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -1392,13 +1393,13 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
