@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-01-11T10:51:45.085Z</updated>
+  <updated>2018-01-23T14:02:18.388Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一行代码实现星级评分</title>
+    <link href="http://zc95.github.io/2018/01/23/star-rating/"/>
+    <id>http://zc95.github.io/2018/01/23/star-rating/</id>
+    <published>2018-01-23T13:03:13.000Z</published>
+    <updated>2018-01-23T14:02:18.388Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg" alt=""></p><h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul><li><a href="https://zc95.github.io/2018/01/23/star-rating/">demo</a></li><li><a href="https://github.com/zc95/star-rating" target="_blank" rel="external">github</a></li></ul><a id="more"></a><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.score_wrapper</span> &#123;</div><div class="line">      <span class="attribute">display</span>:inline-block;</div><div class="line">      <span class="attribute">font-size</span>: <span class="number">45px</span>;</div><div class="line">      <span class="attribute">cursor</span>: pointer;</div><div class="line">      <span class="attribute">color</span>: <span class="number">#dc2020</span>;</div><div class="line">      <span class="attribute">-webkit-user-select</span>:none;</div><div class="line">      <span class="attribute">-moz-user-select</span>:none;</div><div class="line">      <span class="attribute">-ms-user-select</span>:none;</div><div class="line">      <span class="attribute">user-select</span>:none;</div><div class="line">    &#125;</div></pre></td></tr></table></figure><h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"score_wrapper"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure><h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  ScoreInit(<span class="number">3</span>); <span class="comment">//初始化，参数是0～5的数字，代表星数，传空默认0颗星</span></div><div class="line">&#125;)</div><div class="line"><span class="comment">//点击</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ScoreInit</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">  Score((e == <span class="literal">null</span>) ? <span class="number">0</span> : e);</div><div class="line">  $(<span class="string">".score_wrapper"</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> eachWidth = $(<span class="string">".score_wrapper"</span>).width() / <span class="number">5</span>; <span class="comment">//计算出每个星星的长度</span></div><div class="line">    <span class="keyword">var</span> X = e.pageX - $(<span class="keyword">this</span>).offset().left; <span class="comment">//距离父容器的偏移距离</span></div><div class="line">    <span class="keyword">var</span> score = <span class="built_in">Math</span>.floor(X / eachWidth) + <span class="number">1</span>;</div><div class="line">    Score(score);</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">//评分</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Score</span>(<span class="params">rate</span>) </span>&#123;</div><div class="line">  $(<span class="string">".score_wrapper"</span>).html(<span class="string">"★★★★★☆☆☆☆☆"</span>.slice(<span class="number">5</span> - rate, <span class="number">10</span> - rate));</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理&quot;&gt;&lt;/a&gt;实现原理&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Link&quot;&gt;&lt;a href=&quot;#Link&quot; class=&quot;headerlink&quot; title=&quot;Link&quot;&gt;&lt;/a&gt;Link&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zc95.github.io/2018/01/23/star-rating/&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zc95/star-rating&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>nodejs搭建本地服务器环境</title>
@@ -539,30 +565,6 @@
     
     
       <category term="html" scheme="http://zc95.github.io/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表头固定</title>
-    <link href="http://zc95.github.io/2017/10/24/amazingTable/"/>
-    <id>http://zc95.github.io/2017/10/24/amazingTable/</id>
-    <published>2017-10-23T16:15:16.000Z</published>
-    <updated>2017-12-21T12:16:19.880Z</updated>
-    
-    <content type="html"><![CDATA[<p>table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动</p><h2 id="关于表格固定"><a href="#关于表格固定" class="headerlink" title="关于表格固定"></a>关于表格固定</h2><p>如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了</p><p>如果数据很多就要考虑左右滚动的情况了<br><a id="more"></a></p><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>demo: <a href="http://jsrun.net/biiKp/show" target="_blank" rel="external">http://jsrun.net/biiKp/show</a></p><p>同样是两个table，一个放thead，另一个放tbody，用两个div分别包裹起来</p><p>这两个div依赖于他们的的父容器进行absolute定位</p><blockquote><p>theadDiv {</p><p> position: absolute;<br> left: 0;<br> right: 0;<br> overflow: hidden; //这里hidden是用于隐藏滚动条<br>}</p><p>tbodyDiv {</p><p> position: absolute;<br> top: 35px;<br> left: 0;<br> right: 0;<br> bottom: 0;<br> overflow: auto;<br>}</p></blockquote><p>给放置thead的div添加样式 <code>overflow: hidden;</code> ，表头不需要看到滚动条</p><p>给放置tbody的div添加样式 <code>overflow: auto;</code> ，表的主体需要滚动条</p><p>这时只需要在滚动下面的tbody时，同样滚动上面的thead就行</p><blockquote><p>$(‘#tbodyDiv’).on(‘scroll’, function () {</p><p>  $(“#theadDiv”).scrollLeft($(‘#tbodyDiv’).scrollLeft());</p><p>  });</p><p>})</p></blockquote><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>demo: <a href="http://jsrun.net/2iiKp/show" target="_blank" rel="external">http://jsrun.net/2iiKp/show</a></p><ol><li>大概思路就是  <code>容器A</code> 下面有 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li><li>x轴滚动条属于 <code>容器A</code> ，滚动 <code>容器1（放置thead）</code> 和 <code>容器2（放置tbody）</code></li><li>y轴属于 <code>容器2</code> ，滚动 <code>tbody</code></li></ol><p>这个方法有缺陷，就是y轴的滚动条必须要当x轴滚到最右边才看得到，当然Mac下无差（Mac下的滚动条不滚动的时候是隐藏的，而win系统下就会影响美观，但都不影响操作，毕竟我们有鼠标滚轮）</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;table的表头固定 ——— 上下滚动表头固定，左右滚动表头跟随滚动&lt;/p&gt;
-&lt;h2 id=&quot;关于表格固定&quot;&gt;&lt;a href=&quot;#关于表格固定&quot; class=&quot;headerlink&quot; title=&quot;关于表格固定&quot;&gt;&lt;/a&gt;关于表格固定&lt;/h2&gt;&lt;p&gt;如果数据不是很多，一般都是用两个表格，一个放thead，另一个放tbody，这个没难度就不再赘述了&lt;/p&gt;
-&lt;p&gt;如果数据很多就要考虑左右滚动的情况了&lt;br&gt;
-    
-    </summary>
-    
-      <category term="demo" scheme="http://zc95.github.io/categories/demo/"/>
-    
-    
-      <category term="css" scheme="http://zc95.github.io/tags/css/"/>
     
   </entry>
   
