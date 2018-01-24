@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/about/index.html</loc>
+    
+    <lastmod>2018-01-24T15:53:44.840Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/topPosts/index.html</loc>
+    
+    <lastmod>2018-01-24T15:13:16.058Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-01-24T14:36:58.704Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
     
     <lastmod>2018-01-24T14:21:44.921Z</lastmod>
@@ -68,13 +89,6 @@
     <loc>http://zc95.github.io/2017/12/26/VMware/</loc>
     
     <lastmod>2017-12-26T13:10:59.659Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/about/index.html</loc>
-    
-    <lastmod>2017-12-21T15:01:52.539Z</lastmod>
     
   </url>
   
@@ -198,23 +212,9 @@
   </url>
   
   <url>
-    <loc>http://zc95.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-12-21T12:03:36.959Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zc95.github.io/links/index.html</loc>
     
     <lastmod>2017-11-30T11:37:25.982Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/repository/index.html</loc>
-    
-    <lastmod>2017-11-23T12:32:07.222Z</lastmod>
     
   </url>
   
