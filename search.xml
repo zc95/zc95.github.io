@@ -1357,7 +1357,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[日常问题整理]]></title>
+      <title><![CDATA[javascript知识碎片]]></title>
       <url>/2017/10/21/javascript/</url>
       <content type="html"><![CDATA[<ul>
 <li>记录每天学到的知识点或者遇到的问题</li>
@@ -1465,10 +1465,6 @@
         
         
         <tags>
-            
-            <tag> css </tag>
-            
-            <tag> html </tag>
             
             <tag> javascript </tag>
             
