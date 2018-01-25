@@ -3,12 +3,31 @@
 
 
     
-    
-    
+  <url>
+    <loc>http://zc95.github.io/2018/01/25/htmlAndCss/</loc>
+    <lastmod>2018-01-25T13:04:49.394Z</lastmod>
+    <data>
+        <display>
+        <title>html&css知识碎片</title>
+        <pubTime>2018-01-25T12:56:30.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
-    <lastmod>2018-01-24T14:21:44.921Z</lastmod>
+    <lastmod>2018-01-25T13:00:15.621Z</lastmod>
     <data>
         <display>
         <title>javascript知识碎片</title>
@@ -27,6 +46,9 @@
     </data>
     </url>
 
+    
+    
+    
     
   <url>
     <loc>http://zc95.github.io/2018/01/23/star-rating/</loc>
