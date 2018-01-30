@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zc95.github.io/2018/01/25/htmlAndCss/</loc>
+    <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
     
-    <lastmod>2018-01-25T13:04:49.394Z</lastmod>
+    <lastmod>2018-01-30T15:24:50.830Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
+    <loc>http://zc95.github.io/2018/01/23/star-rating/</loc>
     
-    <lastmod>2018-01-25T13:00:15.621Z</lastmod>
+    <lastmod>2018-01-30T15:23:57.113Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2018/01/25/htmlAndCss/</loc>
+    
+    <lastmod>2018-01-25T13:04:49.394Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://zc95.github.io/tags/index.html</loc>
     
     <lastmod>2018-01-24T14:36:58.704Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2018/01/23/star-rating/</loc>
-    
-    <lastmod>2018-01-23T14:19:39.597Z</lastmod>
     
   </url>
   
