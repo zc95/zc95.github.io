@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/02/06/RTF/</loc>
+    <lastmod>2018-02-06T15:35:42.922Z</lastmod>
+    <data>
+        <display>
+        <title>Rich Text Format</title>
+        <pubTime>2018-02-06T15:20:53.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
     <lastmod>2018-01-30T15:24:50.830Z</lastmod>
     <data>
@@ -570,9 +590,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            
