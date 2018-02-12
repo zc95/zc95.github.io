@@ -65,9 +65,9 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
@@ -1368,9 +1368,10 @@
 </ul>
 <h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ol>
 <li>引入<code>css</code>、<code>jQuery</code> 和 <code>js</code>（github里面有）</li>
-<li>$(‘#id’).FuzzyQuery({<pre><code>&apos;msg&apos;: msg
-</code></pre>   });</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#id'</span>).FuzzyQuery(&#123;</div><div class="line">        <span class="string">'msg'</span>: msg</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+</li>
 </ol>
+<a id="more"></a>
 <h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><p><code>msg</code> 是json数据（必须），<code>fontSize</code> 是模糊查询项的字体大小，<code>height</code> 是模糊查询项的高度<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#Name'</span>).FuzzyQuery(&#123;</div><div class="line">        <span class="string">'msg'</span>: msg,</div><div class="line">        <span class="string">'fontSize'</span>: <span class="string">'13px'</span>,</div><div class="line">        <span class="string">'height'</span>: <span class="string">'30px'</span></div><div class="line">      &#125;);</div></pre></td></tr></table></figure></p>
 <h2 id="msg格式示例"><a href="#msg格式示例" class="headerlink" title="msg格式示例"></a>msg格式示例</h2><p><code>name</code> 是文本，<code>id</code> 是标识<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">msg = [&#123; <span class="string">"name"</span>: <span class="string">"苏州大学"</span>, <span class="string">"id"</span>: <span class="string">"szdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"北京大学"</span>, <span class="string">"id"</span>: <span class="string">"bjdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"南京大学"</span>, <span class="string">"id"</span>: <span class="string">"njdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"清华大学"</span>, <span class="string">"id"</span>: <span class="string">"qhdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"复旦大学"</span>, <span class="string">"id"</span>: <span class="string">"fddx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"浙江大学"</span>, <span class="string">"id"</span>: <span class="string">"zjdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"上海交通大学"</span>, <span class="string">"id"</span>: <span class="string">"shjtdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"武汉大学"</span>, <span class="string">"id"</span>: <span class="string">"whdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"中国人民大学"</span>, <span class="string">"id"</span>: <span class="string">"zgrmdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"中国科学技术大学"</span>, <span class="string">"id"</span>: <span class="string">"zgkxjsdx"</span> &#125;, &#123; <span class="string">"name"</span>: <span class="string">"北京师范大学"</span>, <span class="string">"id"</span>: <span class="string">"bjsfdx"</span> &#125;];</div></pre></td></tr></table></figure></p>
 <h2 id="html和CSS部分的一些细节"><a href="#html和CSS部分的一些细节" class="headerlink" title="html和CSS部分的一些细节"></a>html和CSS部分的一些细节</h2><ol>
@@ -1401,13 +1402,13 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
