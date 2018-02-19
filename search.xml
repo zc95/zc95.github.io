@@ -3,6 +3,52 @@
   
     
     <entry>
+      <title><![CDATA[教你下载会员歌曲]]></title>
+      <url>/2018/02/19/musicLink/</url>
+      <content type="html"><![CDATA[<p>教你找歌曲的外链（要会员的歌曲都能下载🤪）</p>
+<h2 id="什么是歌曲的外链？"><a href="#什么是歌曲的外链？" class="headerlink" title="什么是歌曲的外链？"></a>什么是歌曲的外链？</h2><p>我们手机里的歌曲都是下载好的mp3文件，比如说散就散.mp3，</p>
+<p>而外链就比如 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> 这样链接的形式。</p>
+<h2 id="怎么免费下载会员歌曲？"><a href="#怎么免费下载会员歌曲？" class="headerlink" title="怎么免费下载会员歌曲？"></a>怎么免费下载会员歌曲？</h2><p>你应该注意到了《说散就散》在qq音乐和网易云都是要vip才能下载<br><a id="more"></a><br><img style="height:400px; display:inline-block;" src="https://ws4.sinaimg.cn/large/006tNc79gy1fom4irp01wj30nq1600x0.jpg"></p>
+<p><img style="height:400px; display:inline-block;" src="https://ws1.sinaimg.cn/large/006tNc79gy1fom4m03u1bj30no15y77v.jpg"></p>
+<p>这里以网易云音乐的网页版为例说一下”破解“的方法</p>
+<p>这个外链下载会员歌曲的方法也是最近撸一个播放器的时候发现的 <a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> （还在改进，下次再说吧 ，逃。。。）</p>
+<h2 id="废话少说，开始了"><a href="#废话少说，开始了" class="headerlink" title="废话少说，开始了"></a>废话少说，开始了</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>打开你电脑上的浏览器，输入 <a href="http://music.163.com" target="_blank" rel="external">http://music.163.com</a> ，网易云音乐官网，输入 “说散就散” 搜索，点第一个要钱的原唱！</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>到了 <a href="http://music.163.com/#/song?id=523251118" target="_blank" rel="external">http://music.163.com/#/song?id=523251118</a> 这个页面</p>
+<ol>
+<li>这个什么 <code>生成外链播放器</code> 不用管，就是个iframe（一般用来博客里），点了提示没版权，放弃。。。</li>
+<li>还有下载按钮，点了提示下载PC端和app，肯定还是要会员。。。放弃</li>
+<li><strong>重点是url，有个?id = xxxxx ，原来百度云网页版的每首歌都有自己的id标识</strong></li>
+</ol>
+<p><img style="height:400px;" src="https://ws2.sinaimg.cn/large/006tNc79gy1fom543cxz3j317i0tgq8q.jpg"></p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>从url得到这首歌的id是 <code>523251118</code></p>
+<p>所以这首歌的外链就是 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> ，之后找到别的歌，把这个链接的id替换了就行，除了那种网易云没播放版权的，所有的都可以。</p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>打开电脑里的浏览器，输入 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> 回车，这时候url被解析成好长的一段，不用管它，有上面的链接就足够了，点html5 video标签上的下载按钮就行啦（如下），移动端和Safari的video应该是没有下载按钮的。。。</p>
+<video controls name="media"><source src="https://music.163.com/song/media/outer/url?id=523251118.mp3" type="audio/mpeg"></video>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>如果是安卓机的就直接把这首歌导入到手机里去，qq音乐、网易云都会自动加到列表里去。</p>
+<p>如果是iphone，，，那就没啥吊用了。。。。</p>
+<hr>
+<p>最后说一下，有很多方法下载这种会员歌曲，，发现这种方法是因为最近在手撸一个音乐播放器，需要用到这样的链接<a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> </p>
+<p>不然才不费这么大劲。。毕竟我有破解版😂😂😂</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg" alt="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Rich Text Format]]></title>
       <url>/2018/02/06/RTF/</url>
       <content type="html"><![CDATA[<p>自己写的一个移动端的富文本编辑器</p>
