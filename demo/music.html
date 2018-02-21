@@ -87,13 +87,35 @@
       color: white;
       margin-right: 11px;
     }
-    @media screen and (max-width: 400px) {
-      .mdui-text-truncate {
-        overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
+    @media screen and (min-width: 400px) {
+      #musicPlayer-detail {
+        width: 320px !important;
+      }
     }
-}
+
+    @media screen and (max-width: 700px) {
+      .PrevAndNext {
+        display: none;
+      }
+    }
+
+    #fatherUl {
+      display: flex;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .childrenLi {
+      flex: 1;
+      text-align: center;
+    }
+
+    .childrenLi i {
+      font-size: 38px;
+    }
   </style>
 </head>
 
@@ -114,11 +136,14 @@
     <ul id="musicListUl" class="mdui-list music-ul" style="padding:0 5px;"></ul>
   </div>
 
-  <div id="player-wrapper" class="mdui-list" style="position:fixed;bottom:0;left:0;right:0;padding:0;background-color:white;display:none;">
+  <div id="player-wrapper" class="mdui-list" style="position:fixed;bottom:0;left:0;right:0;padding:0;background-color:white;display:none;z-index:5050;">
     <div class="mdui-list-item" style="padding:0 10px;">
-      <div class="mdui-progress" style="position:absolute;top:0;left:0;right:0;height:3px;">
+      <!-- <div class="mdui-progress" style="position:absolute;top:0;left:0;right:0;height:3px;">
         <div class="mdui-progress-determinate mini-progress" style="width: 0%;"></div>
-      </div>
+      </div> -->
+      <label id="changeProgress" class="mdui-slider" style="position:absolute;top:0;left:0;right:0;height:3px;">
+        <input onchange="changeProgress()" class="mini-progress" type="range" value="0" step="1" min="0" max="100" />
+      </label>
       <div class="mdui-list-item-avatar">
         <img id="musicPlayer-icon" src="https://ws3.sinaimg.cn/large/006tNbRwgy1fokiycw4kdj30dw0dm0te.jpg" />
       </div>
@@ -126,16 +151,28 @@
         <p id="musicPlayer-name">无心睡眠</p>
         <p style="width:160px" class="mdui-text-truncate" id="musicPlayer-detail">张国荣</p>
       </div>
-      <i onclick="playBtn()" id="playBtn" class="mdui-icon material-icons" style="color:#009688!important; font-size:38px;">&#xe039;
+      <i onclick="PrevAndNext(-1)" class="PrevAndNext mdui-ripple mdui-icon material-icons" style="color:#009688!important; font-size:38px;">&#xe045;</i>
+      <i onclick="playBtn()" id="playBtn" class="mdui-ripple mdui-icon material-icons" style="color:#009688!important; font-size:38px;">&#xe039;
       </i>
-      <div id="play-spinner" style="display:none;" class="mdui-spinner mdui-spinner-colorful"></div>
-      <i mdui-dialog="{target: '#music-opts'}" class="mdui-icon material-icons" style="color:#009688!important; font-size:38px;margin-left:14px;">&#xe03d;</i>
+
+      <div id="play-spinner" style="display:none;margin:5px;" class="mdui-spinner mdui-spinner-colorful"></div>
+
+      <i onclick="PrevAndNext(+1)" class="PrevAndNext mdui-ripple mdui-icon material-icons" style="color:#009688!important; font-size:38px;">&#xe044;</i>
+      <i mdui-dialog="{target: '#music-opts'}" class="mdui-ripple mdui-icon material-icons" style="color:#009688!important; font-size:38px;margin-left:14px;">&#xe03d;</i>
     </div>
   </div>
 
   <div class="mdui-dialog" id="music-opts">
     <div class="mdui-dialog-content">
       <div class="mdui-dialog-title">设置</div>
+      <ul id="fatherUl">
+        <li onclick="PrevAndNext(-1)" class="childrenLi mdui-ripple">
+          <i class="mdui-icon material-icons">&#xe045;</i>上一曲</li>
+        <li onclick="PrevAndNext(+1)" class="childrenLi mdui-ripple">下一曲
+          <i class="mdui-icon material-icons">&#xe044;</i>
+        </li>
+      </ul>
+      <p></p>
       音量：
       <label style="width:98%;" class="mdui-slider mdui-slider-discrete">
         <input oninput="changeVolume()" id="changeVolume" value="100" type="range" step="1" min="0" max="100" />
@@ -148,7 +185,7 @@
   </div>
   <div id="music-MV" style="width:96%;" class="mdui-dialog">
     <div style="padding:3px; min-height:200px;" class="mdui-dialog-content">
-      <video style="width: 100%;" class="mdui-video-fluid" autoplay="autoplay" controls="" src=""></video>
+        <video style="width: 100%;" class="mdui-video-fluid"  src=""  controls="" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" preload="auto" autoplay="autoplay" loop="loop" ></video>
     </div>
 
     <div class="mdui-dialog-actions">
@@ -183,7 +220,7 @@
     {
       'name': 'Heartbeat', 'detail': 'Childish Gambino·Camp',
       'link': 'https://music.163.com/song/media/outer/url?id=16961463.mp3', 'icon': 'http://p1.music.126.net/fg3YsjnSuS7C93Sv5mfLzg==/647612348767757.jpg?param=130y130',
-      'id': '16961463', 'tips': ["HQ",], 'mv': 'http://v4.music.126.net/20180220094237/2b3cca4e6a265fb73fd79c494705aad4/web/cloudmusic/IDEgYCEkJDAiMSAwIDQwIg==/mv/525015/14110da95e0db8d0a3e4b93dabd9cf15.mp4'
+      'id': '16961463', 'tips': ["HQ",], 'mv': 'http://baiducdnct.inter.iqiyi.com/videos/v0/20150925/3c/5e/96f5c7e40ee95cacda838029e6aa08a7.mp4?key=087aa628143e3040fdd24c00949f17caf&dis_k=42b41ca8101329f71d7f174db06e1f34&dis_t=1519184035&src=iqiyi.com&uuid=add4b46-5a8ce8a3-b9&m=v&qd_ip=de5d318d&qdv=1&qd_p=de5d318d&qd_tm=1519184035999&qd_vip=0&ssl=&ip=222.93.49.141&qd_src=02020031010000000000&dis_src=vrs&qd_uid=0&qd_k=b6b00b2df2dfdbde11add8f3f4b30ae5&sgti=13_094d8ae56b4aa41db669f27cb65af837_1519184035893&qypid=401535500_31'
     },
 
     {
@@ -195,19 +232,13 @@
     {
       'name': 'Jungle', 'detail': 'X Ambassadors / Jamie N Commons·VHS',
       'link': 'http://music.163.com/song/media/outer/url?id=31789003.mp3', 'icon': 'http://p1.music.126.net/vWxtUi1JhbQD_zupnoGr0w==/2924700930965763.jpg?param=130y130',
-      'id': '31789003', 'tips': ["SQ"], 'mv': 'http://v4.music.126.net/20180219130929/2ce72ada475e0215c38abfcd54be5b01/web/cloudmusic/MCA2ITAkYiAwICMgIGJiMA==/mv/==/281072/20140618165250/2240804797409398_crop480.mp4'
-    },
-
-    {
-      'name': '无心睡眠', 'detail': '张国荣·Summer Romance',
-      'link': 'https://music.163.com/song/media/outer/url?id=188979.mp3', 'icon': 'https://ws3.sinaimg.cn/large/006tNbRwgy1fokiycw4kdj30dw0dm0te.jpg',
-      'id': '188979', 'tips': ["HQ", "独家"], 'mv': ''
+      'id': '31789003', 'tips': ["SQ"], 'mv': 'http://baiducdnct.inter.iqiyi.com/videos/v0/20150907/da/c2/441e99a7a63de90acd4d57c1b8d76352.mp4?key=00fd8667a247d48529438fc8507064cb&dis_k=046ba19c22b7e31508b0655c5619a7f9&dis_t=1519184417&src=iqiyi.com&uuid=a795aea-5a8cea21-bc&m=v&qd_ip=de5d318d&qdv=1&qd_p=de5d318d&qd_tm=1519184417502&qd_vip=0&ssl=&ip=222.93.49.141&qd_src=02020031010000000000&dis_src=vrs&qd_uid=0&qd_k=1b757643bf561c8805d2b5d24ecc9442&sgti=13_094d8ae56b4aa41db669f27cb65af837_1519184417362&qypid=395561200_31'
     },
 
     {
       'name': 'Shape of You', 'detail': 'Ed Sheeran·Shape Of You',
       'link': 'https://music.163.com/song/media/outer/url?id=451703096.mp3', 'icon': 'http://p1.music.126.net/5Zs51JS6cQzvQclW5u_J1g==/18832435162240436.jpg?param=130y130',
-      'id': '451703096', 'tips': ["HQ"], 'mv': 'http://v4.music.126.net/20180220094041/dfe616621605e729431b03059c50a6c3/web/cloudmusic/MTAiYDQwICQwMDRkOTAhIg==/mv/5439044/77d080f76b5527949ceb8e02c4b11034.mp4'
+      'id': '451703096', 'tips': ["HQ"], 'mv': 'http://baiducdnct.inter.iqiyi.com/videos/v0/20170202/11/4f/69b068693f7b4895d04f745477b1c81e.mp4?key=008683001be99bb91cbff81e4872faf37&dis_k=220dd9f1a0aea6be044b4cc8758439aa&dis_t=1519184544&src=iqiyi.com&uuid=a795aeb-5a8ceaa0-bd&m=v&qd_ip=de5d318d&qdv=1&qd_p=de5d318d&qd_tm=1519184544994&qd_vip=0&ssl=&ip=222.93.49.141&qd_src=02020031010000000000&dis_src=vrs&qd_uid=0&qd_k=40b48a731445d297e5e539fc232da4da&sgti=13_094d8ae56b4aa41db669f27cb65af837_1519184544862&qypid=611159300_31'
     },
 
     {
@@ -223,6 +254,12 @@
       'id': '531051217', 'tips': ["SQ"], 'mv': ''
     },
 
+    {
+      'name': '无心睡眠', 'detail': '张国荣·Summer Romance',
+      'link': 'https://music.163.com/song/media/outer/url?id=188979.mp3', 'icon': 'https://ws3.sinaimg.cn/large/006tNbRwgy1fokiycw4kdj30dw0dm0te.jpg',
+      'id': '188979', 'tips': ["HQ", "独家"], 'mv': ''
+    },
+    
     {
       'name': 'Girls', 'detail': '巡音ルカ·EasyPop VOCALOID Tracks 2',
       'link': 'http://music.163.com/song/media/outer/url?id=28606028.mp3', 'icon': 'http://p1.music.126.net/EzDE0McR2gIZwsKb99stLA==/6069304185774923.jpg?param=130y130',
@@ -296,12 +333,14 @@
     //获取进度条
     var playInterval;
     function getDuration() {
+      $("#changeProgress").fadeIn(3800);
       playInterval = setInterval(function () {
-        var widthDuration = ($("audio")[0].currentTime / $("audio")[0].duration * 100).toFixed(2) + "%";
-        $(".mini-progress").css("width", widthDuration);
-        $("#large-progress").css("width", widthDuration);
-        if (widthDuration == "100.00%") {
-          currentIndex = getCurrentIndex() + 1;
+        var widthDuration = $("audio")[0].currentTime / $("audio")[0].duration * 100;
+        //$(".mini-progress").css("width", widthDuration);
+        $(".mini-progress").val(widthDuration);
+        mdui.updateSliders();
+        if (widthDuration == "100") {
+          var currentIndex = getCurrentIndex() + 1;
           if (currentIndex == $("#musicListUl li").length) {
             currentIndex = 0;
           }
@@ -310,8 +349,37 @@
       }, 1000);
     }
 
+    //快进快退
+    function changeProgress() {
+      $("#playBtn").hide();
+      $("#play-spinner").fadeIn();
+
+      $("audio")[0].currentTime = $(".mini-progress").val() / 100 * $("audio")[0].duration;
+      if ($("audio")[0].paused) {
+        playBtn();
+        
+      }
+      setTimeout(function(){
+        $("#play-spinner").hide();
+        $("#playBtn").fadeIn();
+      
+      },2000);
+    }
+
+    //上一首下一首
+    function PrevAndNext(e) {
+      $("#changeProgress").hide();
+      var currentIndex = getCurrentIndex() + e;
+      if (currentIndex == $("#musicListUl li").length) {
+        currentIndex = 0;
+      }
+      $("#musicListUl li").eq(currentIndex).click();
+      $("audio")[0].currentTime = 0;
+    }
+
     //列表点击
     function play(name, detail, link, icon, e) {
+      $("#changeProgress").hide();
       $(".music-ul li").removeClass("playList-active");
       $(e).addClass("playList-active");
       if ($("audio")[0].src == link && $("audio")[0].paused) { //点击列表时若是当前歌曲 且 暂停状态 => 播放
@@ -341,8 +409,10 @@
         // 暂停>播放
         $("#playBtn").html("&#xe036;");
         $("audio")[0].play();
+        if ($("audio")[0].paused) {
+          $("#playBtn").html("&#xe039;");
+        }
         getDuration();
-        getCurrentIndex();
       } else {
         // 播放>暂停
         $("#playBtn").html("&#xe039;");

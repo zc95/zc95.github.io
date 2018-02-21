@@ -1,0 +1,176 @@
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <title></title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
+  <style>
+    body {
+      padding: 0 !important;
+      background-color:#f5f5f5; 
+      font-family: STHeiti, "Microsoft YaHei", SimSun, STSong, "\5b8b\4f53", Arial, Helvetica, sans-serif;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 46.08px;
+      background-color: #f9f9f9;
+      box-shadow: 0 -0.10666667rem 0.32rem #eee;
+    }
+
+    .footer-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 46.08px;
+      height: 46.08px;
+      bottom: 0;
+      padding: 10px;
+    }
+
+    .footer-icon img {
+      width: 26.08px;
+      height: 26.08px;
+    }
+
+    .footer-input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 46.08px;
+      right: 88px;
+    }
+
+    .footer-send {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 88px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .footer-input input {
+      outline: none;
+      width: 100%;
+      height: 36.08px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #eee;
+      font-family: STHeiti, "Microsoft YaHei", SimSun, STSong, "\5b8b\4f53", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      text-indent: 11px;
+      border-radius: 18.04px;
+    }
+
+    input::-webkit-input-placeholder {
+      /* placeholder颜色  */
+      color: #aab2bd;
+      /* placeholder字体大小  */
+      font-size: 12px;
+      /* placeholder位置  */
+      text-align: left;
+    }
+
+    #tab1 p {
+      word-break: break-all;
+      word-wrap: break-word;
+      font-size: 10px;
+      background-color: #fff;
+      display: inline-block;
+      padding: 5px;
+      border-radius: 7px;
+      margin: 3px;
+      line-height: 17px;
+    }
+  </style>
+</head>
+
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-pink">
+  <video src="http://huya-w10.huya.com/migrate/1714/3601054/1300/328ac8830192294f41c33ccc1f61d199.mp4"  controls="" x5-playsinline="" playsinline="" webkit-playsinline="" poster="" preload="auto"  class="mdui-video-fluid" autoplay="autoplay" loop="loop" ></video>
+  <div id="mainTab" class="mdui-tab" mdui-tab>
+    <a href="#tab1" class="mdui-ripple">聊天</a>
+    <a href="#tab2" class="mdui-ripple">主播</a>
+    <a href="#tab3" class="mdui-ripple">精彩详情</a>
+  </div>
+  <div id="tab1" class="mdui-p-a-2 tab-wrapper" style="overflow-y:auto;">
+
+  </div>
+  <div id="tab2" class="mdui-p-a-2 tab-wrapper">主播</div>
+  <div id="tab3" class="mdui-p-a-2 tab-wrapper">精彩详情</div>
+
+  <footer>
+    <div class="footer-icon">
+      <img src="https://zc95.github.io/img/favicon.png" alt="">
+    </div>
+    <div class="footer-input">
+      <input maxlength="40" placeholder="发个弹幕吧～" type="text">
+    </div>
+    <div class="footer-send">
+      <button onclick="send()" style="width:78px !important; min-width:78px; border-radius:18px;" class="mdui-btn mdui-color-theme-accent mdui-ripple">Send</button>
+    </div>
+  </footer>
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+  <script>
+    $(function () {
+      $(".tab-wrapper").height($(window).height() - $("video").height() - $("#mainTab").height() - 46.08 + "px");
+      $(".tab-wrapper").css("box-sizing", "border-box");
+      setInterval(function(){
+        send(RandomSend());
+      },2800);
+    })
+    document.onkeyup = function (e) {
+      var code = e.charCode || e.keyCode;
+      if (code == 13) {
+        send();
+      }
+    }
+    function send(message) {
+      var messages;
+      var sender;
+      if(message){
+        messages = message;
+        sender = "<span style='color:#04c073'>"+RandomName()+"：</span>"
+      }else{ //手输
+        messages = $("input").val();
+        sender = "<span style='color:#04c073'>我：</span>"
+        $("input").val("");
+      }
+      $("#tab1").append("<p style='display:none;'>"+sender + messages + "</p><br>");
+      var marqueeArea = RandomNumBoth(0,$("video").height() / 2);
+      $("body").append("<marquee loop='1' scrollamount='"+RandomNumBoth(3, 6)+"' load='1' style='position:fixed; top:"+marqueeArea+"px; color:"+RandomColor()+";z-index:999999;'>" + messages + "</marquee>");
+      $("#tab1 p").last().fadeIn(800);
+      var div = document.getElementById('tab1');
+      div.scrollTop = div.scrollHeight;
+    }
+    function RandomNumBoth(Min, Max) {
+      var Range = Max - Min;
+      var Rand = Math.random();
+      var num = Min + Math.round(Rand * Range); //四舍五入
+      return num;
+    }
+    function RandomSend(){
+      var messages=["2333333333","哈哈哈哈哈哈哈哈","6666的飞起","我是世界第几帅？","画质感人","前面的你过来我不打死你。","。。。。。。。。。。。","(ノ°ο°)ノ前方高能预警","(ಥ_ಥ)是在下输了","๑乛◡乛๑卡在了奇怪的地方","一本正经的胡说八道"];
+      return messages[RandomNumBoth(0, messages.length-1)];
+    }
+    function RandomColor() {
+      var colorArr = ["white","purple","pink","white","orange","white"];
+      return colorArr[RandomNumBoth(0, colorArr.length-1)];
+    }
+    function RandomName(){
+      var name=["派大星","海绵宝宝","钢铁侠","蜘蛛侠","美国队长","黑寡妇","蝙蝠侠","德玛西亚","熊大","光头强","熊二","金刚葫芦娃","米老鼠"];
+      return name[RandomNumBoth(0, name.length-1)];
+    }
+  </script>
+</body>
+
+</html>

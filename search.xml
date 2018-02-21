@@ -3,6 +3,125 @@
   
     
     <entry>
+      <title><![CDATA[直播平台的弹幕功能]]></title>
+      <url>/2018/02/21/liveVideo/</url>
+      <content type="html"><![CDATA[<h2 id="类似直播平台的弹幕功能（微信上有bug）"><a href="#类似直播平台的弹幕功能（微信上有bug）" class="headerlink" title="类似直播平台的弹幕功能（微信上有bug）"></a>类似直播平台的弹幕功能（微信上有bug）</h2><ul>
+<li><a href="https://zc95.github.io/demo/liveVideo.html">demo</a></li>
+<li><a href="https://github.com/zc95/liveVideo" target="_blank" rel="external">github</a></li>
+</ul>
+<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fonz7vts1rj307s07sq3t.jpg"></p>
+<hr>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fonz8gb76lj30u01hcgq0.jpg" height="600"></p>
+<a id="more"></a>
+<h2 id="QQ、微信内置浏览器-X5内核的坑"><a href="#QQ、微信内置浏览器-X5内核的坑" class="headerlink" title="QQ、微信内置浏览器 X5内核的坑"></a>QQ、微信内置浏览器 X5内核的坑</h2><h3 id="进入页面video自动全屏、自动播放"><a href="#进入页面video自动全屏、自动播放" class="headerlink" title="进入页面video自动全屏、自动播放"></a>进入页面video自动全屏、自动播放</h3><p>然而我并不需要这样，解决方法：给video标签加上 x5-playsinline=”” playsinline=”” webkit-playsinline=”” 就ok</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;video src=<span class="string">"http://huya-w10.huya.com/migrate/1714/3601054/1300/328ac8830192294f41c33ccc1f61d199.mp4"</span> </div><div class="line"> controls=<span class="string">""</span> x5-playsinline=<span class="string">""</span> playsinline=<span class="string">""</span> webkit-playsinline=<span class="string">""</span> </div><div class="line">poster=<span class="string">""</span> preload=<span class="string">"auto"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<h3 id="video层级默认最高"><a href="#video层级默认最高" class="headerlink" title="video层级默认最高"></a>video层级默认最高</h3><p>z-index怎么设置都无效，所以微信或者qq扫出来的页面弹幕都是看不到的，在video下面了。。。</p>
+<p>暂时没法解决，有空再看吧</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[自己写了个音乐播放器]]></title>
+      <url>/2018/02/21/musicPlayer/</url>
+      <content type="html"><![CDATA[<h2 id="material-design风格的音乐播放器"><a href="#material-design风格的音乐播放器" class="headerlink" title="material design风格的音乐播放器"></a>material design风格的音乐播放器</h2><ul>
+<li><a href="https://zc95.github.io/demo/music.html">demo</a></li>
+<li><a href="https://github.com/zc95/music" target="_blank" rel="external">github</a></li>
+</ul>
+<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws3.sinaimg.cn/large/006tNc79gy1fonxkcugj3j307s07sq2p.jpg"></p>
+<hr>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony99p9rfj30u01hcmzd.jpg" height="600"></p>
+<hr>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony8j721lj30u01hcwhv.jpg" height="600"></p>
+<a id="more"></a>
+<h2 id="HTML-5-audio标签"><a href="#HTML-5-audio标签" class="headerlink" title="HTML 5 audio标签"></a>HTML 5 audio标签</h2><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p> 标签定义声音，比如音乐或其他音频流，是 HTML 5 的新标签。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"https://music.163.com/song/media/outer/url?id=451703096.mp3"</span>&gt;</span></div><div class="line">您的浏览器不支持 audio 标签。</div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="提示和注释"><a href="#提示和注释" class="headerlink" title="提示和注释"></a>提示和注释</h3><p>可以在开始标签和结束标签之间放置文本内容，这样老的浏览器就可以显示出不支持该标签的信息。</p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/html5/att_audio_autoplay.asp" target="_blank" rel="external">autoplay</a></td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/html5/att_audio_controls.asp" target="_blank" rel="external">controls</a></td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/html5/att_audio_loop.asp" target="_blank" rel="external">loop</a></td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/html5/att_audio_preload.asp" target="_blank" rel="external">preload</a></td>
+<td>preload</td>
+<td>如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/html5/att_audio_src.asp" target="_blank" rel="external">src</a></td>
+<td><em>url</em></td>
+<td>要播放的音频的 URL。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Javascript控制html5-Audio标签"><a href="#Javascript控制html5-Audio标签" class="headerlink" title="Javascript控制html5 Audio标签"></a>Javascript控制html5 Audio标签</h2><h3 id="javascript动态创建audio标签"><a href="#javascript动态创建audio标签" class="headerlink" title="javascript动态创建audio标签"></a>javascript动态创建audio标签</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> audio=<span class="built_in">document</span>.creatElement(<span class="string">"audio"</span>);</div><div class="line">audio.src=<span class="string">"audio/source.ogg"</span>;<span class="comment">//路径</span></div><div class="line">audio.play();</div></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">audio=<span class="keyword">new</span> Audio(<span class="string">"audio/source.ogg"</span>);<span class="comment">//路径</span></div><div class="line">audio.play();</div></pre></td></tr></table></figure>
+<h3 id="预加载"><a href="#预加载" class="headerlink" title="预加载"></a>预加载</h3><p>我们可以通过preload=”auto”来实现音频的自动加载，但是我们无法知道音频加载的进度</p>
+<p>这时候可以用canplaythrough来完成</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> audio = <span class="built_in">document</span>.createElement(<span class="string">"audio"</span>);</div><div class="line">audio.src = <span class="string">"https://music.163.com/song/media/outer/url?id=451703096.mp3"</span>;</div><div class="line">audio.addEventListener(<span class="string">"canplaythrough"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">truealert(<span class="string">'音频文件已经准备好，随时待命'</span>);</div><div class="line">&#125;, <span class="literal">false</span>);</div></pre></td></tr></table></figure>
+<p>第一次运行时间会长一些，第二次运行由于文件已经缓存到本地，所以会直接弹出提示框。</p>
+<h3 id="javascript控制audio的播放，暂停，停止"><a href="#javascript控制audio的播放，暂停，停止" class="headerlink" title="javascript控制audio的播放，暂停，停止"></a>javascript控制audio的播放，暂停，停止</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aPlay</span>(<span class="params"></span>) </span>&#123;</div><div class="line">trueaudio.play();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aPause</span>(<span class="params"></span>) </span>&#123;</div><div class="line">trueaudio.pause();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aStop</span>(<span class="params"></span>) </span>&#123;</div><div class="line">trueaudio.currentTime = <span class="number">0</span>;</div><div class="line">trueaudio.pause();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aSkip</span>(<span class="params"></span>) </span>&#123;</div><div class="line">trueaudio.currentTime = <span class="number">50</span>;</div><div class="line">trueaudio.play();</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span> onclick=<span class="string">"aPlay();"</span> value=<span class="string">"播放音频"</span>&gt;</div><div class="line">&lt;input type=<span class="string">"button"</span> onclick=<span class="string">"aPause();"</span> value=<span class="string">"暂停音频"</span>&gt;</div><div class="line">&lt;input type=<span class="string">"button"</span> onclick=<span class="string">"aStop();"</span> value=<span class="string">"停止音频"</span>&gt;</div><div class="line">&lt;input type=<span class="string">"button"</span> onclick=<span class="string">"aSkip();"</span> value=<span class="string">"跳到第50秒"</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="javascript控制audio的声音大小"><a href="#javascript控制audio的声音大小" class="headerlink" title="javascript控制audio的声音大小"></a>javascript控制audio的声音大小</h3><blockquote>
+<p>audio.volume = 0;//表示静音  </p>
+<p>audio.volume = 1; //表示声音最大</p>
+<p>audio.volume //返回当前音量，声音值在0-1之间</p>
+</blockquote>
+<h3 id="javascript控制audio的快进，快退，以及显示进度与时长"><a href="#javascript控制audio的快进，快退，以及显示进度与时长" class="headerlink" title="javascript控制audio的快进，快退，以及显示进度与时长"></a>javascript控制audio的快进，快退，以及显示进度与时长</h3><blockquote>
+<p>audio.currentTime //控制audio的进度</p>
+<p>audio.duration //返回当前音量的总时长</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> demo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[教你下载会员歌曲]]></title>
       <url>/2018/02/19/musicLink/</url>
       <content type="html"><![CDATA[<p>教你找歌曲的外链（要会员的歌曲都能下载🤪）</p>
@@ -757,9 +876,9 @@
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         
