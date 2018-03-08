@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
+    <lastmod>2018-03-08T15:19:19.846Z</lastmod>
+    <data>
+        <display>
+        <title>撸了一个canvas手写板</title>
+        <pubTime>2018-03-08T15:15:11.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/02/21/liveVideo/</loc>
     <lastmod>2018-02-21T05:08:23.280Z</lastmod>
     <data>
@@ -42,7 +62,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://zc95.github.io/2018/02/19/musicLink/</loc>
@@ -90,7 +109,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -631,9 +649,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>hosts</tag>
-         
         <tag>github</tag>
+         
+        <tag>hosts</tag>
          
          
            

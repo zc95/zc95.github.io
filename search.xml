@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[撸了一个canvas手写板]]></title>
+      <url>/2018/03/08/canvasPalette/</url>
+      <content type="html"><![CDATA[<p>用 canvas 写了一个手写板，功能：画笔粗细、橡皮擦大小、画笔颜色、清空画布、历史操作等</p>
+<h2 id="canvas手写板"><a href="#canvas手写板" class="headerlink" title="canvas手写板"></a>canvas手写板</h2><ul>
+<li><a href="https://zc95.github.io/demo/canvas.html">demo</a></li>
+<li><a href="https://github.com/zc95/canvas" target="_blank" rel="external">github</a></li>
+</ul>
+<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fp5r4kgijtj307s07st9m.jpg"></p>
+<hr>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tb8a00yj31401z40vt.jpg" height="600"></p>
+<hr>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fp5tb8s4tgj31401z4wjo.jpg" height="600"></p>
+<a id="more"></a>
+<hr>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tbmm3ytj31401z4wj1.jpg" height="600"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> demo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[直播平台的弹幕功能]]></title>
       <url>/2018/02/21/liveVideo/</url>
       <content type="html"><![CDATA[<h2 id="类似直播平台的弹幕功能（微信上有bug）"><a href="#类似直播平台的弹幕功能（微信上有bug）" class="headerlink" title="类似直播平台的弹幕功能（微信上有bug）"></a>类似直播平台的弹幕功能（微信上有bug）</h2><ul>
@@ -876,9 +909,9 @@
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
