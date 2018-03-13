@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/03/13/es6-webpack/</loc>
+    <lastmod>2018-03-13T13:48:51.361Z</lastmod>
+    <data>
+        <display>
+        <title>ES6入门</title>
+        <pubTime>2018-03-13T13:42:52.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
     <lastmod>2018-03-08T15:19:19.846Z</lastmod>
     <data>
@@ -649,9 +669,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            
