@@ -4,14 +4,58 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/03/19/nodeTest/</loc>
-    <lastmod>2018-03-19T15:59:26.131Z</lastmod>
+    <loc>http://zc95.github.io/2018/03/20/nodejs-TCP/</loc>
+    <lastmod>2018-03-20T14:47:10.554Z</lastmod>
     <data>
         <display>
-        <title>nodejs搭建本地服务器环境</title>
+        <title>nodejs-TCP</title>
+        <pubTime>2018-03-20T13:56:12.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2018/03/20/Homebrew/</loc>
+    <lastmod>2018-03-20T14:46:52.669Z</lastmod>
+    <data>
+        <display>
+        <title>Homebrew</title>
+        <pubTime>2018-03-20T13:31:52.000Z</pubTime>
+        
+        <tag>Homebrew</tag>
+         
+        <tag>brew</tag>
+         
+        <tag>telnet</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2018/03/19/nodejs-HTTP/</loc>
+    <lastmod>2018-03-20T14:04:25.178Z</lastmod>
+    <data>
+        <display>
+        <title>Node.js构建HTTP服务器</title>
         <pubTime>2018-03-19T12:29:42.000Z</pubTime>
         
-        <tag>node.js</tag>
+        <tag>Node.js</tag>
          
         <tag>本地服务器</tag>
          
@@ -25,56 +69,15 @@
     </url>
 
     
-    
   <url>
-    <loc>http://zc95.github.io/2018/03/13/es6-webpack/</loc>
-    <lastmod>2018-03-13T13:48:51.361Z</lastmod>
+    <loc>http://zc95.github.io/2018/02/19/musicLink/</loc>
+    <lastmod>2018-03-20T13:33:47.658Z</lastmod>
     <data>
         <display>
-        <title>ES6入门</title>
-        <pubTime>2018-03-13T13:42:52.000Z</pubTime>
+        <title>教你下载会员歌曲</title>
+        <pubTime>2018-02-19T15:19:04.000Z</pubTime>
         
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
-    <lastmod>2018-03-08T15:19:19.846Z</lastmod>
-    <data>
-        <display>
-        <title>撸了一个canvas手写板</title>
-        <pubTime>2018-03-08T15:15:11.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/02/21/liveVideo/</loc>
-    <lastmod>2018-02-21T05:08:23.280Z</lastmod>
-    <data>
-        <display>
-        <title>直播平台的弹幕功能</title>
-        <pubTime>2018-02-21T04:51:05.000Z</pubTime>
-        
-        <tag>html</tag>
+        <tag>歌曲</tag>
          
          
            
@@ -88,13 +91,13 @@
     
   <url>
     <loc>http://zc95.github.io/2018/02/21/musicPlayer/</loc>
-    <lastmod>2018-02-21T04:50:39.432Z</lastmod>
+    <lastmod>2018-03-20T13:33:31.498Z</lastmod>
     <data>
         <display>
         <title>自己写了个音乐播放器</title>
         <pubTime>2018-02-21T04:45:29.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>material design</tag>
          
          
            
@@ -107,14 +110,16 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/02/19/musicLink/</loc>
-    <lastmod>2018-02-19T15:32:39.403Z</lastmod>
+    <loc>http://zc95.github.io/2018/02/21/liveVideo/</loc>
+    <lastmod>2018-03-20T13:33:15.758Z</lastmod>
     <data>
         <display>
-        <title>教你下载会员歌曲</title>
-        <pubTime>2018-02-19T15:19:04.000Z</pubTime>
+        <title>直播平台的弹幕功能</title>
+        <pubTime>2018-02-21T04:51:05.000Z</pubTime>
         
-        <tag>html</tag>
+        <tag>video</tag>
+         
+        <tag>X5内核</tag>
          
          
            
@@ -125,6 +130,51 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
+    <lastmod>2018-03-20T13:32:54.416Z</lastmod>
+    <data>
+        <display>
+        <title>撸了一个canvas手写板</title>
+        <pubTime>2018-03-08T15:15:11.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>material design</tag>
+         
+         
+           
+             
+              <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2018/03/13/es6-webpack/</loc>
+    <lastmod>2018-03-20T13:32:31.632Z</lastmod>
+    <data>
+        <display>
+        <title>ES6入门</title>
+        <pubTime>2018-03-13T13:42:52.000Z</pubTime>
+        
+        <tag>ES6</tag>
+         
+        <tag>webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://zc95.github.io/2017/10/21/input/</loc>
@@ -174,28 +224,6 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2017/10/21/javascript/</loc>
-    <lastmod>2018-02-08T11:31:27.881Z</lastmod>
-    <data>
-        <display>
-        <title>javascript知识碎片</title>
-        <pubTime>2017-10-21T04:14:08.000Z</pubTime>
-        
-        <tag>javascript</tag>
-         
-        <tag>jquery</tag>
-         
-         
-           
-             
-              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2018/01/23/star-rating/</loc>
     <lastmod>2018-01-30T15:23:57.113Z</lastmod>
     <data>
@@ -209,28 +237,6 @@
            
              
               <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/01/25/htmlAndCss/</loc>
-    <lastmod>2018-01-25T13:04:49.394Z</lastmod>
-    <data>
-        <display>
-        <title>html&css知识碎片</title>
-        <pubTime>2018-01-25T12:56:30.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-        <tag>html</tag>
-         
-         
-           
-             
-              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
           
         </display>
     </data>
