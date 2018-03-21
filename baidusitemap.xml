@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zc95.github.io/2018/03/20/nodejs-TCP/</loc>
-    <lastmod>2018-03-20T15:15:32.361Z</lastmod>
+    <lastmod>2018-03-21T13:24:36.494Z</lastmod>
     <data>
         <display>
         <title>Node.js构建TCP服务器</title>
@@ -338,9 +338,9 @@
         <title>JavaScript闭包</title>
         <pubTime>2017-12-21T12:48:17.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>正则表达式</tag>
+         
+        <tag>javascript</tag>
          
          
            
