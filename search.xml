@@ -136,7 +136,7 @@
 <ol>
 <li><p>在根目录下新建 <code>nodetest</code> 文件夹</p>
 </li>
-<li><p>在 <code>nodetest</code> 下安装 <code>HTTP</code> 文件夹</p>
+<li><p>在 <code>nodetest</code> 下新建 <code>HTTP</code> 文件夹</p>
 </li>
 <li><p>在 <code>HTTP</code> 文件夹下新建一个 <code>server.js</code> 的文件</p>
 </li>
@@ -706,9 +706,9 @@
         
         <tags>
             
-            <tag> javascript </tag>
-            
             <tag> 正则表达式 </tag>
+            
+            <tag> javascript </tag>
             
         </tags>
         
@@ -1501,7 +1501,7 @@
 <h2 id="document-ready"><a href="#document-ready" class="headerlink" title="$(document).ready"></a>$(document).ready</h2><p>DOM加载完成，会触发DOMContentLoaded事件，等同于jQuery的$(document).ready方法。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="数据储存"><a href="#数据储存" class="headerlink" title="数据储存"></a>数据储存</h2><p>jQuery对象可以储存数据。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">(<span class="string">"body"</span>).data(<span class="string">"foo"</span>, 52);</span></div><div class="line"><span class="meta">$</span><span class="bash">(<span class="string">"body"</span>).data(<span class="string">"foo"</span>);</span></div></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>, <span class="number">52</span>)<span class="comment">;</span></div><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
 <p>HTML 5有一个dataset对象，也有类似的功能（IE 10不支持），不过只能保存字符串。</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">element.dataset.<span class="keyword">user</span> <span class="title">= JSON</span>.stringify(user);</div><div class="line">element.dataset.score = score;</div></pre></td></tr></table></figure>
 <h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>jQuery的animate方法，用于生成动画效果。</p>
