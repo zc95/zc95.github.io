@@ -7,7 +7,7 @@
       <url>/2018/03/25/AI-chat/</url>
       <content type="html"><![CDATA[<h2 id="人工智能聊天机器人"><a href="#人工智能聊天机器人" class="headerlink" title="人工智能聊天机器人"></a>人工智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/ai">demo</a></p>
 <p><a href="https://github.com/zc95/AI-Chat" target="_blank" rel="external">github源码</a></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg"><br><a id="more"></a></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp7hgtv60j307s07sglj.jpg" alt=""><br><a id="more"></a></p>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><p>本地打开html文件，能正常访问。但放到github上之后，访问 <a href="https://zc95.github.io/demo/ai">https://zc95.github.io/demo/ai</a> 就会报错。</p>
 <p>谷歌：</p>
 <blockquote>
@@ -21,7 +21,7 @@
 <p>​    HTTPS页面里动态的引入HTTP资源，比如引入一个js文件，会被直接block掉的，在HTTPS页面里通过AJAX的方式请求HTTP资源，也会被直接block掉的。这是因为浏览器为了安全，HTTPS下不能跨协议直接调用http。</p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>方法1：对于同时支持HTTPS和HTTP的资源，引用的时候要把引用资源的URL里的协议头去掉，浏览器会自动根据当前是HTTPS还是HTTP来给资源URL补上协议头的，可以达到无缝切换。或者在head中添加meta标签<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">，会自动将http的不安全请求升级为https。</p>
 <p>方法2：使用iframe的方式引入HTTP资源，然后将这个页面嵌入到HTTPS页面里就可以了。</p>
-<p>方法3：由于该智能聊天的url请求只能是http协议，所以不采用上面两种方法。当跨域请求被拒绝时，地址栏右侧会有个盾牌，允许网页加载这些“不安全”的脚本或请求，当然这是建立在访问双方互相信任的基础上，如果涉及银行卡，密码之类的最好不要这么做。</p>
+<p>方法3：由于该智能聊天的url请求只能是http协议，所以不采用上面两种方法。当跨域请求被拒绝时，地址栏右侧会有个盾牌，点击 <code>加载不安全的脚本</code> ，允许网页加载这些“不安全”的脚本或请求，当然这是建立在访问双方互相信任的基础上，如果涉及银行卡，密码之类的最好不要这么做。</p>
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp694eihfj30iy07mdgl.jpg" alt=""></p>
 <p>此时，接口已经能正常访问，地址栏前面的绿色安全变成红色不安全，控制台也从报错变为警告。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fpp6ky423dj31kw0fkn37.jpg" alt=""></p>

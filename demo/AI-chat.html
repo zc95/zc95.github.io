@@ -163,8 +163,8 @@
     }
 
     .anim {
-      -webkit-animation-duration: .3s;
-      animation-duration: .3s;
+      -webkit-animation-duration: .18s;
+      animation-duration: .18s;
     }
   </style>
 </head>
@@ -197,6 +197,7 @@
   <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
   <script>
     $(function () {
+      console.log("由于跨域的问题可能会导致无法使用，地址栏右侧会有个盾牌，点击“加载不安全的脚本”，允许网页加载这些“不安全”的脚本或请求");
       $("#tab1").append("<p class='sendp AiSend anim fadeInUp'>\
       <img class='icon' src='https://ws1.sinaimg.cn/large/006tNc79gy1fpbm7zbxgsj305k05kjrj.jpg' alt=''>\
       <span>你可以这样问我：蛋炒饭怎么做,   现在什么时间,   苏州今天天气怎么样,   北京到上海的列车,   金鸡湖 图片,  观前街是什么,   你叫什么名字,   我叫什么名字,   开黑吗 我玩亚索,  ...（手机键盘右下角那个按钮就是发送）</span></p>");
