@@ -1,0 +1,311 @@
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <link rel="shortcut icon" href="https://ws1.sinaimg.cn/large/006tNc79gy1fpotw33kfgj305k05kjrj.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <title>哆啦A梦</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
+  <style>
+    body {
+      padding: 0 !important;
+      background-color: #f5f5f5;
+      font-family: STHeiti, "Microsoft YaHei", SimSun, STSong, "\5b8b\4f53", Arial, Helvetica, sans-serif;
+    }
+    html,body,#tab1{
+      overflow-x: hidden;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 46.08px;
+      background-color: #f9f9f9;
+      box-shadow: 0 -0.10666667rem 0.32rem #eee;
+    }
+
+    .footer-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 46.08px;
+      height: 46.08px;
+      bottom: 0;
+      padding: 10px;
+    }
+
+    .footer-icon img {
+      width: 26.08px;
+      height: 26.08px;
+    }
+
+    .footer-input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 46.08px;
+      right: 9px;
+    }
+
+    .footer-send {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 88px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .footer-input input {
+      outline: none;
+      width: 100%;
+      height: 36.08px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #eee;
+      font-family: STHeiti, "Microsoft YaHei", SimSun, STSong, "\5b8b\4f53", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      text-indent: 11px;
+      border-radius: 18.04px;
+    }
+
+    input::-webkit-input-placeholder {
+      /* placeholder颜色  */
+      color: #aab2bd;
+      /* placeholder字体大小  */
+      font-size: 12px;
+      /* placeholder位置  */
+      text-align: left;
+    }
+
+    #tab1 {
+      position: absolute;
+      top: 0;
+      bottom: 46.08;
+      left: 0;
+      right: 0;
+      box-sizing: border-box;
+    }
+
+    .AiSend {
+      text-align: left;
+    }
+
+    .MySend {
+      text-align: right;
+    }
+
+    #tab1 p {
+      margin-bottom: 8px;
+    }
+
+    #tab1 p .icon {
+      width: 38px;
+      border-radius: 3px;
+      background-color: white;
+    }
+
+    #tab1 p span {
+      padding: 11px;
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      max-width: calc(100% - 80px);
+      background-color: white;
+      vertical-align: top;
+      position: relative;
+    }
+
+    .AiSend span:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 11px;
+      right: 100%;
+      border: solid 8px;
+      border-color: transparent white transparent transparent;
+      font-size: 0;
+    }
+
+    .AiSend span {
+      margin-left: 10px;
+      max-width: calc(100% - 80px);
+    }
+
+    .MySend span {
+      margin-right: 10px;
+      text-align: left;
+      background-color: #3cc51f !important;
+    }
+
+    .MySend span:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 11px;
+      right: -16px;
+      border: solid 8px;
+      border-color: transparent transparent transparent 3cc51f;
+      font-size: 0;
+    }
+
+    .anim {
+      -webkit-animation-duration: .4s;
+      animation-duration: .4s;
+    }
+  </style>
+</head>
+
+<body class="mdui-theme-primary-teal mdui-theme-accent-pink">
+  <div id="tab1" class="mdui-p-a-1 tab-wrapper" style="overflow-y:auto;">
+  </div>
+
+  <footer>
+    <div class="footer-icon">
+      <img src="https://zc95.github.io/img/favicon.png" alt="">
+    </div>
+    <div class="footer-input">
+      <input placeholder="你可以问我：高铁，天气、时间、菜谱、新闻和任何东西～～" id="chatInput" maxlength="40" type="text">
+    </div>
+  </footer>
+
+  <div id="detailBox" style="position:fixed;top:0; bottom:0;left:0; right:0;z-index:99999; background-color:white;display:none;">
+    <div style="position:absolute;top:0; top:48px; bottom:0; left:0; right:0;">
+      <iframe src="" frameborder="0" style="height:100%; width:100%;"></iframe>
+    </div>
+    <div style="position:absolute;height:48px;background-color:#dedddd; top:0;left:0; right:0;" class="mdui-dialog-actions">
+      <button id="closeBox" style="position:absolute;bottom:6px; right:6px;" class="mdui-btn mdui-ripple">关闭</button>
+    </div>
+
+  </div>
+
+  <audio id="audio1"></audio>
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+  <script>
+    $(function () {
+      $("#tab1").append("<p class='sendp AiSend anim fadeInUp'>\
+      <img class='icon' src='https://ws1.sinaimg.cn/large/006tNc79gy1fpbm7zbxgsj305k05kjrj.jpg' alt=''>\
+      <span>你可以这样问我：蛋炒饭怎么做,   现在什么时间,   苏州今天天气怎么样,   北京到上海的列车,   金鸡湖 图片,  观前街是什么,   你叫什么名字,   我叫什么名字,   开黑吗 我玩亚索,  ...（手机键盘右下角那个按钮就是发送）</span></p>");
+    
+      $("#chatInput").focus(function () {
+        setTimeout(function () {
+          $("#tab1")[0].scrollTop = $("#tab1")[0].scrollHeight;
+        }, 1000);
+      })
+    })
+
+    function send() {
+      if ($("#chatInput").val() == "") {
+        return false;
+      }
+
+      var ci = $("#chatInput").val();
+      $("#tab1").append("<p class='sendp MySend anim fadeInRight'>\
+      <span>"+ ci + "</span>\
+      <img class='icon' src='https://zc95.github.io/img/favicon.png' alt=''>\
+    </p>");
+      $("#chatInput").val("");
+      $("#tab1")[0].scrollTop = $("#tab1")[0].scrollHeight;
+      
+      setTimeout(function(){
+      $.ajax({
+        type: 'post',
+        url: "http://www.tuling123.com/openapi/api?key=d56078b7bb5546b79b716fcf7f965edb&info=" + ci + "&userid=237391",
+        success: function (data) {
+          try {
+            if (navigator.vibrate) {
+              navigator.vibrate([500, 500]);
+            } else if (navigator.webkitVibrate) {
+              navigator.webkitVibrate([500, 500]); //参数代表时间，如果是数组就是连续振动
+            }
+
+            if (data.code == 302000) {
+              var str = "";
+              $.each(data.list, function (i, n) {
+                if (i == 5) {
+                  return false;
+                }
+                str+="<li onclick=\"detail('"+n.detailurl+"')\"  class='mdui-list-item mdui-ripple'>\
+    <div class='mdui-list-item-avatar'><img src='"+ n.icon + "'/></div>\
+    <div class='mdui-list-item-content'>\
+      <div class='mdui-list-item-title'>"+ n.source + "</div>\
+      <div class='mdui-list-item-text mdui-list-item-two-line'>"+ n.article + "</div>\
+    </div>\
+  </li>";
+                
+              })
+              $('#tab1').append("<ul  class='mdui-list mdui-list-dense'>"+str+"</ul>");
+            }
+
+            if (data.code == 308000) {
+              var str = "";
+              $.each(data.list, function (i, n) {
+                if (i == 5) {
+                  return false;
+                }
+                str+="<li onclick=\"detail('"+n.detailurl+"')\"  class='mdui-list-item mdui-ripple'>\
+    <div class='mdui-list-item-avatar'><img src='"+ n.icon + "'/></div>\
+    <div class='mdui-list-item-content'>\
+      <div class='mdui-list-item-title'>"+ n.name + "</div>\
+      <div style='line-height: 36px;' class='mdui-list-item-text mdui-list-item-two-line'>"+ n.info + "</div>\
+    </div>\
+  </li>";
+              })
+              $('#tab1').append("<ul  class='mdui-list mdui-list-dense'>"+str+"</ul>");
+            }
+
+            if (data.code == 200000) {
+              detail(data.url)
+            }
+
+
+            var rl = data.text;
+            $("#tab1").append("<p class='sendp AiSend anim fadeInLeft'>\
+      <img class='icon' src='https://ws1.sinaimg.cn/large/006tNc79gy1fpbm7zbxgsj305k05kjrj.jpg' alt=''>\
+      <span>"+ rl + "</span>\
+    </p>");
+
+            $("#tab1")[0].scrollTop = $("#tab1")[0].scrollHeight;
+          } catch (error) {
+            alert(error);
+          }
+        }
+      })
+      },Math.floor(Math.random()*1200+300))
+    }
+
+function detail(url){
+$("#detailBox").show();
+  $("iframe")[0].src=url;
+  $("#closeBox").click(function(){
+    $("#detailBox").hide();
+  });
+}
+
+    document.onkeyup = function (e) {
+      var code = e.charCode || e.keyCode;
+      if (code == 13) {
+        send();
+      }
+    }
+
+
+
+  </script>
+</body>
+
+</html>
