@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-03-25T03:41:17.395Z</updated>
+  <updated>2018-03-25T07:04:38.067Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="http://zc95.github.io/2018/03/25/AI-chat/"/>
     <id>http://zc95.github.io/2018/03/25/AI-chat/</id>
     <published>2018-03-25T03:41:01.000Z</published>
-    <updated>2018-03-25T03:41:17.395Z</updated>
+    <updated>2018-03-25T07:04:38.067Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="AI智能聊天机器人"><a href="#AI智能聊天机器人" class="headerlink" title="AI智能聊天机器人"></a>AI智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/ai">demo</a></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg"></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="人工智能聊天机器人"><a href="#人工智能聊天机器人" class="headerlink" title="人工智能聊天机器人"></a>人工智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/ai">demo</a></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg"><br><a id="more"></a></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;AI智能聊天机器人&quot;&gt;&lt;a href=&quot;#AI智能聊天机器人&quot; class=&quot;headerlink&quot; title=&quot;AI智能聊天机器人&quot;&gt;&lt;/a&gt;AI智能聊天机器人&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zc95.github.io/demo/ai&quot;&gt;d
-      
+      &lt;h2 id=&quot;人工智能聊天机器人&quot;&gt;&lt;a href=&quot;#人工智能聊天机器人&quot; class=&quot;headerlink&quot; title=&quot;人工智能聊天机器人&quot;&gt;&lt;/a&gt;人工智能聊天机器人&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zc95.github.io/demo/ai&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg&quot; alt=&quot;https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -539,9 +537,9 @@
       <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
     
     
-      <category term="github" scheme="http://zc95.github.io/tags/github/"/>
-    
       <category term="hosts" scheme="http://zc95.github.io/tags/hosts/"/>
+    
+      <category term="github" scheme="http://zc95.github.io/tags/github/"/>
     
   </entry>
   
