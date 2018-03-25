@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-03-21T14:57:01.816Z</updated>
+  <updated>2018-03-25T03:41:17.395Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI-chat</title>
+    <link href="http://zc95.github.io/2018/03/25/AI-chat/"/>
+    <id>http://zc95.github.io/2018/03/25/AI-chat/</id>
+    <published>2018-03-25T03:41:01.000Z</published>
+    <updated>2018-03-25T03:41:17.395Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="AI智能聊天机器人"><a href="#AI智能聊天机器人" class="headerlink" title="AI智能聊天机器人"></a>AI智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/ai">demo</a></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg"></p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;AI智能聊天机器人&quot;&gt;&lt;a href=&quot;#AI智能聊天机器人&quot; class=&quot;headerlink&quot; title=&quot;AI智能聊天机器人&quot;&gt;&lt;/a&gt;AI智能聊天机器人&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://zc95.github.io/demo/ai&quot;&gt;d
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>Node.js构建TCP服务器和TCP客户端</title>
@@ -540,34 +565,6 @@
     
     
       <category term="css" scheme="http://zc95.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于 GitHub Issues 的评论系统：gitment</title>
-    <link href="http://zc95.github.io/2017/11/23/gitment/"/>
-    <id>http://zc95.github.io/2017/11/23/gitment/</id>
-    <published>2017-11-23T15:47:12.000Z</published>
-    <updated>2017-12-21T12:43:24.821Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为<a href="https://zc95.github.io/2017/10/20/hexoBlog/">hexo</a>博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p><p>本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。</p><h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="gitment"><a href="#gitment" class="headerlink" title="gitment"></a>gitment</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentPC.png" width="90%;"><br></p>        <hr><h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentYD.png" width="90%;"><br></p><hr><h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>打开博客主题文件夹下的 <code>_config.yml</code> 文件，以我的为例：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">comment:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">gitment</span>  <span class="comment"># 启用哪种评论系统</span></div><div class="line"><span class="attr">  gitment:</span></div><div class="line"><span class="attr">    githubID:</span> <span class="string">zc95</span>  <span class="comment"># 你的GitHub名称</span></div><div class="line"><span class="attr">    repo:</span> <span class="string">zc95.github.io</span>  <span class="comment"># 你的GitHub名称.github.io</span></div><div class="line"><span class="attr">    ClientID:</span> <span class="string">*********</span></div><div class="line"><span class="attr">    ClientSecret:</span> <span class="string">*********</span></div><div class="line"><span class="attr">    lazy:</span> <span class="literal">false</span>   <span class="comment"># 这个我也不清楚 大概是懒加载的意思吧</span></div></pre></td></tr></table></figure><p><code>githubID</code> 和 <code>repo</code> 都有了，就剩 <code>ClientID</code> 和 <code>ClientSecret</code> 了</p><hr><h2 id="注册OAuth-Application"><a href="#注册OAuth-Application" class="headerlink" title="注册OAuth Application"></a>注册OAuth Application</h2><p>通过地址<a href="https://github.com/settings/applications/new" target="_blank" rel="external">OAuth Application注册传送门</a>申请配置，注册一个新的 OAuth Application，其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="https://zc95.github.io">https://zc95.github.io</a>）</p><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplication.png" width="90%;"><br></p><hr><h2 id="获取ClientID与ClientSecret"><a href="#获取ClientID与ClientSecret" class="headerlink" title="获取ClientID与ClientSecret"></a>获取ClientID与ClientSecret</h2><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplicationId.png" width="90%;"><br></p><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>优点<ul><li>界面​简洁</li><li>与github绑定，方便注册，不用依赖脚本或插件</li><li>评论会出现在github项目中的Issues里，方便管理</li><li>支持Markdown全部语法和html标签（这个很厉害）</li></ul></li><li>缺点<ul><li>​每篇文章都需要手动点击initialize comments按钮来初始化评论，否则不能评论；</li><li>不支持图片（可以尝试用markdown或者img标签来实现）和表情（emoji可以用）</li><li>只能支持github登陆</li></ul></li></ul><hr><h2 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h2><p>最后还是选择了<a href="https://livere.com" target="_blank" rel="external">livere 来必力</a>，注册登陆需要翻墙（或许因为我网不好。。），一旦注册之后评论之类的就不需翻墙了，支持QQ、微信、微博、百度等登陆方式，本页拉到最底下就是来必力了，体验还是可以的。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;如何为hexo博客添加评论功能&quot;&gt;&lt;a href=&quot;#如何为hexo博客添加评论功能&quot; class=&quot;headerlink&quot; title=&quot;如何为hexo博客添加评论功能&quot;&gt;&lt;/a&gt;如何为&lt;a href=&quot;https://zc95.github.io/2017/10/20/hexoBlog/&quot;&gt;hexo&lt;/a&gt;博客添加评论功能&lt;/h2&gt;&lt;p&gt;多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙&lt;/p&gt;
-&lt;p&gt;本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="Hexo" scheme="http://zc95.github.io/tags/Hexo/"/>
-    
-      <category term="gitment" scheme="http://zc95.github.io/tags/gitment/"/>
-    
-      <category term="Issues" scheme="http://zc95.github.io/tags/Issues/"/>
     
   </entry>
   

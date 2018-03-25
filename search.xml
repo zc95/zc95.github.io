@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[AI-chat]]></title>
+      <url>/2018/03/25/AI-chat/</url>
+      <content type="html"><![CDATA[<h2 id="AI智能聊天机器人"><a href="#AI智能聊天机器人" class="headerlink" title="AI智能聊天机器人"></a>AI智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/ai">demo</a></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowuni2m5j307s07s747.jpg"></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Node.js构建TCP服务器和TCP客户端]]></title>
       <url>/2018/03/20/nodejs-TCP/</url>
       <content type="html"><![CDATA[<p>网络是通信互联网的基础，Node.js提供了net、http、dgram模块、分别用来实现TCP、HTTP、UDP的通信。上次的文章<a href="https://zc95.github.io/2018/03/19/nodejs-HTTP/">《Node.js构建HTTP服务器》</a>实现了HTTP的通信，这篇文章说一说TCP服务器和TCP客户端的构建。</p>
@@ -1719,9 +1742,9 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
+            
+            <tag> css </tag>
             
             <tag> javascript </tag>
             
