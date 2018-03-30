@@ -1,13 +1,236 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="关于float清除浮动和inline-block出现空隙的问题"><meta name="keywords" content="css"><meta name="author" content="张成,undefined"><meta name="copyright" content="张成"><title>关于float清除浮动和inline-block出现空隙的问题 | 张成的博客</title><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css?version=1.3"><script>var GLOBAL = { 
-  root: '/',
-  algolia: undefined,
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  localSearch: {"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}"},"path":"search.xml"}
-} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#display-inline-block去掉空隙"><span class="toc-number">1.</span> <span class="toc-text">display:inline-block去掉空隙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#移除标签间的空格"><span class="toc-number">1.1.</span> <span class="toc-text">移除标签间的空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去掉闭合标签"><span class="toc-number">1.2.</span> <span class="toc-text">去掉闭合标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#font-size-0"><span class="toc-number">1.3.</span> <span class="toc-text">font-size:0;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#float-清除浮动"><span class="toc-number">2.</span> <span class="toc-text">float 清除浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#空标签"><span class="toc-number">2.1.</span> <span class="toc-text">空标签 </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最佳方法"><span class="toc-number">2.2.</span> <span class="toc-text">最佳方法</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">张成</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">33</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">43</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">3</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/img/top.jpg);"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">张成的博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">主页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/about">关于我</a></span></div><div id="post-info"><div id="post-title">关于float清除浮动和inline-block出现空隙的问题</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-26</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/技术篇/">技术篇</a><div class="post-meta-wordcount"><span>Word count: </span><span class="word-count">530</span><span class="post-meta__separator">|</span><span>Reading time: 2 min</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div id="post-content"><p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>关于float清除浮动和inline-block出现空隙的问题 | 张成的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="css">
+    <link rel="shortcut icon" href="https://github.com/fluidicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.2.8">
+    
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":"ture","app_id":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","app_key":"fvlhBW5UGPEBJeIH70tpAFkf","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","appkey":"fvlhBW5UGPEBJeIH70tpAFkf","notify":true,"verify":false,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":false,"lazy":false,"owner":"zc95","repo":"zc95.github.io","oauth":{"client_id":"ceb5b1ea06a001340367","client_secret":"18b4653d0e0a6322618614ca060bd0fb601d8b69"},"perPage":10}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      
+      <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpvazdb2ufj31hc0xcwfc.jpg" class="brand-bg">
+      
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">张成</h5>
+          <a href="mailto:571346800@qq.com" title="571346800@qq.com" class="mail">
+            
+              <span>5</span>
+            
+              <span>7</span>
+            
+              <span>1</span>
+            
+              <span>3</span>
+            
+              <span>4</span>
+            
+              <span>6</span>
+            
+              <span>8</span>
+            
+              <span>0</span>
+            
+              <span>0</span>
+            
+              <span>@</span>
+            
+              <span>q</span>
+            
+              <span>q</span>
+            
+              <span>.</span>
+            
+              <span>c</span>
+            
+              <span>o</span>
+            
+              <span>m</span>
+            
+          </a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="tencent://message/?uin=571346800&amp;Site=400301.com&amp;Menu=yes" target="_blank">
+                  <i class="icon icon-lg icon-qq"></i>
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/zc95" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="">
+              <a href="/"  >
+                <i class="icon icon-lg icon-university"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>关于float清除浮动和inline-block出现空隙的问题</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+    <img src="/img/banner.jpg" class="header-bg">
+    <div class="container fade-scale">
+        <h1 class="title">关于float清除浮动和inline-block出现空隙的问题</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-26T15:21:45.000Z" itemprop="datePublished" class="page-time">
+  2017-11-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术篇/">技术篇</a></li></ul>
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-floatAndInlineBlock"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">关于float清除浮动和inline-block出现空隙的问题</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-11-26 23:21:45" datetime="2017-11-26T15:21:45.000Z"  itemprop="datePublished">2017-11-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术篇/">技术篇</a></li></ul>
+
+
+
+            
+	<span id="/2017/11/26/floatAndInlineBlock/" class="leancloud_visitors" data-flag-title="关于float清除浮动和inline-block出现空隙的问题" title="关于float清除浮动和inline-block出现空隙的问题">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+    <span class="leancloud-comment">
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/11/26/floatAndInlineBlock/#comment">
+            <span class="valine-comment-count" data-xid="/2017/11/26/floatAndInlineBlock/"></span>
+        </a>
+    </span>
+
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <p>最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; </p>
 <p></p><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/inlineBlockKX.png" width="90%;"><br></p><br>但我们都知道 <code>display:inline-block</code> 布局会出现空隙的问题，<code>float:left</code>  又要清除浮动，本文就这两个问题整理出解决方案。<br><a id="more"></a><p></p>
 <h2 id="display-inline-block去掉空隙"><a href="#display-inline-block去掉空隙" class="headerlink" title="display:inline-block去掉空隙"></a>display:inline-block去掉空隙</h2><h3 id="移除标签间的空格"><a href="#移除标签间的空格" class="headerlink" title="移除标签间的空格"></a>移除标签间的空格</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"tab-wrapper"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item active"</span>&gt;</span>项目一<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目二<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目三<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"tab-item"</span>&gt;</span>项目四<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这个方法是我最初学html时知道的方法，当时觉得挺方便的，现在工作了觉得这个方法好蠢😂，一个代码格式化就能毁了它，这样不易维护的代码太脆弱了；</p>
@@ -18,4 +241,300 @@
 <p>这个方法方法好理解，比较主流的解决方案；</p>
 <h2 id="float-清除浮动"><a href="#float-清除浮动" class="headerlink" title="float 清除浮动"></a>float 清除浮动</h2><h3 id="空标签"><a href="#空标签" class="headerlink" title="空标签 "></a>空标签 <div style="clear:both;"></div></h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class="box-wrapper"&gt;</div><div class="line">    &lt;div class="box"&gt;&lt;/div&gt;</div><div class="line">    &lt;div class="box"&gt;&lt;/div&gt;</div><div class="line">    &lt;div class="box"&gt;&lt;/div&gt;</div><div class="line">    &lt;div style="clear:both;"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <h3 id="最佳方法"><a href="#最佳方法" class="headerlink" title="最佳方法"></a>最佳方法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 全浏览器通用的clearfix方案【推荐 */</span></div><div class="line"><span class="comment">/* 引入了zoom以支持IE6/7 */</span></div><div class="line"><span class="comment">/* 同时加入:before以解决现代浏览器上边距折叠的问题 */</span></div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,</div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">    <span class="attribute">display</span>: table;</div><div class="line">    <span class="attribute">content</span>: <span class="string">" "</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">    <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span>&#123;</div><div class="line">    *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">张成</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://zc95.github.io/2017/11/26/floatAndInlineBlock/">http://zc95.github.io/2017/11/26/floatAndInlineBlock/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="/img/alipayimg.png"><div class="post-qr-code__desc">支付宝打赏</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="/img/weipayimg.png"><div class="post-qr-code__desc">微信打赏</div></div></div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2017/11/28/hostsChange/"><i class="fa fa-chevron-left">  </i><span>更改hosts文件来更好地使用github</span></a></div><div class="next-post pull-right"><a href="/2017/11/23/gitment/"><span>基于 GitHub Issues 的评论系统：gitment</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2018 By 张成</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator"></span></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.3"></script><script src="/js/fancybox.js?version=1.3"></script><script src="/js/sidebar.js?version=1.3"></script><script src="/js/copy.js?version=1.3"></script><script src="/js/fireworks.js?version=1.3"></script><script src="/js/transition.js?version=1.3"></script><script src="/js/scroll.js?version=1.3"></script><script src="/js/head.js?version=1.3"></script></body></html>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+
+        
+        转载注明出处，原文地址：<a href="/2017/11/26/floatAndInlineBlock/" target="_blank" rel="external">http://zc95.github.io/2017/11/26/floatAndInlineBlock/</a>
+        
+    </div>
+    <footer>
+        <a href="http://zc95.github.io">
+            <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" alt="张成">
+            张成
+        </a>
+    </footer>
+</blockquote>
+
+        
+            <div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+            
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/2017/11/26/floatAndInlineBlock/&title=《关于float清除浮动和inline-block出现空隙的问题》 — 张成的博客&pic=https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/2017/11/26/floatAndInlineBlock/&title=《关于float清除浮动和inline-block出现空隙的问题》 — 张成的博客&source=最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; 
+但..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/11/26/floatAndInlineBlock/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+    <div id="comment"></div>
+
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="prev">
+      <a href="/2017/11/28/hostsChange/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">更改hosts文件来更好地使用github</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="next">
+      <a href="/2017/11/23/gitment/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">基于 GitHub Issues 的评论系统：gitment</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#display-inline-block去掉空隙"><span class="post-toc-number">1.</span> <span class="post-toc-text">display:inline-block去掉空隙</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移除标签间的空格"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">移除标签间的空格</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#去掉闭合标签"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">去掉闭合标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#font-size-0"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">font-size:0;</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#float-清除浮动"><span class="post-toc-number">2.</span> <span class="post-toc-text">float 清除浮动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#空标签"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">空标签 </span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#最佳方法"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">最佳方法</span></a></li></ol></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
+</article>
+
+    <div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        大爷赏点饭钱吧😂
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5ekl9uj30bu0bot9m.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5ekl9uj30bu0bot9m.jpg" data-alipay="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5q3r0wj30oy0p03ys.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+    
+</div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                张成 &copy; 2017 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/2017/11/26/floatAndInlineBlock/&title=《关于float清除浮动和inline-block出现空隙的问题》 — 张成的博客&pic=https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/2017/11/26/floatAndInlineBlock/&title=《关于float清除浮动和inline-block出现空隙的问题》 — 张成的博客&source=最近在写项目的时候手写了一个简单选项卡，遇到这类布局，最常见、最快速的布局方式就是display:inline-block;和float:left; 
+" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/11/26/floatAndInlineBlock/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://zc95.github.io/2017/11/26/floatAndInlineBlock/" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.2.8"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.2.8"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.2.8"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.2.8"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.2.8"></script>
+    
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.2.8"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    <script>
+    (function() {
+        var OriginTitile = document.title, titleTime;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = '😒	快回来！快点我！';
+                clearTimeout(titleTime);
+            } else {
+                document.title = '🤪	欢迎回来～';
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                },2000);
+            }
+        });
+    })();
+</script>
+
+
+    
+</body>
+</html>

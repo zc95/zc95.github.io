@@ -7,7 +7,11 @@
       <url>/2018/03/25/AI-chat/</url>
       <content type="html"><![CDATA[<h2 id="人工智能聊天机器人"><a href="#人工智能聊天机器人" class="headerlink" title="人工智能聊天机器人"></a>人工智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/AI-chat">demo</a></p>
 <p><a href="https://github.com/zc95/AI-chat" target="_blank" rel="external">github源码</a></p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp7hgtv60j307s07sglj.jpg" alt=""><br><a id="more"></a></p>
+<figure class="image-box">
+                <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp7hgtv60j307s07sglj.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<a id="more"></a>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><p>本地打开html文件，能正常访问。但放到github上之后，访问 <a href="https://zc95.github.io/demo/AI-Chat">https://zc95.github.io/demo/AI-Chat</a> 就会报错。</p>
 <p>谷歌：</p>
 <blockquote>
@@ -22,10 +26,19 @@
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>方法1：对于同时支持HTTPS和HTTP的资源，引用的时候要把引用资源的URL里的协议头去掉，浏览器会自动根据当前是HTTPS还是HTTP来给资源URL补上协议头的，可以达到无缝切换。或者在head中添加meta标签<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">，会自动将http的不安全请求升级为https。</p>
 <p>方法2：使用iframe的方式引入HTTP资源，然后将这个页面嵌入到HTTPS页面里就可以了。</p>
 <p>方法3：由于该智能聊天的url请求只能是http协议，所以不采用上面两种方法。当跨域请求被拒绝时，地址栏右侧会有个盾牌，点击 <code>加载不安全的脚本</code> ，允许网页加载这些“不安全”的脚本或请求，当然这是建立在访问双方互相信任的基础上，如果涉及银行卡，密码之类的最好不要这么做。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp694eihfj30iy07mdgl.jpg" alt=""></p>
+<figure class="image-box">
+                <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp694eihfj30iy07mdgl.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
 <p>此时，接口已经能正常访问，地址栏前面的绿色安全变成红色不安全，控制台也从报错变为警告。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fpp6ky423dj31kw0fkn37.jpg" alt=""></p>
-<h2 id="Demo截图"><a href="#Demo截图" class="headerlink" title="Demo截图"></a>Demo截图</h2><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg"></p>
+<figure class="image-box">
+                <img src="https://ws1.sinaimg.cn/large/006tNc79gy1fpp6ky423dj31kw0fkn37.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
+<h2 id="Demo截图"><a href="#Demo截图" class="headerlink" title="Demo截图"></a>Demo截图</h2><figure class="image-box">
+                <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg" title="" class="">
+                <p>https://ws3.sinaimg.cn/large/006tNc79gy1fpowpmgwo1j30u04zu1kx.jpg</p>
+            </figure>
 ]]></content>
       
         <categories>
@@ -37,7 +50,7 @@
         
         <tags>
             
-            <tag> html </tag>
+            <tag> demo </tag>
             
         </tags>
         
@@ -81,7 +94,10 @@
 <h3 id="连接服务器的客户端数量"><a href="#连接服务器的客户端数量" class="headerlink" title="连接服务器的客户端数量"></a>连接服务器的客户端数量</h3><p>创建一个TCP服务器后，可以通过server.getConnections()方法获取连接这个TCP服务器的客户端数量。除此之外，也可以通过maxConnections属性来设置这个服务器的最大连接数量，当连接数量超过最大值时，服务器将拒绝新的连接。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 连接服务器的客户端数量</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="comment">/* 引入net模块 */</span></div><div class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">"net"</span>);</div><div class="line"></div><div class="line"><span class="comment">/* 创建TCP服务器 */</span></div><div class="line"><span class="keyword">var</span> server = net.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'someone connects'</span>);</div><div class="line"></div><div class="line">    <span class="comment">/* 设置最大连接数量 */</span></div><div class="line">    server.maxConnections=<span class="number">3</span>;</div><div class="line">    server.getConnections(<span class="function"><span class="keyword">function</span>(<span class="params">err,count</span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"the count of client is "</span>+count);</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/* 获取监听端口 */</span></div><div class="line">server.listen(<span class="number">8000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Creat server on http://127.0.0.1:8000/"</span>);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>你可以打开多个网页输入localhost:8000来测试这段代码，也可以用Telnet命令 <code>telnet localhost 8000</code> 来连接这个TCP服务器（上一篇文章有提到如何用Homebrew安装Telnet：<a href="https://zc95.github.io/2018/03/20/Homebrew/">《Homebrew》</a>）。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fpkqytum6zj31kw0s7toa.jpg" alt=""></p>
+<figure class="image-box">
+                <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fpkqytum6zj31kw0s7toa.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
 <h3 id="服务器和客户端之间的通信"><a href="#服务器和客户端之间的通信" class="headerlink" title="服务器和客户端之间的通信"></a>服务器和客户端之间的通信</h3><p>利用socket.write()可以使TCP服务器发送数据给客户端；</p>
 <p>socket对象可以用来获取客户端发出的流数据，每次接收到数据的时候触发data事件，通过监听这个事件就可以在回调函数中获取客户端发送的数据了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 发送和获取</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="comment">/* 引入net模块 */</span></div><div class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">"net"</span>);</div><div class="line"></div><div class="line"><span class="comment">/* 创建TCP服务器 */</span></div><div class="line"><span class="keyword">var</span> server = net.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">socket</span>)</span>&#123;</div><div class="line">    <span class="comment">/* 获取地址信息 */</span></div><div class="line">    <span class="keyword">var</span> address = server.address();</div><div class="line">    <span class="keyword">var</span> message = <span class="string">"the server address is"</span>+<span class="built_in">JSON</span>.stringify(address);</div><div class="line"></div><div class="line">    <span class="comment">/* 发送数据 */</span></div><div class="line">    socket.write(message,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> writeSize = socket.bytesWritten;</div><div class="line">        <span class="built_in">console</span>.log(message + <span class="string">"has send"</span>);</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"the size of message is"</span>+writeSize);</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="comment">/* 监听data事件 */</span></div><div class="line">    socket.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(data.toString());</div><div class="line">        <span class="keyword">var</span> readSize = socket.bytesRead;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"the size of data is"</span>+readSize);</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/* 获取地址信息 */</span></div><div class="line">server.listen(<span class="number">8000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Creat server on http://127.0.0.1:8000/"</span>);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -90,7 +106,10 @@
 <p>the server address is{“address”:”::”,”family”:”IPv6”,”port”:8000}has send</p>
 </blockquote>
 <p>客户端给TCP服务器发送了字符串 <code>hello TCP!</code> 和字节数。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fpkr5446asj31kw0p5gvz.jpg" alt=""></p>
+<figure class="image-box">
+                <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fpkr5446asj31kw0p5gvz.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
 <h2 id="用Node-js创建TCP客户端"><a href="#用Node-js创建TCP客户端" class="headerlink" title="用Node.js创建TCP客户端"></a>用Node.js创建TCP客户端</h2><h3 id="构建TCP客户端"><a href="#构建TCP客户端" class="headerlink" title="构建TCP客户端"></a>构建TCP客户端</h3><p>上面说到用打开网页或者Telnet来访问TCP服务器，其实我们也可以用Node.js来构建一个TCP客户端，实现TCP客户端和TCP服务器的通信。</p>
 <p>为了使用Node.js创建TCP客户端，首先要使用require(“net”)来加载net模块，然后创建一个连接TCP客户端的socket对象即可：</p>
 <blockquote>
@@ -102,7 +121,10 @@
 <p>创建完socket对象后，使用socket对象的connect方法就可以连接一个TCP服务器。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 构建TCP客户端</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="comment">/* 引入net模块 */</span></div><div class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">"net"</span>);</div><div class="line"></div><div class="line"><span class="comment">/* 创建TCP客户端 */</span></div><div class="line"><span class="keyword">var</span> client = net.Socket();</div><div class="line"></div><div class="line"><span class="comment">/* 设置连接的服务器 */</span></div><div class="line">client.connect(<span class="number">8000</span>, <span class="string">'127.0.0.1'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"connect the server"</span>);</div><div class="line"></div><div class="line">    <span class="comment">/* 向服务器发送数据 */</span></div><div class="line">    client.write(<span class="string">"message from client"</span>);</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/* 监听服务器传来的data数据 */</span></div><div class="line">client.on(<span class="string">"data"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"the data of server is "</span> + data.toString());</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/* 监听end事件 */</span></div><div class="line">client.on(<span class="string">"end"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"data end"</span>);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h3 id="TCP客户端和TCP服务器的通信"><a href="#TCP客户端和TCP服务器的通信" class="headerlink" title="TCP客户端和TCP服务器的通信"></a>TCP客户端和TCP服务器的通信</h3><p>运行 <a href="#服务器和客户端之间的通信">这段代码</a> 之后再运行 <a href="#构建TCP客户端">这段代码</a> ，可以发现服务器已经接收到客户端的数据，客户端也已经接收到服务端的数据。</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fpkso73cqdj31kw0o27bv.jpg" alt=""></p>
+<figure class="image-box">
+                <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fpkso73cqdj31kw0o27bv.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
 <h2 id="LINK"><a href="#LINK" class="headerlink" title="LINK"></a>LINK</h2><ol>
 <li>本章github源码：<a href="https://github.com/zc95/nodeTest/tree/master/TCP" target="_blank" rel="external">https://github.com/zc95/nodeTest/tree/master/TCP</a></li>
 <li>《Node.js构建HTTP服务器》：<a href="https://zc95.github.io/2018/03/19/nodejs-HTTP/">https://zc95.github.io/2018/03/19/nodejs-HTTP/</a></li>
@@ -461,8 +483,10 @@
 <hr>
 <p>最后说一下，有很多方法下载这种会员歌曲，，发现这种方法是因为最近在手撸一个音乐播放器，需要用到这样的链接<a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> </p>
 <p>不然才不费这么大劲。。毕竟我有破解版😂😂😂</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg" alt="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg"></p>
-]]></content>
+<figure class="image-box">
+                <img src="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg" alt="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg" title="" class="">
+                <p>https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg</p>
+            </figure>]]></content>
       
         <categories>
             
@@ -509,7 +533,10 @@
     <entry>
       <title><![CDATA[一行代码实现星级评分]]></title>
       <url>/2018/01/23/star-rating/</url>
-      <content type="html"><![CDATA[<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><figure class="image-box">
+                <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg" alt="" title="" class="">
+                <p></p>
+            </figure>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul>
 <li><a href="https://htmlpreview.github.io/?https://github.com/zc95/star-rating/blob/master/index.html" target="_blank" rel="external">demo</a></li>
 <li><a href="https://github.com/zc95/star-rating" target="_blank" rel="external">github</a></li>
@@ -1331,7 +1358,10 @@
     <entry>
       <title><![CDATA[自定义range滑块]]></title>
       <url>/2017/11/17/rangeUI/</url>
-      <content type="html"><![CDATA[<h2 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h2><p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/range.png" alt="range.png"></p>
+      <content type="html"><![CDATA[<h2 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h2><figure class="image-box">
+                <img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/range.png" alt="range.png" title="" class="">
+                <p>range.png</p>
+            </figure>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
 <li><a href="https://htmlpreview.github.io/?https://github.com/zc95/RangeSlider/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
 <li><a href="https://github.com/zc95/RangeSlider" target="_blank" rel="external">github地址</a></li>
@@ -1365,7 +1395,10 @@
       <title><![CDATA[column]]></title>
       <url>/2017/11/11/column/</url>
       <content type="html"><![CDATA[<h2 id="CSS3多列"><a href="#CSS3多列" class="headerlink" title="CSS3多列"></a>CSS3多列</h2><p>CSS3 可以将文本内容设计成像报纸一样的多列布局，如下实例：</p>
-<p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/fo2zxn7p.png" alt="示例"></p>
+<figure class="image-box">
+                <img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/fo2zxn7p.png" alt="示例" title="" class="">
+                <p>示例</p>
+            </figure>
 <h2 id="CSS3-多列属性"><a href="#CSS3-多列属性" class="headerlink" title="CSS3 多列属性"></a>CSS3 多列属性</h2><ul>
 <li><code>column-count</code></li>
 <li><code>column-gap</code></li>
@@ -1542,7 +1575,7 @@
 <h2 id="document-ready"><a href="#document-ready" class="headerlink" title="$(document).ready"></a>$(document).ready</h2><p>DOM加载完成，会触发DOMContentLoaded事件，等同于jQuery的$(document).ready方法。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="数据储存"><a href="#数据储存" class="headerlink" title="数据储存"></a>数据储存</h2><p>jQuery对象可以储存数据。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">(<span class="string">"body"</span>).data(<span class="string">"foo"</span>, 52);</span></div><div class="line"><span class="meta">$</span><span class="bash">(<span class="string">"body"</span>).data(<span class="string">"foo"</span>);</span></div></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>, <span class="number">52</span>)<span class="comment">;</span></div><div class="line">$(<span class="string">"body"</span>)<span class="meta">.data</span>(<span class="string">"foo"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
 <p>HTML 5有一个dataset对象，也有类似的功能（IE 10不支持），不过只能保存字符串。</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">element.dataset.<span class="keyword">user</span> <span class="title">= JSON</span>.stringify(user);</div><div class="line">element.dataset.score = score;</div></pre></td></tr></table></figure>
 <h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>jQuery的animate方法，用于生成动画效果。</p>
@@ -1760,13 +1793,13 @@
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         

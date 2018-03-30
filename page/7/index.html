@@ -1,13 +1,259 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="张成,undefined"><meta name="copyright" content="张成"><title> | 张成的博客</title><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css?version=1.3"><script>var GLOBAL = { 
-  root: '/',
-  algolia: undefined,
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  localSearch: {"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}"},"path":"search.xml"}
-} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">张成</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">33</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">43</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">Categories</span><span class="pull-right">3</span></a></div></div></div><nav class="/img/top.jpg" id="nav" style="background-image: url(/img/top.jpg);"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">张成的博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">主页</a><a class="site-page" href="/archives">文章</a><a class="site-page" href="/about">关于我</a></span></div><div id="site-info"><div id="site-title">张成的博客</div><div id="site-sub-title"></div><div id="site-social-icons"> <a class="social-icon" href="https://github.com/zc95" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon" href="http://weibo.com/5177131366" target="_blank"><i class="fa fa-weibo"></i></a><a class="social-icon search"><i class="fa fa-search"></i></a></div></div><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local Search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><hr class="local-search-stats__hr">Powered by <span style="color: #49B1F5;">hexo-generator-search</span></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item"><a class="article-title" href="/2017/10/21/input/">文本框模糊查询</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-21</time><div class="content"><p>文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>张成的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="https://github.com/fluidicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.2.8">
+    
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	false,
+            lv: JSON.parse('{"enable":"ture","app_id":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","app_key":"fvlhBW5UGPEBJeIH70tpAFkf","icon":true}'),
+            v: JSON.parse('{"enable":true,"appid":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","appkey":"fvlhBW5UGPEBJeIH70tpAFkf","notify":true,"verify":false,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":false,"lazy":false,"owner":"zc95","repo":"zc95.github.io","oauth":{"client_id":"ceb5b1ea06a001340367","client_secret":"18b4653d0e0a6322618614ca060bd0fb601d8b69"},"perPage":10}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      
+      <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpvazdb2ufj31hc0xcwfc.jpg" class="brand-bg">
+      
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">张成</h5>
+          <a href="mailto:571346800@qq.com" title="571346800@qq.com" class="mail">
+            
+              <span>5</span>
+            
+              <span>7</span>
+            
+              <span>1</span>
+            
+              <span>3</span>
+            
+              <span>4</span>
+            
+              <span>6</span>
+            
+              <span>8</span>
+            
+              <span>0</span>
+            
+              <span>0</span>
+            
+              <span>@</span>
+            
+              <span>q</span>
+            
+              <span>q</span>
+            
+              <span>.</span>
+            
+              <span>c</span>
+            
+              <span>o</span>
+            
+              <span>m</span>
+            
+          </a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="tencent://message/?uin=571346800&amp;Site=400301.com&amp;Menu=yes" target="_blank">
+                  <i class="icon icon-lg icon-qq"></i>
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/zc95" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="">
+              <a href="/"  >
+                <i class="icon icon-lg icon-university"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        
+    <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>张成的博客</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header index-header">
+    <img src="/img/banner.jpg" class="header-bg">
+    <div class="container fade-scale">
+        <h1 class="title">张成的博客</h1>
+        <h5 class="subtitle">
+            
+                
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+    <div class="container body-wrap">
+        <ul class="post-list">
+        
+            <li class="post-list-item fade">
+                <article id="post-input"
+  class="article-card article-type-post" itemprop="blogPost">
+  
+        
+<div class="item-thumb">
+    <a class="thumb-link" href="/2017/10/21/input/"></a>
+    <div class="thumb-hover">
+        <span class="icon icon-eye"></span>
+    </div>
+    <img src="/img/thumb/3.jpg" alt="图片路径不正确">
+    
+
+
+  
+    <h3 class="post-title ab-title" itemprop="name">
+      <a class="post-title-link" href="/2017/10/21/input/">文本框模糊查询</a>
+    </h3>
+  
+
+
+
+</div>
+
+        
+    
+    
+    
+    <div class="post-meta">
+        <time class="post-time" title="2017-10-21 13:14:08" datetime="2017-10-21T05:14:08.000Z"  itemprop="datePublished">2017-10-21</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/demo/">demo</a></li></ul>
+
+
+
+        
+	<span id="/2017/10/21/input/" class="leancloud_visitors" data-flag-title="文本框模糊查询" title="文本框模糊查询">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span class="leancloud-comment">
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/21/input/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/21/input/"></span>
+        </a>
+    </span>
+
+
+
+        
+        
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。</p>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
 <li><a href="https://htmlpreview.github.io/?https://github.com/zc95/Fuzzy-Query/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
 <li><a href="https://github.com/zc95/Fuzzy-Query" target="_blank" rel="external">github地址</a></li>
@@ -16,7 +262,83 @@
 <li>引入<code>css</code>、<code>jQuery</code> 和 <code>js</code>（github里面有）</li>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#id'</span>).FuzzyQuery(&#123;</div><div class="line">        <span class="string">'msg'</span>: msg</div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
 </li>
-</ol></div><a class="more" href="/2017/10/21/input/#more">Read more</a><hr></div><div class="recent-post-item"><a class="article-title" href="/2017/10/20/hexoBlog/">在Mac下通过Hexo在Github上搭建博客（入门篇）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-20</time><div class="content"><p>Hexo 快速，简洁且高效的博客框架，让上百个页面在几秒内瞬间完成渲染。Hexo支持Github Flavored Markdown的所有功能，甚至可以整合Octopress的大多数插件，并自己也拥有强大的插件系统。</p>
+</ol>
+    
+    </div>
+</article>
+
+<div class="post-footer">
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+
+</div>
+
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-hexoBlog"
+  class="article-card article-type-post" itemprop="blogPost">
+  
+        
+<div class="item-thumb">
+    <a class="thumb-link" href="/2017/10/20/hexoBlog/"></a>
+    <div class="thumb-hover">
+        <span class="icon icon-eye"></span>
+    </div>
+    <img src="/img/thumb/2.jpg" alt="图片路径不正确">
+    
+
+
+  
+    <h3 class="post-title ab-title" itemprop="name">
+      <a class="post-title-link" href="/2017/10/20/hexoBlog/">在Mac下通过Hexo在Github上搭建博客（入门篇）</a>
+    </h3>
+  
+
+
+
+</div>
+
+        
+    
+    
+    
+    <div class="post-meta">
+        <time class="post-time" title="2017-10-20 21:48:28" datetime="2017-10-20T13:48:28.000Z"  itemprop="datePublished">2017-10-20</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/技术篇/">技术篇</a></li></ul>
+
+
+
+        
+	<span id="/2017/10/20/hexoBlog/" class="leancloud_visitors" data-flag-title="在Mac下通过Hexo在Github上搭建博客（入门篇）" title="在Mac下通过Hexo在Github上搭建博客（入门篇）">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span class="leancloud-comment">
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/20/hexoBlog/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/20/hexoBlog/"></span>
+        </a>
+    </span>
+
+
+
+        
+        
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>Hexo 快速，简洁且高效的博客框架，让上百个页面在几秒内瞬间完成渲染。Hexo支持Github Flavored Markdown的所有功能，甚至可以整合Octopress的大多数插件，并自己也拥有强大的插件系统。</p>
 <p><code>Hexo</code> <code>github</code> <code>Node.js</code> <code>Git</code> <code>markdown</code> <code>themes</code> <code>bash命令</code> <code>npm</code> <code>SSH</code></p>
 <h2 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是<a href="https://hexo.io/docs/index.html" target="_blank" rel="external">Hexo</a>？</h2><ul>
 <li>Hexo 是一个快速、简洁且高效的博客框架。</li>
@@ -25,9 +347,253 @@
 <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p><strong>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</strong></p>
 <ul>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> （安装Recommended For Most Users那个版本）</li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Git</a></div><a class="more" href="/2017/10/20/hexoBlog/#more">Read more</a><hr></div><div class="recent-post-item"><a class="article-title" href="/2017/10/19/hello-world/">Hello World</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2017-10-19</time><div class="content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Git</a>
+    
+    </div>
+</article>
+
+<div class="post-footer">
+    
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
+
+</div>
+
+
+            </li>
+        
+            <li class="post-list-item fade">
+                <article id="post-hello-world"
+  class="article-card article-type-post" itemprop="blogPost">
+  
+        
+<div class="item-thumb">
+    <a class="thumb-link" href="/2017/10/19/hello-world/"></a>
+    <div class="thumb-hover">
+        <span class="icon icon-eye"></span>
+    </div>
+    <img src="/img/thumb/1.jpg" alt="图片路径不正确">
+    
+
+
+  
+    <h3 class="post-title ab-title" itemprop="name">
+      <a class="post-title-link" href="/2017/10/19/hello-world/">Hello World</a>
+    </h3>
+  
+
+
+
+</div>
+
+        
+    
+    
+    
+    <div class="post-meta">
+        <time class="post-time" title="2017-10-19 00:10:04" datetime="2017-10-18T16:10:04.000Z"  itemprop="datePublished">2017-10-19</time>
+
+        
+
+
+        
+	<span id="/2017/10/19/hello-world/" class="leancloud_visitors" data-flag-title="Hello World" title="Hello World">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+        
+    <span class="leancloud-comment">
+        <i class="icon icon-comment-o"></i>
+        <a href="/2017/10/19/hello-world/#comment">
+            <span class="valine-comment-count" data-xid="/2017/10/19/hello-world/"></span>
+        </a>
+    </span>
+
+
+
+        
+        
+    </div>
+    
+    <div class="post-content" id="post-content" itemprop="postContent">
+    
+    
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3></div><a class="more" href="/2017/10/19/hello-world/#more">Read more</a><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span></div></nav></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2017 - 2018 By 张成</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator"></span></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.3"></script><script src="/js/fancybox.js?version=1.3"></script><script src="/js/sidebar.js?version=1.3"></script><script src="/js/copy.js?version=1.3"></script><script src="/js/fireworks.js?version=1.3"></script><script src="/js/transition.js?version=1.3"></script><script src="/js/scroll.js?version=1.3"></script><script src="/js/head.js?version=1.3"></script><script src="/js/search/local-search.js"></script></body></html>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3>
+    
+    </div>
+</article>
+
+
+            </li>
+        
+        </ul>
+        
+<nav id="page-nav">
+    <div class="inner">
+    <a class="extend prev" rel="prev" href="/page/6/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+    </div>
+</nav>
+
+    </div>
+
+        <footer class="footer">
+    
+    <div class="bottom">
+        <p>
+            <span>
+                张成 &copy; 2017 - 2018
+            </span>
+        		
+           	
+            
+            
+            <span>
+	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
+            </span>
+            
+            
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/page/7/&title=张成的博客&pic=https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/page/7/&title=张成的博客&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/page/7/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://zc95.github.io/page/7/" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.2.8"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.2.8"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.2.8"></script>
+
+<!-- third-party -->
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.2.8"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+    
+        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript" src="/js/plugins/valine.js?v=1.2.8"></script>
+    
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.2.8"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+    <script>
+    (function() {
+        var OriginTitile = document.title, titleTime;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = '😒	快回来！快点我！';
+                clearTimeout(titleTime);
+            } else {
+                document.title = '🤪	欢迎回来～';
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                },2000);
+            }
+        });
+    })();
+</script>
+
+
+    
+</body>
+</html>
