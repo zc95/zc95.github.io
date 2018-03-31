@@ -7,11 +7,11 @@
       <url>/2018/03/25/AI-chat/</url>
       <content type="html"><![CDATA[<h2 id="人工智能聊天机器人"><a href="#人工智能聊天机器人" class="headerlink" title="人工智能聊天机器人"></a>人工智能聊天机器人</h2><p><a href="https://zc95.github.io/demo/AI-chat">demo</a></p>
 <p><a href="https://github.com/zc95/AI-chat" target="_blank" rel="external">github源码</a></p>
+<a id="more"></a>
 <figure class="image-box">
                 <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fpp7hgtv60j307s07sglj.jpg" alt="" title="" class="">
                 <p></p>
             </figure>
-<a id="more"></a>
 <h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><p>本地打开html文件，能正常访问。但放到github上之后，访问 <a href="https://zc95.github.io/demo/AI-Chat">https://zc95.github.io/demo/AI-Chat</a> 就会报错。</p>
 <p>谷歌：</p>
 <blockquote>
@@ -43,14 +43,18 @@
       
         <categories>
             
-            <category> 技术篇 </category>
+            <category> demo </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> demo </tag>
+            <tag> 人工智能 </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> 图灵机器人 </tag>
             
         </tags>
         
@@ -305,14 +309,14 @@
       <content type="html"><![CDATA[<p>用 canvas 写了一个手写板，功能：画笔粗细、橡皮擦大小、画笔颜色、清空画布、历史操作等</p>
 <h2 id="canvas手写板"><a href="#canvas手写板" class="headerlink" title="canvas手写板"></a>canvas手写板</h2><ul>
 <li><a href="https://zc95.github.io/demo/canvas.html">demo</a></li>
-<li><a href="https://github.com/zc95/canvas" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/zc95/canvas" target="_blank" rel="external">github</a><a id="more"></a>
+<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2></li>
 </ul>
-<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fp5r4kgijtj307s07st9m.jpg"></p>
+<p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fp5r4kgijtj307s07st9m.jpg"></p>
 <hr>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tb8a00yj31401z40vt.jpg" height="600"></p>
 <hr>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fp5tb8s4tgj31401z4wjo.jpg" height="600"></p>
-<a id="more"></a>
 <hr>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tbmm3ytj31401z4wj1.jpg" height="600"></p>
 ]]></content>
@@ -335,52 +339,18 @@
     </entry>
     
     <entry>
-      <title><![CDATA[直播平台的弹幕功能]]></title>
-      <url>/2018/02/21/liveVideo/</url>
-      <content type="html"><![CDATA[<h2 id="类似直播平台的弹幕功能（微信上有bug）"><a href="#类似直播平台的弹幕功能（微信上有bug）" class="headerlink" title="类似直播平台的弹幕功能（微信上有bug）"></a>类似直播平台的弹幕功能（微信上有bug）</h2><ul>
-<li><a href="https://zc95.github.io/demo/liveVideo.html">demo</a></li>
-<li><a href="https://github.com/zc95/liveVideo" target="_blank" rel="external">github</a></li>
-</ul>
-<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fonz7vts1rj307s07sq3t.jpg"></p>
-<hr>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fonz8gb76lj30u01hcgq0.jpg" height="600"></p>
-<a id="more"></a>
-<h2 id="QQ、微信内置浏览器-X5内核的坑"><a href="#QQ、微信内置浏览器-X5内核的坑" class="headerlink" title="QQ、微信内置浏览器 X5内核的坑"></a>QQ、微信内置浏览器 X5内核的坑</h2><h3 id="进入页面video自动全屏、自动播放"><a href="#进入页面video自动全屏、自动播放" class="headerlink" title="进入页面video自动全屏、自动播放"></a>进入页面video自动全屏、自动播放</h3><p>然而我并不需要这样，解决方法：给video标签加上 x5-playsinline=”” playsinline=”” webkit-playsinline=”” 就ok</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;video src=<span class="string">"http://huya-w10.huya.com/migrate/1714/3601054/1300/328ac8830192294f41c33ccc1f61d199.mp4"</span> </div><div class="line"> controls=<span class="string">""</span> x5-playsinline=<span class="string">""</span> playsinline=<span class="string">""</span> webkit-playsinline=<span class="string">""</span> </div><div class="line">poster=<span class="string">""</span> preload=<span class="string">"auto"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<h3 id="video层级默认最高"><a href="#video层级默认最高" class="headerlink" title="video层级默认最高"></a>video层级默认最高</h3><p>z-index怎么设置都无效，所以微信或者qq扫出来的页面弹幕都是看不到的，在video下面了。。。</p>
-<p>暂时没法解决，有空再看吧</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术篇 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> video </tag>
-            
-            <tag> X5内核 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[自己写了个音乐播放器]]></title>
       <url>/2018/02/21/musicPlayer/</url>
       <content type="html"><![CDATA[<h2 id="material-design风格的音乐播放器"><a href="#material-design风格的音乐播放器" class="headerlink" title="material design风格的音乐播放器"></a>material design风格的音乐播放器</h2><ul>
 <li><a href="https://zc95.github.io/demo/music.html">demo</a></li>
-<li><a href="https://github.com/zc95/music" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/zc95/music" target="_blank" rel="external">github</a><a id="more"></a>
+<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2></li>
 </ul>
-<h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2><p><img width="150" src="https://ws3.sinaimg.cn/large/006tNc79gy1fonxkcugj3j307s07sq2p.jpg"></p>
+<p><img width="150" src="https://ws3.sinaimg.cn/large/006tNc79gy1fonxkcugj3j307s07sq2p.jpg"></p>
 <hr>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony99p9rfj30u01hcmzd.jpg" height="600"></p>
 <hr>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony8j721lj30u01hcwhv.jpg" height="600"></p>
-<a id="more"></a>
 <h2 id="HTML-5-audio标签"><a href="#HTML-5-audio标签" class="headerlink" title="HTML 5 audio标签"></a>HTML 5 audio标签</h2><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p> 标签定义声音，比如音乐或其他音频流，是 HTML 5 的新标签。</p>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"https://music.163.com/song/media/outer/url?id=451703096.mp3"</span>&gt;</span></div><div class="line">您的浏览器不支持 audio 标签。</div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="提示和注释"><a href="#提示和注释" class="headerlink" title="提示和注释"></a>提示和注释</h3><p>可以在开始标签和结束标签之间放置文本内容，这样老的浏览器就可以显示出不支持该标签的信息。</p>
@@ -461,7 +431,9 @@
       <content type="html"><![CDATA[<p>教你找歌曲的外链（要会员的歌曲都能下载🤪）</p>
 <h2 id="什么是歌曲的外链？"><a href="#什么是歌曲的外链？" class="headerlink" title="什么是歌曲的外链？"></a>什么是歌曲的外链？</h2><p>我们手机里的歌曲都是下载好的mp3文件，比如说散就散.mp3，</p>
 <p>而外链就比如 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> 这样链接的形式。</p>
-<h2 id="怎么免费下载会员歌曲？"><a href="#怎么免费下载会员歌曲？" class="headerlink" title="怎么免费下载会员歌曲？"></a>怎么免费下载会员歌曲？</h2><p>你应该注意到了《说散就散》在qq音乐和网易云都是要vip才能下载<br><a id="more"></a><br><img style="height:400px; display:inline-block;" src="https://ws4.sinaimg.cn/large/006tNc79gy1fom4irp01wj30nq1600x0.jpg"></p>
+<a id="more"></a>
+<h2 id="怎么免费下载会员歌曲？"><a href="#怎么免费下载会员歌曲？" class="headerlink" title="怎么免费下载会员歌曲？"></a>怎么免费下载会员歌曲？</h2><p>你应该注意到了《说散就散》在qq音乐和网易云都是要vip才能下载</p>
+<p><img style="height:400px; display:inline-block;" src="https://ws4.sinaimg.cn/large/006tNc79gy1fom4irp01wj30nq1600x0.jpg"></p>
 <p><img style="height:400px; display:inline-block;" src="https://ws1.sinaimg.cn/large/006tNc79gy1fom4m03u1bj30no15y77v.jpg"></p>
 <p>这里以网易云音乐的网页版为例说一下”破解“的方法</p>
 <p>这个外链下载会员歌曲的方法也是最近撸一个播放器的时候发现的 <a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> （还在改进，下次再说吧 ，逃。。。）</p>
@@ -509,9 +481,10 @@
       <content type="html"><![CDATA[<p>自己写的一个移动端的富文本编辑器</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul>
 <li><a href="https://htmlpreview.github.io/?https://github.com/zc95/RTF/blob/master/index.html" target="_blank" rel="external">demo</a></li>
-<li><a href="https://github.com/zc95/RTF" target="_blank" rel="external">github</a></li>
+<li><a href="https://github.com/zc95/RTF" target="_blank" rel="external">github</a><a id="more"></a>
+</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fo74tsp0mij31401z4aeo.jpg" style="height:500px;"><br><a id="more"></a></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fo74tsp0mij31401z4aeo.jpg" style="height:500px;"></p>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fo74ugdi9qj31401z4q72.jpg" style="height:500px;"><br><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fo74v4k9udj31401z40wu.jpg" style="height:500px;"></p>
 ]]></content>
       
