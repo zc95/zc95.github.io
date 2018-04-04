@@ -1,250 +1,579 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html style="display: none;" lang="zh">
+    <head>
     <meta charset="utf-8">
-    
-    
-    <title>数组复习 | 张成的博客</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="keywords" content="array">
-    <link rel="shortcut icon" href="https://github.com/fluidicon.png">
-    <link rel="stylesheet" href="/css/style.css?v=1.2.8">
-    
-    <script type="text/javascript">
-        // Data Center
-        var DC = {
-            reward:	true,
-            lv: JSON.parse('{"enable":"ture","app_id":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","app_key":"fvlhBW5UGPEBJeIH70tpAFkf","icon":true}'),
-            v: JSON.parse('{"enable":true,"appid":"M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz","appkey":"fvlhBW5UGPEBJeIH70tpAFkf","notify":true,"verify":false,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
-            g: JSON.parse('{"enable":false,"lazy":false,"owner":"zc95","repo":"zc95.github.io","oauth":{"client_id":"ceb5b1ea06a001340367","client_secret":"18b4653d0e0a6322618614ca060bd0fb601d8b69"},"perPage":10}')
-        };
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
     </script>
-    <script type="text/javascript">
-        window.lazyScripts=[];
-    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            数组复习 | 
+        
+        张成的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://github.com/fluidicon.png">
+    <link rel="icon" href="https://github.com/fluidicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="检测数组typeofvar ary = [1,23,4];
+console.log(typeof ary); //输出结果是Object
+
+instanceofvar ary = [1,23,4];
+console.log(ary instanceof Array)//true;
+">
+    <meta name="keywords" content="张成的博客,array">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="张成的博客">
+    <meta name="msapplication-starturl" content="http://zc95.github.io/2017/11/21/arrayReview/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="张成的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://github.com/fluidicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://zc95.github.io/2017/11/21/arrayReview/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="数组复习 | 张成的博客">
+    <meta property="og:image" content="https://github.com/fluidicon.png">
+    <meta property="og:description" content="检测数组typeofvar ary = [1,23,4];
+console.log(typeof ary); //输出结果是Object
+
+instanceofvar ary = [1,23,4];
+console.log(ary instanceof Array)//true;
+">
+    <meta property="og:article:tag" content="array"> 
+
+    
+        <meta property="article:published_time" content="Tue Nov 21 2017 18:44:45 GMT+0800">
+        <meta property="article:modified_time" content="Thu Dec 21 2017 20:14:17 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://zc95.github.io/2017/11/21/arrayReview/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zc95.github.io/2017/11/21/arrayReview/index.html",
+    "headline": "数组复习",
+    "datePublished": "Tue Nov 21 2017 18:44:45 GMT+0800",
+    "dateModified": "Thu Dec 21 2017 20:14:17 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "张成",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg"
+        },
+        "description": "深自缄默，如云漂泊"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "张成的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://github.com/fluidicon.png"
+        }
+    },
+    "keywords": ",array张成的博客",
+    "description": "检测数组typeofvar ary = [1,23,4];
+console.log(typeof ary); //输出结果是Object
+
+instanceofvar ary = [1,23,4];
+console.log(ary instanceof Array)//true;
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
 </head>
 
 
-<body>
-    <div id="loading" class="active"></div>
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap">
-      
-      <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpvazdb2ufj31hc0xcwfc.jpg" class="brand-bg">
-      
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg">
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
         </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">张成</h5>
-          <a href="mailto:571346800@qq.com" title="571346800@qq.com" class="mail">
-            
-              <span>5</span>
-            
-              <span>7</span>
-            
-              <span>1</span>
-            
-              <span>3</span>
-            
-              <span>4</span>
-            
-              <span>6</span>
-            
-              <span>8</span>
-            
-              <span>0</span>
-            
-              <span>0</span>
-            
-              <span>@</span>
-            
-              <span>q</span>
-            
-              <span>q</span>
-            
-              <span>.</span>
-            
-              <span>c</span>
-            
-              <span>o</span>
-            
-              <span>m</span>
-            
-          </a>
-        </hgroup>
-        
-        <ul class="menu-link">
-          
-              <li>
-                <a href="https://github.com/zc95" target="_blank">
-                  <i class="icon icon-lg icon-github"></i>
-                </a>
-              </li>
-            
-              <li>
-                <a href="tencent://message/?uin=571346800&amp;Site=400301.com&amp;Menu=yes" target="_blank">
-                  <i class="icon icon-lg icon-qq"></i>
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://weibo.com/u/5177131366" target="_blank">
-                  <i class="icon icon-lg icon-weibo"></i>
-                </a>
-              </li>
-            
-        </ul>
-        
-      </div>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="">
-              <a href="/"  >
-                <i class="icon icon-lg icon-university"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                归档
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
-              </a>
-            </li>
-        
-            <li class="">
-              <a href="/about"  >
-                <i class="icon icon-lg icon-user"></i>
-                关于我
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row clearfix">
-        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">
-            <span>数组复习</span>
-            
-        </div>
-        
-        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
-            <i class="icon icon-lg icon-search"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header post-header">
-    <img src="/img/banner.jpg" class="header-bg">
-    <div class="container fade-scale">
-        <h1 class="title">数组复习</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2017-11-21T10:44:45.000Z" itemprop="datePublished" class="page-time">
-  2017-11-21
-</time>
+    -->
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/汇总篇/">汇总篇</a></li></ul>
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
-            
-        </h5>
-        
-    </div>
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检测数组"><span class="post-toc-number">1.</span> <span class="post-toc-text">检测数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#typeof"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">typeof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#instanceof"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">instanceof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型链方法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">原型链方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正确方法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">正确方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己封装的基本数据类型验证"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">自己封装的基本数据类型验证</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#push-和pop"><span class="post-toc-number">2.</span> <span class="post-toc-text">push()和pop()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-和unshift"><span class="post-toc-number">3.</span> <span class="post-toc-text">shift()和unshift()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重排序-sort-reverse"><span class="post-toc-number">4.</span> <span class="post-toc-text">重排序 sort() reverse()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作方法-concat-slice-splice"><span class="post-toc-number">5.</span> <span class="post-toc-text">操作方法 concat() slice() splice()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#concat"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">concat()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#slice"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">slice()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#splice"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">splice()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#位置方法"><span class="post-toc-number">6.</span> <span class="post-toc-text">位置方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#indexOf"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">indexOf()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lastindexOf"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">lastindexOf()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#迭代方法"><span class="post-toc-number">7.</span> <span class="post-toc-text">迭代方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#every-和some"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">every()和some()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#filter"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">filter()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#map"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">map()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#forEach"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">forEach()</span></a></li></ol></li></ol>
+    </ul>
     
 
-</header>
 
-<div id="site_search">
-    <div class="search-title clearfix">
-        <span class="pull-left">
-          <i class="icon icon-lg icon-search"></i>
-        </span>
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
-        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
-          <i class="icon icon-lg icon-close"></i>
-        </a>
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                数组复习
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
-    <div id="local-search-result"></div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张成</strong>
+        <span>11月 21, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2017/11/21/arrayReview/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/array/">array</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2017/11/21/arrayReview/" class="leancloud-views_num" data-flag-title="数组复习">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数组复习&url=http://zc95.github.io/2017/11/21/arrayReview/index.html&pic=http://zc95.github.iohttps://github.com/fluidicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/11/21/arrayReview/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的博客&title=数组复习&summary=&pics=http://zc95.github.iohttps://github.com/fluidicon.png&url=http://zc95.github.io/2017/11/21/arrayReview/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
+                
 
-<div class="container body-wrap">
-    <article id="post-arrayReview"
-  class="post-article article-type-post" itemprop="blogPost">
-    <div class="post-card">
-        <h1 class="post-card-title">数组复习</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2017-11-21 18:44:45" datetime="2017-11-21T10:44:45.000Z"  itemprop="datePublished">2017-11-21</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/汇总篇/">汇总篇</a></li></ul>
-
-
-
-            
-	<span id="/2017/11/21/arrayReview/" class="leancloud_visitors" data-flag-title="数组复习" title="数组复习">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-            
-    <span class="leancloud-comment">
-        <i class="icon icon-comment-o"></i>
-        <a href="/2017/11/21/arrayReview/#comment">
-            <span class="valine-comment-count" data-xid="/2017/11/21/arrayReview/"></span>
-        </a>
-    </span>
-
-
-
-            
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            
-            <h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> ary); <span class="comment">//输出结果是Object</span></div></pre></td></tr></table></figure>
-<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(ary <span class="keyword">instanceof</span> <span class="built_in">Array</span>)<span class="comment">//true;</span></div></pre></td></tr></table></figure>
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(typeof ary); //输出结果是Object
+</code></pre>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(ary instanceof Array)//true;
+</code></pre>
 <a id="more"></a>
-<h3 id="原型链方法"><a href="#原型链方法" class="headerlink" title="原型链方法"></a>原型链方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">23</span>,<span class="number">4</span>];</div><div class="line"><span class="built_in">console</span>.log(ary.__proto__.constructor==<span class="built_in">Array</span>);<span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(ary.constructor==<span class="built_in">Array</span>)<span class="comment">//true 这两段代码是一样的</span></div></pre></td></tr></table></figure>
+<h3 id="原型链方法"><a href="#原型链方法" class="headerlink" title="原型链方法"></a>原型链方法</h3><pre><code class="javascript">var ary = [1,23,4];
+console.log(ary.__proto__.constructor==Array);//true
+console.log(ary.constructor==Array)//true 这两段代码是一样的
+</code></pre>
 <blockquote>
 <p>以上三种方法都不太好，<code>instanceof</code> 和 <code>constructor</code> 判断的变量，必须在当前页面声明的，比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个arr，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；</p>
 </blockquote>
-<h3 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ary = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">e</span>)</span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(e)==<span class="string">'[object Array]'</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(isArray(ary));</div></pre></td></tr></table></figure>
-<h3 id="自己封装的基本数据类型验证"><a href="#自己封装的基本数据类型验证" class="headerlink" title="自己封装的基本数据类型验证"></a>自己封装的基本数据类型验证</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> type = &#123;</div><div class="line">  isObj: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Object]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isArray: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Array]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isNull: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Null]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isUndefined: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Undefined]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isBoolean: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Boolean]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isString: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object String]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isNumber: <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Number]"</span>;</div><div class="line">  &#125;,</div><div class="line">  isDocument: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(o) == <span class="string">"[object Document]"</span> || <span class="string">"[object HTMLDocument]"</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">------------------------------</div><div class="line">&gt;<span class="built_in">console</span>.log(type.isArray([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]));</div><div class="line">&gt;<span class="literal">true</span></div></pre></td></tr></table></figure>
+<h3 id="正确方法"><a href="#正确方法" class="headerlink" title="正确方法"></a>正确方法</h3><pre><code class="javascript">var ary = [1,2,3,4];
+function isArray(e){
+return Object.prototype.toString.call(e)==&#39;[object Array]&#39;;
+}
+console.log(isArray(ary));
+</code></pre>
+<h3 id="自己封装的基本数据类型验证"><a href="#自己封装的基本数据类型验证" class="headerlink" title="自己封装的基本数据类型验证"></a>自己封装的基本数据类型验证</h3><pre><code class="javascript">var type = {
+  isObj: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Object]&quot;;
+  },
+  isArray: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Array]&quot;;
+  },
+  isNull: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Null]&quot;;
+  },
+  isUndefined: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Undefined]&quot;;
+  },
+  isBoolean: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Boolean]&quot;;
+  },
+  isString: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object String]&quot;;
+  },
+  isNumber: function(o) {
+    return Object.prototype.toString.call(o) == &quot;[object Number]&quot;;
+  },
+  isDocument: function() {
+    return Object.prototype.toString.call(o) == &quot;[object Document]&quot; || &quot;[object HTMLDocument]&quot;;
+  }
+}
+
+------------------------------
+&gt;console.log(type.isArray([1,2,3]));
+&gt;true
+</code></pre>
 <h2 id="push-和pop"><a href="#push-和pop" class="headerlink" title="push()和pop()"></a>push()和pop()</h2><ul>
 <li><code>push()</code> 向数组末尾添加任意个项并返回新数组的长度</li>
 <li><code>pop()</code> 从数组末尾移除最后一项，减少数组的length值 （返回的是移除的项）</li>
@@ -255,7 +584,12 @@
 <li><p><code>shift()</code> 从数组前端移除第一项，减少数组的length值 （返回的是移除的项）</p>
 </li>
 </ul>
-<h2 id="重排序-sort-reverse"><a href="#重排序-sort-reverse" class="headerlink" title="重排序 sort() reverse()"></a>重排序 sort() reverse()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> a-b;<span class="comment">//升序</span></div><div class="line">  <span class="comment">//return b-a; 或者在升序方法之后使用reverse()反转数组</span></div><div class="line">&#125;</div><div class="line">arr.sort(compare);</div></pre></td></tr></table></figure>
+<h2 id="重排序-sort-reverse"><a href="#重排序-sort-reverse" class="headerlink" title="重排序 sort() reverse()"></a>重排序 sort() reverse()</h2><pre><code class="javascript">function compare(a,b){
+  return a-b;//升序
+  //return b-a; 或者在升序方法之后使用reverse()反转数组
+}
+arr.sort(compare);
+</code></pre>
 <h2 id="操作方法-concat-slice-splice"><a href="#操作方法-concat-slice-splice" class="headerlink" title="操作方法 concat() slice() splice()"></a>操作方法 concat() slice() splice()</h2><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat()</code> 方法用于连接两个或多个数组，不会改变原始数组。</p>
 <h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p><code>slice()</code> 方法可从已有的数组中返回选定的元素，不会改变原始数组。</p>
 <blockquote>
@@ -321,304 +655,631 @@
 <li>map(): 对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</li>
 <li>some(): 对数组中的每一项运行给定函数，如果该函数任意一项返回true，则返回true。</li>
 </ol>
-<h3 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> everyResult = numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> someResult = numbers.some(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(everyResult);      <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(someResult);        <span class="comment">//true</span></div></pre></td></tr></table></figure>
-<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> filterResult = numbers.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(filterResult);  \\[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>]</div></pre></td></tr></table></figure>
-<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> mapResult = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> (item * <span class="number">2</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(mapResult);     <span class="comment">//[2, 4, 6, 8, 10, 8, 6, 4, 2]</span></div></pre></td></tr></table></figure>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</div><div class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, arr</span>) </span>&#123;</div><div class="line">    <span class="comment">//这里执行一些操作</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="every-和some"><a href="#every-和some" class="headerlink" title="every()和some()"></a>every()和some()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var everyResult = numbers.every(function(item, index, array) {
+    return (item &gt; 2);
+});
+var someResult = numbers.some(function(item) {
+    return (item &gt; 2);
+});
+console.log(everyResult);      //false
+console.log(someResult);        //true
+</code></pre>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var filterResult = numbers.filter(function(item) {
+    return (item &gt; 2);
+});
 
-        </div>
-        
-<blockquote class="post-copyright">
-    <div class="content">
-        
+console.log(filterResult);  \\[3, 4, 5, 4, 3]
+</code></pre>
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+var mapResult = numbers.map(function(item) {
+    return (item * 2);
+});
+
+console.log(mapResult);     //[2, 4, 6, 8, 10, 8, 6, 4, 2]
+</code></pre>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><pre><code class="javascript">var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+numbers.forEach(function(item, index, arr) {
+    //这里执行一些操作
+});
+</code></pre>
 
         
-        转载注明出处，原文地址：<a href="/2017/11/21/arrayReview/" target="_blank" rel="external">http://zc95.github.io/2017/11/21/arrayReview/</a>
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            深自缄默，如云漂泊
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://zc95.github.io/2017/11/21/arrayReview/">http://zc95.github.io/2017/11/21/arrayReview/</a>
+                    </p>
+                </blockquote>
         
-    </div>
-    <footer>
-        <a href="http://zc95.github.io">
-            <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" alt="张成">
-            张成
-        </a>
-    </footer>
-</blockquote>
-
-        
-            <div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-            
-        
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li></ul>
-
-            <div class="page-share-wrap">
     
 
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/2017/11/21/arrayReview/&title=《数组复习》 — 张成的博客&pic=https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz",
+        appKey: "fvlhBW5UGPEBJeIH70tpAFkf",
+        placeholder: "😂快来评论吧～",
+        pageSize:'10',
+        avatar:'wavatar',
+        lang:'zh-cn'
+    });
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/11/21/Collection/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
         </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/11/11/column/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
         </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/2017/11/21/arrayReview/&title=《数组复习》 — 张成的博客&source=检测数组typeof12var ary = [1,23,4];console.log(typeof ary); //输出结果是Object
-instanc..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/11/21/arrayReview/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" alt="张成's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        571346800@qq.com
+        <b class="caret"></b>
     </a>
 </div>
 
-        </div>
-        
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
             
-    <div id="comment"></div>
+                <li>
+                    <a href="mailto:571346800@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
 
-
-
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
         
-    </div>
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="prev">
-      <a href="/2017/11/21/Collection/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">我的收藏</h4>
-      </a>
-    </div>
-  
 
-  
-    <div class="next">
-      <a href="/2017/11/17/rangeUI/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">自定义range滑块</h4>
-      </a>
-    </div>
-  
-</nav>
-
-
+    <!-- Archives  -->
     
-    
-        <aside class="post-widget">
-            <nav class="post-toc-wrap" id="post-toc">
-                <strong>目录</strong>
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检测数组"><span class="post-toc-number">1.</span> <span class="post-toc-text">检测数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#typeof"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">typeof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#instanceof"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">instanceof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型链方法"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">原型链方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正确方法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">正确方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己封装的基本数据类型验证"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">自己封装的基本数据类型验证</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#push-和pop"><span class="post-toc-number">2.</span> <span class="post-toc-text">push()和pop()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-和unshift"><span class="post-toc-number">3.</span> <span class="post-toc-text">shift()和unshift()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重排序-sort-reverse"><span class="post-toc-number">4.</span> <span class="post-toc-text">重排序 sort() reverse()</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作方法-concat-slice-splice"><span class="post-toc-number">5.</span> <span class="post-toc-text">操作方法 concat() slice() splice()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#concat"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">concat()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#slice"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">slice()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#splice"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">splice()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#位置方法"><span class="post-toc-number">6.</span> <span class="post-toc-text">位置方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#indexOf"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">indexOf()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lastindexOf"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">lastindexOf()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#迭代方法"><span class="post-toc-number">7.</span> <span class="post-toc-text">迭代方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#every-和some"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">every()和some()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#filter"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">filter()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#map"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">map()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#forEach"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">forEach()</span></a></li></ol></li></ol>
-            </nav>
-            <div class="toc-bar"><div>
-        </aside>
-    
-</article>
-
-    <div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        大爷赏点饭钱吧😂
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
         
-        <div class="reward-code">
-            <img id="rewardCode" src="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5ekl9uj30bu0bot9m.jpg" alt="打赏二维码">
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/demo/">demo<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术篇/">技术篇<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/categories/汇总篇/">汇总篇<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">28</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
         </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5ekl9uj30bu0bot9m.jpg" data-alipay="https://ws3.sinaimg.cn/large/006tNc79gy1fpva5q3r0wj30oy0p03ys.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/5177131366" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/zc95" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张成的博客
+            
+                <br>
+                
+                    深自缄默，如云漂泊
+                
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
             </div>
-        </label>
-        
-    </div>
-</div>
-
+        </div>
     
-</div>
-
-        <footer class="footer">
-    
-    <div class="bottom">
-        <p>
-            <span>
-                张成 &copy; 2017 - 2018
-            </span>
-        		
-           	
-            
-            
-            <span>
-	            Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/codefine/hexo-theme-mellow" target="_blank">mellow</a>
-            </span>
-            
-            
-            
-        </p>
-    </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
 
 
 
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://zc95.github.io/2017/11/21/arrayReview/&title=《数组复习》 — 张成的博客&pic=https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zc95.github.io/2017/11/21/arrayReview/&title=《数组复习》 — 张成的博客&source=检测数组typeof12var ary = [1,23,4];console.log(typeof ary); //输出结果是Object
-instanc..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/11/21/arrayReview/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://zc95.github.io/2017/11/21/arrayReview/" alt="微信分享二维码">
-</div>
-
-
-    
-    <!-- main-js -->
-<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.2.8"></script>
-
-<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script type="text/javascript" src="/js/method.js?v=1.2.8"></script>
-<script type="text/javascript" src="/js/blog.js?v=1.2.8"></script>
-
-<!-- third-party -->
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 
 
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 
-<script type="text/javascript" src="/js/plugins/local_search.js?v=1.2.8"></script>
-<script type="text/javascript">
-	var search_path = "search.xml";
-	if (search_path.length === 0) {
-		search_path = "search.xml";
-	}
-	var path = "/" + search_path;
-	searchFunc(path, "local-search-input", "local-search-result");
-</script>
-
-
-
-    
-        <script type="text/javascript" src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript" src="/js/plugins/valine.js?v=1.2.8"></script>
-    
-    
-
-
-
-<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.2.8"></script>
-
-
-
-    <!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-            processEscapes: true,
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
     });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
     });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
 </script>
 
-<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 
-
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
     <script>
-    (function() {
-        var OriginTitile = document.title, titleTime;
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                document.title = '😒	快回来！快点我！';
-                clearTimeout(titleTime);
-            } else {
-                document.title = '😂	欢迎回来～';
-                titleTime = setTimeout(function() {
-                    document.title = OriginTitile;
-                },2000);
-            }
+        AV.initialize('M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz', 'fvlhBW5UGPEBJeIH70tpAFkf');
+    </script>
+    <script type="text/ls-javascript" id="leancloud-views-script">
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
         });
-    })();
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
 </script>
 
 
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
     
-</body>
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
 </html>
