@@ -390,7 +390,7 @@ server.listen(8000, function(){
 })
 </code></pre>
 <p>同时在同级目录中创建一个名为 <code>index.html</code> 的文件，写入以下代码：</p>
-<pre><code class="javascript">&lt;! doctype &lt;!DOCTYPE html&gt;
+<pre><code class="javascript">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot; /&gt;
@@ -2581,13 +2581,13 @@ $obj.html(tempStr);
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         

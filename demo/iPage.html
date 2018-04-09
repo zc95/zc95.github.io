@@ -1,0 +1,171 @@
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <title>iPage</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
+  <style>
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    body{
+      background-color: #f8f8f9;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /**/
+
+    header.mdui-toolbar {
+      color: #6f6e6e!important;
+      margin-bottom: 40px;
+      height: 78px;
+      background-color: white;
+    }
+
+    .main-body {
+      width: 100%;
+      min-height: 850px;
+    }
+
+    .personal-panel {
+      width: 83%;
+      margin: 20px auto;
+      box-sizing: border-box;
+    }
+
+    .personal-website{
+      width: calc(50% - 20px);
+      float: left;
+      padding: 0 10px 10px;
+      box-sizing: border-box;
+      background-color: white;
+    }
+
+    .personal-todo{
+      width: calc(50% - 20px);
+      float: right;
+      padding: 0 10px 10px;
+      box-sizing: border-box;
+      background-color: white;
+    }
+    
+    .card-header {
+    height: 50px;
+    padding: 16px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      display: table;
+      content: " ";
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .footer {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background: #1f1915;
+      color: hsla(0, 0%, 100%, .75);
+      text-align: center;
+    }
+
+    .footer .social-buttons {
+      padding: 0;
+      display: flex;
+      margin: 20px 0;
+      justify-content: center;
+    }
+
+    .footer li {
+      list-style: none;
+      margin: 0 10px;
+    }
+
+    .footer a {
+      color: hsla(0, 0%, 100%, .75);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="mdui-theme-primary-white mdui-theme-accent-pink">
+
+  <header class="mdui-toolbar mdui-shadow-3">
+    <div>iPage, make it easy.</div>
+    <div class="mdui-toolbar-spacer"></div>
+    <div class="weather_entry">
+      <p class="now_city"></p>
+      <span class="now_temp"></span>
+    </div>
+  </header>
+
+  <div class="main-body mdui-container-fluid">
+    <div class="personal-panel clearfix">
+        <div class="mdui-shadow-3 personal-website">
+            <div class="mdui-card-header card-header">
+                个人网站
+              </div>
+            <div class="mdui-divider"></div>
+            <p>sdq</p>
+          </div>
+          <div class="mdui-shadow-3 personal-todo">
+              <div class="mdui-card-header card-header">
+                  待办事项
+                </div>
+              <div class="mdui-divider"></div>
+              <p>sdq</p>
+            </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="footer mdui-card mdui-col-xs-12">
+    <ul class="social-buttons">
+      <li>
+        <a title="我的github" href="https://github.com/zc95" target="_blank">
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojQkNCQUI5O30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2LDAuNGMtOC44LDAtMTYsNy4yLTE2LDE2YzAsNy4xLDQuNiwxMy4xLDEwLjksMTUuMmMwLjgsMC4xLDEuMS0wLjMsMS4xLTAuOGMwLTAuNCwwLTEuNCwwLTIuOAoJYy00LjQsMS01LjQtMi4xLTUuNC0yLjFjLTAuNy0xLjgtMS44LTIuMy0xLjgtMi4zYy0xLjUtMSwwLjEtMSwwLjEtMWMxLjYsMC4xLDIuNSwxLjYsMi41LDEuNmMxLjQsMi40LDMuNywxLjcsNC43LDEuMwoJYzAuMS0xLDAuNi0xLjcsMS0yLjFjLTMuNi0wLjQtNy4zLTEuOC03LjMtNy45YzAtMS43LDAuNi0zLjIsMS42LTQuM2MtMC4yLTAuNC0wLjctMiwwLjItNC4yYzAsMCwxLjMtMC40LDQuNCwxLjYKCWMxLjMtMC40LDIuNi0wLjUsNC0wLjVjMS40LDAsMi43LDAuMiw0LDAuNUMyMy4xLDYuNiwyNC40LDcsMjQuNCw3YzAuOSwyLjIsMC4zLDMuOCwwLjIsNC4yYzEsMS4xLDEuNiwyLjUsMS42LDQuMwoJYzAsNi4xLTMuNyw3LjUtNy4zLDcuOWMwLjYsMC41LDEuMSwxLjUsMS4xLDIuOWMwLDIsMCwzLjksMCw0LjRjMCwwLjQsMC4zLDAuOSwxLjEsMC43QzI3LjQsMjkuNSwzMiwyMy41LDMyLDE2LjQKCUMzMiw3LjYsMjQuOCwwLjQsMTYsMC40eiIvPgo8L3N2Zz4K"
+            alt="" width="24px" height="24px;">
+        </a>
+      </li>
+      <li>
+        <a title="我的hexo博客" href="https://zc95.github.io" target="_blank">
+          <img src="https://hexo.io/logo.svg" alt="" width="28px" height="28px;">
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">© 2017 &nbsp;
+      <a href="https://github.com/zc95" target="_blank">iPage</a>
+    </p>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+  <script></script>
+
+</body>
+
+</html>
