@@ -3,10 +3,91 @@
   
     
     <entry>
+      <title><![CDATA[js的函数重载]]></title>
+      <url>/2018/04/15/funcgtion-overloading/</url>
+      <content type="html"><![CDATA[<h2 id="函数的重载"><a href="#函数的重载" class="headerlink" title="函数的重载"></a>函数的重载</h2><p>函数重载，简单说，就是函数有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数之间，互相称之为重载函数。</p>
+<p>所以说，重载函数需要两点：同样的函数名，不同的函数参数。</p>
+<h2 id="js到底有没有函数重载"><a href="#js到底有没有函数重载" class="headerlink" title="js到底有没有函数重载"></a>js到底有没有函数重载</h2><p>如果在我们在一个页面中定义了两个名字相同的函数，则该名字只属于后定义的函数，如下：</p>
+<pre><code class="javascript">function add(num){
+    return num+1;
+}
+function add(num){
+    return num+2;
+}
+add(4);  //结果为6
+</code></pre>
+<p>在上面的例子中，add()函数被定义了两次，然而，当我们调用他的时候，却直接调用了第二个函数，这说明在JavaScript中，后定义的函数会覆盖先定义的函数。</p>
+<p>其实，在java或者.net中都是是存在重载的，那么js中呢？可以肯定的说，js中是不存在重载的，但是我们可以通过其他的方式来模拟重载。</p>
+<h2 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h2><p>当我们在js中在调用一个函数的时候，我们经常会给这个函数传递一些参数，js把传入到这个函数的全部参数存储在一个叫做arguments的东西里面，<code>arguments</code>对象不是一个<code>Array</code> 。它类似于<code>Array</code>，可以使用[i]或者.length，为了代码的严谨度，我们可以用arguments的length属性来判断当前传入参数的个数是否与我们需要的数量一致。</p>
+<pre><code class="javascript">function add(num1, num2){  
+  // 根据arguments.length，对不同的值进行不同的操作
+　　switch(arguments.length) {
+　　　　case 0:
+　　　　　　/*没有传入任何参数时*/
+　　　　　　break;
+　　　　case 1:
+　　　　　　/*传入一个参数时*/
+　　　　　　break;
+　　　　case 2:
+　　　　　　/*传入两个参数时*/
+             break;
+      /*case N.....*/
+}
+}
+</code></pre>
+<p>通过这个例子，我们可以看出，通过检查传入函数中参数的数量，JavaScript函数可以做出不同的反应，这可以间接达到重载的目的。</p>
+<p>所以，JavaScript是可以模仿函数的重载的。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="arguments-类数组对象转为真正的数组"><a href="#arguments-类数组对象转为真正的数组" class="headerlink" title="arguments 类数组对象转为真正的数组"></a>arguments 类数组对象转为真正的数组</h3><pre><code>Array.prototype.slice.apply(arguments);
+
+Array.from(arguments);
+
+[...arguments];
+</code></pre><h3 id="callee"><a href="#callee" class="headerlink" title="callee"></a>callee</h3><p><code>arguments.callee</code> 属性包含当前正在执行的函数。<strong>callee</strong> 是 <code>arguments</code> 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式（也称为匿名函数）内。</p>
+<p>以一个求阶乘的方法为例：</p>
+<pre><code class="javascript">function fact(n) {
+ if (n &lt; 2) {
+  return n;
+ } else {
+  return n * fact(n - 1);
+ }
+}
+console.log(fact(5)); //5*4*3*2=120
+</code></pre>
+<p>匿名函数中：</p>
+<pre><code class="javascript">(function (n) {
+ if (n &lt; 2) {
+  return n;
+ } else {
+  return n * arguments.callee(n - 1);
+ }
+})(5);
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+            <category> 函数重载 </category>
+            
+            <category> arguments对象 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Node.js构建TCP服务器和TCP客户端]]></title>
       <url>/2018/03/20/nodejs-TCP/</url>
       <content type="html"><![CDATA[<p>网络是通信互联网的基础，Node.js提供了net、http、dgram模块、分别用来实现TCP、HTTP、UDP的通信。上次的文章<a href="https://zc95.github.io/2018/03/19/nodejs-HTTP/">《Node.js构建HTTP服务器》</a>实现了HTTP的通信，这篇文章说一说TCP服务器和TCP客户端的构建。</p>
-<h2 id="用Node-js创建TCP服务器"><a href="#用Node-js创建TCP服务器" class="headerlink" title="用Node.js创建TCP服务器"></a>用Node.js创建TCP服务器</h2><h3 id="构建TCP服务器"><a href="#构建TCP服务器" class="headerlink" title="构建TCP服务器"></a>构建TCP服务器</h3><p>为了使用Node.js创建TCP服务器，首先要使用require(“net”)来加载net模块，然后使用net模块的createServer方法就可以轻松地创建一个TCP服务器。<br><a id="more"></a></p>
+<h2 id="用Node-js创建TCP服务器"><a href="#用Node-js创建TCP服务器" class="headerlink" title="用Node.js创建TCP服务器"></a>用Node.js创建TCP服务器</h2><h3 id="构建TCP服务器"><a href="#构建TCP服务器" class="headerlink" title="构建TCP服务器"></a>构建TCP服务器</h3><p>为了使用Node.js创建TCP服务器，首先要使用require(“net”)来加载net模块，然后使用net模块的createServer方法就可以轻松地创建一个TCP服务器。</p>
 <pre><code class="javascript">/**
  * 构建TCP客户端
  */
