@@ -66,18 +66,18 @@ console.log(fact(5)); //5*4*3*2=120
       
         <categories>
             
-            <category> javascript </category>
-            
-            <category> 函数重载 </category>
-            
-            <category> arguments对象 </category>
+            <category> 技术篇 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> html </tag>
+            <tag> javascript </tag>
+            
+            <tag> 函数重载 </tag>
+            
+            <tag> arguments对象 </tag>
             
         </tags>
         
