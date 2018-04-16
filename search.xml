@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[js的函数重载]]></title>
-      <url>/2018/04/15/funcgtion-overloading/</url>
+      <url>/2018/04/15/overloading/</url>
       <content type="html"><![CDATA[<h2 id="函数的重载"><a href="#函数的重载" class="headerlink" title="函数的重载"></a>函数的重载</h2><p>函数重载，简单说，就是函数有相同的名称，但是参数列表不相同的情形，这样的同名不同参数的函数之间，互相称之为重载函数。</p>
 <p>所以说，重载函数需要两点：同样的函数名，不同的函数参数。</p>
 <h2 id="js到底有没有函数重载"><a href="#js到底有没有函数重载" class="headerlink" title="js到底有没有函数重载"></a>js到底有没有函数重载</h2><p>如果在我们在一个页面中定义了两个名字相同的函数，则该名字只属于后定义的函数，如下：</p>
