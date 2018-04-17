@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-04-16T12:52:48.502Z</updated>
+  <updated>2018-04-17T15:06:34.273Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue-learning</title>
+    <link href="http://zc95.github.io/2018/04/17/vue-learning/"/>
+    <id>http://zc95.github.io/2018/04/17/vue-learning/</id>
+    <published>2018-04-17T15:02:21.000Z</published>
+    <updated>2018-04-17T15:06:34.273Z</updated>
+    
+    <content type="html"><![CDATA[<p>emm…开始学习Vue啦 <a href="https://github.com/zc95/vue-learning" target="_blank" rel="external">https://github.com/zc95/vue-learning</a></p><p><img src="https://cn.vuejs.org/images/logo.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;emm…开始学习Vue啦 &lt;a href=&quot;https://github.com/zc95/vue-learning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/zc95/vue-learning&lt;/a&gt;&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>js的函数重载</title>
@@ -569,30 +595,6 @@ FATAL Something&amp;#39;s wrong.Maybe you can find the solution here:http:hexo.i
       <category term="gitment" scheme="http://zc95.github.io/tags/gitment/"/>
     
       <category term="Issues" scheme="http://zc95.github.io/tags/Issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的收藏</title>
-    <link href="http://zc95.github.io/2017/11/21/Collection/"/>
-    <id>http://zc95.github.io/2017/11/21/Collection/</id>
-    <published>2017-11-21T11:30:45.000Z</published>
-    <updated>2017-12-21T12:13:56.048Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h2><h3 id="https-zc95-github-io"><a href="#https-zc95-github-io" class="headerlink" title="https://zc95.github.io"></a><a href="https://zc95.github.io">https://zc95.github.io</a></h3><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="jsrun在线代码编辑"><a href="#jsrun在线代码编辑" class="headerlink" title="jsrun在线代码编辑"></a><a href="http://jsrun.net" target="_blank" rel="external">jsrun在线代码编辑</a></h3><h3 id="tinypng压缩图片"><a href="#tinypng压缩图片" class="headerlink" title="tinypng压缩图片"></a><a href="https://tinypng.com" target="_blank" rel="external">tinypng压缩图片</a></h3><h3 id="Google翻译"><a href="#Google翻译" class="headerlink" title="Google翻译"></a><a href="https://translate.google.cn" target="_blank" rel="external">Google翻译</a></h3><h3 id="msdn-itellyou"><a href="#msdn-itellyou" class="headerlink" title="msdn.itellyou"></a><a href="https://msdn.itellyou.cn" target="_blank" rel="external">msdn.itellyou</a></h3><h3 id="MDN文档"><a href="#MDN文档" class="headerlink" title="MDN文档"></a><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">MDN文档</a></h3><a id="more"></a><h2 id="前端插件-amp-框架"><a href="#前端插件-amp-框架" class="headerlink" title="前端插件&amp;框架"></a>前端插件&amp;框架</h2><h3 id="echarts"><a href="#echarts" class="headerlink" title="echarts"></a><a href="hhttp://www.echartsjs.com" target="_blank" rel="external">echarts</a></h3><h3 id="layui"><a href="#layui" class="headerlink" title="layui"></a><a href="http://www.layui.com" target="_blank" rel="external">layui</a></h3><h3 id="阿里巴巴矢量图标图"><a href="#阿里巴巴矢量图标图" class="headerlink" title="阿里巴巴矢量图标图"></a><a href="http://www.iconfont.cn" target="_blank" rel="external">阿里巴巴矢量图标图</a></h3><h2 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h2><h3 id="freecodecamp"><a href="#freecodecamp" class="headerlink" title="freecodecamp"></a><a href="https://www.freecodecamp.cn" target="_blank" rel="external">freecodecamp</a></h3><h3 id="慕课网"><a href="#慕课网" class="headerlink" title="慕课网"></a><a href="https://www.imooc.com" target="_blank" rel="external">慕课网</a></h3><h3 id="前端菜鸟教程"><a href="#前端菜鸟教程" class="headerlink" title="前端菜鸟教程"></a><a href="http://www.runoob.com" target="_blank" rel="external">前端菜鸟教程</a></h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;我的博客&quot;&gt;&lt;a href=&quot;#我的博客&quot; class=&quot;headerlink&quot; title=&quot;我的博客&quot;&gt;&lt;/a&gt;我的博客&lt;/h2&gt;&lt;h3 id=&quot;https-zc95-github-io&quot;&gt;&lt;a href=&quot;#https-zc95-github-io&quot; class=&quot;headerlink&quot; title=&quot;https://zc95.github.io&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zc95.github.io&quot;&gt;https://zc95.github.io&lt;/a&gt;&lt;/h3&gt;&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;h3 id=&quot;jsrun在线代码编辑&quot;&gt;&lt;a href=&quot;#jsrun在线代码编辑&quot; class=&quot;headerlink&quot; title=&quot;jsrun在线代码编辑&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jsrun.net&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;jsrun在线代码编辑&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;tinypng压缩图片&quot;&gt;&lt;a href=&quot;#tinypng压缩图片&quot; class=&quot;headerlink&quot; title=&quot;tinypng压缩图片&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://tinypng.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tinypng压缩图片&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;Google翻译&quot;&gt;&lt;a href=&quot;#Google翻译&quot; class=&quot;headerlink&quot; title=&quot;Google翻译&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://translate.google.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google翻译&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;msdn-itellyou&quot;&gt;&lt;a href=&quot;#msdn-itellyou&quot; class=&quot;headerlink&quot; title=&quot;msdn.itellyou&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://msdn.itellyou.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;msdn.itellyou&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;MDN文档&quot;&gt;&lt;a href=&quot;#MDN文档&quot; class=&quot;headerlink&quot; title=&quot;MDN文档&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN文档&lt;/a&gt;&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="汇总篇" scheme="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
-    
-    
-      <category term="收藏" scheme="http://zc95.github.io/tags/%E6%94%B6%E8%97%8F/"/>
-    
-      <category term="前端必备" scheme="http://zc95.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BF%85%E5%A4%87/"/>
     
   </entry>
   
