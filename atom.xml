@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-04-17T15:06:34.273Z</updated>
+  <updated>2018-04-21T17:25:53.078Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue-devtools的安装</title>
+    <link href="http://zc95.github.io/2018/04/22/vue-devtools/"/>
+    <id>http://zc95.github.io/2018/04/22/vue-devtools/</id>
+    <published>2018-04-21T17:22:45.000Z</published>
+    <updated>2018-04-21T17:25:53.078Z</updated>
+    
+    <content type="html"><![CDATA[<p>vue-devtools 是一款基于chrome游览器的插件，用于调试vue应用，由于国内不能访问谷歌商店（要科学上网），所以安装比较麻烦，写个博客记录一下。</p><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>将vue-devtools clone到本地</p><pre><code class="bash">git clone https://github.com/vuejs/vue-devtools.git</code></pre><h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在vue-devtools目录下安装依赖包</p><pre><code class="shell">cd vue-devtoolsnpm install</code></pre><h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>编译代码</p><pre><code class="bash">npm run build</code></pre><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqksckz0bfj30vo0kcjvu.jpg" alt=""></p><h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>修改 <code>vue-devtools/shells/chrome/manifest.json</code> 文件，将 persistent改成 <code>true</code></p><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fqkqczgwjdj30zi0g4di1.jpg" alt=""></p><h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><h3 id="打开chrome，输入-chrome-extensions-进入到chrome扩展程序设置页面"><a href="#打开chrome，输入-chrome-extensions-进入到chrome扩展程序设置页面" class="headerlink" title="打开chrome，输入 chrome://extensions/ 进入到chrome扩展程序设置页面"></a>打开chrome，输入 <code>chrome://extensions/</code> 进入到chrome扩展程序设置页面</h3><p>打开右上角的 <code>开发者模式</code> </p><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqkqim3oz3j30b2058aa4.jpg" alt=""></p><h3 id="点击-加载已解压的扩展程序-选择-vue-devtools-shells-chrome"><a href="#点击-加载已解压的扩展程序-选择-vue-devtools-shells-chrome" class="headerlink" title="点击 加载已解压的扩展程序 选择 vue-devtools/shells/chrome"></a>点击 <code>加载已解压的扩展程序</code> 选择 <code>vue-devtools/shells/chrome</code></h3><p>   <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqkqmn6rp0j31480owdlm.jpg" alt=""></p><h3 id="注意：勾选-允许访问文件网址"><a href="#注意：勾选-允许访问文件网址" class="headerlink" title="注意：勾选 允许访问文件网址"></a>注意：勾选 <code>允许访问文件网址</code></h3><p>   <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqks8mz3qxj318u05i0t0.jpg" alt=""></p><p>至此，vue-devtools已经安装完毕。enjoy it!</p><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqksb2n8lkj31kw115n6r.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;vue-devtools 是一款基于chrome游览器的插件，用于调试vue应用，由于国内不能访问谷歌商店（要科学上网），所以安装比较麻烦，写个博客记录一下。&lt;/p&gt;
+&lt;h2 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="Vue" scheme="http://zc95.github.io/tags/Vue/"/>
+    
+      <category term="vue-devtools" scheme="http://zc95.github.io/tags/vue-devtools/"/>
+    
+  </entry>
   
   <entry>
     <title>vue-learning</title>
@@ -541,9 +569,9 @@ FATAL Something&amp;#39;s wrong.Maybe you can find the solution here:http:hexo.i
       <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
     
     
-      <category term="github" scheme="http://zc95.github.io/tags/github/"/>
-    
       <category term="hosts" scheme="http://zc95.github.io/tags/hosts/"/>
+    
+      <category term="github" scheme="http://zc95.github.io/tags/github/"/>
     
   </entry>
   
@@ -567,34 +595,6 @@ FATAL Something&amp;#39;s wrong.Maybe you can find the solution here:http:hexo.i
     
     
       <category term="css" scheme="http://zc95.github.io/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于 GitHub Issues 的评论系统：gitment</title>
-    <link href="http://zc95.github.io/2017/11/23/gitment/"/>
-    <id>http://zc95.github.io/2017/11/23/gitment/</id>
-    <published>2017-11-23T15:47:12.000Z</published>
-    <updated>2017-12-21T12:43:24.821Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="如何为hexo博客添加评论功能"><a href="#如何为hexo博客添加评论功能" class="headerlink" title="如何为hexo博客添加评论功能"></a>如何为<a href="https://zc95.github.io/2017/10/20/hexoBlog/">hexo</a>博客添加评论功能</h2><p>多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙</p><p>本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。</p><h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="gitment"><a href="#gitment" class="headerlink" title="gitment"></a>gitment</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentPC.png" width="90%;"><br></p>        <hr><h3 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h3><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/gitmentYD.png" width="90%;"><br></p><hr><h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><p>打开博客主题文件夹下的 <code>_config.yml</code> 文件，以我的为例：</p><pre><code>comment:  type: gitment  # 启用哪种评论系统  gitment:    githubID: zc95  # 你的GitHub名称    repo: zc95.github.io  # 你的GitHub名称.github.io    ClientID: *********    ClientSecret: *********    lazy: false   # 这个我也不清楚 大概是懒加载的意思吧</code></pre><p><code>githubID</code> 和 <code>repo</code> 都有了，就剩 <code>ClientID</code> 和 <code>ClientSecret</code> 了</p><hr><h2 id="注册OAuth-Application"><a href="#注册OAuth-Application" class="headerlink" title="注册OAuth Application"></a>注册OAuth Application</h2><p>通过地址<a href="https://github.com/settings/applications/new" target="_blank" rel="external">OAuth Application注册传送门</a>申请配置，注册一个新的 OAuth Application，其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="https://zc95.github.io">https://zc95.github.io</a>）</p><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplication.png" width="90%;"><br></p><hr><h2 id="获取ClientID与ClientSecret"><a href="#获取ClientID与ClientSecret" class="headerlink" title="获取ClientID与ClientSecret"></a>获取ClientID与ClientSecret</h2><p style="text-align:center;"><br><img style="box-shadow:1px 1px 10px #888888;" src="/img/OAuthApplicationId.png" width="90%;"><br></p><hr><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>优点<ul><li>界面​简洁</li><li>与github绑定，方便注册，不用依赖脚本或插件</li><li>评论会出现在github项目中的Issues里，方便管理</li><li>支持Markdown全部语法和html标签（这个很厉害）</li></ul></li><li>缺点<ul><li>​每篇文章都需要手动点击initialize comments按钮来初始化评论，否则不能评论；</li><li>不支持图片（可以尝试用markdown或者img标签来实现）和表情（emoji可以用）</li><li>只能支持github登陆</li></ul></li></ul><hr><h2 id="最后更新"><a href="#最后更新" class="headerlink" title="最后更新"></a>最后更新</h2><p>最后还是选择了<a href="https://livere.com" target="_blank" rel="external">livere 来必力</a>，注册登陆需要翻墙（或许因为我网不好。。），一旦注册之后评论之类的就不需翻墙了，支持QQ、微信、微博、百度等登陆方式，本页拉到最底下就是来必力了，体验还是可以的。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;如何为hexo博客添加评论功能&quot;&gt;&lt;a href=&quot;#如何为hexo博客添加评论功能&quot; class=&quot;headerlink&quot; title=&quot;如何为hexo博客添加评论功能&quot;&gt;&lt;/a&gt;如何为&lt;a href=&quot;https://zc95.github.io/2017/10/20/hexoBlog/&quot;&gt;hexo&lt;/a&gt;博客添加评论功能&lt;/h2&gt;&lt;p&gt;多说、友言、Disqus、livere(来比力)、gitment、畅言、valine基本都可以实现，但有些已经关闭，有些需要翻墙&lt;/p&gt;
-&lt;p&gt;本文讲的是一款基于 GitHub Issues 的评论系统：gitment 。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown语法 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="Hexo" scheme="http://zc95.github.io/tags/Hexo/"/>
-    
-      <category term="gitment" scheme="http://zc95.github.io/tags/gitment/"/>
-    
-      <category term="Issues" scheme="http://zc95.github.io/tags/Issues/"/>
     
   </entry>
   

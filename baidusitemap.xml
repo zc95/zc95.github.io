@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/04/22/vue-devtools/</loc>
+    <lastmod>2018-04-21T17:25:53.078Z</lastmod>
+    <data>
+        <display>
+        <title>vue-devtools的安装</title>
+        <pubTime>2018-04-21T17:22:45.000Z</pubTime>
+        
+        <tag>Vue</tag>
+         
+        <tag>vue-devtools</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/04/17/vue-learning/</loc>
     <lastmod>2018-04-17T15:06:34.273Z</lastmod>
     <data>
@@ -655,9 +677,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            

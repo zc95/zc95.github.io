@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[vue-devtools的安装]]></title>
+      <url>/2018/04/22/vue-devtools/</url>
+      <content type="html"><![CDATA[<p>vue-devtools 是一款基于chrome游览器的插件，用于调试vue应用，由于国内不能访问谷歌商店（要科学上网），所以安装比较麻烦，写个博客记录一下。</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>将vue-devtools clone到本地</p>
+<pre><code class="bash">git clone https://github.com/vuejs/vue-devtools.git
+</code></pre>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>在vue-devtools目录下安装依赖包</p>
+<pre><code class="shell">cd vue-devtools
+npm install
+</code></pre>
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>编译代码</p>
+<pre><code class="bash">npm run build
+</code></pre>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqksckz0bfj30vo0kcjvu.jpg" alt=""></p>
+<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>修改 <code>vue-devtools/shells/chrome/manifest.json</code> 文件，将 persistent改成 <code>true</code></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fqkqczgwjdj30zi0g4di1.jpg" alt=""></p>
+<h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><h3 id="打开chrome，输入-chrome-extensions-进入到chrome扩展程序设置页面"><a href="#打开chrome，输入-chrome-extensions-进入到chrome扩展程序设置页面" class="headerlink" title="打开chrome，输入 chrome://extensions/ 进入到chrome扩展程序设置页面"></a>打开chrome，输入 <code>chrome://extensions/</code> 进入到chrome扩展程序设置页面</h3><p>打开右上角的 <code>开发者模式</code> </p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqkqim3oz3j30b2058aa4.jpg" alt=""></p>
+<h3 id="点击-加载已解压的扩展程序-选择-vue-devtools-shells-chrome"><a href="#点击-加载已解压的扩展程序-选择-vue-devtools-shells-chrome" class="headerlink" title="点击 加载已解压的扩展程序 选择 vue-devtools/shells/chrome"></a>点击 <code>加载已解压的扩展程序</code> 选择 <code>vue-devtools/shells/chrome</code></h3><p>   <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqkqmn6rp0j31480owdlm.jpg" alt=""></p>
+<h3 id="注意：勾选-允许访问文件网址"><a href="#注意：勾选-允许访问文件网址" class="headerlink" title="注意：勾选 允许访问文件网址"></a>注意：勾选 <code>允许访问文件网址</code></h3><p>   <img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqks8mz3qxj318u05i0t0.jpg" alt=""></p>
+<p>至此，vue-devtools已经安装完毕。enjoy it!</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fqksb2n8lkj31kw115n6r.jpg" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> vue-devtools </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[vue-learning]]></title>
       <url>/2018/04/17/vue-learning/</url>
       <content type="html"><![CDATA[<p>emm…开始学习Vue啦 <a href="https://github.com/zc95/vue-learning" target="_blank" rel="external">https://github.com/zc95/vue-learning</a></p>
@@ -1898,9 +1940,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         
