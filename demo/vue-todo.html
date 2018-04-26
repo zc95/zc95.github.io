@@ -1,0 +1,125 @@
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <title></title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
+  <style>
+    .mdui-appbar-with-toolbar {
+      padding-top: 56px;
+      padding-bottom: 70px;
+    }
+
+    .lineThrough {
+      text-decoration: line-through
+    }
+  </style>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-Teal mdui-theme-accent-Pink">
+  <div id="app">
+    <header class="mdui-appbar mdui-appbar-fixed">
+      <div class="mdui-toolbar mdui-color-theme">
+        <span class="mdui-typo-title">vue-todo</span>
+        <div class="mdui-toolbar-spacer"></div>
+        <span @click="add" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white mdui-btn-icon">
+          <i class="mdui-icon material-icons">add</i>
+        </span>
+      </div>
+    </header>
+    <div class="mdui-container doc-container doc-no-cover" style="width:100%; padding:0;">
+
+      <div class="mdui-list">
+        <label v-for="(todo,index) in todos" class="mdui-list-item mdui-ripple">
+          <div class="mdui-checkbox">
+            <input type="checkbox" v-model="todo.completed" />
+            <i class="mdui-checkbox-icon"></i>
+          </div>
+          <div class="mdui-list-item-content" v-bind:class="{ lineThrough: todo.completed }">{{todo.text}}</div>
+          <i class="mdui-list-item-icon mdui-icon material-icons" @click="removeTodo(index)">close</i>
+        </label>
+      </div>
+
+      <div class="mdui-fab-wrapper" id="fab" mdui-fab="{trigger: 'hover'}">
+        <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+          <i class="mdui-icon material-icons">&#xe5d2;</i>
+          <i class="mdui-icon mdui-fab-opened material-icons">clear_all</i>
+        </button>
+        <div class="mdui-fab-dial">
+          <a href="https://zc95.github.io/2018/04/27/vue-todo/" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-black">
+            <i class="mdui-icon material-icons">code</i>
+          </a>
+          <button @click="deleteAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red">
+            <i class="mdui-icon material-icons">delete</i>
+          </button>
+          <button @click="resetAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-Indigo">
+            <i class="mdui-icon material-icons">refresh</i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    let todoStorage = {
+      save: function (todos) {
+        localStorage.setItem('vueTodoStorage', JSON.stringify(todos))
+      }
+    }
+    let app = new Vue({
+      el: '#app',
+      data: {
+        todos: localStorage.vueTodoStorage ? JSON.parse(localStorage.vueTodoStorage) : [],
+        inputValue: ""
+      },
+      watch: {
+        todos: {
+          handler: function (items) {
+            todoStorage.save(items);
+          },
+          deep: true
+        }
+      },
+      methods: {
+        add() {
+          mdui.prompt('add a todo',
+            function (value) {
+              if (value.trim() == "") {
+                mdui.snackbar({ message: "Can't be empty!" });
+                return false;
+              }
+              app.todos.push({ text: value, completed: false });
+              mdui.snackbar({ message: 'A todo has been added.' });
+            }
+          );
+        },
+        removeTodo(index) {
+          this.todos.splice(index, 1);
+          mdui.snackbar({ message: 'A todo has been removed.' });
+        },
+        deleteAll() {
+          mdui.confirm('Are you sure you remove all todo?', function () {
+            app.todos = [];
+            mdui.snackbar({ message: 'All todo have been removed.' });
+          });
+        },
+        resetAll() {
+          mdui.confirm('Are you sure you reset all todo?', function () {
+            app.todos.forEach(element => {
+              element.completed = false;
+            });
+            mdui.snackbar({ message: 'All todo have been reset.' });
+          });
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -45,7 +45,7 @@
     
     <title>
         
-            文本框模糊查询 | 
+            vue-todo | 
         
         张成的学习笔记
     </title>
@@ -55,18 +55,8 @@
     <link rel="icon" href="https://github.com/fluidicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。
-链接
-demo地址
-github地址
-
-开始使用
-引入css、jQuery 和 js（github里面有）
-$(&amp;#39;#id&amp;#39;).FuzzyQuery({
-     &amp;#39;msg&amp;#39;: msg
-   });
-">
-    <meta name="keywords" content="张成的学习笔记,css,html,javascript,jquery">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="张成的学习笔记,material design,vue,todo">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -227,7 +217,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="张成的学习笔记">
-    <meta name="msapplication-starturl" content="http://zc95.github.io/2017/10/21/input/">
+    <meta name="msapplication-starturl" content="http://zc95.github.io/2018/04/27/vue-todo/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="张成的学习笔记">
@@ -242,26 +232,16 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://zc95.github.io/2017/10/21/input/">
+    <meta property="og:url" content="http://zc95.github.io/2018/04/27/vue-todo/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="文本框模糊查询 | 张成的学习笔记">
+    <meta property="og:title" content="vue-todo | 张成的学习笔记">
     <meta property="og:image" content="https://github.com/fluidicon.png">
-    <meta property="og:description" content="文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。
-链接
-demo地址
-github地址
-
-开始使用
-引入css、jQuery 和 js（github里面有）
-$(&amp;#39;#id&amp;#39;).FuzzyQuery({
-     &amp;#39;msg&amp;#39;: msg
-   });
-">
-    <meta property="og:article:tag" content="css"> <meta property="og:article:tag" content="html"> <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="jquery"> 
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="material design"> <meta property="og:article:tag" content="vue"> <meta property="og:article:tag" content="todo"> 
 
     
-        <meta property="article:published_time" content="Sat Oct 21 2017 13:14:08 GMT+0800">
-        <meta property="article:modified_time" content="Mon Feb 12 2018 21:52:49 GMT+0800">
+        <meta property="article:published_time" content="Fri Apr 27 2018 00:12:01 GMT+0800">
+        <meta property="article:modified_time" content="Fri Apr 27 2018 00:24:53 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -269,7 +249,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zc95.github.io/2017/10/21/input/index.html" />
+        <link rel="canonical" href="http://zc95.github.io/2018/04/27/vue-todo/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -281,10 +261,10 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zc95.github.io/2017/10/21/input/index.html",
-    "headline": "文本框模糊查询",
-    "datePublished": "Sat Oct 21 2017 13:14:08 GMT+0800",
-    "dateModified": "Mon Feb 12 2018 21:52:49 GMT+0800",
+    "mainEntityOfPage": "http://zc95.github.io/2018/04/27/vue-todo/index.html",
+    "headline": "vue-todo",
+    "datePublished": "Fri Apr 27 2018 00:12:01 GMT+0800",
+    "dateModified": "Fri Apr 27 2018 00:24:53 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "张成",
@@ -302,18 +282,8 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
             "url": "https://github.com/fluidicon.png"
         }
     },
-    "keywords": ",css,html,javascript,jquery张成的学习笔记",
-    "description": "文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。
-链接
-demo地址
-github地址
-
-开始使用
-引入css、jQuery 和 js（github里面有）
-$(&amp;#39;#id&amp;#39;).FuzzyQuery({
-     &amp;#39;msg&amp;#39;: msg
-   });
-",
+    "keywords": ",material design,vue,todo张成的学习笔记",
+    "description": "",
 }
 </script>
 
@@ -378,7 +348,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#链接"><span class="post-toc-number">1.</span> <span class="post-toc-text">链接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">开始使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参数配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">参数配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#msg格式示例"><span class="post-toc-number">4.</span> <span class="post-toc-text">msg格式示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#html和CSS部分的一些细节"><span class="post-toc-number">5.</span> <span class="post-toc-text">html和CSS部分的一些细节</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#demo-amp-源码"><span class="post-toc-number">1.</span> <span class="post-toc-text">demo & 源码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#demo对比（前面是vue写的）："><span class="post-toc-number">2.</span> <span class="post-toc-text">demo对比（前面是vue写的）：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码量对比"><span class="post-toc-number">3.</span> <span class="post-toc-text">代码量对比</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主要代码"><span class="post-toc-number">4.</span> <span class="post-toc-text">主要代码</span></a></li></ol>
     </ul>
     
 
@@ -410,7 +380,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
         
     
             <p class="article-headline-p">
-                文本框模糊查询
+                vue-todo
             </p>
         </div>
 
@@ -429,7 +399,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     <!-- Author Name & Date -->
     <div>
         <strong>张成</strong>
-        <span>10月 21, 2017</span>
+        <span>4月 27, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -451,7 +421,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2017/10/21/input/">
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2018/04/27/vue-todo/">
     
 </ul>
 
@@ -465,7 +435,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/css/">css</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/html/">html</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/jquery/">jquery</a>
+        <a class="post_tag-link" href="/tags/material-design/">material design</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/todo/">todo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/vue/">vue</a>
     </ul>
     
 
@@ -480,7 +450,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2017/10/21/input/" class="leancloud-views_num" data-flag-title="文本框模糊查询">
+                <span id="/2018/04/27/vue-todo/" class="leancloud-views_num" data-flag-title="vue-todo">
      &nbsp;浏览量
 </span>
 
@@ -492,7 +462,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=文本框模糊查询&url=http://zc95.github.io/2017/10/21/input/index.html&pic=http://zc95.github.iohttps://github.com/fluidicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue-todo&url=http://zc95.github.io/2018/04/27/vue-todo/index.html&pic=http://zc95.github.iohttps://github.com/fluidicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -504,7 +474,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2017/10/21/input/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2018/04/27/vue-todo/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -519,7 +489,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=文本框模糊查询&summary=&pics=http://zc95.github.iohttps://github.com/fluidicon.png&url=http://zc95.github.io/2017/10/21/input/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=vue-todo&summary=&pics=http://zc95.github.iohttps://github.com/fluidicon.png&url=http://zc95.github.io/2018/04/27/vue-todo/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -538,47 +508,65 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>文本框模糊匹配(纯html+css+jquery简单实现) ，自己写的一个小组件。</p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
-<li><a href="https://htmlpreview.github.io/?https://github.com/zc95/Fuzzy-Query/blob/master/index.html" target="_blank" rel="external">demo地址</a></li>
-<li><a href="https://github.com/zc95/Fuzzy-Query" target="_blank" rel="external">github地址</a></li>
-</ul>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ol>
-<li>引入<code>css</code>、<code>jQuery</code> 和 <code>js</code>（github里面有）</li>
-<li><pre><code class="javascript">$(&#39;#id&#39;).FuzzyQuery({
-     &#39;msg&#39;: msg
-   });
+        <p>这几天看了点vue，感觉很棒，把之前的todo翻出来用vue写了一下，瞬间少了三分之二的代码😂</p>
+<h2 id="demo-amp-源码"><a href="#demo-amp-源码" class="headerlink" title="demo &amp; 源码"></a>demo &amp; 源码</h2><p>demo：<a href="https://zc95.github.io/demo/vue-todo">https://zc95.github.io/demo/vue-todo</a></p>
+<p>github：<a href="https://github.com/zc95/ToDo/blob/master/vue-todo.html" target="_blank" rel="external">https://github.com/zc95/ToDo/blob/master/vue-todo.html</a></p>
+<p>扫描二维码，在移动设备上查看：<br><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fqqisjlidij307s07sq2p.jpg" alt=""></p>
+<h2 id="demo对比（前面是vue写的）："><a href="#demo对比（前面是vue写的）：" class="headerlink" title="demo对比（前面是vue写的）："></a>demo对比（前面是vue写的）：</h2><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqqicqtlihj31bw18ugr0.jpg" alt=""></p>
+<h2 id="代码量对比"><a href="#代码量对比" class="headerlink" title="代码量对比"></a>代码量对比</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fqqifc1djgj31kw0xg4k3.jpg" alt=""></p>
+<h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><pre><code class="css">let todoStorage = {
+      save: function (todos) {
+        localStorage.setItem(&#39;vueTodoStorage&#39;, JSON.stringify(todos))
+      }
+    }
+    let app = new Vue({
+      el: &#39;#app&#39;,
+      data: {
+        todos: localStorage.vueTodoStorage ? JSON.parse(localStorage.vueTodoStorage) : [],
+        inputValue: &quot;&quot;
+      },
+      watch: {
+        todos: {
+          handler: function (items) {
+            todoStorage.save(items);
+          },
+          deep: true
+        }
+      },
+      methods: {
+        add() {
+          mdui.prompt(&#39;add a todo&#39;,
+            function (value) {
+              if(value.trim()==&quot;&quot;){
+                mdui.snackbar({ message: &quot;Can&#39;t be empty!&quot; });
+                return false;
+              }
+              app.todos.push({ text: value, completed: false });
+              mdui.snackbar({ message: &#39;A todo has been added.&#39; });
+            }
+          );
+        },
+        removeTodo(index) {
+          this.todos.splice(index, 1);
+          mdui.snackbar({ message: &#39;A todo has been removed.&#39; });
+        },
+        deleteAll() {
+          mdui.confirm(&#39;Are you sure you remove all todo?&#39;, function () {
+            app.todos = [];
+            mdui.snackbar({ message: &#39;All todo have been removed.&#39; });
+          });
+        },
+        resetAll() {
+          mdui.confirm(&#39;Are you sure you reset all todo?&#39;, function () {
+            app.todos.forEach(element =&gt; {
+              element.completed = false;
+            });
+            mdui.snackbar({ message: &#39;All todo have been reset.&#39; });
+          });
+        }
+      }
+    })
 </code></pre>
-<a id="more"></a>
-</li>
-</ol>
-<h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><p><code>msg</code> 是json数据（必须），<code>fontSize</code> 是模糊查询项的字体大小，<code>height</code> 是模糊查询项的高度</p>
-<pre><code class="javascript">$(&#39;#Name&#39;).FuzzyQuery({
-        &#39;msg&#39;: msg,
-        &#39;fontSize&#39;: &#39;13px&#39;,
-        &#39;height&#39;: &#39;30px&#39;
-      });
-</code></pre>
-<h2 id="msg格式示例"><a href="#msg格式示例" class="headerlink" title="msg格式示例"></a>msg格式示例</h2><p><code>name</code> 是文本，<code>id</code> 是标识</p>
-<pre><code class="javascript">msg = [{ &quot;name&quot;: &quot;苏州大学&quot;, &quot;id&quot;: &quot;szdx&quot; }, { &quot;name&quot;: &quot;北京大学&quot;, &quot;id&quot;: &quot;bjdx&quot; }, { &quot;name&quot;: &quot;南京大学&quot;, &quot;id&quot;: &quot;njdx&quot; }, { &quot;name&quot;: &quot;清华大学&quot;, &quot;id&quot;: &quot;qhdx&quot; }, { &quot;name&quot;: &quot;复旦大学&quot;, &quot;id&quot;: &quot;fddx&quot; }, { &quot;name&quot;: &quot;浙江大学&quot;, &quot;id&quot;: &quot;zjdx&quot; }, { &quot;name&quot;: &quot;上海交通大学&quot;, &quot;id&quot;: &quot;shjtdx&quot; }, { &quot;name&quot;: &quot;武汉大学&quot;, &quot;id&quot;: &quot;whdx&quot; }, { &quot;name&quot;: &quot;中国人民大学&quot;, &quot;id&quot;: &quot;zgrmdx&quot; }, { &quot;name&quot;: &quot;中国科学技术大学&quot;, &quot;id&quot;: &quot;zgkxjsdx&quot; }, { &quot;name&quot;: &quot;北京师范大学&quot;, &quot;id&quot;: &quot;bjsfdx&quot; }];
-</code></pre>
-<h2 id="html和CSS部分的一些细节"><a href="#html和CSS部分的一些细节" class="headerlink" title="html和CSS部分的一些细节"></a>html和CSS部分的一些细节</h2><ol>
-<li><blockquote>
-<p>outline: none;  </p>
-<p>outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，为了美观应该去掉</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>box-sizing:border-box;</p>
-<p>这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>autocomplete=”off”</p>
-<p>autocomplete是form表单的属性，默认为on，其含义代表是否让浏览器自动记录之前输入的值，应该关闭记录</p>
-</blockquote>
-</li>
-</ol>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -587,7 +575,7 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
                             深自缄默，如云漂泊
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://zc95.github.io/2017/10/21/input/">http://zc95.github.io/2017/10/21/input/</a>
+                        <strong>本文链接：</strong><a href="http://zc95.github.io/2018/04/27/vue-todo/">http://zc95.github.io/2018/04/27/vue-todo/</a>
                     </p>
                 </blockquote>
         
@@ -632,21 +620,13 @@ $(&amp;#39;#id&amp;#39;).FuzzyQuery({
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/10/21/DOM/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/10/20/hexoBlog/" id="post_nav-older" class="next-content">
+        <a href="/2018/04/22/vue-devtools/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
