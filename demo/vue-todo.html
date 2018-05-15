@@ -10,12 +10,33 @@
   <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
   <style>
     .mdui-appbar-with-toolbar {
-      padding-top: 56px;
+      padding-top: 104px;
       padding-bottom: 70px;
     }
 
     .lineThrough {
       text-decoration: line-through
+    }
+
+    .mdui-tab a {
+      text-transform: none;
+    }
+
+    .badge {
+      position: absolute;
+      right: 1px;
+      top: 15px;
+      background-color: #e91e63;
+      border-radius: 10px;
+      color: #fff;
+      display: inline-block;
+      font-size: 12px;
+      height: 18px;
+      line-height: 18px;
+      padding: 0 6px;
+      text-align: center;
+      white-space: nowrap;
+      border: 1px solid #fff;
     }
   </style>
 </head>
@@ -30,58 +51,68 @@
           <i class="mdui-icon material-icons">add</i>
         </span>
       </div>
-    </header>
-    <div class="mdui-container doc-container doc-no-cover" style="width:100%; padding:0;">
-
-      <div class="mdui-list">
-        <label v-for="(todo,index) in todos" class="mdui-list-item mdui-ripple">
-          <div class="mdui-checkbox">
-            <input type="checkbox" v-model="todo.completed" />
-            <i class="mdui-checkbox-icon"></i>
-          </div>
-          <div class="mdui-list-item-content" v-bind:class="{ lineThrough: todo.completed }">{{todo.text}}</div>
-          <i class="mdui-list-item-icon mdui-icon material-icons" @click="removeTodo(index)">close</i>
-        </label>
-      </div>
-
-      <div class="mdui-fab-wrapper" id="fab" mdui-fab="{trigger: 'hover'}">
-        <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
-          <i class="mdui-icon material-icons">&#xe5d2;</i>
-          <i class="mdui-icon mdui-fab-opened material-icons">clear_all</i>
-        </button>
-        <div class="mdui-fab-dial">
-          <a href="https://zc95.github.io/2018/04/27/vue-todo/" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-black">
-            <i class="mdui-icon material-icons">code</i>
+      <div class="mdui-container doc-container doc-no-cover" style="width:100%; padding:0; background-color: #fff">
+        <div class="mdui-tab" mdui-tab>
+          <a href="#example1-tab1" class="mdui-ripple" @click="filter='All'">All
+            <span class="badge">{{allNum}}</span>
           </a>
-          <button @click="deleteAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red">
-            <i class="mdui-icon material-icons">delete</i>
-          </button>
-          <button @click="resetAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-Indigo">
-            <i class="mdui-icon material-icons">refresh</i>
-          </button>
+          <a href="#example1-tab2" class="mdui-ripple" @click="filter='Unfinished'">Unfinished
+            <span class="badge">{{unfinNum}}</span>
+          </a>
+          <a href="#example1-tab3" class="mdui-ripple" @click="filter='Finished'">Finished
+            <span class="badge">{{finNum}}</span>
+          </a>
         </div>
+    </header>
+
+    <p style="text-align: center; padding: 12px; color:#b3aaaa;" v-if="todos.length==0">You haven't added anything yet,
+      <br>try to add one.</p>
+
+    <div class="mdui-list">
+      <label v-for="(todo,index) in filterTodos" class="mdui-list-item mdui-ripple">
+        <div class="mdui-checkbox">
+          <input type="checkbox" v-model="todo.completed" />
+          <i class="mdui-checkbox-icon"></i>
+        </div>
+        <div class="mdui-list-item-content" v-bind:class="{ lineThrough: todo.completed }">{{todo.text}}</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons" @click="removeTodo(index)">close</i>
+      </label>
+    </div>
+
+    <div class="mdui-fab-wrapper" id="fab" mdui-fab="{trigger: 'hover'}">
+      <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+        <i class="mdui-icon material-icons">&#xe5d2;</i>
+        <i class="mdui-icon mdui-fab-opened material-icons">clear_all</i>
+      </button>
+      <div class="mdui-fab-dial">
+        <a href="https://zc95.github.io/2018/04/27/vue-todo/" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-black">
+          <i class="mdui-icon material-icons">code</i>
+        </a>
+        <button @click="deleteAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red">
+          <i class="mdui-icon material-icons">delete</i>
+        </button>
+        <button @click="resetAll" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-Indigo">
+          <i class="mdui-icon material-icons">refresh</i>
+        </button>
       </div>
+    </div>
 
     </div>
   </div>
   <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
-    let todoStorage = {
-      save: function (todos) {
-        localStorage.setItem('vueTodoStorage', JSON.stringify(todos))
-      }
-    }
     let app = new Vue({
       el: '#app',
       data: {
         todos: localStorage.vueTodoStorage ? JSON.parse(localStorage.vueTodoStorage) : [],
-        inputValue: ""
+        inputValue: "",
+        filter: "All"
       },
       watch: {
         todos: {
           handler: function (items) {
-            todoStorage.save(items);
+            localStorage.vueTodoStorage = JSON.stringify(items);
           },
           deep: true
         }
@@ -116,6 +147,26 @@
             });
             mdui.snackbar({ message: 'All todo have been reset.' });
           });
+        }
+      },
+      computed: {
+        filterTodos() {
+          if (this.filter == "Unfinished") {
+            return this.todos.filter((n) => !n.completed)
+          } else if (this.filter == "Finished") {
+            return this.todos.filter((n) => n.completed)
+          } else {
+            return this.todos;
+          }
+        },
+        allNum() {
+          return this.todos.length;
+        },
+        unfinNum() {
+          return this.todos.filter((n) => !n.completed).length;
+        },
+        finNum() {
+          return this.todos.filter((n) => n.completed).length;
         }
       }
     })
