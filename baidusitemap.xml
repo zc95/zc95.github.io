@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>http://zc95.github.io/2018/05/16/thisapplycallbind/</loc>
+    <lastmod>2018-05-15T16:09:39.947Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 中的 call、apply、bind 深入理解</title>
+        <pubTime>2018-05-15T16:08:25.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://zc95.github.io/2018/04/27/vue-todo/</loc>
@@ -276,13 +296,13 @@
         <title>文本框模糊查询</title>
         <pubTime>2017-10-21T05:14:08.000Z</pubTime>
         
-        <tag>css</tag>
-         
         <tag>html</tag>
          
         <tag>javascript</tag>
          
         <tag>jquery</tag>
+         
+        <tag>css</tag>
          
          
            
@@ -701,9 +721,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            

@@ -45,7 +45,7 @@
     
     <title>
         
-            Node.js构建HTTP服务器 | 
+            JavaScript 中的 call、apply、bind 深入理解 | 
         
         张成的学习笔记
     </title>
@@ -55,10 +55,8 @@
     <link rel="icon" href="https://github.com/fluidicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
-Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运行环境。Node.js使用后多种先进的技术，其中包括 事件驱动、非阻塞 I/O 模型，使其轻量又高效，受到众多开发者的追捧。
-简单的说，Node.js 就是运行在服务端的 JavaScript ，可以稳定地在各种平台下运行，包括Linux、Windows、Mac OS X、Sun Os 和FreeBSD等众多平台。">
-    <meta name="keywords" content="张成的学习笔记,Node.js,本地服务器">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="张成的学习笔记,html">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -219,7 +217,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="张成的学习笔记">
-    <meta name="msapplication-starturl" content="http://zc95.github.io/2018/03/19/nodejs-HTTP/">
+    <meta name="msapplication-starturl" content="http://zc95.github.io/2018/05/16/thisapplycallbind/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="张成的学习笔记">
@@ -234,18 +232,16 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://zc95.github.io/2018/03/19/nodejs-HTTP/">
+    <meta property="og:url" content="http://zc95.github.io/2018/05/16/thisapplycallbind/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Node.js构建HTTP服务器 | 张成的学习笔记">
+    <meta property="og:title" content="JavaScript 中的 call、apply、bind 深入理解 | 张成的学习笔记">
     <meta property="og:image" content="https://github.com/fluidicon.png">
-    <meta property="og:description" content="Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
-Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运行环境。Node.js使用后多种先进的技术，其中包括 事件驱动、非阻塞 I/O 模型，使其轻量又高效，受到众多开发者的追捧。
-简单的说，Node.js 就是运行在服务端的 JavaScript ，可以稳定地在各种平台下运行，包括Linux、Windows、Mac OS X、Sun Os 和FreeBSD等众多平台。">
-    <meta property="og:article:tag" content="Node.js"> <meta property="og:article:tag" content="本地服务器"> 
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="html"> 
 
     
-        <meta property="article:published_time" content="Mon Mar 19 2018 20:29:42 GMT+0800">
-        <meta property="article:modified_time" content="Mon Apr 09 2018 22:29:15 GMT+0800">
+        <meta property="article:published_time" content="Wed May 16 2018 00:08:25 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 16 2018 00:09:39 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -253,7 +249,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zc95.github.io/2018/03/19/nodejs-HTTP/index.html" />
+        <link rel="canonical" href="http://zc95.github.io/2018/05/16/thisapplycallbind/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,10 +261,10 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://zc95.github.io/2018/03/19/nodejs-HTTP/index.html",
-    "headline": "Node.js构建HTTP服务器",
-    "datePublished": "Mon Mar 19 2018 20:29:42 GMT+0800",
-    "dateModified": "Mon Apr 09 2018 22:29:15 GMT+0800",
+    "mainEntityOfPage": "http://zc95.github.io/2018/05/16/thisapplycallbind/index.html",
+    "headline": "JavaScript 中的 call、apply、bind 深入理解",
+    "datePublished": "Wed May 16 2018 00:08:25 GMT+0800",
+    "dateModified": "Wed May 16 2018 00:09:39 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "张成",
@@ -286,10 +282,8 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
             "url": "https://github.com/fluidicon.png"
         }
     },
-    "keywords": ",Node.js,本地服务器张成的学习笔记",
-    "description": "Node.js® is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
-Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运行环境。Node.js使用后多种先进的技术，其中包括 事件驱动、非阻塞 I/O 模型，使其轻量又高效，受到众多开发者的追捧。
-简单的说，Node.js 就是运行在服务端的 JavaScript ，可以稳定地在各种平台下运行，包括Linux、Windows、Mac OS X、Sun Os 和FreeBSD等众多平台。",
+    "keywords": ",html张成的学习笔记",
+    "description": "",
 }
 </script>
 
@@ -354,7 +348,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Node-js简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装nodejs"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装nodejs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#构建一个HTTP服务器"><span class="post-toc-number">3.</span> <span class="post-toc-text">构建一个HTTP服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件模块"><span class="post-toc-number">4.</span> <span class="post-toc-text">文件模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP服务器的路由控制"><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP服务器的路由控制</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LINK"><span class="post-toc-number">6.</span> <span class="post-toc-text">LINK</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#this、apply、call、bind"><span class="post-toc-number">1.</span> <span class="post-toc-text">this、apply、call、bind</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#this-的指向"><span class="post-toc-number">2.</span> <span class="post-toc-text">this 的指向</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#怎么改变-this-的指向"><span class="post-toc-number">3.</span> <span class="post-toc-text">怎么改变 this 的指向</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#箭头函数"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">箭头函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在函数内部使用-this-this"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">在函数内部使用 _this = this</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-apply、call、bind"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">使用 apply、call、bind</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-apply"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">使用 apply</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-call"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">使用 call</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-bind"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">使用 bind</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#apply、call、bind-区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">apply、call、bind 区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#apply-和-call-的区别"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">apply 和 call 的区别</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bind-和-apply、call-区别"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">bind 和 apply、call 区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS-中的函数调用"><span class="post-toc-number">5.</span> <span class="post-toc-text">JS 中的函数调用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#作为一个函数调用"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">作为一个函数调用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数作为方法调用"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">函数作为方法调用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用构造函数调用函数"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">使用构造函数调用函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#作为函数方法调用函数"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">作为函数方法调用函数</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -386,7 +380,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
         
     
             <p class="article-headline-p">
-                Node.js构建HTTP服务器
+                JavaScript 中的 call、apply、bind 深入理解
             </p>
         </div>
 
@@ -405,7 +399,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     <!-- Author Name & Date -->
     <div>
         <strong>张成</strong>
-        <span>3月 19, 2018</span>
+        <span>5月 16, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +421,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2018/03/19/nodejs-HTTP/">
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2018/05/16/thisapplycallbind/">
     
 </ul>
 
@@ -441,7 +435,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Node-js/">Node.js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/本地服务器/">本地服务器</a>
+        <a class="post_tag-link" href="/tags/html/">html</a>
     </ul>
     
 
@@ -456,7 +450,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
     <!-- Leancloud Views -->
         <a class="post_share-link" href="#">
             <li class="mdl-menu__item">
-                <span id="/2018/03/19/nodejs-HTTP/" class="leancloud-views_num" data-flag-title="Node.js构建HTTP服务器">
+                <span id="/2018/05/16/thisapplycallbind/" class="leancloud-views_num" data-flag-title="JavaScript 中的 call、apply、bind 深入理解">
      &nbsp;浏览量
 </span>
 
@@ -468,7 +462,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Node.js构建HTTP服务器&url=http://zc95.github.io/2018/03/19/nodejs-HTTP/index.html&pic=http://zc95.github.iohttps://github.com/fluidicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript 中的 call、apply、bind 深入理解&url=http://zc95.github.io/2018/05/16/thisapplycallbind/index.html&pic=http://zc95.github.iohttps://github.com/fluidicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -480,7 +474,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2018/03/19/nodejs-HTTP/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2018/05/16/thisapplycallbind/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -495,7 +489,7 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=Node.js构建HTTP服务器&summary=&pics=http://zc95.github.iohttps://github.com/fluidicon.png&url=http://zc95.github.io/2018/03/19/nodejs-HTTP/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=JavaScript 中的 call、apply、bind 深入理解&summary=&pics=http://zc95.github.iohttps://github.com/fluidicon.png&url=http://zc95.github.io/2018/05/16/thisapplycallbind/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -514,173 +508,418 @@ Node.js简介Node.js 是一个基于 Google Chrome V8 引擎 的 JavaScript 运�
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Node.js® is a JavaScript runtime built on <a href="https://developers.google.com/v8/" target="_blank" rel="external">Chrome’s V8 JavaScript engine</a>. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js’ package ecosystem, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a>, is the largest ecosystem of open source libraries in the world.</p>
-<h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p><code>Node.js</code> 是一个基于 Google Chrome V8 引擎 的 JavaScript 运行环境。Node.js使用后多种先进的技术，其中包括 事件驱动、非阻塞 I/O 模型，使其轻量又高效，受到众多开发者的追捧。</p>
-<p>简单的说，Node.js 就是运行在服务端的 JavaScript ，可以稳定地在各种平台下运行，包括Linux、Windows、Mac OS X、Sun Os 和FreeBSD等众多平台。</p>
-<a id="more"></a>
-<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
-<li>点击 <a href="https://nodejs.org" target="_blank" rel="external">https://nodejs.org</a> 进入nodejs官网</li>
-<li>有两个版本：LTS和Current，LTS是长期支持版本，成熟可靠</li>
-<li>next到底</li>
-<li>打开终端，输入 <code>node -v</code> ，回车，如果出现类似 <code>v6.11.4</code> 的版本号就说明安装成功</li>
-</ol>
-<h2 id="构建一个HTTP服务器"><a href="#构建一个HTTP服务器" class="headerlink" title="构建一个HTTP服务器"></a>构建一个HTTP服务器</h2><p>在如今web大行其道的时代，支撑无数网页运行的正是HTTP服务器。Node.js之所以受到大量web开发者的青睐，与Node.js有能力自己构建服务器是分不开的。</p>
-<ol>
-<li><p>在根目录下新建 <code>nodetest</code> 文件夹</p>
-</li>
-<li><p>在 <code>nodetest</code> 下新建 <code>HTTP</code> 文件夹</p>
-</li>
-<li><p>在 <code>HTTP</code> 文件夹下新建一个 <code>server.js</code> 的文件</p>
-</li>
-<li><p>拷贝粘贴这段代码，保存：</p>
-<pre><code class="javascript">/**
- * 创建http服务器
- */
+        <h1 id="this、apply、call、bind"><a href="#this、apply、call、bind" class="headerlink" title="this、apply、call、bind"></a>this、apply、call、bind</h1><p>之前在公司也做过关于this、apply、call、bind的PPT分享，在这里整理一下这几个知识点。</p>
+<h1 id="this-的指向"><a href="#this-的指向" class="headerlink" title="this 的指向"></a>this 的指向</h1><p>首先必须要说的是，<strong>this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁</strong>，<strong>实际上this的最终指向的是那个调用它的对象（</strong>这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉<strong>）</strong>，那么接下来我会深入的探讨这个问题。</p>
+<p>为什么要学习this？如果你学过函数式编程，面向对象编程，那你肯定知道干什么用的，如果你没有学过，那么暂时可以不用看这篇文章，当然如果你有兴趣也可以看看，毕竟这是js中必须要掌握的东西。    </p>
+<p>下面我们来看一个最简单的例子：<br>例 1：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    function a() {
+        var name = &quot;Cherry&quot;;
 
-/* 引入http模块 */
-var http = require(&quot;http&quot;);
+        console.log(this.name);          // windowsName
 
-/* 创建HTTP服务器 */
-var server = http.createServer(function(request, response) {
-    /* 设置相应的头部 */
-    response.writeHead(200, {
-        &quot;content-Type&quot; : &quot;text/plain&quot;
-    });
-
-    /* 设置相应的数据 */
-    response.write(&quot;Welcome to Nodejs&quot;);
-    response.end();
-});
-
-/* 设置服务器端口 */
-server.listen(8000, function(){
-    console.log(&quot;Creat server on http://127.0.0.1:8000/&quot;);
-})
+        console.log(&quot;inner:&quot; + this);    // inner: Window
+    }
+    a();
+    console.log(&quot;outer:&quot; + this)         // outer: Window
 </code></pre>
-</li>
-<li><p>打开终端 输入 <code>cd nodetest/HTTP</code> </p>
-</li>
-<li><p>输入 <code>node server.js</code> ，返回 <code>Creat server on http://127.0.0.1:8000/</code></p>
-</li>
-<li><p>打开浏览器输入 <code>http://127.0.0.1:8000/</code> 或者 <code>http://localhost:8000</code> </p>
-</li>
-<li><p>Welcome to Nodejs</p>
-</li>
-</ol>
-<h2 id="文件模块"><a href="#文件模块" class="headerlink" title="文件模块"></a>文件模块</h2><p>上面说到的HTTP服务器知识实现了将一串字符串发送给服务器。很明显，如果服务器只能发送一些字符串，那几乎是远远不够的，因此我们要做一些扩展，通过文件模块将文件读取并发送给服务器是一个不错的选择，在nodetest文件夹下新建 <code>fsModule.js</code> :</p>
-<pre><code class="javascript">/**
- * fs模块
- */
-
-/* 引入http模块 */
-var http = require(&quot;http&quot;);
-
-/* 引入fs模块 */
-var fs = require(&quot;fs&quot;);
-
-/* 创建HTTP服务器 */
-var server = http.createServer(function(request, response) {
-    /* 设置响应的头部 */
-    response.writeHead(200, {
-        &quot;content-Type&quot; : &quot;text/html&quot;
-    });
-
-    /* 读取文件数据 */
-    var data = fs.readFileSync(&quot;./index.html&quot;);
-
-    /* 设置响应的数据 */
-    response.write(data);
-    response.end();
-});
-
-/* 设置服务器端口 */
-server.listen(8000, function(){
-    console.log(&quot;Creat server on http://127.0.0.1:8000/&quot;);
-})
+<p>这个相信大家都知道为什么 log 的是 windowsName，因为根据刚刚的那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，我们看最后调用 <code>a</code> 的地方 <code>a();</code>，前面没有调用的对象那么就是全局对象 window，这就相当于是 <code>window.a()</code>；注意，这里我们没有使用严格模式，如果使用严格模式的话，全局对象就是 <code>undefined</code>，那么就会报错 <code>Uncaught TypeError: Cannot read property &#39;name&#39; of undefined</code>。</p>
+<p>再看下这个例子：<br>例 2：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    var a = {
+        name: &quot;Cherry&quot;,
+        fn : function () {
+            console.log(this.name);      // Cherry
+        }
+    }
+    a.fn();
 </code></pre>
-<p>同时在同级目录中创建一个名为 <code>index.html</code> 的文件，写入以下代码：</p>
-<pre><code class="javascript">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot; /&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-  &lt;title&gt;fs module&lt;/title&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;fs文件模块&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<p>在这个例子中，函数 fn 是对象 a 调用的，所以打印的值就是 a 中的 name 的值。是不是有一点清晰了呢~</p>
+<p>我们做一个小小的改动：<br>例 3：</p>
+<pre><code class="javascript">var name = &quot;windowsName&quot;;
+    var a = {
+        name: &quot;Cherry&quot;,
+        fn : function () {
+            console.log(this.name);      // Cherry
+        }
+    }
+    window.a.fn();
 </code></pre>
-<p>node fsModule.js 运行，在浏览器中打开 <code>http://localhost:8000</code> ，Node.js已经把index这个文件发送到客户端了；</p>
-<p>需要提及的是，这里HTTP服务器在发送给浏览器的头部信息中将 content-type修改为了 <code>text/html</code> 。 content-type的人作用就是用来表示客户端或者服务器传输数据的类型，服务器或者客客户端通过这个值来做相应的解析。如果这个值改为原来的 <code>text/plain</code> ，浏览器将显示index.html的所有源代码，这显然不是我们想要的。</p>
-<h2 id="HTTP服务器的路由控制"><a href="#HTTP服务器的路由控制" class="headerlink" title="HTTP服务器的路由控制"></a>HTTP服务器的路由控制</h2><p>上一节中的服务器虽然已经可以通过读取文件数据来发送给客户端了，但你并没有做任何的路由控制，在浏览器中输入任何URL都将返回同样的内容，简单来说，路由就是URL到函数的映射。</p>
-<p>要做到路由控制，通过上面的学习可以预想到修改content-type就可以了，这里假定只需要处理html、js、css和图片文件，创建一个名为 <code>mime.js</code> 的文件：</p>
-<pre><code class="javascript">module.exports = {
-    &quot;.html&quot; : &quot;text/html&quot;,
-    &quot;.css&quot; : &quot;text/css&quot;,
-    &quot;.js&quot; : &quot;text/javascript&quot;,
-    &quot;.gif&quot; : &quot;image/gif&quot;,
-    &quot;.ico&quot; : &quot;image/x-icon&quot;,
-    &quot;.jpeg&quot; : &quot;image/jpeg&quot;,
-    &quot;.jpg&quot; : &quot;image/jpeg&quot;,
-    &quot;.png&quot; : &quot;image/png&quot;,
-}
+<p>这里打印 Cherry 的原因也是因为刚刚那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，最后调用它的对象仍然是对象 a。</p>
+<p>我们再来看一下这个例子：<br>例 4：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    var a = {
+        // name: &quot;Cherry&quot;,
+        fn : function () {
+            console.log(this.name);      // undefined
+        }
+    }
+    window.a.fn();
 </code></pre>
-<p>创建一个名为 <code>fsModule2.js</code> 的文件：</p>
-<pre><code class="javascript">/**
- * 这里通过路径处理判断来返回不同的资源，从而做到简单的路由控制
- */
-
-/* 引入http模块 */
-var http = require(&quot;http&quot;);
-
-/* 引入fs模块 */
-var fs = require(&quot;fs&quot;);
-
-/* 引入url模块 */
-var url = require(&quot;url&quot;);
-
-/* 引入mime文件 */
-var mime = require(&quot;./mime.js&quot;);
-
-/* 引入path模块 */
-var path = require(&quot;path&quot;);
-
-/* 创建HTTP服务器 */
-var server = http.createServer(function(request, response) {
-    var filePath = &quot;.&quot;+url.parse(request.url).pathname;
-    if(filePath === &quot;./&quot;){
-        filePath = &#39;./index.html&#39;
+<p>这里为什么会打印 <code>undefined</code> 呢？这是因为正如刚刚所描述的那样，调用 fn 的是 a 对象，也就是说 fn 的内部的 this 是对象 a，而对象 a 中并没有对 name 进行定义，所以 log 的 <code>this.name</code>的值是 <code>undefined</code>。</p>
+<p>这个例子还是说明了：<strong>this 永远指向最后调用它的那个对象</strong>，因为最后调用 fn 的对象是 a，所以就算 a 中没有 name 这个属性，也不会继续向上一个对象寻找 <code>this.name</code>，而是直接输出 <code>undefined</code>。</p>
+<p>再来看一个比较坑的例子：<br>例 5：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    var a = {
+        name : null,
+        // name: &quot;Cherry&quot;,
+        fn : function () {
+            console.log(this.name);      // windowsName
+        }
     }
 
-    /* 判断相应的文件是否存在 */
-    fs.exists(filePath,function(exists){
-        /* 存在则返回相应文件数据 */
-        if(exists){
-            var data = fs.readFileSync(filePath);
-            var contentType = mime[path.extname(filePath)];
-            response.writeHead(200,{
-                &quot;content-type&quot;: contentType
-            });
-            response.write(data);
-            response.end();
-        }else{
-            response.end(&quot;404&quot;);
-        }
-    })
-});
-
-/* 设置服务器端口 */
-server.listen(8000, function(){
-    console.log(&quot;Creat server on http://127.0.0.1:8000/&quot;);
-})
+    var f = a.fn;
+    f();
 </code></pre>
-<p>这里通过对路径处理判断来返回不同的资源，从而做到简单的路由控制。</p>
-<h2 id="LINK"><a href="#LINK" class="headerlink" title="LINK"></a>LINK</h2><ol>
-<li>本章github源码：<a href="https://github.com/zc95/nodeTest/tree/master/HTTP" target="_blank" rel="external">https://github.com/zc95/nodeTest/tree/master/HTTP</a></li>
-<li>《Node.js构建TCP服务器和TCP客户端》：<a href="https://zc95.github.io/2018/03/20/nodejs-TCP/">https://zc95.github.io/2018/03/20/nodejs-TCP/</a></li>
+<p>这里你可能会有疑问，为什么不是 <code>Cherry</code>，这是因为虽然将 a 对象的 fn 方法赋值给变量 f 了，但是没有调用，再接着跟我念这一句话：“<strong>this 永远指向最后调用它的那个对象</strong>”，由于刚刚的 f 并没有调用，所以 <code>fn()</code> 最后仍然是被 window 调用的。所以 this 指向的也就是 window。</p>
+<p>由以上五个例子我们可以看出，this 的指向并不是在创建的时候就可以确定的，在 es5 中，永远是<strong>this 永远指向最后调用它的那个对象</strong>。</p>
+<p>再来看一个例子：<br>例 6：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    function fn() {
+        var name = &#39;Cherry&#39;;
+        innerFunction();
+        function innerFunction() {
+            console.log(this.name);      // windowsName
+        }
+    }
+
+    fn()
+</code></pre>
+<p>读到现在了应该能够理解这是为什么了吧(oﾟ▽ﾟ)o。</p>
+<h1 id="怎么改变-this-的指向"><a href="#怎么改变-this-的指向" class="headerlink" title="怎么改变 this 的指向"></a>怎么改变 this 的指向</h1><p>改变 this 的指向我总结有以下几种方法：</p>
+<ul>
+<li>使用 ES6 的箭头函数</li>
+<li>在函数内部使用 <code>_this = this</code></li>
+<li>使用 <code>apply</code>、<code>call</code>、<code>bind</code></li>
+<li>new 实例化一个对象</li>
+</ul>
+<p>例 7：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)     
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            },100);
+        }
+
+    };
+
+    a.func2()     // this.func1 is not a function
+</code></pre>
+<p>在不使用箭头函数的情况下，是会报错的，因为最后调用 <code>setTimeout</code> 的对象是 window，但是在 window 中并没有 func1 函数。</p>
+<p>我们在改变 this 指向这一节将把这个例子作为 demo 进行改造。</p>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>众所周知，ES6 的箭头函数是可以避免 ES5 中使用 this 的坑的。<strong>箭头函数的 this 始终指向函数定义时的 this，而非执行时。</strong>，箭头函数需要记着这句话：“箭头函数中没有 this 绑定，必须通过查找作用域链来决定其值，如果箭头函数被非箭头函数包含，则 this 绑定的是最近一层非箭头函数的 this，否则，this 为 undefined”。</p>
+<p>例 8 ：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)     
+        },
+
+        func2: function () {
+            setTimeout( () =&gt; {
+                this.func1()
+            },100);
+        }
+
+    };
+
+    a.func2()     // Cherry
+</code></pre>
+<h2 id="在函数内部使用-this-this"><a href="#在函数内部使用-this-this" class="headerlink" title="在函数内部使用 _this = this"></a>在函数内部使用 <code>_this = this</code></h2><p>如果不使用 ES6，那么这种方式应该是最简单的不会出错的方式了，我们是先将调用这个函数的对象保存在变量 <code>_this</code> 中，然后在函数中都使用这个 <code>_this</code>，这样 <code>_this</code> 就不会改变了。<br>例 9：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    var a = {
+
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)     
+        },
+
+        func2: function () {
+            var _this = this;
+            setTimeout( function() {
+                _this.func1()
+            },100);
+        }
+
+    };
+
+    a.func2()       // Cherry
+</code></pre>
+<p>这个例子中，在 func2 中，首先设置 <code>var _this = this;</code>，这里的 <code>this</code> 是调用 <code>func2</code> 的对象 a，为了防止在 <code>func2</code> 中的 setTimeout 被 window 调用而导致的在 setTimeout 中的 this 为 window。我们将 <code>this(指向变量 a)</code> 赋值给一个变量 <code>_this</code>，这样，在 <code>func2</code> 中我们使用 <code>_this</code> 就是指向对象 a 了。</p>
+<h2 id="使用-apply、call、bind"><a href="#使用-apply、call、bind" class="headerlink" title="使用 apply、call、bind"></a>使用 apply、call、bind</h2><p>使用 apply、call、bind 函数也是可以改变 this 的指向的，原理稍后再讲，我们先来看一下是怎么实现的：</p>
+<h3 id="使用-apply"><a href="#使用-apply" class="headerlink" title="使用 apply"></a>使用 apply</h3><p>例 10：</p>
+<pre><code class="javascript">    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            }.apply(a),100);
+        }
+
+    };
+
+    a.func2()            // Cherry
+</code></pre>
+<h3 id="使用-call"><a href="#使用-call" class="headerlink" title="使用 call"></a>使用 call</h3><p>例 11：</p>
+<pre><code class="javascript">    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            }.call(a),100);
+        }
+
+    };
+
+    a.func2()            // Cherry
+</code></pre>
+<h3 id="使用-bind"><a href="#使用-bind" class="headerlink" title="使用 bind"></a>使用 bind</h3><p>例 12：</p>
+<pre><code class="javascript">    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            }.bind(a)(),100);
+        }
+
+    };
+
+    a.func2()            // Cherry
+</code></pre>
+<h1 id="apply、call、bind-区别"><a href="#apply、call、bind-区别" class="headerlink" title="apply、call、bind 区别"></a>apply、call、bind 区别</h1><p>刚刚我们已经介绍了 apply、call、bind 都是可以改变 this 的指向的，但是这三个函数稍有不同。</p>
+<p>在 <a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply" target="_blank" rel="external">MDN</a> 中定义 apply 如下；</p>
+<blockquote>
+<p>apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数</p>
+</blockquote>
+<p>语法：</p>
+<blockquote>
+<p>fun.apply(thisArg, [argsArray])</p>
+</blockquote>
+<ul>
+<li>thisArg：在 fun 函数运行时指定的 this 值。需要注意的是，指定的 this 值并不一定是该函数执行时真正的 this 值，如果这个函数处于非严格模式下，则指定为 null 或 undefined 时会自动指向全局对象（浏览器中就是window对象），同时值为原始值（数字，字符串，布尔值）的 this 会指向该原始值的自动包装对象。</li>
+<li>argsArray：一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 fun 函数。如果该参数的值为null 或 undefined，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。浏览器兼容性请参阅本文底部内容。</li>
+</ul>
+<h2 id="apply-和-call-的区别"><a href="#apply-和-call-的区别" class="headerlink" title="apply 和 call 的区别"></a>apply 和 call 的区别</h2><p>其实 apply 和 call 基本类似，他们的区别只是传入的参数不同。</p>
+<p>call 的语法为：</p>
+<pre><code class="javascript">fun.call(thisArg[, arg1[, arg2[, ...]]])
+</code></pre>
+<p>所以 apply 和 call 的区别是 call 方法接受的是若干个参数列表，而 apply 接收的是一个包含多个参数的数组。</p>
+<p>例 13：</p>
+<pre><code class="javascript">    var a ={
+        name : &quot;Cherry&quot;,
+        fn : function (a,b) {
+            console.log( a + b)
+        }
+    }
+
+    var b = a.fn;
+    b.apply(a,[1,2])     // 3
+</code></pre>
+<p>例 14：</p>
+<pre><code class="javascript">    var a ={
+        name : &quot;Cherry&quot;,
+        fn : function (a,b) {
+            console.log( a + b)
+        }
+    }
+
+    var b = a.fn;
+    b.call(a,1,2)       // 3
+</code></pre>
+<h2 id="bind-和-apply、call-区别"><a href="#bind-和-apply、call-区别" class="headerlink" title="bind 和 apply、call 区别"></a>bind 和 apply、call 区别</h2><p>我们先来将刚刚的例子使用 bind 试一下</p>
+<pre><code class="javascript">    var a ={
+        name : &quot;Cherry&quot;,
+        fn : function (a,b) {
+            console.log( a + b)
+        }
+    }
+
+    var b = a.fn;
+    b.bind(a,1,2)
+</code></pre>
+<p>我们会发现并没有输出，这是为什么呢，我们来看一下 <a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fbind" target="_blank" rel="external">MDN</a> 上的文档说明：</p>
+<blockquote>
+<p>bind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。</p>
+</blockquote>
+<p>所以我们可以看出，bind 是创建一个新的函数，我们必须要手动去调用：</p>
+<pre><code class="javascript">    var a ={
+        name : &quot;Cherry&quot;,
+        fn : function (a,b) {
+            console.log( a + b)
+        }
+    }
+
+    var b = a.fn;
+    b.bind(a,1,2)()           // 3
+</code></pre>
+<p>==================================== 更新==============================</p>
+<h1 id="JS-中的函数调用"><a href="#JS-中的函数调用" class="headerlink" title="JS 中的函数调用"></a>JS 中的函数调用</h1><p>看到留言说，很多童靴不理解为什么 例 6 的 innerFunction 和 例 7 的 this 是指向 window 的，所以我就来补充一下 JS 中的函数调用。<br>例 6：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    function fn() {
+        var name = &#39;Cherry&#39;;
+        innerFunction();
+        function innerFunction() {
+            console.log(this.name);      // windowsName
+        }
+    }
+
+    fn()
+</code></pre>
+<p>例 7：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)     
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            },100);
+        }
+
+    };
+
+    a.func2()     // this.func1 is not a function
+</code></pre>
+<p>函数调用的方法一共有 4 种</p>
+<ol>
+<li>作为一个函数调用</li>
+<li>函数作为方法调用</li>
+<li>使用构造函数调用函数</li>
+<li>作为函数方法调用函数（call、apply）</li>
 </ol>
+<h2 id="作为一个函数调用"><a href="#作为一个函数调用" class="headerlink" title="作为一个函数调用"></a>作为一个函数调用</h2><p>比如上面的 例 1：<br>例 1：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    function a() {
+        var name = &quot;Cherry&quot;;
+
+        console.log(this.name);          // windowsName
+
+        console.log(&quot;inner:&quot; + this);    // inner: Window
+    }
+    a();
+    console.log(&quot;outer:&quot; + this)         // outer: Window
+</code></pre>
+<p>这样一个最简单的函数，不属于任何一个对象，就是一个函数，这样的情况在 JavaScript 的在浏览器中的非严格模式默认是属于全局对象 window 的，在严格模式，就是 undefined。</p>
+<p>但这是一个全局的函数，很容易产生命名冲突，所以不建议这样使用。</p>
+<h2 id="函数作为方法调用"><a href="#函数作为方法调用" class="headerlink" title="函数作为方法调用"></a>函数作为方法调用</h2><p>所以说更多的情况是将函数作为对象的方法使用。比如例 2：<br>例 2：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+    var a = {
+        name: &quot;Cherry&quot;,
+        fn : function () {
+            console.log(this.name);      // Cherry
+        }
+    }
+    a.fn();
+</code></pre>
+<p>这里定义一个对象 <code>a</code>，对象 <code>a</code> 有一个属性（<code>name</code>）和一个方法（<code>fn</code>）。</p>
+<p>然后对象 <code>a</code> 通过 <code>.</code> 方法调用了其中的 fn 方法。</p>
+<p>然后我们一直记住的那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，所以在 fn 中的 this 就是指向 a 的。</p>
+<h2 id="使用构造函数调用函数"><a href="#使用构造函数调用函数" class="headerlink" title="使用构造函数调用函数"></a>使用构造函数调用函数</h2><blockquote>
+<p>如果函数调用前使用了 new 关键字, 则是调用了构造函数。<br>这看起来就像创建了新的函数，但实际上 JavaScript 函数是重新创建的对象：</p>
+</blockquote>
+<pre><code class="javascript">// 构造函数:
+function myFunction(arg1, arg2) {
+    this.firstName = arg1;
+    this.lastName  = arg2;
+}
+
+// This    creates a new object
+var a = new myFunction(&quot;Li&quot;,&quot;Cherry&quot;);
+a.lastName;                             // 返回 &quot;Cherry&quot;
+</code></pre>
+<p>这就有要说另一个面试经典问题：new 的过程了，(ಥ_ಥ)<br>这里就简单的来看一下 new 的过程吧：<br>伪代码表示：</p>
+<pre><code class="javascript">var a = new myFunction(&quot;Li&quot;,&quot;Cherry&quot;);
+
+new myFunction{
+    var obj = {};
+    obj.__proto__ = myFunction.prototype;
+    var result = myFunction.call(obj,&quot;Li&quot;,&quot;Cherry&quot;);
+    return typeof result === &#39;obj&#39;? result : obj;
+}
+</code></pre>
+<ol>
+<li>创建一个空对象 obj;</li>
+<li>将新创建的空对象的隐式原型指向其构造函数的显示原型。</li>
+<li>使用 call 改变 this 的指向</li>
+<li>如果无返回值或者返回一个非对象值，则将 obj 返回作为新对象；如果返回值是一个新对象的话那么直接直接返回该对象。</li>
+</ol>
+<p>所以我们可以看到，在 new 的过程中，我们是使用 call 改变了 this 的指向。</p>
+<h2 id="作为函数方法调用函数"><a href="#作为函数方法调用函数" class="headerlink" title="作为函数方法调用函数"></a>作为函数方法调用函数</h2><blockquote>
+<p>在 JavaScript 中, 函数是对象。</p>
+<p>JavaScript 函数有它的属性和方法。<br>call() 和 apply() 是预定义的函数方法。 两个方法可用于调用函数，两个方法的第一个参数必须是对象本身</p>
+<p>在 JavaScript 严格模式(strict mode)下, 在调用函数时第一个参数会成为 this 的值， 即使该参数不是一个对象。<br>在 JavaScript 非严格模式(non-strict mode)下, 如果第一个参数的值是 null 或 undefined, 它将使用全局对象替代。</p>
+</blockquote>
+<p>这个时候我们再来看例 6：<br>例 6：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    function fn() {
+        var name = &#39;Cherry&#39;;
+        innerFunction();
+        function innerFunction() {
+            console.log(this.name);      // windowsName
+        }
+    }
+
+    fn()
+</code></pre>
+<p>这里的 innerFunction() 的调用是不是属于第一种调用方式：作为一个函数调用（它就是作为一个函数调用的，没有挂载在任何对象上，所以对于没有挂载在任何对象上的函数，在非严格模式下 this 就是指向 window 的）</p>
+<p>然后再看一下 例 7：<br>例 7：</p>
+<pre><code class="javascript">    var name = &quot;windowsName&quot;;
+
+    var a = {
+        name : &quot;Cherry&quot;,
+
+        func1: function () {
+            console.log(this.name)     
+        },
+
+        func2: function () {
+            setTimeout(  function () {
+                this.func1()
+            },100 );
+        }
+
+    };
+
+    a.func2()     // this.func1 is not a function
+</code></pre>
+<p>这个简单一点的理解可以理解为“<strong>匿名函数的 this 永远指向 window</strong>”，你可以这样想，还是那句话<strong>this 永远指向最后调用它的那个对象</strong>，那么我们就来找最后调用匿名函数的对象，这就很尴尬了，因为匿名函数名字啊，笑哭，所以我们是没有办法被其他对象调用匿名函数的。所以说 匿名函数的 this 永远指向 window。</p>
+<p>如果这个时候你要问，那匿名函数都是怎么定义的，首先，我们通常写的匿名函数都是自执行的，就是在匿名函数后面加 <code>()</code> 让其自执行。其次就是虽然匿名函数不能被其他对象调用，但是可以被其他函数调用啊，比如例 7 中的 setTimeout。</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -689,7 +928,7 @@ server.listen(8000, function(){
                             深自缄默，如云漂泊
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="http://zc95.github.io/2018/03/19/nodejs-HTTP/">http://zc95.github.io/2018/03/19/nodejs-HTTP/</a>
+                        <strong>本文链接：</strong><a href="http://zc95.github.io/2018/05/16/thisapplycallbind/">http://zc95.github.io/2018/05/16/thisapplycallbind/</a>
                     </p>
                 </blockquote>
         
@@ -734,21 +973,13 @@ server.listen(8000, function(){
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/20/Homebrew/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/03/13/es6-webpack/" id="post_nav-older" class="next-content">
+        <a href="/2018/04/27/vue-todo/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
