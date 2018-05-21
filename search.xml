@@ -3,432 +3,23 @@
   
     
     <entry>
-      <title><![CDATA[JavaScript 中的 call、apply、bind 深入理解]]></title>
-      <url>/2018/05/16/thisapplycallbind/</url>
-      <content type="html"><![CDATA[<h1 id="this、apply、call、bind"><a href="#this、apply、call、bind" class="headerlink" title="this、apply、call、bind"></a>this、apply、call、bind</h1><p>之前在公司也做过关于this、apply、call、bind的PPT分享，在这里整理一下这几个知识点。</p>
-<h1 id="this-的指向"><a href="#this-的指向" class="headerlink" title="this 的指向"></a>this 的指向</h1><p>首先必须要说的是，<strong>this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁</strong>，<strong>实际上this的最终指向的是那个调用它的对象（</strong>这句话有些问题，后面会解释为什么会有问题，虽然网上大部分的文章都是这样说的，虽然在很多情况下那样去理解不会出什么问题，但是实际上那样理解是不准确的，所以在你理解this的时候会有种琢磨不透的感觉<strong>）</strong>，那么接下来我会深入的探讨这个问题。</p>
-<p>为什么要学习this？如果你学过函数式编程，面向对象编程，那你肯定知道干什么用的，如果你没有学过，那么暂时可以不用看这篇文章，当然如果你有兴趣也可以看看，毕竟这是js中必须要掌握的东西。    </p>
-<p>下面我们来看一个最简单的例子：<br>例 1：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    function a() {
-        var name = &quot;Cherry&quot;;
-
-        console.log(this.name);          // windowsName
-
-        console.log(&quot;inner:&quot; + this);    // inner: Window
-    }
-    a();
-    console.log(&quot;outer:&quot; + this)         // outer: Window
-</code></pre>
-<p>这个相信大家都知道为什么 log 的是 windowsName，因为根据刚刚的那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，我们看最后调用 <code>a</code> 的地方 <code>a();</code>，前面没有调用的对象那么就是全局对象 window，这就相当于是 <code>window.a()</code>；注意，这里我们没有使用严格模式，如果使用严格模式的话，全局对象就是 <code>undefined</code>，那么就会报错 <code>Uncaught TypeError: Cannot read property &#39;name&#39; of undefined</code>。</p>
-<p>再看下这个例子：<br>例 2：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    var a = {
-        name: &quot;Cherry&quot;,
-        fn : function () {
-            console.log(this.name);      // Cherry
-        }
-    }
-    a.fn();
-</code></pre>
-<p>在这个例子中，函数 fn 是对象 a 调用的，所以打印的值就是 a 中的 name 的值。是不是有一点清晰了呢~</p>
-<p>我们做一个小小的改动：<br>例 3：</p>
-<pre><code class="javascript">var name = &quot;windowsName&quot;;
-    var a = {
-        name: &quot;Cherry&quot;,
-        fn : function () {
-            console.log(this.name);      // Cherry
-        }
-    }
-    window.a.fn();
-</code></pre>
-<p>这里打印 Cherry 的原因也是因为刚刚那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，最后调用它的对象仍然是对象 a。</p>
-<p>我们再来看一下这个例子：<br>例 4：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    var a = {
-        // name: &quot;Cherry&quot;,
-        fn : function () {
-            console.log(this.name);      // undefined
-        }
-    }
-    window.a.fn();
-</code></pre>
-<p>这里为什么会打印 <code>undefined</code> 呢？这是因为正如刚刚所描述的那样，调用 fn 的是 a 对象，也就是说 fn 的内部的 this 是对象 a，而对象 a 中并没有对 name 进行定义，所以 log 的 <code>this.name</code>的值是 <code>undefined</code>。</p>
-<p>这个例子还是说明了：<strong>this 永远指向最后调用它的那个对象</strong>，因为最后调用 fn 的对象是 a，所以就算 a 中没有 name 这个属性，也不会继续向上一个对象寻找 <code>this.name</code>，而是直接输出 <code>undefined</code>。</p>
-<p>再来看一个比较坑的例子：<br>例 5：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    var a = {
-        name : null,
-        // name: &quot;Cherry&quot;,
-        fn : function () {
-            console.log(this.name);      // windowsName
-        }
-    }
-
-    var f = a.fn;
-    f();
-</code></pre>
-<p>这里你可能会有疑问，为什么不是 <code>Cherry</code>，这是因为虽然将 a 对象的 fn 方法赋值给变量 f 了，但是没有调用，再接着跟我念这一句话：“<strong>this 永远指向最后调用它的那个对象</strong>”，由于刚刚的 f 并没有调用，所以 <code>fn()</code> 最后仍然是被 window 调用的。所以 this 指向的也就是 window。</p>
-<p>由以上五个例子我们可以看出，this 的指向并不是在创建的时候就可以确定的，在 es5 中，永远是<strong>this 永远指向最后调用它的那个对象</strong>。</p>
-<p>再来看一个例子：<br>例 6：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    function fn() {
-        var name = &#39;Cherry&#39;;
-        innerFunction();
-        function innerFunction() {
-            console.log(this.name);      // windowsName
-        }
-    }
-
-    fn()
-</code></pre>
-<p>读到现在了应该能够理解这是为什么了吧(oﾟ▽ﾟ)o。</p>
-<h1 id="怎么改变-this-的指向"><a href="#怎么改变-this-的指向" class="headerlink" title="怎么改变 this 的指向"></a>怎么改变 this 的指向</h1><p>改变 this 的指向我总结有以下几种方法：</p>
-<ul>
-<li>使用 ES6 的箭头函数</li>
-<li>在函数内部使用 <code>_this = this</code></li>
-<li>使用 <code>apply</code>、<code>call</code>、<code>bind</code></li>
-<li>new 实例化一个对象</li>
-</ul>
-<p>例 7：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)     
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            },100);
-        }
-
-    };
-
-    a.func2()     // this.func1 is not a function
-</code></pre>
-<p>在不使用箭头函数的情况下，是会报错的，因为最后调用 <code>setTimeout</code> 的对象是 window，但是在 window 中并没有 func1 函数。</p>
-<p>我们在改变 this 指向这一节将把这个例子作为 demo 进行改造。</p>
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>众所周知，ES6 的箭头函数是可以避免 ES5 中使用 this 的坑的。<strong>箭头函数的 this 始终指向函数定义时的 this，而非执行时。</strong>，箭头函数需要记着这句话：“箭头函数中没有 this 绑定，必须通过查找作用域链来决定其值，如果箭头函数被非箭头函数包含，则 this 绑定的是最近一层非箭头函数的 this，否则，this 为 undefined”。</p>
-<p>例 8 ：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)     
-        },
-
-        func2: function () {
-            setTimeout( () =&gt; {
-                this.func1()
-            },100);
-        }
-
-    };
-
-    a.func2()     // Cherry
-</code></pre>
-<h2 id="在函数内部使用-this-this"><a href="#在函数内部使用-this-this" class="headerlink" title="在函数内部使用 _this = this"></a>在函数内部使用 <code>_this = this</code></h2><p>如果不使用 ES6，那么这种方式应该是最简单的不会出错的方式了，我们是先将调用这个函数的对象保存在变量 <code>_this</code> 中，然后在函数中都使用这个 <code>_this</code>，这样 <code>_this</code> 就不会改变了。<br>例 9：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    var a = {
-
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)     
-        },
-
-        func2: function () {
-            var _this = this;
-            setTimeout( function() {
-                _this.func1()
-            },100);
-        }
-
-    };
-
-    a.func2()       // Cherry
-</code></pre>
-<p>这个例子中，在 func2 中，首先设置 <code>var _this = this;</code>，这里的 <code>this</code> 是调用 <code>func2</code> 的对象 a，为了防止在 <code>func2</code> 中的 setTimeout 被 window 调用而导致的在 setTimeout 中的 this 为 window。我们将 <code>this(指向变量 a)</code> 赋值给一个变量 <code>_this</code>，这样，在 <code>func2</code> 中我们使用 <code>_this</code> 就是指向对象 a 了。</p>
-<h2 id="使用-apply、call、bind"><a href="#使用-apply、call、bind" class="headerlink" title="使用 apply、call、bind"></a>使用 apply、call、bind</h2><p>使用 apply、call、bind 函数也是可以改变 this 的指向的，原理稍后再讲，我们先来看一下是怎么实现的：</p>
-<h3 id="使用-apply"><a href="#使用-apply" class="headerlink" title="使用 apply"></a>使用 apply</h3><p>例 10：</p>
-<pre><code class="javascript">    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            }.apply(a),100);
-        }
-
-    };
-
-    a.func2()            // Cherry
-</code></pre>
-<h3 id="使用-call"><a href="#使用-call" class="headerlink" title="使用 call"></a>使用 call</h3><p>例 11：</p>
-<pre><code class="javascript">    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            }.call(a),100);
-        }
-
-    };
-
-    a.func2()            // Cherry
-</code></pre>
-<h3 id="使用-bind"><a href="#使用-bind" class="headerlink" title="使用 bind"></a>使用 bind</h3><p>例 12：</p>
-<pre><code class="javascript">    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            }.bind(a)(),100);
-        }
-
-    };
-
-    a.func2()            // Cherry
-</code></pre>
-<h1 id="apply、call、bind-区别"><a href="#apply、call、bind-区别" class="headerlink" title="apply、call、bind 区别"></a>apply、call、bind 区别</h1><p>刚刚我们已经介绍了 apply、call、bind 都是可以改变 this 的指向的，但是这三个函数稍有不同。</p>
-<p>在 <a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply" target="_blank" rel="external">MDN</a> 中定义 apply 如下；</p>
-<blockquote>
-<p>apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数</p>
-</blockquote>
-<p>语法：</p>
-<blockquote>
-<p>fun.apply(thisArg, [argsArray])</p>
-</blockquote>
-<ul>
-<li>thisArg：在 fun 函数运行时指定的 this 值。需要注意的是，指定的 this 值并不一定是该函数执行时真正的 this 值，如果这个函数处于非严格模式下，则指定为 null 或 undefined 时会自动指向全局对象（浏览器中就是window对象），同时值为原始值（数字，字符串，布尔值）的 this 会指向该原始值的自动包装对象。</li>
-<li>argsArray：一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 fun 函数。如果该参数的值为null 或 undefined，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。浏览器兼容性请参阅本文底部内容。</li>
-</ul>
-<h2 id="apply-和-call-的区别"><a href="#apply-和-call-的区别" class="headerlink" title="apply 和 call 的区别"></a>apply 和 call 的区别</h2><p>其实 apply 和 call 基本类似，他们的区别只是传入的参数不同。</p>
-<p>call 的语法为：</p>
-<pre><code class="javascript">fun.call(thisArg[, arg1[, arg2[, ...]]])
-</code></pre>
-<p>所以 apply 和 call 的区别是 call 方法接受的是若干个参数列表，而 apply 接收的是一个包含多个参数的数组。</p>
-<p>例 13：</p>
-<pre><code class="javascript">    var a ={
-        name : &quot;Cherry&quot;,
-        fn : function (a,b) {
-            console.log( a + b)
-        }
-    }
-
-    var b = a.fn;
-    b.apply(a,[1,2])     // 3
-</code></pre>
-<p>例 14：</p>
-<pre><code class="javascript">    var a ={
-        name : &quot;Cherry&quot;,
-        fn : function (a,b) {
-            console.log( a + b)
-        }
-    }
-
-    var b = a.fn;
-    b.call(a,1,2)       // 3
-</code></pre>
-<h2 id="bind-和-apply、call-区别"><a href="#bind-和-apply、call-区别" class="headerlink" title="bind 和 apply、call 区别"></a>bind 和 apply、call 区别</h2><p>我们先来将刚刚的例子使用 bind 试一下</p>
-<pre><code class="javascript">    var a ={
-        name : &quot;Cherry&quot;,
-        fn : function (a,b) {
-            console.log( a + b)
-        }
-    }
-
-    var b = a.fn;
-    b.bind(a,1,2)
-</code></pre>
-<p>我们会发现并没有输出，这是为什么呢，我们来看一下 <a href="https://link.juejin.im/?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fbind" target="_blank" rel="external">MDN</a> 上的文档说明：</p>
-<blockquote>
-<p>bind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。</p>
-</blockquote>
-<p>所以我们可以看出，bind 是创建一个新的函数，我们必须要手动去调用：</p>
-<pre><code class="javascript">    var a ={
-        name : &quot;Cherry&quot;,
-        fn : function (a,b) {
-            console.log( a + b)
-        }
-    }
-
-    var b = a.fn;
-    b.bind(a,1,2)()           // 3
-</code></pre>
-<p>==================================== 更新==============================</p>
-<h1 id="JS-中的函数调用"><a href="#JS-中的函数调用" class="headerlink" title="JS 中的函数调用"></a>JS 中的函数调用</h1><p>看到留言说，很多童靴不理解为什么 例 6 的 innerFunction 和 例 7 的 this 是指向 window 的，所以我就来补充一下 JS 中的函数调用。<br>例 6：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    function fn() {
-        var name = &#39;Cherry&#39;;
-        innerFunction();
-        function innerFunction() {
-            console.log(this.name);      // windowsName
-        }
-    }
-
-    fn()
-</code></pre>
-<p>例 7：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)     
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            },100);
-        }
-
-    };
-
-    a.func2()     // this.func1 is not a function
-</code></pre>
-<p>函数调用的方法一共有 4 种</p>
-<ol>
-<li>作为一个函数调用</li>
-<li>函数作为方法调用</li>
-<li>使用构造函数调用函数</li>
-<li>作为函数方法调用函数（call、apply）</li>
-</ol>
-<h2 id="作为一个函数调用"><a href="#作为一个函数调用" class="headerlink" title="作为一个函数调用"></a>作为一个函数调用</h2><p>比如上面的 例 1：<br>例 1：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    function a() {
-        var name = &quot;Cherry&quot;;
-
-        console.log(this.name);          // windowsName
-
-        console.log(&quot;inner:&quot; + this);    // inner: Window
-    }
-    a();
-    console.log(&quot;outer:&quot; + this)         // outer: Window
-</code></pre>
-<p>这样一个最简单的函数，不属于任何一个对象，就是一个函数，这样的情况在 JavaScript 的在浏览器中的非严格模式默认是属于全局对象 window 的，在严格模式，就是 undefined。</p>
-<p>但这是一个全局的函数，很容易产生命名冲突，所以不建议这样使用。</p>
-<h2 id="函数作为方法调用"><a href="#函数作为方法调用" class="headerlink" title="函数作为方法调用"></a>函数作为方法调用</h2><p>所以说更多的情况是将函数作为对象的方法使用。比如例 2：<br>例 2：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-    var a = {
-        name: &quot;Cherry&quot;,
-        fn : function () {
-            console.log(this.name);      // Cherry
-        }
-    }
-    a.fn();
-</code></pre>
-<p>这里定义一个对象 <code>a</code>，对象 <code>a</code> 有一个属性（<code>name</code>）和一个方法（<code>fn</code>）。</p>
-<p>然后对象 <code>a</code> 通过 <code>.</code> 方法调用了其中的 fn 方法。</p>
-<p>然后我们一直记住的那句话“<strong>this 永远指向最后调用它的那个对象</strong>”，所以在 fn 中的 this 就是指向 a 的。</p>
-<h2 id="使用构造函数调用函数"><a href="#使用构造函数调用函数" class="headerlink" title="使用构造函数调用函数"></a>使用构造函数调用函数</h2><blockquote>
-<p>如果函数调用前使用了 new 关键字, 则是调用了构造函数。<br>这看起来就像创建了新的函数，但实际上 JavaScript 函数是重新创建的对象：</p>
-</blockquote>
-<pre><code class="javascript">// 构造函数:
-function myFunction(arg1, arg2) {
-    this.firstName = arg1;
-    this.lastName  = arg2;
-}
-
-// This    creates a new object
-var a = new myFunction(&quot;Li&quot;,&quot;Cherry&quot;);
-a.lastName;                             // 返回 &quot;Cherry&quot;
-</code></pre>
-<p>这就有要说另一个面试经典问题：new 的过程了，(ಥ_ಥ)<br>这里就简单的来看一下 new 的过程吧：<br>伪代码表示：</p>
-<pre><code class="javascript">var a = new myFunction(&quot;Li&quot;,&quot;Cherry&quot;);
-
-new myFunction{
-    var obj = {};
-    obj.__proto__ = myFunction.prototype;
-    var result = myFunction.call(obj,&quot;Li&quot;,&quot;Cherry&quot;);
-    return typeof result === &#39;obj&#39;? result : obj;
-}
-</code></pre>
-<ol>
-<li>创建一个空对象 obj;</li>
-<li>将新创建的空对象的隐式原型指向其构造函数的显示原型。</li>
-<li>使用 call 改变 this 的指向</li>
-<li>如果无返回值或者返回一个非对象值，则将 obj 返回作为新对象；如果返回值是一个新对象的话那么直接直接返回该对象。</li>
-</ol>
-<p>所以我们可以看到，在 new 的过程中，我们是使用 call 改变了 this 的指向。</p>
-<h2 id="作为函数方法调用函数"><a href="#作为函数方法调用函数" class="headerlink" title="作为函数方法调用函数"></a>作为函数方法调用函数</h2><blockquote>
-<p>在 JavaScript 中, 函数是对象。</p>
-<p>JavaScript 函数有它的属性和方法。<br>call() 和 apply() 是预定义的函数方法。 两个方法可用于调用函数，两个方法的第一个参数必须是对象本身</p>
-<p>在 JavaScript 严格模式(strict mode)下, 在调用函数时第一个参数会成为 this 的值， 即使该参数不是一个对象。<br>在 JavaScript 非严格模式(non-strict mode)下, 如果第一个参数的值是 null 或 undefined, 它将使用全局对象替代。</p>
-</blockquote>
-<p>这个时候我们再来看例 6：<br>例 6：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    function fn() {
-        var name = &#39;Cherry&#39;;
-        innerFunction();
-        function innerFunction() {
-            console.log(this.name);      // windowsName
-        }
-    }
-
-    fn()
-</code></pre>
-<p>这里的 innerFunction() 的调用是不是属于第一种调用方式：作为一个函数调用（它就是作为一个函数调用的，没有挂载在任何对象上，所以对于没有挂载在任何对象上的函数，在非严格模式下 this 就是指向 window 的）</p>
-<p>然后再看一下 例 7：<br>例 7：</p>
-<pre><code class="javascript">    var name = &quot;windowsName&quot;;
-
-    var a = {
-        name : &quot;Cherry&quot;,
-
-        func1: function () {
-            console.log(this.name)     
-        },
-
-        func2: function () {
-            setTimeout(  function () {
-                this.func1()
-            },100 );
-        }
-
-    };
-
-    a.func2()     // this.func1 is not a function
-</code></pre>
-<p>这个简单一点的理解可以理解为“<strong>匿名函数的 this 永远指向 window</strong>”，你可以这样想，还是那句话<strong>this 永远指向最后调用它的那个对象</strong>，那么我们就来找最后调用匿名函数的对象，这就很尴尬了，因为匿名函数名字啊，笑哭，所以我们是没有办法被其他对象调用匿名函数的。所以说 匿名函数的 this 永远指向 window。</p>
-<p>如果这个时候你要问，那匿名函数都是怎么定义的，首先，我们通常写的匿名函数都是自执行的，就是在匿名函数后面加 <code>()</code> 让其自执行。其次就是虽然匿名函数不能被其他对象调用，但是可以被其他函数调用啊，比如例 7 中的 setTimeout。</p>
+      <title><![CDATA[vue-comeback]]></title>
+      <url>/2018/05/21/vue-comeback/</url>
+      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经没有一天能安安静静学习了。</p>
+<p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友又没了，公司的事稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>
 ]]></content>
       
         <categories>
             
-            <category> 技术篇 </category>
+            <category> 杂谈篇 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> html </tag>
+            <tag> Vue </tag>
             
         </tags>
         
@@ -509,7 +100,7 @@ new myFunction{
             
             <tag> material design </tag>
             
-            <tag> vue </tag>
+            <tag> Vue </tag>
             
             <tag> todo </tag>
             
@@ -568,14 +159,14 @@ npm install
       
         <categories>
             
-            <category> 技术篇 </category>
+            <category> 汇总篇 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> html </tag>
+            <tag> Vue </tag>
             
         </tags>
         
@@ -2455,9 +2046,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
@@ -3241,13 +2832,13 @@ $obj.html(tempStr);
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
