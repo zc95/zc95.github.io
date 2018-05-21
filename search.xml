@@ -3,10 +3,10 @@
   
     
     <entry>
-      <title><![CDATA[vue-comeback]]></title>
+      <title><![CDATA[我又回来了]]></title>
       <url>/2018/05/21/vue-comeback/</url>
-      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经没有一天能安安静静学习了。</p>
-<p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友又没了，公司的事稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p>
+      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。</p>
+<p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友没了，公司的事也稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>
 ]]></content>
       
@@ -151,7 +151,7 @@ npm install
     </entry>
     
     <entry>
-      <title><![CDATA[vue-learning]]></title>
+      <title><![CDATA[我要开始学Vue啦]]></title>
       <url>/2018/04/17/vue-learning/</url>
       <content type="html"><![CDATA[<p>emm…开始学习Vue啦 <a href="https://github.com/zc95/vue-learning" target="_blank" rel="external">https://github.com/zc95/vue-learning</a></p>
 <p><img src="https://cn.vuejs.org/images/logo.png" alt=""></p>

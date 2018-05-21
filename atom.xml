@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-05-21T15:33:44.595Z</updated>
+  <updated>2018-05-21T15:41:53.897Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vue-comeback</title>
+    <title>我又回来了</title>
     <link href="http://zc95.github.io/2018/05/21/vue-comeback/"/>
     <id>http://zc95.github.io/2018/05/21/vue-comeback/</id>
     <published>2018-05-21T15:12:01.000Z</published>
-    <updated>2018-05-21T15:33:44.595Z</updated>
+    <updated>2018-05-21T15:41:53.897Z</updated>
     
-    <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经没有一天能安安静静学习了。</p><p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友又没了，公司的事稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。</p><p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友没了，公司的事也稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经没有一天能安安静静学习了。&lt;/p&gt;
-&lt;p&gt;看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友又没了，公司的事稍微少了些，应该可以定下心好
+        &lt;p&gt;最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。&lt;/p&gt;
+&lt;p&gt;看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友没了，公司的事也稍微少了些，应该可以定下心好
       
     
     </summary>
@@ -47,7 +47,7 @@
     <link href="http://zc95.github.io/2018/04/27/vue-todo/"/>
     <id>http://zc95.github.io/2018/04/27/vue-todo/</id>
     <published>2018-04-26T16:12:01.000Z</published>
-    <updated>2018-05-21T15:14:18.785Z</updated>
+    <updated>2018-05-21T15:38:25.650Z</updated>
     
     <content type="html"><![CDATA[<p>这几天看了点vue，感觉很棒，把之前的todo翻出来用vue写了一下，瞬间少了三分之二的代码😂</p><h2 id="demo-amp-源码"><a href="#demo-amp-源码" class="headerlink" title="demo &amp; 源码"></a>demo &amp; 源码</h2><p>demo：<a href="https://zc95.github.io/demo/vue-todo">https://zc95.github.io/demo/vue-todo</a></p><p>github：<a href="https://github.com/zc95/ToDo/blob/master/vue-todo.html" target="_blank" rel="external">https://github.com/zc95/ToDo/blob/master/vue-todo.html</a></p><p>扫描二维码，在移动设备上查看：<br><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fqqisjlidij307s07sq2p.jpg" alt=""></p><h2 id="demo对比（前面是vue写的）："><a href="#demo对比（前面是vue写的）：" class="headerlink" title="demo对比（前面是vue写的）："></a>demo对比（前面是vue写的）：</h2><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fqqicqtlihj31bw18ugr0.jpg" alt=""></p><h2 id="代码量对比"><a href="#代码量对比" class="headerlink" title="代码量对比"></a>代码量对比</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fqqifc1djgj31kw0xg4k3.jpg" alt=""></p><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><pre><code class="css">let todoStorage = {      save: function (todos) {        localStorage.setItem(&#39;vueTodoStorage&#39;, JSON.stringify(todos))      }    }    let app = new Vue({      el: &#39;#app&#39;,      data: {        todos: localStorage.vueTodoStorage ? JSON.parse(localStorage.vueTodoStorage) : [],        inputValue: &quot;&quot;      },      watch: {        todos: {          handler: function (items) {            todoStorage.save(items);          },          deep: true        }      },      methods: {        add() {          mdui.prompt(&#39;add a todo&#39;,            function (value) {              if(value.trim()==&quot;&quot;){                mdui.snackbar({ message: &quot;Can&#39;t be empty!&quot; });                return false;              }              app.todos.push({ text: value, completed: false });              mdui.snackbar({ message: &#39;A todo has been added.&#39; });            }          );        },        removeTodo(index) {          this.todos.splice(index, 1);          mdui.snackbar({ message: &#39;A todo has been removed.&#39; });        },        deleteAll() {          mdui.confirm(&#39;Are you sure you remove all todo?&#39;, function () {            app.todos = [];            mdui.snackbar({ message: &#39;All todo have been removed.&#39; });          });        },        resetAll() {          mdui.confirm(&#39;Are you sure you reset all todo?&#39;, function () {            app.todos.forEach(element =&gt; {              element.completed = false;            });            mdui.snackbar({ message: &#39;All todo have been reset.&#39; });          });        }      }    })</code></pre>]]></content>
     
@@ -101,11 +101,11 @@
   </entry>
   
   <entry>
-    <title>vue-learning</title>
+    <title>我要开始学Vue啦</title>
     <link href="http://zc95.github.io/2018/04/17/vue-learning/"/>
     <id>http://zc95.github.io/2018/04/17/vue-learning/</id>
     <published>2018-04-17T15:02:21.000Z</published>
-    <updated>2018-05-21T15:14:44.082Z</updated>
+    <updated>2018-05-21T15:38:11.513Z</updated>
     
     <content type="html"><![CDATA[<p>emm…开始学习Vue啦 <a href="https://github.com/zc95/vue-learning" target="_blank" rel="external">https://github.com/zc95/vue-learning</a></p><p><img src="https://cn.vuejs.org/images/logo.png" alt=""></p>]]></content>
     
