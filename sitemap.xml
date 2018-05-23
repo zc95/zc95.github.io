@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/about/index.html</loc>
+    
+    <lastmod>2018-05-23T11:55:59.571Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2018/05/21/vue-comeback/</loc>
     
     <lastmod>2018-05-23T11:01:58.378Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://zc95.github.io/2018/04/17/vue-learning/</loc>
     
     <lastmod>2018-05-21T15:38:11.513Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/about/index.html</loc>
-    
-    <lastmod>2018-05-15T15:35:26.702Z</lastmod>
     
   </url>
   
