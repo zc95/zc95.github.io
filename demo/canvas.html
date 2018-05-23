@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>手写板</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0 !important;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .eraser {
+            width: 35px;
+            height: 35px;
+            background-color: #e91e63;
+            border-radius: 8%;
+            box-shadow: 5px 5px 3px #888888;
+            position: absolute;
+            display: none;
+        }
+
+        #bottomBar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            height: 60px;
+            padding: 12px;
+            border-radius: 1px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background-color: rgba(243, 243, 243, 0.2);
+            -webkit-box-shadow: 0px -1px 10px 1px rgba(142, 136, 136, 0.5);
+            box-shadow: 0px -1px 10px 1px rgba(142, 136, 136, 0.5);
+        }
+
+        #main-drawer p.center {
+            text-align: center;
+        }
+
+        #beforeList,
+        #beforeList>li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #beforeList {
+            width: 98%;
+            margin: auto;
+        }
+
+        #beforeList>li {
+            text-align: center;
+        }
+
+        #beforeList>li>img {
+            display: inline-block;
+            height: 250px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .mdui-dialog>.mdui-dialog-title {
+            padding: 14px;
+        }
+
+        #colorWrapper {
+            padding: 0;
+        }
+
+        #colorWrapper ul {
+            overflow: auto;
+            list-style: none;
+            padding: 0;
+        }
+
+        #colorWrapper ul li{
+            width: 20%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+        }
+
+        #colorWrapper ul li span{
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body class="mdui-bottom-nav-fixed mdui-theme-primary-indigo mdui-theme-accent-pink">
+    <div class="eraser hidden"></div>
+    <canvas class="canvas" id="thecanvas"></canvas>
+
+    <div class="mdui-bottom-nav" style="overflow: inherit;">
+        <a href="javascript:;" mdui-menu="{target: '#example-1'}" class="mdui-ripple mdui-bottom-nav-active">
+            <i id='penEraser' class="mdui-icon material-icons">mode_edit</i>
+            <label id="typeAndSize">画笔, 中</label>
+        </a>
+        <ul class="mdui-menu" id="example-1">
+            <li class="mdui-menu-item" disabled>
+                <a href="javascript:;">画笔</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('画笔','细')" class="mdui-ripple">细</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('画笔','中')" class="mdui-ripple">中</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('画笔','粗')" class="mdui-ripple">粗</a>
+            </li>
+            <li class="mdui-divider"></li>
+            <li class="mdui-menu-item" disabled>
+                <a href="javascript:;">橡皮擦</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('橡皮','小')" class="mdui-ripple">小</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('橡皮','中')" class="mdui-ripple">中</a>
+            </li>
+            <li class="mdui-menu-item">
+                <a href="javascript:;" onclick="changeType('橡皮','大')" class="mdui-ripple">大</a>
+            </li>
+        </ul>
+
+        <a href="javascript:;" onclick="colorChange(this)" class="mdui-ripple" mdui-dialog="{target: '#dialog2'}" style="color:black;">
+            <i class="mdui-icon material-icons">&#xe3b7;</i>
+            <label>取色</label>
+        </a>
+
+        <a href="javascript:;" onclick="setAttr()" class="mdui-ripple">
+            <i class="mdui-icon material-icons">refresh</i>
+            <label>清空画布</label>
+        </a>
+        <a href="javascript:;" onclick="goBottom()" mdui-dialog="{target: '#dialog1'}" class="mdui-ripple">
+            <i class="mdui-icon material-icons">history</i>
+            <label>历史操作</label>
+        </a>
+    </div>
+
+    <div class="mdui-dialog" id="dialog1">
+        <div class="mdui-dialog-title">历史操作</div>
+        <p style="padding: 0; margin: 0 4px; font-size: 11px; color: #afaeae; text-indent: 8px;">点击添加到画布 或者 长按保存</p>
+        <div id="beforeWrapper" class="mdui-dialog-content" style="background-color: rgb(251, 251, 251); min-height: 200px;">
+            <ul id="beforeList" class="">
+            </ul>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" onclick="beforeListClear()" mdui-dialog-close>清空历史</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+        </div>
+    </div>
+
+    <div class="mdui-dialog" id="dialog2">
+        <div class="mdui-dialog-title">取色</div>
+        <div id="colorWrapper" class="mdui-dialog-content" style="background-color: rgb(251, 251, 251); min-height: 200px;">
+            <ul>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:black;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#2196F3;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#795548;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#00BCD4;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#4CAF50;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#E666E5;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#FF9800;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:pink;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:purple;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#ff2a1a;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#FFEB3B;"></span>
+                </li>
+                <li>
+                    <span class="textStyle-color-span" style="background-color:#fff;border:1px solid #e4e4e4;"></span>
+                </li>
+                <li style="clear:both;"></li>
+            </ul>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/mdui/0.4.0/js/mdui.min.js"></script>
+    <script type="text/javascript">
+        //画笔
+        var paint, canvas, paint, color = "black", width = 4;
+        $(function () {
+            goPAGE();
+            setAttr();
+            drawMonitor();
+        })
+
+        //检测是否是移动端
+        function goPAGE() {
+            if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                alert("请在移动端查看（或者开发者模式）");
+            }
+        }
+
+        //基本设置
+        function setAttr() {
+            canvas = document.getElementsByClassName("canvas")[0];
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            paint = canvas.getContext("2d");
+            //背景色
+            paint.fillStyle = "#fff";
+            paint.fillRect(0, 0, window.innerWidth, window.innerHeight);
+        }
+
+        //画笔和橡皮切换
+        function changeType(e, size) {
+            $("#typeAndSize").html(e + ", " + size);
+            if (e == "画笔") {
+                drawing = true;
+                switch (size) {
+                    case "细":
+                        width = 2;
+                        break;
+
+                    case "中":
+                        width = 4;
+                        break;
+
+                    case "粗":
+                        width = 6;
+                        break;
+                }
+                $("#penEraser").html("mode_edit");
+            } else {
+                drawing = false;
+                var sizeStr = "";
+                switch (size) {
+                    case "小":
+                        sizeStr = "10px";
+                        break;
+
+                    case "中":
+                        sizeStr = "35px";
+                        break;
+
+                    case "大":
+                        sizeStr = "70px";
+                        break;
+                }
+                $("#penEraser").html("&#xe3bc;");
+                $(".eraser").css("width", sizeStr);
+                $(".eraser").css("height", sizeStr);
+            }
+        }
+
+        //改变颜色
+        function colorChange(e) {
+            $("#colorWrapper ul li span").click(function(){
+                color = $(this).css("background-color");
+                $('.mdui-overlay').click();
+                $(e).css("color",color);
+            })
+            $(e).removeClass("bottom-nav-active");
+        }
+
+        //点击历史操作中的图片
+        function goback(image) {
+            setAttr();
+            img = new Image();
+            img.src = image;
+            img.onload = function () {
+                paint.drawImage(img, 0, 0);
+            }
+        }
+
+        //滚动到底部
+        function goBottom() {
+            var dialog = document.getElementById('dialog1');
+            dialog.addEventListener('opened.mdui.dialog', function () {
+                $("#beforeWrapper")[0].scrollTop = $("#beforeWrapper")[0].scrollHeight;
+                //$("#beforeWrapper").animate({ scrollTop: $("#beforeWrapper")[0].scrollHeight },1000);  //animate滑动到底部
+            });
+        }
+
+        //每次手离开 向历史操作里推送本次绘图
+        function stackImgs() {
+            var mycanvas = document.getElementById("thecanvas");
+            var image = mycanvas.toDataURL("image/png");
+            $("#beforeList").append("<li><img mdui-dialog-close class='mdui-shadow-7' onclick=\"goback('" + image + "')\" src='" + image + "'></li>");
+        }
+
+        //清空历史记录
+        function beforeListClear() {
+            $("#beforeList").empty();
+        }
+
+        var startX, startY, drawing = true;
+        function drawMonitor() {
+            //给画笔添加上个事件一个点击开始 ， 点击后移动 ，点击事件结束
+            $(canvas).on("touchstart touchmove touchend", function (event) {
+                var endX;
+                var endY;
+
+                switch (event.type) {
+                    case "touchstart":
+                        //记录触屏的第一个点
+                        startX = event.originalEvent.targetTouches[0].clientX;
+                        startY = event.originalEvent.targetTouches[0].clientY;
+
+                        //如果处于檫的状态
+                        if (!drawing) {
+                            //显示橡皮檫那div
+                            $(".eraser").show();
+                            $(".eraser").css({ "top": startY - $(".eraser").height() * 0.5 + "px", "left": startX - $(".eraser").width() * 0.5 + "px" });
+                            //从哪个点开始清理的宽度，高度
+                            paint.clearRect($(".eraser").offset().left, $(".eraser").offset().top, $(".eraser").width(), $(".eraser").height());
+                        }
+                        break;
+                    case "touchmove":
+                        event.preventDefault();
+                        endX = event.originalEvent.targetTouches[0].clientX;
+                        endY = event.originalEvent.targetTouches[0].clientY;
+                        if (drawing) {//绘图
+                            //画下线段
+                            paint.beginPath();
+                            paint.moveTo(startX, startY);
+                            paint.lineTo(endX, endY);
+                            paint.closePath();
+                            //动态的设置颜色
+                            paint.strokeStyle = color;
+                            paint.lineWidth = width;
+                            paint.stroke();
+                        } else {
+                            //橡皮擦
+                            $(".eraser").css({ "top": endY - $(".eraser").height() * 0.5 + "px", "left": endX - $(".eraser").width() * 0.5 + "px" });
+                            paint.clearRect($(".eraser").offset().left, $(".eraser").offset().top, $(".eraser").width(), $(".eraser").height());
+                        }
+
+                        startX = endX;
+                        startY = endY;
+                        break;
+
+                    //手离开触屏是橡皮檫隐藏
+                    case "touchend":
+                        stackImgs();
+                        $(".eraser").hide();
+                        break;
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
