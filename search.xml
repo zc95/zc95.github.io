@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[mac上传项目至github]]></title>
+      <title><![CDATA[上传项目至github]]></title>
       <url>/2018/05/22/git-remote-add/</url>
-      <content type="html"><![CDATA[<p>之前因为没有用github上传过整个项目，都是一些小呆萌，现在要上传整个项目再去在网页上一个个新建文件夹上传很麻烦，现在记录一下如何在mac上传项目至github。</p>
+      <content type="html"><![CDATA[<p>之前因为没有用github上传过整个项目，都是一些小呆萌，现在要上传整个项目再去在网页上一个个新建文件夹上传很麻烦，现在记录一下如何在上传项目至github。</p>
 <h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><h4 id="假设你已经在github上新建了一个空项目，你的电脑里的项目也都准备好了，同时你也已经安装了-git，然后-let’s-start"><a href="#假设你已经在github上新建了一个空项目，你的电脑里的项目也都准备好了，同时你也已经安装了-git，然后-let’s-start" class="headerlink" title="假设你已经在github上新建了一个空项目，你的电脑里的项目也都准备好了，同时你也已经安装了 git，然后 let’s start."></a>假设你已经在github上新建了一个空项目，你的电脑里的项目也都准备好了，同时你也已经安装了 git，然后 let’s start.</h4><blockquote>
 <p>cd my-project</p>
 <p>git init</p>
@@ -66,9 +66,9 @@
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> git </tag>
+            
+            <tag> github </tag>
             
             <tag> ssh </tag>
             
@@ -79,7 +79,7 @@
     <entry>
       <title><![CDATA[我又回来了]]></title>
       <url>/2018/05/21/vue-comeback/</url>
-      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如女朋友闹分手😂，买房子网签贷款过户各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。</p>
+      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如谈了三年多的女朋友要分手😂，房子的事各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。</p>
 <p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友没了，公司的事也稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>
 ]]></content>
@@ -3003,9 +3003,9 @@ $obj.html(tempStr);
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> github </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> Node.js </tag>
             
