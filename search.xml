@@ -3,6 +3,74 @@
   
     
     <entry>
+      <title><![CDATA[vue-sell]]></title>
+      <url>/2018/05/25/vue-sell/</url>
+      <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。慕课的老项目了，没有打广告哈哈。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frnx4o6etrj314f0rhwjl.jpg" alt=""></p>
+<h2 id="vue-cli脚手架-搭建基本代码框架"><a href="#vue-cli脚手架-搭建基本代码框架" class="headerlink" title="vue-cli脚手架 搭建基本代码框架"></a>vue-cli脚手架 搭建基本代码框架</h2><blockquote>
+<p>全局安装vue-cli</p>
+<p>$ npm install hexo-cli -g</p>
+<p>创建一个基于webpack模版的新项目，基本配置看下图</p>
+<p>$ vue init webpack vue-sell</p>
+<p>安装依赖，开启localhost本地服务器</p>
+<p>$ cd vue-sell</p>
+<p>$ npm run dev</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frnx9rccizj30iy0doq4i.jpg" alt=""></p>
+<h2 id="引入准备好的字体图标"><a href="#引入准备好的字体图标" class="headerlink" title="引入准备好的字体图标"></a>引入准备好的字体图标</h2><p>慕课准备好了图标，这一步就省略了，可以去 <a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icomoon.io</a> 自己打包图标</p>
+<h2 id="mock数据（模拟后台数据）"><a href="#mock数据（模拟后台数据）" class="headerlink" title="mock数据（模拟后台数据）"></a>mock数据（模拟后台数据）</h2><p>1.将准备好的 <code>data.json</code> 模拟数据文件放到根目录下</p>
+<p>2.打开<code>build/webpack.dev.conf.js</code> 文件编写数据接口</p>
+<pre><code class="javascript">const appData = require(&#39;../data.json&#39;)
+const seller = appData.seller
+const goods = appData.goods
+const ratings = appData.ratings
+
+before(app) {
+      app.get(&#39;/api/seller&#39;, function (req, res) {
+        res.json({
+          errno: 0,
+          data: seller
+        })
+      });
+      app.get(&#39;/api/goods&#39;, function (req, res) {
+        res.json({
+          errno: 0,
+          data: goods
+        })
+      });
+      app.get(&#39;/api/ratings&#39;, function (req, res) {
+        res.json({
+          errno: 0,
+          data: ratings
+        })
+      });
+    }
+</code></pre>
+<p>3.浏览器中打开 <a href="http://localhost:8080/api/seller" target="_blank" rel="external">http://localhost:8080/api/seller</a> 查看数据是否能正常访问，我们可以安装谷歌插件 <code>JSONView</code> 让数组格式化，然后依次查看goods ratings数据是否正常。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> webpack </tag>
+            
+            <tag> Vue </tag>
+            
+            <tag> mock模拟数据 </tag>
+            
+            <tag> vue-cli </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[上传项目至github]]></title>
       <url>/2018/05/22/git-remote-add/</url>
       <content type="html"><![CDATA[<p>之前因为没有用github上传过整个项目，都是一些小呆萌，现在要上传整个项目再去在网页上一个个新建文件夹上传很麻烦，现在记录一下如何在上传项目至github。</p>
@@ -3003,9 +3071,9 @@ $obj.html(tempStr);
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> github </tag>
             
             <tag> Node.js </tag>
             
