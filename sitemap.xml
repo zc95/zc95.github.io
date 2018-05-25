@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/2018/05/22/git-remote-add/</loc>
+    
+    <lastmod>2018-05-25T17:10:13.570Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2018/05/26/vue-sell-vue-router/</loc>
     
     <lastmod>2018-05-25T16:14:26.095Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://zc95.github.io/2018/05/21/vue-comeback/</loc>
     
     <lastmod>2018-05-23T11:01:58.378Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2018/05/22/git-remote-add/</loc>
-    
-    <lastmod>2018-05-23T11:00:26.563Z</lastmod>
     
   </url>
   

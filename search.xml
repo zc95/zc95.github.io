@@ -144,7 +144,7 @@ export default {
 </blockquote>
 <hr>
 <h4 id="这个地方请注意，它会在你选择的路径下上生成-ssh-key，如果你直接点击回车，会在默认路径下创建-ssh-。如果你有多个项目，有工作的，有自己玩的，那么请配置不同的路径，或者一个路径换个文件名，我就用：-Users-zhangcheng-ssh-id-vue-rsa-作为演示。输入路径之后点击回车。"><a href="#这个地方请注意，它会在你选择的路径下上生成-ssh-key，如果你直接点击回车，会在默认路径下创建-ssh-。如果你有多个项目，有工作的，有自己玩的，那么请配置不同的路径，或者一个路径换个文件名，我就用：-Users-zhangcheng-ssh-id-vue-rsa-作为演示。输入路径之后点击回车。" class="headerlink" title="这个地方请注意，它会在你选择的路径下上生成 ssh key，如果你直接点击回车，会在默认路径下创建 ssh 。如果你有多个项目，有工作的，有自己玩的，那么请配置不同的路径，或者一个路径换个文件名，我就用：/Users/zhangcheng/.ssh/id_vue_rsa 作为演示。输入路径之后点击回车。"></a>这个地方请注意，它会在你选择的路径下上生成 ssh key，如果你直接点击回车，会在默认路径下创建 ssh 。如果你有多个项目，有工作的，有自己玩的，那么请配置不同的路径，或者一个路径换个文件名，我就用：/Users/zhangcheng/.ssh/id_vue_rsa 作为演示。输入路径之后点击回车。</h4><blockquote>
-<p>/Users/zhangcheng/.ssh/id_vue_rsa</p>
+<p>/Users/zhangcheng/.ssh/id_test_rsa</p>
 </blockquote>
 <hr>
 <p>下面要你输入密码，直接回车则是不设置密码。直接回车就可以。然后会让你重复密码，也是直接回车。</p>
