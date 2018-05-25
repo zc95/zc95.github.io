@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-05-25T14:01:45.198Z</updated>
+  <updated>2018-05-25T16:14:26.095Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -17,13 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>vue-sell</title>
+    <title>饿了么app之vue-router</title>
+    <link href="http://zc95.github.io/2018/05/26/vue-sell-vue-router/"/>
+    <id>http://zc95.github.io/2018/05/26/vue-sell-vue-router/</id>
+    <published>2018-05-25T16:12:51.000Z</published>
+    <updated>2018-05-25T16:14:26.095Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="vue-router" scheme="http://zc95.github.io/tags/vue-router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一个vue项目[饿了么app]</title>
     <link href="http://zc95.github.io/2018/05/25/vue-sell/"/>
     <id>http://zc95.github.io/2018/05/25/vue-sell/</id>
     <published>2018-05-25T14:00:24.000Z</published>
-    <updated>2018-05-25T14:01:45.198Z</updated>
+    <updated>2018-05-25T16:09:50.199Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。慕课的老项目了，没有打广告哈哈。</p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frnx4o6etrj314f0rhwjl.jpg" alt=""></p><h2 id="vue-cli脚手架-搭建基本代码框架"><a href="#vue-cli脚手架-搭建基本代码框架" class="headerlink" title="vue-cli脚手架 搭建基本代码框架"></a>vue-cli脚手架 搭建基本代码框架</h2><blockquote><p>全局安装vue-cli</p><p>$ npm install hexo-cli -g</p><p>创建一个基于webpack模版的新项目，基本配置看下图</p><p>$ vue init webpack vue-sell</p><p>安装依赖，开启localhost本地服务器</p><p>$ cd vue-sell</p><p>$ npm run dev</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frnx9rccizj30iy0doq4i.jpg" alt=""></p><h2 id="引入准备好的字体图标"><a href="#引入准备好的字体图标" class="headerlink" title="引入准备好的字体图标"></a>引入准备好的字体图标</h2><p>慕课准备好了图标，这一步就省略了，可以去 <a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icomoon.io</a> 自己打包图标</p><h2 id="mock数据（模拟后台数据）"><a href="#mock数据（模拟后台数据）" class="headerlink" title="mock数据（模拟后台数据）"></a>mock数据（模拟后台数据）</h2><p>1.将准备好的 <code>data.json</code> 模拟数据文件放到根目录下</p><p>2.打开<code>build/webpack.dev.conf.js</code> 文件编写数据接口</p><pre><code class="javascript">const appData = require(&#39;../data.json&#39;)const seller = appData.sellerconst goods = appData.goodsconst ratings = appData.ratingsbefore(app) {      app.get(&#39;/api/seller&#39;, function (req, res) {        res.json({          errno: 0,          data: seller        })      });      app.get(&#39;/api/goods&#39;, function (req, res) {        res.json({          errno: 0,          data: goods        })      });      app.get(&#39;/api/ratings&#39;, function (req, res) {        res.json({          errno: 0,          data: ratings        })      });    }</code></pre><p>3.浏览器中打开 <a href="http://localhost:8080/api/seller" target="_blank" rel="external">http://localhost:8080/api/seller</a> 查看数据是否能正常访问，我们可以安装谷歌插件 <code>JSONView</code> 让数组格式化，然后依次查看goods ratings数据是否正常。</p>]]></content>
+    <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。慕课的老项目了，没有打广告哈哈。</p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frnx4o6etrj314f0rhwjl.jpg" alt=""></p><h2 id="vue-cli脚手架-搭建基本代码框架"><a href="#vue-cli脚手架-搭建基本代码框架" class="headerlink" title="vue-cli脚手架 搭建基本代码框架"></a>vue-cli脚手架 搭建基本代码框架</h2><blockquote><p>全局安装vue-cli</p><p>$ npm install hexo-cli -g</p><p>创建一个基于webpack模版的新项目，基本配置看下图</p><p>$ vue init webpack vue-sell</p><p>安装依赖，开启localhost本地服务器</p><p>$ cd vue-sell</p><p>$ npm run dev</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frnx9rccizj30iy0doq4i.jpg" alt=""></p><h2 id="引入准备好的字体图标"><a href="#引入准备好的字体图标" class="headerlink" title="引入准备好的字体图标"></a>引入准备好的字体图标</h2><p>慕课准备好了图标，这一步就省略了，可以去 <a href="https://icomoon.io/app/#/select" target="_blank" rel="external">icomoon.io</a> 自己打包图标</p><h2 id="mock数据（模拟后台数据）"><a href="#mock数据（模拟后台数据）" class="headerlink" title="mock数据（模拟后台数据）"></a>mock数据（模拟后台数据）</h2><p>1.将准备好的 <code>data.json</code> 模拟数据文件放到根目录下</p><p>2.打开<code>build/webpack.dev.conf.js</code> 文件编写数据接口</p><pre><code class="javascript">const appData = require(&#39;../data.json&#39;)const seller = appData.sellerconst goods = appData.goodsconst ratings = appData.ratingsbefore(app) {      app.get(&#39;/api/seller&#39;, function (req, res) {        res.json({          errno: 0,          data: seller        })      });      app.get(&#39;/api/goods&#39;, function (req, res) {        res.json({          errno: 0,          data: goods        })      });      app.get(&#39;/api/ratings&#39;, function (req, res) {        res.json({          errno: 0,          data: ratings        })      });    }</code></pre><p>3.浏览器中打开 <a href="http://localhost:8080/api/seller" target="_blank" rel="external">http://localhost:8080/api/seller</a> 查看数据是否能正常访问，我们可以安装谷歌插件 <code>JSONView</code> 让数据格式化，然后依次查看goods ratings数据是否正常。</p><h2 id="重置css样式"><a href="#重置css样式" class="headerlink" title="重置css样式"></a>重置css样式</h2><p>引入reset.css即可</p><h2 id="CSS预处理器-stylus-的安装"><a href="#CSS预处理器-stylus-的安装" class="headerlink" title="CSS预处理器 stylus 的安装"></a>CSS预处理器 stylus 的安装</h2><p>1.在 <code>package.json</code> 文件中写入依赖</p><blockquote><p>“stylus”: “^0.54.5”,</p><p>“stylus-loader”: “^3.0.1”,</p></blockquote><p>然后安装依赖，mac用户需要加sudo，win不需要</p><blockquote><p>sudo npm install</p><p>npm run dev</p></blockquote><h2 id="头部组件的命名问题"><a href="#头部组件的命名问题" class="headerlink" title="头部组件的命名问题"></a>头部组件的命名问题</h2><p>因为 header 是html5的一个原生的标签，组件名字和它有冲突。</p><pre><code class="javascript">[Vue warn]: Do not use built-in or reserved HTML elements as component id: header</code></pre><p>修改后：</p><pre><code class="html">&lt;v-header&gt;&lt;/v-header&gt;&lt;script&gt;import header from &#39;./components/header/header.vue&#39;export default {  components:{    &#39;v-header&#39;:header  }}&lt;/script&gt;</code></pre><h1 id="ESLint规范"><a href="#ESLint规范" class="headerlink" title="ESLint规范"></a>ESLint规范</h1><p>ESLint是一种代码检测工具，空格、分号各种报错。。。当然我们可以在配置里面注释它，但是有良好的代码习惯还是很重要的，一个个解决吧～</p><blockquote><p>Missing space before value for key ‘v-header’ </p><p>‘v-header’:header</p><p>缺少空格，改：</p><p>‘v-header’: header</p><p>Extra semicolon</p><p>有无用的分号，删掉</p></blockquote><p>好麻烦，还是直接在 <code>build/webpack.base.conf.js</code> 禁止检测吧</p><blockquote><p>//…(config.dev.useEslint ? [createLintingRule()] : []),</p></blockquote><p>重启服务器，世界都清净了。。。</p>]]></content>
     
     <summary type="html">
     
@@ -568,38 +586,6 @@ npm start
       <category term="磁盘阵列" scheme="http://zc95.github.io/tags/%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/"/>
     
       <category term="交换机" scheme="http://zc95.github.io/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript闭包</title>
-    <link href="http://zc95.github.io/2017/12/21/javascriptClosure/"/>
-    <id>http://zc95.github.io/2017/12/21/javascriptClosure/</id>
-    <published>2017-12-21T12:48:17.000Z</published>
-    <updated>2017-12-26T13:11:21.185Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于JavaScript的程序员来说，闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures" target="_blank" rel="external">MDN Closures</a></p><h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>变量的作用域无非就是两种：全局变量和局部变量。当在函数中声明一个变量的时候，如果用关键字<code>var</code>来声明此变量，那么它就是局部变量，如果没有<code>var</code>那么就会成为全局变量。一般不建议用这种方式定义全局变量。而是用<code>var</code>将变量声明在函数的外面。</p><pre><code class="javascript">var name = &#39;小张&#39;;  // 全局变量function func() {    var name = &#39;小明&#39;;  // 局部变量    age = 12;  // 全局变量，建议少用这种全局变量的定义方式}</code></pre><a id="more"></a><p>在JavaScript中，函数可以用来创造函数作用域。函数内部可以看到外面的变量，而外面看不到函数里的变量。这是因为当在函数中搜索一个变量的时候，如果该函数内没有声明这个变量，那么此次搜索的过程会随着代码执行环境创建的作用域链往外层逐层搜索，直到搜索到全局变量为止。</p><pre><code class="javascript">var a = 1;var func1 = function(){    var b = 2;    var func2 = function(){        var c = 3;        console.log( b );  // 2        console.log( a );  // 1    }     func2();    console.log( c );  // 报错：c is not defined};func1();</code></pre><p>那么能不能从函数外部来访问局部变量呢？答案是可以。</p><pre><code class="javascript">var func = function() {    var number = 6;    return function() {        return number;    } };console.log( func()() );  // 6</code></pre><h2 id="变量的生存周期"><a href="#变量的生存周期" class="headerlink" title="变量的生存周期"></a>变量的生存周期</h2><p>全局变量的生存周期是永久的，除非我们主动的销毁这个全局变量。而对于局部变量来说，当退出函数时，这些局部变量就失去了生存的环境，所以会随着函数调用的结束而被销毁。<br>那么是否可以让局部变量在函数调用结束的时候不被销毁呢？来看下面这个例子：</p><pre><code class="javascript">var func = function() {    var a = 1;    return function() {        a++;        console.log( a );    }  };var f = func();f();  // 2f();  // 3f();  // 4</code></pre><p>从上面这个输出结果，我们可以看到局部变量a并没有随着f()的调用而被销毁。这是因为全局变量f保存着对func里面匿名函数的引用。而这个匿名函数是可以访问到局部变量a的，所以自然a也被保存下来了。所以这种情况下局部变量的生存周期就得以延续。上面这个匿名函数其实就是一个闭包。再来看一个闭包的经典应用。</p><pre><code class="javascript">// 假设有5个divvar nodes = document.getElementsByTagName( &#39;div&#39; );for ( var i = 0, l = nodes.length; i &lt; l; i++ ) {    nodes[i].onclick = function() {        console.log( i );    }}</code></pre><p>当真正执行这段代码的时候，发现无论点击那个div，最后打印的结果都是4。这是因为onclick事件是异步触发的，当事件触发的时候，for循环早已经结束，此时变量i的值已经是4。解决方案可以是用闭包把每次的i都保存起来：</p><pre><code class="javascript">for ( var i = 0, l = nodes.length; i &lt; l; i++ ) {    (function( i ) {        nodes[i].onclick = function() {            console.log( i );        }    })( i );}</code></pre><p>同理，我们编写一段代码用来判断对象类型：</p><pre><code class="javascript">var Type = {};for ( var i = 0, type; type = [ &#39;String&#39;, &#39;Array&#39;, &#39;Number&#39; ][ i++ ]; ) {    (function( type ) {        Type[ &#39;is&#39; + type ] = function( obj ) {            return Object.prototype.toString.call( obj ) === &#39;[object &#39; + type + &#39;]&#39;;        }    })( type );}Type.isArray( [] );  // trueType.isString( &#39;str&#39; );  // true</code></pre><h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><p>官方的解释是：一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因为这些变量也是该表达式的一部分。这个概念不好理解，我们可以简单得理解成闭包就是能够访问函数内部变量的函数。</p><h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><ul><li><p>可以在函数外部访问在函数内部定义的局部变量</p></li><li><p>延续局部变量的生存周期</p></li><li><p>封装变量<br>闭包可以帮助把一些不需要暴露在全局的变量封装成“私有变量”。假设有一个计算乘积的函数：</p><pre><code class="javascript">var mult = function() {    var  a = 1;    for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {        a = a * arguments[i];    }    return a;};mult(2, 3, 4);  // 24</code></pre><p>mult函数接受一些<code>Number</code>类型的参数，并且返回他们的乘积。现再我们觉得对于那些相同参数来说，每次再进行计算是一种浪费，所以我们决定加入缓存机制来提高函数性能：</p><pre><code class="javascript">var cache = {};var mult = function() {    var args = Array.prototype.join.call( arguments, &#39;&#39; );    if ( cache[ args ] ) {        return cache[ args ];    }    var  a = 1;    for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {        a = a * arguments[i];    }    return cache[ args ] = a;};</code></pre><p>我们看到cache这个变量仅仅在mult函数中被使用，所以为了避免cache污染全局变量，我们将它放到mult函数里面</p><pre><code class="javascript">var mult = (function() {    var cache = {};    return function() {        var args = Array.prototype.join.call( arguments, &#39;&#39; );        if ( cache[ args ] ) {            return cache[ args ];        }        var  a = 1;        for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {           a = a * arguments[i];        }        return cache[ args ] = a;    }})();</code></pre><p>提炼函数是代码重构中的一种常见技巧。如果在一个大函数中有一些代码块能够独立出来，我们常常把这些代码块封装在独立的小函数里面。独立出来的小函数有利于代码的复用，如果这些小函数有一个良好的命名，那么它们本身就起到了一个很好的注释作用。</p><pre><code class="javascript">var mult = (function() {    var cache = {};    var calculate = function() {        var  a = 1;        for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {           a = a * arguments[i];        }        return a;    };    return function() {        var args = Array.prototype.join.call( arguments, &#39;&#39; );        if ( cache[ args ] ) {            return cache[ args ];        }        return cache[ args ] = calculate.apply( null, arguments );    }})();</code></pre></li></ul><h2 id="闭包与内存管理"><a href="#闭包与内存管理" class="headerlink" title="闭包与内存管理"></a>闭包与内存管理</h2><p>局部变量本来应该在函数退出的时候就被结束引用，但如果局部变量被封装在闭包形成的环境中，那么这个局部变量就能一直生存下去。从这个意义上来看，闭包确实会使一些数据无法被及时销毁。如果将来需要回收这些变量，我们可以手动把这些变量设为<code>null</code>。<br>跟闭包和内存泄露有关系的地方是，使用闭包的同时比较容易形成循环引用，如果闭包的作用域中保存着一些DOM节点，这个时候就有可能造成内存泄露。在IE9之前的浏览器中，由于BOM和DOM中的对象是使用C++对象以COM对象的方式实现的，而COM对象的垃圾收集机制采用的是引用计数策略。在基于引用计数的垃圾收集机制中，如果两个对象之间形成了循环引用，那么这两个对象都无法被回收。但我们只要把循环引用中的对象设为<code>null</code>即可解决这个问题。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对于JavaScript的程序员来说，闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN Closures&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;变量的作用域&quot;&gt;&lt;a href=&quot;#变量的作用域&quot; class=&quot;headerlink&quot; title=&quot;变量的作用域&quot;&gt;&lt;/a&gt;变量的作用域&lt;/h2&gt;&lt;p&gt;变量的作用域无非就是两种：全局变量和局部变量。当在函数中声明一个变量的时候，如果用关键字&lt;code&gt;var&lt;/code&gt;来声明此变量，那么它就是局部变量，如果没有&lt;code&gt;var&lt;/code&gt;那么就会成为全局变量。一般不建议用这种方式定义全局变量。而是用&lt;code&gt;var&lt;/code&gt;将变量声明在函数的外面。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var name = &amp;#39;小张&amp;#39;;  // 全局变量
-function func() {
-    var name = &amp;#39;小明&amp;#39;;  // 局部变量
-    age = 12;  // 全局变量，建议少用这种全局变量的定义方式
-}
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
-    
-      <category term="正则表达式" scheme="http://zc95.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   

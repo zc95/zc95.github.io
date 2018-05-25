@@ -3,7 +3,27 @@
   
     
     <entry>
-      <title><![CDATA[vue-sell]]></title>
+      <title><![CDATA[饿了么app之vue-router]]></title>
+      <url>/2018/05/26/vue-sell-vue-router/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> vue-router </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[我的第一个vue项目[饿了么app]]]></title>
       <url>/2018/05/25/vue-sell/</url>
       <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。慕课的老项目了，没有打广告哈哈。</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frnx4o6etrj314f0rhwjl.jpg" alt=""></p>
@@ -46,7 +66,47 @@ before(app) {
       });
     }
 </code></pre>
-<p>3.浏览器中打开 <a href="http://localhost:8080/api/seller" target="_blank" rel="external">http://localhost:8080/api/seller</a> 查看数据是否能正常访问，我们可以安装谷歌插件 <code>JSONView</code> 让数组格式化，然后依次查看goods ratings数据是否正常。</p>
+<p>3.浏览器中打开 <a href="http://localhost:8080/api/seller" target="_blank" rel="external">http://localhost:8080/api/seller</a> 查看数据是否能正常访问，我们可以安装谷歌插件 <code>JSONView</code> 让数据格式化，然后依次查看goods ratings数据是否正常。</p>
+<h2 id="重置css样式"><a href="#重置css样式" class="headerlink" title="重置css样式"></a>重置css样式</h2><p>引入reset.css即可</p>
+<h2 id="CSS预处理器-stylus-的安装"><a href="#CSS预处理器-stylus-的安装" class="headerlink" title="CSS预处理器 stylus 的安装"></a>CSS预处理器 stylus 的安装</h2><p>1.在 <code>package.json</code> 文件中写入依赖</p>
+<blockquote>
+<p>“stylus”: “^0.54.5”,</p>
+<p>“stylus-loader”: “^3.0.1”,</p>
+</blockquote>
+<p>然后安装依赖，mac用户需要加sudo，win不需要</p>
+<blockquote>
+<p>sudo npm install</p>
+<p>npm run dev</p>
+</blockquote>
+<h2 id="头部组件的命名问题"><a href="#头部组件的命名问题" class="headerlink" title="头部组件的命名问题"></a>头部组件的命名问题</h2><p>因为 header 是html5的一个原生的标签，组件名字和它有冲突。</p>
+<pre><code class="javascript">[Vue warn]: Do not use built-in or reserved HTML elements as component id: header
+</code></pre>
+<p>修改后：</p>
+<pre><code class="html">&lt;v-header&gt;&lt;/v-header&gt;
+
+&lt;script&gt;
+import header from &#39;./components/header/header.vue&#39;
+export default {
+  components:{
+    &#39;v-header&#39;:header
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h1 id="ESLint规范"><a href="#ESLint规范" class="headerlink" title="ESLint规范"></a>ESLint规范</h1><p>ESLint是一种代码检测工具，空格、分号各种报错。。。当然我们可以在配置里面注释它，但是有良好的代码习惯还是很重要的，一个个解决吧～</p>
+<blockquote>
+<p>Missing space before value for key ‘v-header’ </p>
+<p>‘v-header’:header</p>
+<p>缺少空格，改：</p>
+<p>‘v-header’: header</p>
+<p>Extra semicolon</p>
+<p>有无用的分号，删掉</p>
+</blockquote>
+<p>好麻烦，还是直接在 <code>build/webpack.base.conf.js</code> 禁止检测吧</p>
+<blockquote>
+<p>//…(config.dev.useEslint ? [createLintingRule()] : []),</p>
+</blockquote>
+<p>重启服务器，世界都清净了。。。</p>
 ]]></content>
       
         <categories>
@@ -3071,9 +3131,9 @@ $obj.html(tempStr);
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> github </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> Node.js </tag>
             
