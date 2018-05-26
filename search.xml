@@ -3,9 +3,17 @@
   
     
     <entry>
-      <title><![CDATA[饿了么app之vue-router]]></title>
-      <url>/2018/05/26/vue-sell-vue-router/</url>
-      <content type="html"></content>
+      <title><![CDATA[本地开启的localhost服务器如何在移动设备访问]]></title>
+      <url>/2018/05/26/mobilewatchlocalhost/</url>
+      <content type="html"><![CDATA[<p>当vue-cli为我们开启了一个本地服务器如：<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，我们该怎么在手机或平板上查看呢。</p>
+<p>1.找到 <code>build/index.js</code> ，将红色方框内原来的localhost改成0.0.0.0，表示底层的TCP bind IP结构体被置为全0，就允许监听本机全部网卡。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1frokw2zi7aj30oi08mmyq.jpg" alt=""></p>
+<p>2.新建命令 ifconfig（Windows用户是ipconfig），找到本机ip地址</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frol1xh200j30iy0dawgk.jpg" alt=""></p>
+<p>3.打开浏览器把localhost换成刚刚的ip <a href="http://192.168.2.238:8080" target="_blank" rel="external">http://192.168.2.238:8080</a>，发现仍然可以访问</p>
+<p>4.打开草料二维码粘贴生成二维码，手机微信扫一扫就好啦</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1frol5bjp2zj31kw0t8tdi.jpg" alt=""></p>
+]]></content>
       
         <categories>
             
@@ -16,7 +24,9 @@
         
         <tags>
             
-            <tag> vue-router </tag>
+            <tag> localhost </tag>
+            
+            <tag> ifconfig </tag>
             
         </tags>
         

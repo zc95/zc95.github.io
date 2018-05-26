@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-05-25T16:14:26.095Z</updated>
+  <updated>2018-05-26T03:40:37.366Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -17,20 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>饿了么app之vue-router</title>
-    <link href="http://zc95.github.io/2018/05/26/vue-sell-vue-router/"/>
-    <id>http://zc95.github.io/2018/05/26/vue-sell-vue-router/</id>
-    <published>2018-05-25T16:12:51.000Z</published>
-    <updated>2018-05-25T16:14:26.095Z</updated>
+    <title>本地开启的localhost服务器如何在移动设备访问</title>
+    <link href="http://zc95.github.io/2018/05/26/mobilewatchlocalhost/"/>
+    <id>http://zc95.github.io/2018/05/26/mobilewatchlocalhost/</id>
+    <published>2018-05-26T03:36:42.000Z</published>
+    <updated>2018-05-26T03:40:37.366Z</updated>
+    
+    <content type="html"><![CDATA[<p>当vue-cli为我们开启了一个本地服务器如：<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，我们该怎么在手机或平板上查看呢。</p><p>1.找到 <code>build/index.js</code> ，将红色方框内原来的localhost改成0.0.0.0，表示底层的TCP bind IP结构体被置为全0，就允许监听本机全部网卡。</p><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1frokw2zi7aj30oi08mmyq.jpg" alt=""></p><p>2.新建命令 ifconfig（Windows用户是ipconfig），找到本机ip地址</p><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frol1xh200j30iy0dawgk.jpg" alt=""></p><p>3.打开浏览器把localhost换成刚刚的ip <a href="http://192.168.2.238:8080" target="_blank" rel="external">http://192.168.2.238:8080</a>，发现仍然可以访问</p><p>4.打开草料二维码粘贴生成二维码，手机微信扫一扫就好啦</p><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1frol5bjp2zj31kw0t8tdi.jpg" alt=""></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;当vue-cli为我们开启了一个本地服务器如：&lt;a href=&quot;http://localhost:8080&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:8080&lt;/a&gt;，我们该怎么在手机或平板上查看呢。&lt;/p&gt;
+&lt;p&gt;1
+      
     
     </summary>
     
       <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
     
     
-      <category term="vue-router" scheme="http://zc95.github.io/tags/vue-router/"/>
+      <category term="localhost" scheme="http://zc95.github.io/tags/localhost/"/>
+    
+      <category term="ifconfig" scheme="http://zc95.github.io/tags/ifconfig/"/>
     
   </entry>
   

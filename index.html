@@ -470,17 +470,20 @@
     
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/26/vue-sell-vue-router/">饿了么app之vue-router</a></p>
+        <p class="article-headline-p"><a href="/2018/05/26/mobilewatchlocalhost/">本地开启的localhost服务器如何在移动设备访问</a></p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            当vue-cli为我们开启了一个本地服务器如：http://localhost:8080，我们该怎么在手机或平板上查看呢。
+1.找到 build/index.js ，将红色方框内原来的localhost改成0.0.0.0，表示底层的TCP bind IP结构体被置为全0，就允许监听本机全部网卡。
+
+2.新建命令 if...
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/2018/05/26/vue-sell-vue-router/" target="_self">阅读全文</a>
+            <a href="/2018/05/26/mobilewatchlocalhost/" target="_self">阅读全文</a>
         </span>
     </div>
     <!-- Post_entry Info-->
