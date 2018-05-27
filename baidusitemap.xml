@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
+    <lastmod>2018-05-27T06:52:55.637Z</lastmod>
+    <data>
+        <display>
+        <title>package-app</title>
+        <pubTime>2018-05-27T06:52:16.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
-    <lastmod>2018-05-27T03:08:35.186Z</lastmod>
+    <lastmod>2018-05-27T03:20:52.540Z</lastmod>
     <data>
         <display>
         <title>我的第一个vue项目[饿了么app]</title>
@@ -77,26 +97,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://zc95.github.io/2018/05/21/vue-comeback/</loc>
-    <lastmod>2018-05-23T11:01:58.378Z</lastmod>
-    <data>
-        <display>
-        <title>我又回来了</title>
-        <pubTime>2018-05-21T15:12:01.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂谈篇" url="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://zc95.github.io/2018/04/27/vue-todo/</loc>

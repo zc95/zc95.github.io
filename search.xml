@@ -3,6 +3,38 @@
   
     
     <entry>
+      <title><![CDATA[package-app]]></title>
+      <url>/2018/05/27/package-app/</url>
+      <content type="html"><![CDATA[<p>如何将你的html代码打包成一个app？那就是HBuilder，无论是只有一个页面的小demo，还是一个完整的vue项目，都可以变成原生app。</p>
+<h2 id="准备好项目"><a href="#准备好项目" class="headerlink" title="准备好项目"></a>准备好项目</h2><p>新建一个文件夹，里面放入你的文件，我这里以一个页面为例，里面就写了一句页面跳转到博客的js语句。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1frpw12tluuj30q4098q3s.jpg" alt=""></p>
+<p>如果是Vue项目，npm run build之后找到dist文件夹打开就行。</p>
+<h2 id="下载HBuilder"><a href="#下载HBuilder" class="headerlink" title="下载HBuilder"></a>下载HBuilder</h2><p>进入 <a href="http://www.dcloud.io/" target="_blank" rel="external">官网</a> 下载就行</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1frpvthekeij31kw0yntjp.jpg" alt=""></p>
+<h2 id="打开目录"><a href="#打开目录" class="headerlink" title="打开目录"></a>打开目录</h2><p>点击 <code>文件/打开目录…</code> 选择你刚刚的项目。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1frpw550z5dj30t60go0u9.jpg" alt=""></p>
+<h2 id="转换成移动app"><a href="#转换成移动app" class="headerlink" title="转换成移动app"></a>转换成移动app</h2><p>右击刚刚打开的项目选择 <code>转换成移动app</code> ，此时，项目前的W图标变成了A，然后文件夹里就多了一个manifest文件，我们可以在这里配置app的名字、图标、载入动画、入口页面、是否全屏或者一些更高的权限（摄像头，阿里支付等）</p>
+<p>注意上传图标的时候，尽量选择1024 <em> 1024的图标，如果是ios则必须1024 </em> 1024，然后点击<strong>自动生成所有图标并替换</strong></p>
+<h2 id="开始打包"><a href="#开始打包" class="headerlink" title="开始打包"></a>开始打包</h2><p>选择 <code>发行/云打包-打原生安装包</code> ，然后按提示操作就行。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1frpwdrizdwj31dk0deaec.jpg" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> app </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[本地开启的localhost服务器如何在移动设备访问]]></title>
       <url>/2018/05/26/mobilewatchlocalhost/</url>
       <content type="html"><![CDATA[<p>当vue-cli为我们开启了一个本地服务器如：<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，我们该怎么在手机或平板上查看呢。</p>
@@ -35,7 +67,7 @@
     <entry>
       <title><![CDATA[我的第一个vue项目[饿了么app]]]></title>
       <url>/2018/05/25/vue-sell/</url>
-      <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。慕课的老项目了，没有打广告哈哈。</p>
+      <content type="html"><![CDATA[<p>这是一个饿了么外卖app开发笔记，记录我的第一个vue项目的开发过程。</p>
 <p>暂时还没做完就不上图了。。。</p>
 <h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p>github地址：<a href="https://github.com/zc95/vue-sell" target="_blank" rel="external">https://github.com/zc95/vue-sell</a></p>
 <p>手机预览：<a href="https://zc95.github.io/demo/vue-sell/">https://zc95.github.io/demo/vue-sell/</a></p>
@@ -334,29 +366,6 @@ created() {
             <tag> github </tag>
             
             <tag> ssh </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[我又回来了]]></title>
-      <url>/2018/05/21/vue-comeback/</url>
-      <content type="html"><![CDATA[<p>最近一个月发生了好多事。比如谈了三年多的女朋友要分手😂，房子的事各种烦，加上公司的事情超多天天加班，已经一个月没能安安静静学习了。</p>
-<p>看了看之前的学习进度，很忧伤～基础部分可说是断断续续的学完的。现在房子忙完了，女朋友没了，公司的事也稍微少了些，应该可以定下心好好学vue啦，下面的目标就是Vue-cli和webpack。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1frjds1uqlpj30rd0imgo4.jpg" alt=""></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 杂谈篇 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Vue </tag>
             
         </tags>
         

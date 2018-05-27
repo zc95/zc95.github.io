@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.0/css/mdui.min.css">
   <style>
     .mdui-appbar-with-toolbar {
-      padding-top: 104px;
+      padding-top: 56px;
       padding-bottom: 70px;
     }
 
@@ -51,25 +51,13 @@
           <i class="mdui-icon material-icons">add</i>
         </span>
       </div>
-      <div class="mdui-container doc-container doc-no-cover" style="width:100%; padding:0; background-color: #fff">
-        <div class="mdui-tab" mdui-tab>
-          <a href="#example1-tab1" class="mdui-ripple" @click="filter='All'">All
-            <span class="badge">{{allNum}}</span>
-          </a>
-          <a href="#example1-tab2" class="mdui-ripple" @click="filter='Unfinished'">Unfinished
-            <span class="badge">{{unfinNum}}</span>
-          </a>
-          <a href="#example1-tab3" class="mdui-ripple" @click="filter='Finished'">Finished
-            <span class="badge">{{finNum}}</span>
-          </a>
-        </div>
     </header>
 
-    <p style="text-align: center; padding: 12px; color:#b3aaaa;" v-if="todos.length==0">You haven't added anything yet,
+    <p style="text-align: center; padding: 18px; color:#b3aaaa;" v-if="todos.length==0">You haven't added anything yet,
       <br>try to add one.</p>
 
     <div class="mdui-list">
-      <label v-for="(todo,index) in filterTodos" class="mdui-list-item mdui-ripple">
+      <label v-for="(todo,index) in todos" class="mdui-list-item mdui-ripple">
         <div class="mdui-checkbox">
           <input type="checkbox" v-model="todo.completed" />
           <i class="mdui-checkbox-icon"></i>
@@ -107,7 +95,6 @@
       data: {
         todos: localStorage.vueTodoStorage ? JSON.parse(localStorage.vueTodoStorage) : [],
         inputValue: "",
-        filter: "All"
       },
       watch: {
         todos: {
@@ -125,7 +112,7 @@
                 mdui.snackbar({ message: "Can't be empty!" });
                 return false;
               }
-              app.todos.push({ text: value, completed: false });
+              app.todos.unshift({ text: value, completed: false });
               mdui.snackbar({ message: 'A todo has been added.' });
             }
           );
@@ -147,26 +134,6 @@
             });
             mdui.snackbar({ message: 'All todo have been reset.' });
           });
-        }
-      },
-      computed: {
-        filterTodos() {
-          if (this.filter == "Unfinished") {
-            return this.todos.filter((n) => !n.completed)
-          } else if (this.filter == "Finished") {
-            return this.todos.filter((n) => n.completed)
-          } else {
-            return this.todos;
-          }
-        },
-        allNum() {
-          return this.todos.length;
-        },
-        unfinNum() {
-          return this.todos.filter((n) => !n.completed).length;
-        },
-        finNum() {
-          return this.todos.filter((n) => n.completed).length;
         }
       }
     })
