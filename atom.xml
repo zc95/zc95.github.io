@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-05-27T06:52:55.637Z</updated>
+  <updated>2018-05-27T06:57:11.539Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>package-app</title>
+    <title>如何把你的demo打包成一个app</title>
     <link href="http://zc95.github.io/2018/05/27/package-app/"/>
     <id>http://zc95.github.io/2018/05/27/package-app/</id>
     <published>2018-05-27T06:52:16.000Z</published>
-    <updated>2018-05-27T06:52:55.637Z</updated>
+    <updated>2018-05-27T06:57:11.539Z</updated>
     
     <content type="html"><![CDATA[<p>如何将你的html代码打包成一个app？那就是HBuilder，无论是只有一个页面的小demo，还是一个完整的vue项目，都可以变成原生app。</p><h2 id="准备好项目"><a href="#准备好项目" class="headerlink" title="准备好项目"></a>准备好项目</h2><p>新建一个文件夹，里面放入你的文件，我这里以一个页面为例，里面就写了一句页面跳转到博客的js语句。</p><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1frpw12tluuj30q4098q3s.jpg" alt=""></p><p>如果是Vue项目，npm run build之后找到dist文件夹打开就行。</p><h2 id="下载HBuilder"><a href="#下载HBuilder" class="headerlink" title="下载HBuilder"></a>下载HBuilder</h2><p>进入 <a href="http://www.dcloud.io/" target="_blank" rel="external">官网</a> 下载就行</p><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1frpvthekeij31kw0yntjp.jpg" alt=""></p><h2 id="打开目录"><a href="#打开目录" class="headerlink" title="打开目录"></a>打开目录</h2><p>点击 <code>文件/打开目录…</code> 选择你刚刚的项目。</p><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1frpw550z5dj30t60go0u9.jpg" alt=""></p><h2 id="转换成移动app"><a href="#转换成移动app" class="headerlink" title="转换成移动app"></a>转换成移动app</h2><p>右击刚刚打开的项目选择 <code>转换成移动app</code> ，此时，项目前的W图标变成了A，然后文件夹里就多了一个manifest文件，我们可以在这里配置app的名字、图标、载入动画、入口页面、是否全屏或者一些更高的权限（摄像头，阿里支付等）</p><p>注意上传图标的时候，尽量选择1024 <em> 1024的图标，如果是ios则必须1024 </em> 1024，然后点击<strong>自动生成所有图标并替换</strong></p><h2 id="开始打包"><a href="#开始打包" class="headerlink" title="开始打包"></a>开始打包</h2><p>选择 <code>发行/云打包-打原生安装包</code> ，然后按提示操作就行。</p><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1frpwdrizdwj31dk0deaec.jpg" alt=""></p>]]></content>
     

@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[package-app]]></title>
+      <title><![CDATA[如何把你的demo打包成一个app]]></title>
       <url>/2018/05/27/package-app/</url>
       <content type="html"><![CDATA[<p>如何将你的html代码打包成一个app？那就是HBuilder，无论是只有一个页面的小demo，还是一个完整的vue项目，都可以变成原生app。</p>
 <h2 id="准备好项目"><a href="#准备好项目" class="headerlink" title="准备好项目"></a>准备好项目</h2><p>新建一个文件夹，里面放入你的文件，我这里以一个页面为例，里面就写了一句页面跳转到博客的js语句。</p>
