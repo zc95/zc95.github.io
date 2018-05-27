@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
+    
+    <lastmod>2018-05-27T03:08:35.186Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2018/05/22/git-remote-add/</loc>
     
     <lastmod>2018-05-26T08:58:00.648Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://zc95.github.io/2018/05/26/mobilewatchlocalhost/</loc>
     
     <lastmod>2018-05-26T03:40:37.366Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
-    
-    <lastmod>2018-05-25T16:09:50.199Z</lastmod>
     
   </url>
   

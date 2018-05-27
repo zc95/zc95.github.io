@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
+    <lastmod>2018-05-27T03:08:35.186Z</lastmod>
+    <data>
+        <display>
+        <title>我的第一个vue项目[饿了么app]</title>
+        <pubTime>2018-05-25T14:00:24.000Z</pubTime>
+        
+        <tag>webpack</tag>
+         
+        <tag>Vue</tag>
+         
+        <tag>mock模拟数据</tag>
+         
+        <tag>vue-cli</tag>
+         
+        <tag>饿了么vue项目</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/05/22/git-remote-add/</loc>
     <lastmod>2018-05-26T08:58:00.648Z</lastmod>
     <data>
@@ -38,32 +66,6 @@
         <tag>localhost</tag>
          
         <tag>ifconfig</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
-    <lastmod>2018-05-25T16:09:50.199Z</lastmod>
-    <data>
-        <display>
-        <title>我的第一个vue项目[饿了么app]</title>
-        <pubTime>2018-05-25T14:00:24.000Z</pubTime>
-        
-        <tag>webpack</tag>
-         
-        <tag>Vue</tag>
-         
-        <tag>mock模拟数据</tag>
-         
-        <tag>vue-cli</tag>
          
          
            
@@ -605,9 +607,9 @@
         <title>在Mac下通过Hexo在Github上搭建博客（入门篇）</title>
         <pubTime>2017-10-20T13:48:28.000Z</pubTime>
         
-        <tag>Hexo</tag>
-         
         <tag>github</tag>
+         
+        <tag>Hexo</tag>
          
         <tag>Node.js</tag>
          
