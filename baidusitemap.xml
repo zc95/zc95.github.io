@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/05/28/vue-transition/</loc>
+    <lastmod>2018-05-28T13:55:08.340Z</lastmod>
+    <data>
+        <display>
+        <title>Vue路由切换时的左滑和右滑效果</title>
+        <pubTime>2018-05-28T13:52:07.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>transition</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
     <lastmod>2018-05-27T06:57:11.539Z</lastmod>
     <data>
