@@ -2344,9 +2344,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
@@ -3130,13 +3130,13 @@ $obj.html(tempStr);
         
         <tags>
             
+            <tag> css </tag>
+            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
-            
-            <tag> css </tag>
             
         </tags>
         
