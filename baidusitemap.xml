@@ -4,50 +4,8 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/05/28/vue-transition/</loc>
-    <lastmod>2018-05-28T13:55:08.340Z</lastmod>
-    <data>
-        <display>
-        <title>Vue路由切换时的左滑和右滑效果</title>
-        <pubTime>2018-05-28T13:52:07.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>transition</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
-    <lastmod>2018-05-27T06:57:11.539Z</lastmod>
-    <data>
-        <display>
-        <title>如何把你的demo打包成一个app</title>
-        <pubTime>2018-05-27T06:52:16.000Z</pubTime>
-        
-        <tag>app</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2018/05/25/vue-sell/</loc>
-    <lastmod>2018-05-27T03:20:52.540Z</lastmod>
+    <lastmod>2018-05-31T11:38:25.966Z</lastmod>
     <data>
         <display>
         <title>我的第一个vue项目[饿了么app]</title>
@@ -74,18 +32,14 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/05/22/git-remote-add/</loc>
-    <lastmod>2018-05-26T08:58:00.648Z</lastmod>
+    <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
+    <lastmod>2018-05-27T06:57:11.539Z</lastmod>
     <data>
         <display>
-        <title>上传项目至github</title>
-        <pubTime>2018-05-21T17:01:13.000Z</pubTime>
+        <title>如何把你的demo打包成一个app</title>
+        <pubTime>2018-05-27T06:52:16.000Z</pubTime>
         
-        <tag>git</tag>
-         
-        <tag>github</tag>
-         
-        <tag>ssh</tag>
+        <tag>app</tag>
          
          
            
@@ -138,26 +92,6 @@
            
              
               <breadCrumb title="demo" url="http://zc95.github.io/categories/demo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/04/17/vue-learning/</loc>
-    <lastmod>2018-05-21T15:38:11.513Z</lastmod>
-    <data>
-        <display>
-        <title>我要开始学Vue啦</title>
-        <pubTime>2018-04-17T15:02:21.000Z</pubTime>
-        
-        <tag>Vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="汇总篇" url="http://zc95.github.io/categories/%E6%B1%87%E6%80%BB%E7%AF%87/"/>
           
         </display>
     </data>
