@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            GoSlowly | 
+        
+        张成的学习笔记
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon .ico">
+    <link rel="icon" href="/img/favicon .ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="张成的学习笔记,余生漫长，莫要慌张">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="张成的学习笔记">
+    <meta name="msapplication-starturl" content="http://zc95.github.io/2018/06/02/GoSlowly/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="张成的学习笔记">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon .ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://zc95.github.io/2018/06/02/GoSlowly/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="GoSlowly | 张成的学习笔记">
+    <meta property="og:image" content="/img/favicon .ico">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="余生漫长，莫要慌张"> 
+
+    
+        <meta property="article:published_time" content="Sat Jun 02 2018 18:12:19 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 02 2018 18:19:04 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://zc95.github.io/2018/06/02/GoSlowly/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zc95.github.io/2018/06/02/GoSlowly/index.html",
+    "headline": "GoSlowly",
+    "datePublished": "Sat Jun 02 2018 18:12:19 GMT+0800",
+    "dateModified": "Sat Jun 02 2018 18:19:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "张成",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg"
+        },
+        "description": "深自缄默，如云漂泊"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "张成的学习笔记",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon .ico"
+        }
+    },
+    "keywords": ",余生漫长，莫要慌张张成的学习笔记",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">余生漫长，莫要慌张</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-graduated-at-21-and-didn’t-get-a-job-until-they-were-27"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">I know people who graduated at 21 and didn’t get a job until they were 27.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-graduated-late-at-25-and-they-found-work-immediately"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">I know people who graduated late at 25 and they found work immediately.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-never-went-to-university-but-found-what-they-love-at-18"><span class="post-toc-number">1.0.0.3.</span> <span class="post-toc-text">I know people who never went to university, but found what they love at 18.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-found-a-job-straight-out-of-college-making-decent-money-but-hate-what-they-do"><span class="post-toc-number">1.0.0.4.</span> <span class="post-toc-text">I know people who found a job straight out of college making decent money, but hate what they do.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-took-gap-years-and-found-their-purpose"><span class="post-toc-number">1.0.0.5.</span> <span class="post-toc-text">I know people who took gap years and found their purpose.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-were-so-sure-about-what-they-were-going-to-do-at-16-they-change-their-mind-at-26"><span class="post-toc-number">1.0.0.6.</span> <span class="post-toc-text">I know people who were so sure about what they were going to do at 16, they change their mind at 26.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-have-children-but-are-single-and-I-know-people-who-are-married-but-had-to-wait-8-to-10-years-to-have-children"><span class="post-toc-number">1.0.0.7.</span> <span class="post-toc-text">I know people who have children but are single, and I know people who are married but had to wait 8 to 10 years to have children.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-in-relationships-who-love-someone-else"><span class="post-toc-number">1.0.0.8.</span> <span class="post-toc-text">I know people in relationships who love someone else.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-know-people-who-love-each-other-but-aren’t-together"><span class="post-toc-number">1.0.0.9.</span> <span class="post-toc-text">I know people who love each other but aren’t together.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#So-my-point-is-everything-in-life-happens-according-to-our-time-our-clock"><span class="post-toc-number">1.0.0.10.</span> <span class="post-toc-text">So my point is everything in life happens according to our time, our clock.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#You-may-look-at-some-of-your-friends-and-think-that-they’re-ahead-of-you-maybe-some-of-them-you-feel-are-behind-but-everything-happens-at-their-own-pace"><span class="post-toc-number">1.0.0.11.</span> <span class="post-toc-text">You may look at some of your friends and think that they’re ahead of you, maybe some of them you feel are behind, but everything happens at their own pace.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#They-have-their-own-time-and-clock-and-so-do-you"><span class="post-toc-number">1.0.0.12.</span> <span class="post-toc-text">They have their own time and clock and so do you.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Be-patient"><span class="post-toc-number">1.0.0.13.</span> <span class="post-toc-text">Be patient.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#At-age-25-Mark-Cuban-was-a-bartender-in-Dallas"><span class="post-toc-number">1.0.0.14.</span> <span class="post-toc-text">At age 25, Mark Cuban was a bartender in Dallas.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#It-took-till-32-for-J-K-Rowling-to-be-published-for-Harry-Potter-after-being-rejected-by-12-publishers"><span class="post-toc-number">1.0.0.15.</span> <span class="post-toc-text">It took till 32 for J.K.Rowling to be published for Harry Potter after being rejected by 12 publishers.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ortega-launched-ZARA-when-he-was-39"><span class="post-toc-number">1.0.0.16.</span> <span class="post-toc-text">Ortega launched ZARA when he was 39.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Jack-Ma-started-Alibaba-when-35"><span class="post-toc-number">1.0.0.17.</span> <span class="post-toc-text">Jack Ma started Alibaba when 35.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Morgan-Freeman-got-his-big-break-at-52"><span class="post-toc-number">1.0.0.18.</span> <span class="post-toc-text">Morgan Freeman got his big break at 52.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Steve-Carell-only-got-his-break-after40-yeas-old"><span class="post-toc-number">1.0.0.19.</span> <span class="post-toc-text">Steve Carell only got his break after40 yeas old.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Virgin-was-started-by-Richard-Branson-at-34"><span class="post-toc-number">1.0.0.20.</span> <span class="post-toc-text">Virgin was started by Richard Branson at 34.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Getting-your-degree-after-25-is-still-an-achievement"><span class="post-toc-number">1.0.0.21.</span> <span class="post-toc-text">Getting your degree after 25 is still an achievement.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Not-being-married-at-30-but-still-happy-is-beautiful"><span class="post-toc-number">1.0.0.22.</span> <span class="post-toc-text">Not being married at 30 but still happy is beautiful.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Starting-a-family-after-35-is-still-possible-and-buying-a-house-after-40-is-still-great"><span class="post-toc-number">1.0.0.23.</span> <span class="post-toc-text">Starting a family after 35 is still possible and buying a house after 40 is still great.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Don’t-let-anyone-rush-you-with-their-time-lines"><span class="post-toc-number">1.0.0.24.</span> <span class="post-toc-text">Don’t let anyone rush you with their time lines.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Because-as-Einstein-said-“-Not-everything-that-counts-can-be-counted-and-not-everything-that’s-counted-truly-counts-“"><span class="post-toc-number">1.0.0.25.</span> <span class="post-toc-text">Because as Einstein said, “ Not everything that counts can be counted and not everything that’s counted truly counts.“</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#And-this-is-the-most-important-thing-I-want-you-to-be-able-to-create-meaningful-purposeful-fulfilling-lives-for-yourselves-and-learn-how-to-use-that-to-make-an-impact-and-a-difference-in-the-lives-of-others"><span class="post-toc-number">1.0.0.26.</span> <span class="post-toc-text">And this is the most important thing, I want you to be able to create meaningful, purposeful fulfilling lives for yourselves and learn how to use that to make an impact and a difference in the lives of others.</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#That-will-be-true-success"><span class="post-toc-number">1.0.0.27.</span> <span class="post-toc-text">That will be true success.</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://i.loli.net/2018/06/02/5b126e4e0dbe4.jpg)">
+    
+            <p class="article-headline-p">
+                GoSlowly
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张成</strong>
+        <span>6月 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2018/06/02/GoSlowly/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/余生漫长，莫要慌张/">余生漫长，莫要慌张</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2018/06/02/GoSlowly/" class="leancloud-views_num" data-flag-title="GoSlowly">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=GoSlowly&url=http://zc95.github.io/2018/06/02/GoSlowly/index.html&pic=http://zc95.github.io/img/favicon .ico&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2018/06/02/GoSlowly/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=GoSlowly&summary=&pics=http://zc95.github.io/img/favicon .ico&url=http://zc95.github.io/2018/06/02/GoSlowly/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 align="center">余生漫长，莫要慌张</h1>
+
+<h4 id="I-know-people-who-graduated-at-21-and-didn’t-get-a-job-until-they-were-27"><a href="#I-know-people-who-graduated-at-21-and-didn’t-get-a-job-until-they-were-27" class="headerlink" title="I know people who graduated at 21 and didn’t get a job until they were 27."></a>I know people who graduated at 21 and didn’t get a job until they were 27.</h4><blockquote>
+<p>有的人21岁毕业，到27岁才找到工作。</p>
+</blockquote>
+<h4 id="I-know-people-who-graduated-late-at-25-and-they-found-work-immediately"><a href="#I-know-people-who-graduated-late-at-25-and-they-found-work-immediately" class="headerlink" title="I know people who graduated late at 25 and they found work immediately."></a>I know people who graduated late at 25 and they found work immediately.</h4><blockquote>
+<p>有的人25岁才毕业，但马上就找到了工作。</p>
+</blockquote>
+<h4 id="I-know-people-who-never-went-to-university-but-found-what-they-love-at-18"><a href="#I-know-people-who-never-went-to-university-but-found-what-they-love-at-18" class="headerlink" title="I know people who never went to university, but found what they love at 18."></a>I know people who never went to university, but found what they love at 18.</h4><blockquote>
+<p>有的人没上过大学，却在18岁就找到了热爱的事。</p>
+</blockquote>
+<h4 id="I-know-people-who-found-a-job-straight-out-of-college-making-decent-money-but-hate-what-they-do"><a href="#I-know-people-who-found-a-job-straight-out-of-college-making-decent-money-but-hate-what-they-do" class="headerlink" title="I know people who found a job straight out of college making decent money, but hate what they do."></a>I know people who found a job straight out of college making decent money, but hate what they do.</h4><blockquote>
+<p>有的人毕业就找到好工作，赚很多钱，却过得不开心。</p>
+</blockquote>
+<h4 id="I-know-people-who-took-gap-years-and-found-their-purpose"><a href="#I-know-people-who-took-gap-years-and-found-their-purpose" class="headerlink" title="I know people who took gap years and found their purpose."></a>I know people who took gap years and found their purpose.</h4><blockquote>
+<p>有的人选择间隔年，去寻找自我。</p>
+</blockquote>
+<h4 id="I-know-people-who-were-so-sure-about-what-they-were-going-to-do-at-16-they-change-their-mind-at-26"><a href="#I-know-people-who-were-so-sure-about-what-they-were-going-to-do-at-16-they-change-their-mind-at-26" class="headerlink" title="I know people who were so sure about what they were going to do at 16, they change their mind at 26."></a>I know people who were so sure about what they were going to do at 16, they change their mind at 26.</h4><blockquote>
+<p>有的人在16岁就清楚知道自己要什么，但在26岁时改变了想法。</p>
+</blockquote>
+<h4 id="I-know-people-who-have-children-but-are-single-and-I-know-people-who-are-married-but-had-to-wait-8-to-10-years-to-have-children"><a href="#I-know-people-who-have-children-but-are-single-and-I-know-people-who-are-married-but-had-to-wait-8-to-10-years-to-have-children" class="headerlink" title="I know people who have children but are single, and I know people who are married but had to wait 8 to 10 years to have children."></a>I know people who have children but are single, and I know people who are married but had to wait 8 to 10 years to have children.</h4><blockquote>
+<p>有的人有了孩子，却还是单身。有的人结了婚，却等了10年才生孩子。</p>
+</blockquote>
+<h4 id="I-know-people-in-relationships-who-love-someone-else"><a href="#I-know-people-in-relationships-who-love-someone-else" class="headerlink" title="I know people in relationships who love someone else."></a>I know people in relationships who love someone else.</h4><blockquote>
+<p>有的人身处一段感情，爱的却是别人。</p>
+</blockquote>
+<h4 id="I-know-people-who-love-each-other-but-aren’t-together"><a href="#I-know-people-who-love-each-other-but-aren’t-together" class="headerlink" title="I know people who love each other but aren’t together."></a>I know people who love each other but aren’t together.</h4><blockquote>
+<p>有的人明明彼此相爱，却没有在一起。</p>
+</blockquote>
+<h4 id="So-my-point-is-everything-in-life-happens-according-to-our-time-our-clock"><a href="#So-my-point-is-everything-in-life-happens-according-to-our-time-our-clock" class="headerlink" title="So my point is everything in life happens according to our time, our clock."></a>So my point is everything in life happens according to our time, our clock.</h4><blockquote>
+<p>我想说的是，人生中的每一件事都取决于我们自己的时间。</p>
+</blockquote>
+<h4 id="You-may-look-at-some-of-your-friends-and-think-that-they’re-ahead-of-you-maybe-some-of-them-you-feel-are-behind-but-everything-happens-at-their-own-pace"><a href="#You-may-look-at-some-of-your-friends-and-think-that-they’re-ahead-of-you-maybe-some-of-them-you-feel-are-behind-but-everything-happens-at-their-own-pace" class="headerlink" title="You may look at some of your friends and think that they’re ahead of you, maybe some of them you feel are behind, but everything happens at their own pace."></a>You may look at some of your friends and think that they’re ahead of you, maybe some of them you feel are behind, but everything happens at their own pace.</h4><blockquote>
+<p>你身边有些朋友也许遥遥领先于你。有些朋友也许落后于你，但凡事都有它自己的节奏。</p>
+</blockquote>
+<h4 id="They-have-their-own-time-and-clock-and-so-do-you"><a href="#They-have-their-own-time-and-clock-and-so-do-you" class="headerlink" title="They have their own time and clock and so do you."></a>They have their own time and clock and so do you.</h4><blockquote>
+<p>他们有他们的节奏，你有你自己的。</p>
+</blockquote>
+<h4 id="Be-patient"><a href="#Be-patient" class="headerlink" title="Be patient."></a>Be patient.</h4><blockquote>
+<p>耐心一点。</p>
+</blockquote>
+<h4 id="At-age-25-Mark-Cuban-was-a-bartender-in-Dallas"><a href="#At-age-25-Mark-Cuban-was-a-bartender-in-Dallas" class="headerlink" title="At age 25, Mark Cuban was a bartender in Dallas."></a>At age 25, Mark Cuban was a bartender in Dallas.</h4><blockquote>
+<p>库班25岁的时候还在酒吧做酒保。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/ae0d6ee26c824f309189b87a59462be4.jpeg" alt="img"></p>
+<h4 id="It-took-till-32-for-J-K-Rowling-to-be-published-for-Harry-Potter-after-being-rejected-by-12-publishers"><a href="#It-took-till-32-for-J-K-Rowling-to-be-published-for-Harry-Potter-after-being-rejected-by-12-publishers" class="headerlink" title="It took till 32 for J.K.Rowling to be published for Harry Potter after being rejected by 12 publishers."></a>It took till 32 for J.K.Rowling to be published for Harry Potter after being rejected by 12 publishers.</h4><blockquote>
+<p>在被拒12次之后，JK罗琳到32岁才出版了哈利波特。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/b1e908d36a9040a1992ec273a530bf53.jpeg" alt="img"></p>
+<h4 id="Ortega-launched-ZARA-when-he-was-39"><a href="#Ortega-launched-ZARA-when-he-was-39" class="headerlink" title="Ortega launched ZARA when he was 39."></a>Ortega launched ZARA when he was 39.</h4><blockquote>
+<p>Ortega 到39岁才创办了ZARA。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/9ffa442aef28464596217cd215df6796.jpeg" alt="img"></p>
+<h4 id="Jack-Ma-started-Alibaba-when-35"><a href="#Jack-Ma-started-Alibaba-when-35" class="headerlink" title="Jack Ma started Alibaba when 35."></a>Jack Ma started Alibaba when 35.</h4><blockquote>
+<p>马云35岁才建立了阿里巴巴。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/e24338f5761c4ccf86d40af75222accd.jpeg" alt="img"></p>
+<h4 id="Morgan-Freeman-got-his-big-break-at-52"><a href="#Morgan-Freeman-got-his-big-break-at-52" class="headerlink" title="Morgan Freeman got his big break at 52."></a>Morgan Freeman got his big break at 52.</h4><blockquote>
+<p>摩根佛里曼到52岁才迎来他演艺事业的大爆发。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/8740134072434b18a3413b0a6046ba60.jpeg" alt="img"></p>
+<h4 id="Steve-Carell-only-got-his-break-after40-yeas-old"><a href="#Steve-Carell-only-got-his-break-after40-yeas-old" class="headerlink" title="Steve Carell only got his break after40 yeas old."></a>Steve Carell only got his break after40 yeas old.</h4><blockquote>
+<p>Steve Carell 40岁才红。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/4af5d872c6f942feaf064cf0122a7693.jpeg" alt="img"></p>
+<h4 id="Virgin-was-started-by-Richard-Branson-at-34"><a href="#Virgin-was-started-by-Richard-Branson-at-34" class="headerlink" title="Virgin was started by Richard Branson at 34."></a>Virgin was started by Richard Branson at 34.</h4><p>Richard Branson 34岁才创办维珍航空。</p>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/13b67209c8954339986d7ba87719cceb.jpeg" alt="img"></p>
+<h4 id="Getting-your-degree-after-25-is-still-an-achievement"><a href="#Getting-your-degree-after-25-is-still-an-achievement" class="headerlink" title="Getting your degree after 25 is still an achievement."></a>Getting your degree after 25 is still an achievement.</h4><blockquote>
+<p>25岁后才拿到文凭，依然值得骄傲。</p>
+</blockquote>
+<h4 id="Not-being-married-at-30-but-still-happy-is-beautiful"><a href="#Not-being-married-at-30-but-still-happy-is-beautiful" class="headerlink" title="Not being married at 30 but still happy is beautiful."></a>Not being married at 30 but still happy is beautiful.</h4><blockquote>
+<p>30岁没结婚，但过得快乐也是一种成功。</p>
+</blockquote>
+<h4 id="Starting-a-family-after-35-is-still-possible-and-buying-a-house-after-40-is-still-great"><a href="#Starting-a-family-after-35-is-still-possible-and-buying-a-house-after-40-is-still-great" class="headerlink" title="Starting a family after 35 is still possible and buying a house after 40 is still great."></a>Starting a family after 35 is still possible and buying a house after 40 is still great.</h4><blockquote>
+<p>35岁之后成家也完全可以，40岁买房也没什么丢脸的。</p>
+</blockquote>
+<h4 id="Don’t-let-anyone-rush-you-with-their-time-lines"><a href="#Don’t-let-anyone-rush-you-with-their-time-lines" class="headerlink" title="Don’t let anyone rush you with their time lines."></a>Don’t let anyone rush you with their time lines.</h4><blockquote>
+<p>不要让任何人扰乱你的时间表。</p>
+</blockquote>
+<p><img src="http://5b0988e595225.cdn.sohucs.com/images/20180516/df89d3c18dd74a478da05e9917a1bf69.jpeg" alt="img"></p>
+<h4 id="Because-as-Einstein-said-“-Not-everything-that-counts-can-be-counted-and-not-everything-that’s-counted-truly-counts-“"><a href="#Because-as-Einstein-said-“-Not-everything-that-counts-can-be-counted-and-not-everything-that’s-counted-truly-counts-“" class="headerlink" title="Because as Einstein said, “ Not everything that counts can be counted and not everything that’s counted truly counts.“"></a>Because as Einstein said, “ Not everything that counts can be counted and not everything that’s counted truly counts.“</h4><blockquote>
+<p>因为爱因斯坦曾经说过：并不是每一件算的出来的事，都有意义，也不是每一件有意义的事，都能够被算出来。</p>
+</blockquote>
+<h4 id="And-this-is-the-most-important-thing-I-want-you-to-be-able-to-create-meaningful-purposeful-fulfilling-lives-for-yourselves-and-learn-how-to-use-that-to-make-an-impact-and-a-difference-in-the-lives-of-others"><a href="#And-this-is-the-most-important-thing-I-want-you-to-be-able-to-create-meaningful-purposeful-fulfilling-lives-for-yourselves-and-learn-how-to-use-that-to-make-an-impact-and-a-difference-in-the-lives-of-others" class="headerlink" title="And this is the most important thing, I want you to be able to create meaningful, purposeful fulfilling lives for yourselves and learn how to use that to make an impact and a difference in the lives of others."></a>And this is the most important thing, I want you to be able to create meaningful, purposeful fulfilling lives for yourselves and learn how to use that to make an impact and a difference in the lives of others.</h4><blockquote>
+<p>这才是最重要的事，我希望你们可以创造属于自己的充满意义的人生，我希望你们可以创造属于自己的充满意义的人生。学会用这些去影响点亮他人的生活。</p>
+</blockquote>
+<h4 id="That-will-be-true-success"><a href="#That-will-be-true-success" class="headerlink" title="That will be true success."></a>That will be true success.</h4><blockquote>
+<p>这才是真正的成功。</p>
+</blockquote>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            深自缄默，如云漂泊
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://zc95.github.io/2018/06/02/GoSlowly/">http://zc95.github.io/2018/06/02/GoSlowly/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz",
+        appKey: "fvlhBW5UGPEBJeIH70tpAFkf",
+        placeholder: "快来评论吧～",
+        pageSize:'10',
+        avatar:'wavatar',
+        lang:'zh-cn'
+    });
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/27/package-app/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(https://ws1.sinaimg.cn/large/006tNc79gy1fq0z2jbqsfj30u00u0my1.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" alt="张成's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        571346800@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:571346800@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/demo/">demo<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术篇/">技术篇<span class="sidebar_archives-count">24</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈篇/">杂谈篇<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/汇总篇/">汇总篇<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="https://github.com/zc95" title="我的 Github">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                我的 Github
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">35</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/zc95" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张成的学习笔记
+            
+                <br>
+                
+                    深自缄默，如云漂泊
+                
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - Material Design</div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+    <!-- Leancloud -->
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+    <script>
+        AV.initialize('M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz', 'fvlhBW5UGPEBJeIH70tpAFkf');
+    </script>
+    <script type="text/ls-javascript" id="leancloud-views-script">
+    function showTime(Counter) {
+        var query = new AV.Query(Counter);
+        $('.leancloud-views_num').each(function() {
+            var url = $(this).attr('id').trim();
+            query.equalTo('url', url);
+            query.find({
+                success: function(results) {
+                    if (results.length === 0) {
+                        var content = '0 ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                        return;
+                    }
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    }
+                },
+                error: function(object, error) {
+                    console.log('Error: ' + error.code + ' ' + error.message);
+                }
+            });
+        });
+    }
+
+    function addCount(Counter) {
+      var Counter = AV.Object.extend('Counter');
+      url = $('.leancloud-views_num').attr('id').trim();
+      title = $('.leancloud-views_num').attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo('url', url);
+      query.find({
+          success: function(results) {
+            if (results.length > 0) {
+                var counter = results[0];
+                counter.fetchWhenSave(true);
+                counter.increment('time');
+                counter.save(null, {
+                    success: function(counter) {
+                        var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
+                        $(document.getElementById(url)).text(content);
+                    },
+                    error: function(counter, error) {
+                        console.log('Failed to save Visitor num, with error message: ' + error.message);
+                    }
+                });
+            } else {
+              var newcounter = new Counter();
+              newcounter.set('title', title);
+              newcounter.set('url', url);
+              newcounter.set('time', 1);
+              newcounter.save(null, {
+                  success: function(newcounter) {
+                      console.log('newcounter.get(\'time\')='+newcounter.get('time'));
+                      var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
+                      $(document.getElementById(url)).text(content);
+                  },
+                  error: function(newcounter, error) {
+                      console.log('Failed to create');
+                  }
+              });
+            }
+        },
+        error: function(error) {
+            console.log('Error:' + error.code + ' ' + error.message);
+        }
+      });
+    }
+    $(function() {
+        var Counter = AV.Object.extend('Counter');
+        if ($('.leancloud-views_num').length === 1) {
+            addCount(Counter);
+        } else if ($('.post-title-link').length > 1) {
+            showTime(Counter);
+        }
+    });
+</script>
+
+
+
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',false);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © 张成的博客 | Material Design | https://github.com/zc95 %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
