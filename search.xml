@@ -147,7 +147,7 @@
       <title><![CDATA[本地开启的localhost服务器如何在移动设备访问]]></title>
       <url>/2018/05/26/mobilewatchlocalhost/</url>
       <content type="html"><![CDATA[<p>当vue-cli为我们开启了一个本地服务器如：<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，我们该怎么在手机或平板上查看呢。</p>
-<p>1.找到 <code>build/index.js</code> ，将红色方框内原来的localhost改成0.0.0.0，表示底层的TCP bind IP结构体被置为全0，就允许监听本机全部网卡。</p>
+<p>1.找到 <code>config/index.js</code> ，将红色方框内原来的localhost改成0.0.0.0，表示底层的TCP bind IP结构体被置为全0，就允许监听本机全部网卡。</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1frokw2zi7aj30oi08mmyq.jpg" alt=""></p>
 <p>2.新建命令 ifconfig（Windows用户是ipconfig），找到本机ip地址</p>
 <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1frol1xh200j30iy0dawgk.jpg" alt=""></p>
@@ -428,6 +428,13 @@ created() {
     }  
   }    
 }
+</code></pre>
+<h2 id="解决vue的变量在setTimeout内部效果失效方法"><a href="#解决vue的变量在setTimeout内部效果失效方法" class="headerlink" title="解决vue的变量在setTimeout内部效果失效方法"></a>解决vue的变量在setTimeout内部效果失效方法</h2><p>定义一个self暂存this就行啦</p>
+<pre><code class="javascript">var self=this; 
+this.progressShow=true;
+setTimeout(function(){
+    self.progressShow=false
+},3000);
 </code></pre>
 ]]></content>
       
@@ -2973,59 +2980,6 @@ numbers.forEach(function(item, index, arr) {
     </entry>
     
     <entry>
-      <title><![CDATA[类似Windows文件的布局问题]]></title>
-      <url>/2017/11/03/AdaptiveLayout/</url>
-      <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>如何做到类似windows文件的布局：无论如何改变窗口（屏幕）的大小，文件或者文件夹的大小都是固定的，不同的是一行显示的数目会有所变化；</p>
-<h2 id="百分比布局"><a href="#百分比布局" class="headerlink" title="百分比布局"></a>百分比布局</h2><p>首先这类布局，肯定会先想到百分比的方法（最快的方法），在不同手机上看的话当然没区别，比如一行显示4个的话，那么一个就是25%，但如果放到ipad或者电脑上来看的话，就大的有些恐怖了</p>
-<h2 id="百分比加-media布局"><a href="#百分比加-media布局" class="headerlink" title="百分比加@media布局"></a>百分比加@media布局</h2><p>同上，我们可以用@media的方法来解决不同类型设备的差异问题，也就是多写几行css的问题<br><a id="more"></a></p>
-<h2 id="我的方法"><a href="#我的方法" class="headerlink" title="我的方法"></a>我的方法</h2><p><code>var eachWidth = $(document).width() / Math.floor($(document).width() / 80);</code></p>
-<p>假如我想每个div都在80px左右，那么一行就可以放 <code>$(document).width() / 80</code> 个，用 <code>Math.floor</code> 向下取整之后可以去掉不满一个的零头，再用屏幕宽度除以这个取整后的个数，就能得到长度在80±10的eachWidth值了</p>
-<p>下面是在控制台的不同手机屏幕大小下console出来的数据：</p>
-<pre><code class="javascript">$(document).width() / Math.floor($(document).width() / 80) //iPad
---&gt; 85.33333333333333
-
-$(document).width() / Math.floor($(document).width() / 80) //iPhone 6 Plus
---&gt; 82.8
-
-$(document).width() / Math.floor($(document).width() / 80) //iPhone 6
---&gt; 93.75
-
-$(document).width() / Math.floor($(document).width() / 80) //iPhone 5
---&gt; 80
-
-$(document).width() / Math.floor($(document).width() / 80) //Nexus 6P
---&gt; 82.4
-</code></pre>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><ul>
-<li><p>移动端</p>
-<p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/buju1.png" alt="iPhone"></p>
-</li>
-</ul>
-<ul>
-<li><p>iPad</p>
-<p><img src="http://sandbox.runjs.cn/uploads/rs/234/bxxwrmn8/buju2.png" alt="iPad"></p>
-</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术篇 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> css </tag>
-            
-            <tag> 页面布局 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[css换行问题]]></title>
       <url>/2017/10/25/wordBreak/</url>
       <content type="html"><![CDATA[<p>css实现强制不换行/自动换行/强制换行</p>
@@ -3239,13 +3193,13 @@ $obj.html(tempStr);
         
         <tags>
             
-            <tag> css </tag>
-            
             <tag> html </tag>
             
             <tag> javascript </tag>
             
             <tag> jquery </tag>
+            
+            <tag> css </tag>
             
         </tags>
         
