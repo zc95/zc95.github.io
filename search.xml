@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[Material Page]]></title>
+      <url>/2018/06/11/material-page/</url>
+      <content type="html"><![CDATA[<h1 id="Material-Page"><a href="#Material-Page" class="headerlink" title="Material Page"></a>Material Page</h1><blockquote>
+<p>Nature, Pure</p>
+<p>原质，纯粹</p>
+</blockquote>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fs33tk274xj31kw0zkwnc.jpg" alt=""></p>
+<p><code>Material Page</code> 是一个客制化上网首页</p>
+<p>基于 Material Design &amp; vuetifyjs &amp; Vue.js</p>
+<p>集成搜索，网站收藏和分类，TODO</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>demo：<a href="https://zc95.github.io/demo/material-page/index.html">https://zc95.github.io/demo/material-page/index.html</a></p>
+<p>github：<a href="https://github.com/zc95/material-page" target="_blank" rel="external">https://github.com/zc95/material-page</a></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>搜索：Google + Bing + 百度</li>
+<li>网站：可自定义网站列表</li>
+<li>TODO: 简单的 Todo 列表</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="bash"># install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+</code></pre>
+<p>For a detailed explanation on how things work, check out the <a href="http://vuejs-templates.github.io/webpack/" target="_blank" rel="external">guide</a> and <a href="http://vuejs.github.io/vue-loader" target="_blank" rel="external">docs for vue-loader</a>.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[余生漫长，何必慌张]]></title>
       <url>/2018/06/02/GoSlowly/</url>
       <content type="html"><![CDATA[<h4 id="I-know-people-who-graduated-at-21-and-didn’t-get-a-job-until-they-were-27"><a href="#I-know-people-who-graduated-at-21-and-didn’t-get-a-job-until-they-were-27" class="headerlink" title="I know people who graduated at 21 and didn’t get a job until they were 27."></a>I know people who graduated at 21 and didn’t get a job until they were 27.</h4><blockquote>
