@@ -4,26 +4,6 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/06/14/mylinks/</loc>
-    <lastmod>2018-06-14T12:29:40.648Z</lastmod>
-    <data>
-        <display>
-        <title>一键获取我的所有作品链接</title>
-        <pubTime>2018-06-14T12:24:26.000Z</pubTime>
-        
-        <tag>个人链接</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人链接" url="http://zc95.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%93%BE%E6%8E%A5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2018/06/11/material-page/</loc>
     <lastmod>2018-06-11T12:01:19.364Z</lastmod>
     <data>
@@ -87,26 +67,6 @@
            
              
               <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/06/02/GoSlowly/</loc>
-    <lastmod>2018-06-02T10:48:15.169Z</lastmod>
-    <data>
-        <display>
-        <title>余生漫长，何必慌张</title>
-        <pubTime>2018-06-02T10:12:19.000Z</pubTime>
-        
-        <tag>余生漫长，何必慌张</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂谈篇" url="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
           
         </display>
     </data>
