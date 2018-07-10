@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-06-11T12:01:19.364Z</updated>
+  <updated>2018-07-10T13:18:42.313Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好久不见，嘿嘿</title>
+    <link href="http://zc95.github.io/2018/07/10/helloNewWorld/"/>
+    <id>http://zc95.github.io/2018/07/10/helloNewWorld/</id>
+    <published>2018-07-10T12:57:30.000Z</published>
+    <updated>2018-07-10T13:18:42.313Z</updated>
+    
+    <content type="html"><![CDATA[<p>好久没有更博客，好久没有学习，github也是一片白哈哈。</p><p>这段时间发生了好多事，买房子、谈了三年多的女盆友变成前任（挺难受的哈哈）、辞职、跳槽。</p><p>还好，房子忙完了，前女友也放下了，工作也找到了，之后的五年应该是尹山湖-独墅湖两点一线，朝九晚六，下班了自己烧饭，滑板玩起来，跑跑步减减肥，还是挺期待新的生活的。</p><p>之后要做的事情还有很多，努力学习、工作、减肥。争取明年考上苏大在职研究生，争取明年税后9k+，争取五年之内能置换一套视野好点的三居室哈哈。</p><p>女朋友什么的，还是随缘吧，前任也挺好的，只是不想打扰了。</p><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1ft52ja0116j31901o0qv5.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;好久没有更博客，好久没有学习，github也是一片白哈哈。&lt;/p&gt;
+&lt;p&gt;这段时间发生了好多事，买房子、谈了三年多的女盆友变成前任（挺难受的哈哈）、辞职、跳槽。&lt;/p&gt;
+&lt;p&gt;还好，房子忙完了，前女友也放下了，工作也找到了，之后的五年应该是尹山湖-独墅湖两点一线，朝九晚六，
+      
+    
+    </summary>
+    
+      <category term="杂谈篇" scheme="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Material Page</title>
@@ -569,38 +594,6 @@ npm start
       <category term="磁盘阵列" scheme="http://zc95.github.io/tags/%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97/"/>
     
       <category term="交换机" scheme="http://zc95.github.io/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript闭包</title>
-    <link href="http://zc95.github.io/2017/12/21/javascriptClosure/"/>
-    <id>http://zc95.github.io/2017/12/21/javascriptClosure/</id>
-    <published>2017-12-21T12:48:17.000Z</published>
-    <updated>2017-12-26T13:11:21.185Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于JavaScript的程序员来说，闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures" target="_blank" rel="external">MDN Closures</a></p><h2 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h2><p>变量的作用域无非就是两种：全局变量和局部变量。当在函数中声明一个变量的时候，如果用关键字<code>var</code>来声明此变量，那么它就是局部变量，如果没有<code>var</code>那么就会成为全局变量。一般不建议用这种方式定义全局变量。而是用<code>var</code>将变量声明在函数的外面。</p><pre><code class="javascript">var name = &#39;小张&#39;;  // 全局变量function func() {    var name = &#39;小明&#39;;  // 局部变量    age = 12;  // 全局变量，建议少用这种全局变量的定义方式}</code></pre><a id="more"></a><p>在JavaScript中，函数可以用来创造函数作用域。函数内部可以看到外面的变量，而外面看不到函数里的变量。这是因为当在函数中搜索一个变量的时候，如果该函数内没有声明这个变量，那么此次搜索的过程会随着代码执行环境创建的作用域链往外层逐层搜索，直到搜索到全局变量为止。</p><pre><code class="javascript">var a = 1;var func1 = function(){    var b = 2;    var func2 = function(){        var c = 3;        console.log( b );  // 2        console.log( a );  // 1    }     func2();    console.log( c );  // 报错：c is not defined};func1();</code></pre><p>那么能不能从函数外部来访问局部变量呢？答案是可以。</p><pre><code class="javascript">var func = function() {    var number = 6;    return function() {        return number;    } };console.log( func()() );  // 6</code></pre><h2 id="变量的生存周期"><a href="#变量的生存周期" class="headerlink" title="变量的生存周期"></a>变量的生存周期</h2><p>全局变量的生存周期是永久的，除非我们主动的销毁这个全局变量。而对于局部变量来说，当退出函数时，这些局部变量就失去了生存的环境，所以会随着函数调用的结束而被销毁。<br>那么是否可以让局部变量在函数调用结束的时候不被销毁呢？来看下面这个例子：</p><pre><code class="javascript">var func = function() {    var a = 1;    return function() {        a++;        console.log( a );    }  };var f = func();f();  // 2f();  // 3f();  // 4</code></pre><p>从上面这个输出结果，我们可以看到局部变量a并没有随着f()的调用而被销毁。这是因为全局变量f保存着对func里面匿名函数的引用。而这个匿名函数是可以访问到局部变量a的，所以自然a也被保存下来了。所以这种情况下局部变量的生存周期就得以延续。上面这个匿名函数其实就是一个闭包。再来看一个闭包的经典应用。</p><pre><code class="javascript">// 假设有5个divvar nodes = document.getElementsByTagName( &#39;div&#39; );for ( var i = 0, l = nodes.length; i &lt; l; i++ ) {    nodes[i].onclick = function() {        console.log( i );    }}</code></pre><p>当真正执行这段代码的时候，发现无论点击那个div，最后打印的结果都是4。这是因为onclick事件是异步触发的，当事件触发的时候，for循环早已经结束，此时变量i的值已经是4。解决方案可以是用闭包把每次的i都保存起来：</p><pre><code class="javascript">for ( var i = 0, l = nodes.length; i &lt; l; i++ ) {    (function( i ) {        nodes[i].onclick = function() {            console.log( i );        }    })( i );}</code></pre><p>同理，我们编写一段代码用来判断对象类型：</p><pre><code class="javascript">var Type = {};for ( var i = 0, type; type = [ &#39;String&#39;, &#39;Array&#39;, &#39;Number&#39; ][ i++ ]; ) {    (function( type ) {        Type[ &#39;is&#39; + type ] = function( obj ) {            return Object.prototype.toString.call( obj ) === &#39;[object &#39; + type + &#39;]&#39;;        }    })( type );}Type.isArray( [] );  // trueType.isString( &#39;str&#39; );  // true</code></pre><h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><p>官方的解释是：一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因为这些变量也是该表达式的一部分。这个概念不好理解，我们可以简单得理解成闭包就是能够访问函数内部变量的函数。</p><h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><ul><li><p>可以在函数外部访问在函数内部定义的局部变量</p></li><li><p>延续局部变量的生存周期</p></li><li><p>封装变量<br>闭包可以帮助把一些不需要暴露在全局的变量封装成“私有变量”。假设有一个计算乘积的函数：</p><pre><code class="javascript">var mult = function() {    var  a = 1;    for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {        a = a * arguments[i];    }    return a;};mult(2, 3, 4);  // 24</code></pre><p>mult函数接受一些<code>Number</code>类型的参数，并且返回他们的乘积。现再我们觉得对于那些相同参数来说，每次再进行计算是一种浪费，所以我们决定加入缓存机制来提高函数性能：</p><pre><code class="javascript">var cache = {};var mult = function() {    var args = Array.prototype.join.call( arguments, &#39;&#39; );    if ( cache[ args ] ) {        return cache[ args ];    }    var  a = 1;    for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {        a = a * arguments[i];    }    return cache[ args ] = a;};</code></pre><p>我们看到cache这个变量仅仅在mult函数中被使用，所以为了避免cache污染全局变量，我们将它放到mult函数里面</p><pre><code class="javascript">var mult = (function() {    var cache = {};    return function() {        var args = Array.prototype.join.call( arguments, &#39;&#39; );        if ( cache[ args ] ) {            return cache[ args ];        }        var  a = 1;        for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {           a = a * arguments[i];        }        return cache[ args ] = a;    }})();</code></pre><p>提炼函数是代码重构中的一种常见技巧。如果在一个大函数中有一些代码块能够独立出来，我们常常把这些代码块封装在独立的小函数里面。独立出来的小函数有利于代码的复用，如果这些小函数有一个良好的命名，那么它们本身就起到了一个很好的注释作用。</p><pre><code class="javascript">var mult = (function() {    var cache = {};    var calculate = function() {        var  a = 1;        for ( var i = 0, l = arguments.length; i &lt; l; i++ ) {           a = a * arguments[i];        }        return a;    };    return function() {        var args = Array.prototype.join.call( arguments, &#39;&#39; );        if ( cache[ args ] ) {            return cache[ args ];        }        return cache[ args ] = calculate.apply( null, arguments );    }})();</code></pre></li></ul><h2 id="闭包与内存管理"><a href="#闭包与内存管理" class="headerlink" title="闭包与内存管理"></a>闭包与内存管理</h2><p>局部变量本来应该在函数退出的时候就被结束引用，但如果局部变量被封装在闭包形成的环境中，那么这个局部变量就能一直生存下去。从这个意义上来看，闭包确实会使一些数据无法被及时销毁。如果将来需要回收这些变量，我们可以手动把这些变量设为<code>null</code>。<br>跟闭包和内存泄露有关系的地方是，使用闭包的同时比较容易形成循环引用，如果闭包的作用域中保存着一些DOM节点，这个时候就有可能造成内存泄露。在IE9之前的浏览器中，由于BOM和DOM中的对象是使用C++对象以COM对象的方式实现的，而COM对象的垃圾收集机制采用的是引用计数策略。在基于引用计数的垃圾收集机制中，如果两个对象之间形成了循环引用，那么这两个对象都无法被回收。但我们只要把循环引用中的对象设为<code>null</code>即可解决这个问题。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对于JavaScript的程序员来说，闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MDN Closures&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;变量的作用域&quot;&gt;&lt;a href=&quot;#变量的作用域&quot; class=&quot;headerlink&quot; title=&quot;变量的作用域&quot;&gt;&lt;/a&gt;变量的作用域&lt;/h2&gt;&lt;p&gt;变量的作用域无非就是两种：全局变量和局部变量。当在函数中声明一个变量的时候，如果用关键字&lt;code&gt;var&lt;/code&gt;来声明此变量，那么它就是局部变量，如果没有&lt;code&gt;var&lt;/code&gt;那么就会成为全局变量。一般不建议用这种方式定义全局变量。而是用&lt;code&gt;var&lt;/code&gt;将变量声明在函数的外面。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;var name = &amp;#39;小张&amp;#39;;  // 全局变量
-function func() {
-    var name = &amp;#39;小明&amp;#39;;  // 局部变量
-    age = 12;  // 全局变量，建议少用这种全局变量的定义方式
-}
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
-    
-      <category term="正则表达式" scheme="http://zc95.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
