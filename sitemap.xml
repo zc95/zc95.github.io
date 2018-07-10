@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/about/index.html</loc>
+    
+    <lastmod>2018-07-10T13:30:22.017Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2018/07/10/helloNewWorld/</loc>
     
     <lastmod>2018-07-10T13:18:42.313Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://zc95.github.io/2018/05/26/mobilewatchlocalhost/</loc>
     
     <lastmod>2018-06-05T13:25:17.981Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/about/index.html</loc>
-    
-    <lastmod>2018-06-02T10:47:59.867Z</lastmod>
     
   </url>
   

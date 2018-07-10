@@ -2416,9 +2416,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
