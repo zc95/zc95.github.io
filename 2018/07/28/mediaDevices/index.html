@@ -241,7 +241,7 @@
 
     
         <meta property="article:published_time" content="Sat Jul 28 2018 22:55:59 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jul 28 2018 22:58:58 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jul 28 2018 23:34:19 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@
     "mainEntityOfPage": "http://zc95.github.io/2018/07/28/mediaDevices/index.html",
     "headline": "如何使用js调用摄像头拍照",
     "datePublished": "Sat Jul 28 2018 22:55:59 GMT+0800",
-    "dateModified": "Sat Jul 28 2018 22:58:58 GMT+0800",
+    "dateModified": "Sat Jul 28 2018 23:34:19 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "张成",
@@ -508,7 +508,8 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="MediaDevices-getUserMedia"><a href="#MediaDevices-getUserMedia" class="headerlink" title="MediaDevices.getUserMedia()"></a>MediaDevices.getUserMedia()</h2><p>MediaDevices.getUserMedia() 会提示用户给予使用媒体输入的许可，媒体输入会产生一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStream" target="_blank" rel="external"><code>MediaStream</code></a>，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D转换器等等），也可能是其它轨道类型。</p>
+        <p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftpzysab74j30pc0hamzw.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1ftpzysab74j30pc0hamzw.jpg"></p>
+<h2 id="MediaDevices-getUserMedia"><a href="#MediaDevices-getUserMedia" class="headerlink" title="MediaDevices.getUserMedia()"></a>MediaDevices.getUserMedia()</h2><p>MediaDevices.getUserMedia() 会提示用户给予使用媒体输入的许可，媒体输入会产生一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStream" target="_blank" rel="external"><code>MediaStream</code></a>，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D转换器等等），也可能是其它轨道类型。</p>
 <p>它返回一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="external"><code>Promise</code></a> 对象，成功后会<code>resolve</code>回调一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStream" target="_blank" rel="external"><code>MediaStream</code></a> 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，<code>promise</code>会<code>reject</code>回调一个  <code>PermissionDeniedError</code> 或者 <code>NotFoundError</code> 。</p>
 <blockquote>
 <p>返回的promise对象可能既不会resolve也不会reject，因为用户不是必须选择允许或拒绝。 </p>
