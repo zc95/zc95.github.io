@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://zc95.github.io/2018/07/28/mediaDevices/</loc>
-    <lastmod>2018-07-28T14:57:23.486Z</lastmod>
+    <lastmod>2018-07-28T14:58:58.348Z</lastmod>
     <data>
         <display>
-        <title>MediaDevices.getUserMedia()</title>
+        <title>如何使用js调用摄像头拍照</title>
         <pubTime>2018-07-28T14:55:59.000Z</pubTime>
         
         <tag>html</tag>
