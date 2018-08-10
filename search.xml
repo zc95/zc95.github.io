@@ -3,6 +3,93 @@
   
     
     <entry>
+      <title><![CDATA[美团、支付宝、微信扫码支付]]></title>
+      <url>/2018/08/10/alipay/</url>
+      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fu51nh65fkj30vi0uawgz.jpg" alt=""></p>
+<pre><code class="vue">&lt;template&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;orderInfo&quot;&gt;
+            &lt;p&gt;支付方式：
+                &lt;Select v-model=&quot;orderInfo.payType&quot;&gt;
+                    &lt;Option value=&quot;CASH&quot;&gt;现金&lt;/Option&gt;
+                    &lt;Option value=&quot;WECHAT&quot;&gt;微信&lt;/Option&gt;
+                    &lt;Option value=&quot;ALIPAY&quot;&gt;支付宝&lt;/Option&gt;
+                &lt;/Select&gt;
+            &lt;/p&gt;
+            &lt;div v-if=&quot;orderInfo.payType!=&#39;CASH&#39;&quot;&gt;
+                &lt;p v-show=&quot;authCode==&#39;&#39;&quot;&gt;等待扫码&lt;/p&gt;
+                &lt;p v-show=&quot;authCode!==&#39;&#39;&quot;&gt;正在扫码&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div slot=&quot;footer&quot;&gt;
+            &lt;Button type=&quot;ghost&quot;&gt;取消&lt;/Button&gt;
+            &lt;Button v-if=&quot;orderInfo.payType==&#39;CASH&#39;&quot; type=&quot;primary&quot; @click=&quot;handleSureOrder&quot;&gt;
+                确定
+            &lt;/Button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    export default {
+        props: [&#39;orderInfo&#39;, &#39;orderShow&#39;],
+        data() {
+            return {
+                spinShow: false,
+                authCode: &#39;&#39;,
+            }
+        },
+        watch: {
+            &#39;orderInfo.payType&#39;(type) {
+                let _this = this;
+                window.onkeyup = function (e) {
+                    if (type !== &#39;CASH&#39; &amp;&amp; _this.orderShow) {
+                        _this.doKeyup(e)
+                    }
+                }
+            },
+            authCode() {
+                setTimeout(() =&gt; {
+                    this.authCode = &#39;&#39;
+                }, 1200)
+            }
+        },
+        methods: {
+            doKeyup(e) {
+                let keyCode = e.keyCode
+                let keyValue = e.key
+                if (keyCode &gt;= 48 &amp;&amp; keyCode &lt;= 57) {
+                    this.authCode += keyValue
+                } else if (keyCode === 13 &amp;&amp; this.authCode !== &#39;&#39;) {
+                    this.handleSureOrder()
+                    this.authCode = &#39;&#39;
+                }
+            },
+            handleSureOrder() {
+                // ...
+            }
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[如何使用js调用摄像头拍照]]></title>
       <url>/2018/07/28/mediaDevices/</url>
       <content type="html"><![CDATA[<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1ftpzysab74j30pc0hamzw.jpg" alt="https://ws3.sinaimg.cn/large/006tNc79gy1ftpzysab74j30pc0hamzw.jpg"></p>
@@ -2515,9 +2602,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
