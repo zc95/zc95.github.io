@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/2018/08/16/qrcodeAndWebsocket/</loc>
+    
+    <lastmod>2018-08-16T12:25:39.715Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zc95.github.io/2018/08/16/debounceAndThrottle/</loc>
+    
+    <lastmod>2018-08-16T12:24:35.251Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/about/index.html</loc>
     
     <lastmod>2018-08-12T14:47:20.719Z</lastmod>

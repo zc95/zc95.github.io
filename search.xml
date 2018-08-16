@@ -3,6 +3,339 @@
   
     
     <entry>
+      <title><![CDATA[qrcode和Websocket实现在线支付]]></title>
+      <url>/2018/08/16/qrcodeAndWebsocket/</url>
+      <content type="html"><![CDATA[<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>收营员选择收款方式（现金/支付宝/微信），如果是支付宝/微信，服务端会传给前端一个交易码，前端用 <strong>qrcode</strong> 生成二维码给客户扫并且支付，<strong>websocket</strong> 建立持久的连接直到收到服务端返回的true，前端提示交易成功。</p>
+<h2 id="HTML5-WebSocket"><a href="#HTML5-WebSocket" class="headerlink" title="HTML5 WebSocket"></a>HTML5 WebSocket</h2><p>1.简介</p>
+<p>我们已经有了 HTTP 协议，为什么还需要另一个协议？它能带来什么好处？ </p>
+<p>答案很简单，因为 HTTP 协议有一个缺陷：通信只能由客户端发起。 </p>
+<p>举例来说，我们想了解今天的天气，只能是客户端向服务器发出请求，服务器返回查询结果。HTTP 协议做不到服务器主动向客户端推送信息。 </p>
+<p>这种单向请求的特点，注定了如果服务器有连续的状态变化，客户端要获知就非常麻烦。我们只能使用”轮询”：每隔一段时候，就发出一个询问，了解服务器有没有新的信息。最典型的场景就是聊天室。</p>
+<p>轮询的效率低，非常浪费资源（因为必须不停连接，或者 HTTP 连接始终打开）。因此，工程师们一直在思考，有没有更好的方法。WebSocket 就是这样发明的。</p>
+<p>2.使用</p>
+<p><a href="http://jsbin.com/muqamiqimu/edit?js,console" target="_blank" rel="external">http://jsbin.com/muqamiqimu/edit?js,console</a></p>
+<pre><code class="JS">var ws = new WebSocket(&quot;wss://echo.websocket.org&quot;);
+
+ws.onopen = function(evt) { 
+  console.log(&quot;Connection open ...&quot;); 
+  ws.send(&quot;Hello WebSockets!&quot;);
+};
+
+ws.onmessage = function(evt) {
+  console.log( &quot;Received Message: &quot; + evt.data);
+  ws.close();
+};
+
+ws.onclose = function(evt) {
+  console.log(&quot;Connection closed.&quot;);
+};
+</code></pre>
+<h2 id="qrcode-vue"><a href="#qrcode-vue" class="headerlink" title="qrcode-vue"></a>qrcode-vue</h2><p><a href="https://www.npmjs.com/package/qrcode-vue" target="_blank" rel="external">https://www.npmjs.com/package/qrcode-vue</a></p>
+<p>1.安装</p>
+<blockquote>
+<p>npm install –save qrcode.vue</p>
+</blockquote>
+<p>2.使用</p>
+<pre><code class="vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;qrcode-vue 
+      :size=&quot;size&quot; 
+      :value=&quot;value&quot; 
+      :logo=&quot;logo&quot; 
+      :bgColor=&quot;bgColor&quot; 
+      :fgColor=&quot;fgColor&quot;
+    &gt;&lt;/qrcode-vue&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="vue">&lt;script&gt;
+  import qrcodeVue from &#39;../src/qrcode-vue&#39;
+  export default {
+    data () {
+      return {
+        size: 128,
+        bgColor: &#39;#fff&#39;,
+        fgColor: &#39;#000&#39;,
+        value: &#39;https://github.com/l-ll/qrcode-vue&#39;,
+        logo: &#39;https://avatars3.githubusercontent.com/u/7104141?v=3&amp;s=80&#39;
+      }
+    },
+    components: {
+      qrcodeVue
+    }
+  }
+&lt;/script&gt;
+</code></pre>
+<h2 id="在线支付场景实例"><a href="#在线支付场景实例" class="headerlink" title="在线支付场景实例"></a>在线支付场景实例</h2><pre><code class="vue">&lt;style lang=&quot;less&quot;&gt;
+    @import &#39;../../styles/common.less&#39;;
+
+    .pay-template {
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .orderInfo {
+            .payType {
+                width: 200px
+            }
+            canvas {
+                border-radius: 4px;
+            }
+        }
+
+        .footer {
+            text-align: right;
+            .submit {
+                margin-left: 5px;
+            }
+        }
+    }
+&lt;/style&gt;
+
+&lt;template&gt;
+    &lt;div class=&quot;pay-template&quot;&gt;
+        &lt;Spin size=&quot;large&quot; fix v-if=&quot;spinShow&quot;&gt;&lt;/Spin&gt;
+        &lt;p slot=&quot;header&quot;&gt;
+            &lt;span class=&quot;title&quot;&gt;付款 {{orderInfo.orderNo}}&lt;/span&gt;
+        &lt;/p&gt;
+        &lt;div class=&quot;orderInfo&quot;&gt;
+            &lt;p&gt;订单类型：{{orderInfo.orderType|orderType}}&lt;/p&gt;
+            &lt;p&gt;订单金额：{{orderInfo.totalAmount|money}}&lt;/p&gt;
+            &lt;p&gt;优惠金额：{{orderInfo.totalAmount - orderInfo.finalAmount|money}}&lt;/p&gt;
+            &lt;p&gt;实付金额：
+                &lt;span&gt;{{orderInfo.finalAmount|money}}&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;支付方式：
+                &lt;Select class=&quot;payType&quot; v-model=&quot;orderInfo.payType&quot;&gt;
+                    &lt;Option value=&quot;CASH&quot;&gt;现金&lt;/Option&gt;
+                    &lt;Option value=&quot;WECHAT&quot;&gt;微信&lt;/Option&gt;
+                    &lt;Option value=&quot;ALIPAY&quot;&gt;支付宝&lt;/Option&gt;
+                &lt;/Select&gt;
+            &lt;/p&gt;
+            &lt;p style=&quot;text-align: center&quot; v-if=&quot;orderInfo.payType!=&#39;CASH&#39; &amp;&amp; message!==&#39;&#39;&quot;&gt;{{message}}&lt;/p&gt;
+            &lt;qr-code-vue v-if=&quot;orderInfo.payType!=&#39;CASH&#39;&amp;&amp;message===&#39;&#39;&amp;&amp;qrCodeValue!==&#39;&#39;&quot; style=&quot;text-align: center;&quot;
+                         :value=&quot;qrCodeValue&quot; size=&quot;150&quot; level=&quot;H&quot;&gt;&lt;/qr-code-vue&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;footer&quot; slot=&quot;footer&quot;&gt;
+            &lt;Button type=&quot;ghost&quot; @click=&quot;$emit(&#39;emitCloseDialog&#39;)&quot;&gt;取消&lt;/Button&gt;
+            &lt;Button class=&quot;submit&quot; v-if=&quot;orderInfo.payType==&#39;CASH&#39;&quot; type=&quot;primary&quot;
+                    @click=&quot;handleSureOrder&quot;&gt;
+                确定
+            &lt;/Button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    import {
+        getQrCode,
+        sureOrder
+    } from &#39;../../api/retail&#39;
+    import QrCodeVue from &#39;qrcode.vue&#39;
+
+    export default {
+        props: [&#39;orderInfo&#39;, &#39;orderShow&#39;],
+        data() {
+            return {
+                message: &#39;&#39;,
+                qrCodeValue: &#39;&#39;,
+                spinShow: false
+            }
+        },
+        components: {
+            QrCodeVue
+        },
+        watch: {
+            &#39;orderInfo.payType&#39;(type) {
+                this.makeQrCode(type)
+            },
+            orderShow(flag) {
+                if (flag) {
+                    this.webSocketInit()
+
+                } else {
+                    this.webSocketClose()
+                }
+            }
+        },
+        methods: {
+            makeQrCode(type) {
+                let _this = this
+                if (type !== &#39;CASH&#39;) {
+                    _this.spinShow = true
+                    return new Promise((resolve, reject) =&gt; {
+                        getQrCode({
+                            orderId: _this.orderInfo.id,
+                            payType: type
+                        }).then(response =&gt; {
+                            _this.spinShow = false
+                            if (response.status === 200) {
+                                _this.qrCodeValue = response.data
+                                _this.message = &#39;&#39;
+                            } else {
+                                _this.message = response.message
+                            }
+                            resolve(response)
+                        }).catch(error =&gt; {
+                            _this.qrCodeValue = &#39;&#39;
+                            _this.message = &#39;&#39;
+                            _this.spinShow = false
+                            reject(error)
+                        })
+                    })
+                }
+            },
+            handleSureOrder() {
+                let _this = this
+                _this.spinShow = true
+                return new Promise((resolve, reject) =&gt; {
+                    sureOrder({
+                        orderNo: _this.orderInfo.orderNo,
+                        id: _this.orderInfo.id,
+                        payType: _this.orderInfo.payType
+                    }).then(response =&gt; {
+                        _this.spinShow = false
+                        if (response.status &amp;&amp; response.status === 200) {
+                            _this.$Notice.success({
+                                title: &#39;付款成功通知&#39;,
+                                desc: &#39;订单&#39; + _this.orderInfo.orderNo + &#39;付款成功&#39;,
+                                duration: 3
+                            })
+                            _this.$emit(&#39;emitCloseDialog&#39;)
+                            _this.$store.commit(&#39;RELOAD&#39;)
+                        } else {
+                            _this.$Notice.error({
+                                title: response.message,
+                                desc: &#39;订单&#39; + _this.orderInfo.orderNo + &#39;付款失败&#39;,
+                                duration: 3
+                            })
+                        }
+                        resolve(response)
+                    }).catch(error =&gt; {
+                        _this.spinShow = false
+                        reject(error)
+                    })
+                })
+            },
+            webSocketInit() {
+                if (&#39;WebSocket&#39; in window) {
+                    this.websock = new WebSocket(&quot;ws://xxxxxxxxxxxxxxxxxxxx&quot;)
+                    this.websock.onopen = this.webSocketOnOpen
+                    this.websock.onmessage = this.webSocketOnMessage
+                    this.websock.onerror = this.webSocketOnError
+                    this.websock.onclose = this.webSocketClose
+                } else {
+                    alert(&#39;Not support websocket&#39;)
+                }
+            },
+            webSocketOnOpen(event) {
+                console.log(&#39;websocket open&#39;)
+            },
+            webSocketOnMessage(event) {
+                if (event.data) {
+                    this.$Notice.success({
+                        title: &#39;付款成功通知&#39;,
+                        desc: &#39;订单&#39; + this.orderInfo.orderNo + &#39;付款成功&#39;,
+                        duration: 3
+                    })
+                    this.$emit(&#39;emitCloseDialog&#39;)
+                    this.$store.commit(&#39;reloadOrder&#39;)
+                }
+            },
+            webSocketOnError(event) {
+                this.$Message.error(&quot;websocket 连接失败&quot;)
+            },
+            webSocketClose(event) {
+                console.log(&#39;websocket close&#39;)
+            }
+        }
+    }
+
+&lt;/script&gt;
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> qrcode </tag>
+            
+            <tag> Websocket </tag>
+            
+            <tag> 微信支付宝支付 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScript性能优化之函数去抖（debounce）和函数节流（throttle）]]></title>
+      <url>/2018/08/16/debounceAndThrottle/</url>
+      <content type="html"><![CDATA[<p>以下场景往往由于事件频繁被触发，因而频繁执行DOM操作、资源加载等重行为，导致UI停顿或者服务器压力大甚至浏览器崩溃。</p>
+<ol>
+<li>window对象的resize、scroll事件</li>
+<li>拖拽时的mousemove事件</li>
+<li>射击游戏中的mousedown、keydown事件</li>
+<li>文字输入、自动完成的keyup、onchange事件</li>
+</ol>
+<h2 id="函数去抖（debounce）和函数节流（throttle）"><a href="#函数去抖（debounce）和函数节流（throttle）" class="headerlink" title="函数去抖（debounce）和函数节流（throttle）"></a>函数去抖（debounce）和函数节流（throttle）</h2><ol>
+<li><strong>函数去抖 debounce：</strong>如果用手指一直按住一个弹簧，它将不会弹起直到你松手为止。也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。</li>
+<li><strong>函数节流 throttle</strong>：如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现每隔一段时间，就会有一滴水流出。也就是会说预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。</li>
+</ol>
+<h2 id="远程搜索的实际场景"><a href="#远程搜索的实际场景" class="headerlink" title="远程搜索的实际场景"></a>远程搜索的实际场景</h2><p>当我们用 <strong>onkeyup</strong> 或者 <strong>onchange</strong> 事件来监听某个输入框的时候，每按下键盘后弹起都会调用接口来查询数据，所以我们输入一个中文可能需要调用四五次这样子，而事实上我们只需要在停下来的时候查询一次就行，因此这种场景下用函数去抖（debounce）更合适。</p>
+<pre><code class="javascript">getRecently() {
+    this.debounce(this.getRecentlyFn, 600)
+},
+getRecentlyFn() {
+    let _this = this
+    return new Promise((resolve, reject) = &gt;{
+        queryRecently({
+            cardId: _this.recently
+        }).then(response = &gt;{
+            _this.autoInfo = response resolve(response)
+        }).
+        catch(error = &gt;{
+            reject(error)
+        })
+    })
+},
+debounce(fn, delay) {
+    clearTimeout(fn.timeid) fn.timeid = setTimeout(function() {
+        fn()
+    },
+    delay)
+}
+</code></pre>
+<p>关于另一个函数节流 throttle，目前暂时还没遇到适用的场景。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 性能优化 </tag>
+            
+            <tag> 函数去抖 debounce </tag>
+            
+            <tag> 函数节流 throttle </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[美团、支付宝、微信扫码支付]]></title>
       <url>/2018/08/10/alipay/</url>
       <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fu51nh65fkj30vi0uawgz.jpg" alt=""></p>
@@ -2602,9 +2935,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         

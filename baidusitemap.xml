@@ -3,6 +3,54 @@
 
 
     
+  <url>
+    <loc>http://zc95.github.io/2018/08/16/qrcodeAndWebsocket/</loc>
+    <lastmod>2018-08-16T12:25:39.715Z</lastmod>
+    <data>
+        <display>
+        <title>qrcode和Websocket实现在线支付</title>
+        <pubTime>2018-08-16T12:22:23.000Z</pubTime>
+        
+        <tag>qrcode</tag>
+         
+        <tag>Websocket</tag>
+         
+        <tag>微信支付宝支付</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zc95.github.io/2018/08/16/debounceAndThrottle/</loc>
+    <lastmod>2018-08-16T12:24:35.251Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript性能优化之函数去抖（debounce）和函数节流（throttle）</title>
+        <pubTime>2018-08-16T12:22:03.000Z</pubTime>
+        
+        <tag>性能优化</tag>
+         
+        <tag>函数去抖 debounce</tag>
+         
+        <tag>函数节流 throttle</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://zc95.github.io/2018/08/10/alipay/</loc>
@@ -789,9 +837,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>github</tag>
-         
         <tag>hosts</tag>
+         
+        <tag>github</tag>
          
          
            
