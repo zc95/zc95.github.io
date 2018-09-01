@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[阿里的面试邀请]]></title>
+      <url>/2018/09/01/ali/</url>
+      <content type="html"><![CDATA[<p>昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。<br>今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只是偶尔听说。。<br>还是赶紧学习吧！无论是RN，还是weex，都要开始学起来了。</p>
+<p>附上面试邀请勉励自己一下哈哈，加油！！<br><img src="https://i.loli.net/2018/09/01/5b8aae86e2e7e.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[qrcode和Websocket实现在线支付]]></title>
       <url>/2018/08/16/qrcodeAndWebsocket/</url>
       <content type="html"><![CDATA[<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>收营员选择收款方式（现金/支付宝/微信），如果是支付宝/微信，服务端会传给前端一个交易码，前端用 <strong>qrcode</strong> 生成二维码给客户扫并且支付，<strong>websocket</strong> 建立持久的连接直到收到服务端返回的true，前端提示交易成功。</p>

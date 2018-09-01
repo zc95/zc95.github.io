@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-08-16T12:25:39.715Z</updated>
+  <updated>2018-09-01T15:29:15.534Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里的面试邀请</title>
+    <link href="http://zc95.github.io/2018/09/01/ali/"/>
+    <id>http://zc95.github.io/2018/09/01/ali/</id>
+    <published>2018-09-01T15:19:52.000Z</published>
+    <updated>2018-09-01T15:29:15.534Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。<br>今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只是偶尔听说。。<br>还是赶紧学习吧！无论是RN，还是weex，都要开始学起来了。</p><p>附上面试邀请勉励自己一下哈哈，加油！！<br><img src="https://i.loli.net/2018/09/01/5b8aae86e2e7e.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。&lt;br&gt;今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>qrcode和Websocket实现在线支付</title>
@@ -539,32 +564,6 @@ npm start
 &lt;h2 id=&quot;Link&quot;&gt;&lt;a href=&quot;#Link&quot; class=&quot;headerlink&quot; title=&quot;Link&quot;&gt;&lt;/a&gt;Link&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://htmlpreview.github.io/?https://github.com/zc95/RTF/blob/master/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/zc95/RTF&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一行代码实现星级评分</title>
-    <link href="http://zc95.github.io/2018/01/23/star-rating/"/>
-    <id>http://zc95.github.io/2018/01/23/star-rating/</id>
-    <published>2018-01-23T13:03:13.000Z</published>
-    <updated>2018-01-30T15:23:57.113Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg" alt=""></p><h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul><li><a href="https://htmlpreview.github.io/?https://github.com/zc95/star-rating/blob/master/index.html" target="_blank" rel="external">demo</a></li><li><a href="https://github.com/zc95/star-rating" target="_blank" rel="external">github</a></li></ul><a id="more"></a><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><pre><code class="css">.score_wrapper {      display:inline-block;      font-size: 45px;      cursor: pointer;      color: #dc2020;      -webkit-user-select:none;      -moz-user-select:none;      -ms-user-select:none;      user-select:none;    }</code></pre><h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><pre><code class="html">&lt;div class=&quot;score_wrapper&quot;&gt;&lt;/div&gt;</code></pre><h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><pre><code class="javascript">    $(function () {      ScoreInit(3); //初始化，参数是0～5的数字，代表星数，传空默认0颗星    })    //点击    function ScoreInit(e) {      Score((e == null) ? 0 : e); //传空默认0颗星      $(&quot;.score_wrapper&quot;).bind(&#39;click&#39;, function (e) {        var eachWidth = $(&quot;.score_wrapper&quot;).width() / 5; //计算出每个星星的长度        var X = e.pageX - $(this).offset().left; //距离父容器的偏移距离        var score = Math.floor(X / eachWidth) + 1; //分数        Score((getScore() == score) ? 0 : score); //取消评分      })    }    //评分    function Score(rate) {      $(&quot;.score_wrapper&quot;).html(&quot;★★★★★☆☆☆☆☆&quot;.slice(5 - rate, 10 - rate));    }    //获取评分    function getScore() {      var str = $(&quot;.score_wrapper&quot;).html(), num = 0;      for (var i = 0; i &lt; str.length; i++) {        if (str[i] == &quot;★&quot;) {          num++        }      }      return num;    }</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理&quot;&gt;&lt;/a&gt;实现原理&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Link&quot;&gt;&lt;a href=&quot;#Link&quot; class=&quot;headerlink&quot; title=&quot;Link&quot;&gt;&lt;/a&gt;Link&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://htmlpreview.github.io/?https://github.com/zc95/star-rating/blob/master/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zc95/star-rating&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
