@@ -3,6 +3,76 @@
   
     
     <entry>
+      <title><![CDATA[weex踩坑第一天]]></title>
+      <url>/2018/09/02/weex-day1/</url>
+      <content type="html"><![CDATA[<h2 id="什么是-Weex-？"><a href="#什么是-Weex-？" class="headerlink" title="什么是 Weex ？"></a>什么是 Weex ？</h2><blockquote>
+<p>Weex 是一个使用 Web 开发体验来开发高性能原生应用的框架。</p>
+</blockquote>
+<p>Weex 致力于使开发者能基于当代先进的 Web 开发技术，使用同一套代码来构建 Android、iOS 和 Web 应用。具体来讲，在集成了 WeexSDK 之后，你可以使用 JavaScript 和现代流行的前端框架来开发移动应用。</p>
+<p>Weex 的结构是解耦的，渲染引擎与语法层是分开的，也不依赖任何特定的前端框架，目前主要支持 Vue.js 和 Rax 这两个前端框架。</p>
+<p>Weex 的另一个主要目标是跟进当代先进的 Web 开发和原生开发的技术，使生产力和性能共存。在开发 Weex 页面就像开发普通网页一样；在渲染 Weex 页面时和渲染原生页面一样。</p>
+<h2 id="weex与vue的异同"><a href="#weex与vue的异同" class="headerlink" title="weex与vue的异同"></a>weex与vue的异同</h2><ol>
+<li>不推荐使用vue-router，weex编译出的页面不再是一个SPA（单页面应用），而是多页应用，如果组件层级嵌套过深或者路由过多很容易造成性能问题</li>
+<li>weex中使用vuex和在vue中类似，但是weex是多页应用，多个页面之间的store是不同的，不能跨页面使用</li>
+</ol>
+<h2 id="css知识点，为了适配三端有很多约束"><a href="#css知识点，为了适配三端有很多约束" class="headerlink" title="css知识点，为了适配三端有很多约束"></a>css知识点，为了适配三端有很多约束</h2><ol>
+<li><p>weex中所有样式都是自带scoped，不存在全局污染，强制只对本页有效</p>
+</li>
+<li><p>不支持百分比布局，用px比较合适，默认750px是100%宽度，会根据不同手机自动适配</p>
+</li>
+<li><p>npm start之后在浏览器中预览的效果并不正确，因为weex构建的是原生应用，只有在真机或者Android Studio/Xcode 上看到的才是最终效果</p>
+</li>
+<li><p>不支持类似 border: 1px solid #ccc; 的组合写法，拆分成：</p>
+<blockquote>
+<p>border-width border-style border-color</p>
+</blockquote>
+</li>
+<li><p>支持flexbox:  flex-direction justify-content align-items flex</p>
+</li>
+<li><p>支持position定位，但是不支持z-index,元素层级按照先后顺序，越靠后层级越高</p>
+</li>
+<li><p>伪类只支持active。有个特例就是input和textaraea，支持focus，enabled，disabled来设置样式</p>
+</li>
+</ol>
+<h2 id="内置组件"><a href="#内置组件" class="headerlink" title="内置组件"></a>内置组件</h2><ol>
+<li>所有的能看到文字都必须放在 <code>text</code> 组件中</li>
+<li>尽量避免使用 <code>a</code> 标签，用了之后只能在native端运行，在web端会打开一堆代码</li>
+<li><code>div</code> 中不能放置文字</li>
+</ol>
+<h2 id="使用字体图标"><a href="#使用字体图标" class="headerlink" title="使用字体图标"></a>使用字体图标</h2><p><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fuv2p3q7nzj31k00xegrz.jpg" alt=""></p>
+<h3 id="src-index-vue"><a href="#src-index-vue" class="headerlink" title="src/index.vue"></a>src/index.vue</h3><pre><code class="javascript">export default {
+  name: &quot;App&quot;,
+  beforeCreate() {
+    const domModule = weex.requireModule(&quot;dom&quot;);
+    domModule.addRule(&quot;fontFace&quot;, {
+      fontFamily: &quot;iconfont&quot;,
+      src: &quot;url(&#39;http://at.alicdn.com/t/font_544044_k9kgix8mzs.ttf&#39;)&quot;
+    })
+  }
+}
+</code></pre>
+<pre><code class="css">.iconfont{
+  font-family: iconfont;
+}
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> weex </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[阿里的面试邀请]]></title>
       <url>/2018/09/01/ali/</url>
       <content type="html"><![CDATA[<p>昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。<br>今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只是偶尔听说。。<br>还是赶紧学习吧！无论是RN，还是weex，都要开始学起来了。</p>
@@ -2957,9 +3027,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         

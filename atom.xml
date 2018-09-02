@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-09-01T15:29:15.534Z</updated>
+  <updated>2018-09-02T05:00:42.270Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>weex踩坑第一天</title>
+    <link href="http://zc95.github.io/2018/09/02/weex-day1/"/>
+    <id>http://zc95.github.io/2018/09/02/weex-day1/</id>
+    <published>2018-09-02T04:58:58.000Z</published>
+    <updated>2018-09-02T05:00:42.270Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是-Weex-？"><a href="#什么是-Weex-？" class="headerlink" title="什么是 Weex ？"></a>什么是 Weex ？</h2><blockquote><p>Weex 是一个使用 Web 开发体验来开发高性能原生应用的框架。</p></blockquote><p>Weex 致力于使开发者能基于当代先进的 Web 开发技术，使用同一套代码来构建 Android、iOS 和 Web 应用。具体来讲，在集成了 WeexSDK 之后，你可以使用 JavaScript 和现代流行的前端框架来开发移动应用。</p><p>Weex 的结构是解耦的，渲染引擎与语法层是分开的，也不依赖任何特定的前端框架，目前主要支持 Vue.js 和 Rax 这两个前端框架。</p><p>Weex 的另一个主要目标是跟进当代先进的 Web 开发和原生开发的技术，使生产力和性能共存。在开发 Weex 页面就像开发普通网页一样；在渲染 Weex 页面时和渲染原生页面一样。</p><h2 id="weex与vue的异同"><a href="#weex与vue的异同" class="headerlink" title="weex与vue的异同"></a>weex与vue的异同</h2><ol><li>不推荐使用vue-router，weex编译出的页面不再是一个SPA（单页面应用），而是多页应用，如果组件层级嵌套过深或者路由过多很容易造成性能问题</li><li>weex中使用vuex和在vue中类似，但是weex是多页应用，多个页面之间的store是不同的，不能跨页面使用</li></ol><h2 id="css知识点，为了适配三端有很多约束"><a href="#css知识点，为了适配三端有很多约束" class="headerlink" title="css知识点，为了适配三端有很多约束"></a>css知识点，为了适配三端有很多约束</h2><ol><li><p>weex中所有样式都是自带scoped，不存在全局污染，强制只对本页有效</p></li><li><p>不支持百分比布局，用px比较合适，默认750px是100%宽度，会根据不同手机自动适配</p></li><li><p>npm start之后在浏览器中预览的效果并不正确，因为weex构建的是原生应用，只有在真机或者Android Studio/Xcode 上看到的才是最终效果</p></li><li><p>不支持类似 border: 1px solid #ccc; 的组合写法，拆分成：</p><blockquote><p>border-width border-style border-color</p></blockquote></li><li><p>支持flexbox:  flex-direction justify-content align-items flex</p></li><li><p>支持position定位，但是不支持z-index,元素层级按照先后顺序，越靠后层级越高</p></li><li><p>伪类只支持active。有个特例就是input和textaraea，支持focus，enabled，disabled来设置样式</p></li></ol><h2 id="内置组件"><a href="#内置组件" class="headerlink" title="内置组件"></a>内置组件</h2><ol><li>所有的能看到文字都必须放在 <code>text</code> 组件中</li><li>尽量避免使用 <code>a</code> 标签，用了之后只能在native端运行，在web端会打开一堆代码</li><li><code>div</code> 中不能放置文字</li></ol><h2 id="使用字体图标"><a href="#使用字体图标" class="headerlink" title="使用字体图标"></a>使用字体图标</h2><p><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fuv2p3q7nzj31k00xegrz.jpg" alt=""></p><h3 id="src-index-vue"><a href="#src-index-vue" class="headerlink" title="src/index.vue"></a>src/index.vue</h3><pre><code class="javascript">export default {  name: &quot;App&quot;,  beforeCreate() {    const domModule = weex.requireModule(&quot;dom&quot;);    domModule.addRule(&quot;fontFace&quot;, {      fontFamily: &quot;iconfont&quot;,      src: &quot;url(&#39;http://at.alicdn.com/t/font_544044_k9kgix8mzs.ttf&#39;)&quot;    })  }}</code></pre><pre><code class="css">.iconfont{  font-family: iconfont;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;什么是-Weex-？&quot;&gt;&lt;a href=&quot;#什么是-Weex-？&quot; class=&quot;headerlink&quot; title=&quot;什么是 Weex ？&quot;&gt;&lt;/a&gt;什么是 Weex ？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Weex 是一个使用 Web 开发体验来开发高性能
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="weex" scheme="http://zc95.github.io/tags/weex/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里的面试邀请</title>
@@ -546,31 +572,6 @@ npm start
     
     
       <category term="歌曲" scheme="http://zc95.github.io/tags/%E6%AD%8C%E6%9B%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rich Text Format</title>
-    <link href="http://zc95.github.io/2018/02/06/RTF/"/>
-    <id>http://zc95.github.io/2018/02/06/RTF/</id>
-    <published>2018-02-06T15:20:53.000Z</published>
-    <updated>2018-03-31T04:49:02.246Z</updated>
-    
-    <content type="html"><![CDATA[<p>自己写的一个移动端的富文本编辑器</p><h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><ul><li><a href="https://htmlpreview.github.io/?https://github.com/zc95/RTF/blob/master/index.html" target="_blank" rel="external">demo</a></li><li><a href="https://github.com/zc95/RTF" target="_blank" rel="external">github</a><a id="more"></a></li></ul><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fo74tsp0mij31401z4aeo.jpg" style="height:500px;"></p><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1fo74ugdi9qj31401z4q72.jpg" style="height:500px;"><br><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fo74v4k9udj31401z40wu.jpg" style="height:500px;"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;自己写的一个移动端的富文本编辑器&lt;/p&gt;
-&lt;h2 id=&quot;Link&quot;&gt;&lt;a href=&quot;#Link&quot; class=&quot;headerlink&quot; title=&quot;Link&quot;&gt;&lt;/a&gt;Link&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://htmlpreview.github.io/?https://github.com/zc95/RTF/blob/master/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zc95/RTF&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
     
   </entry>
   

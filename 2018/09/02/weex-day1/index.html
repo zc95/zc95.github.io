@@ -45,7 +45,7 @@
     
     <title>
         
-            标签: 博客 | 
+            weex踩坑第一天 | 
         
         张成的学习笔记
     </title>
@@ -56,7 +56,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="张成的学习笔记">
+    <meta name="keywords" content="张成的学习笔记,weex">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,7 +217,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="张成的学习笔记">
-    <meta name="msapplication-starturl" content="http://zc95.github.io/tags/博客/">
+    <meta name="msapplication-starturl" content="http://zc95.github.io/2018/09/02/weex-day1/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="张成的学习笔记">
@@ -232,13 +232,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://zc95.github.io/tags/博客/">
+    <meta property="og:url" content="http://zc95.github.io/2018/09/02/weex-day1/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 博客 | 张成的学习笔记">
+    <meta property="og:title" content="weex踩坑第一天 | 张成的学习笔记">
     <meta property="og:image" content="/img/favicon .ico">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="weex"> 
 
+    
+        <meta property="article:published_time" content="Sun Sep 02 2018 12:58:58 GMT+0800">
+        <meta property="article:modified_time" content="Sun Sep 02 2018 13:00:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +249,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://zc95.github.io/tags/博客/index.html" />
+        <link rel="canonical" href="http://zc95.github.io/2018/09/02/weex-day1/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://zc95.github.io/2018/09/02/weex-day1/index.html",
+    "headline": "weex踩坑第一天",
+    "datePublished": "Sun Sep 02 2018 12:58:58 GMT+0800",
+    "dateModified": "Sun Sep 02 2018 13:00:42 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "张成",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg"
+        },
+        "description": "深自缄默，如云漂泊"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "张成的学习笔记",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon .ico"
+        }
+    },
+    "keywords": ",weex张成的学习笔记",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,109 +319,317 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-        
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是-Weex-？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是 Weex ？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#weex与vue的异同"><span class="post-toc-number">2.</span> <span class="post-toc-text">weex与vue的异同</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#css知识点，为了适配三端有很多约束"><span class="post-toc-number">3.</span> <span class="post-toc-text">css知识点，为了适配三端有很多约束</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内置组件"><span class="post-toc-number">4.</span> <span class="post-toc-text">内置组件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用字体图标"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用字体图标</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#src-index-vue"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">src/index.vue</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/20/hexoBlog/">在Mac下通过Hexo在Github上搭建博客（入门篇）</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Hexo 快速，简洁且高效的博客框架，让上百个页面在几秒内瞬间完成渲染。Hexo支持Github Flavored Markdown的所有功能，甚至可以整合Octopress的大多数插件，并自己也拥有强大的插件系统。
-Hexo github Node.js Git markdown themes bash命令 npm SSH
-什么是Hexo？
-Hexo 是一个快速、简洁且高效的博客框架。
-Hexo 使用 Markdown（或其他渲染引擎，之后会解释什么是Markdown）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-
-前期准备安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：
-
-Node.js （安装Recommended For Most Users那个版本）
-Git
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/20/hexoBlog/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" width="44px" height="44px" alt="张成's avatar">
-            </div>
-            <div>
-                <strong>张成</strong>
-                <span>10月 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/技术篇/">技术篇</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                weex踩坑第一天
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fpv9bxu35bj305k05k0sp.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张成</strong>
+        <span>9月 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=http://zc95.github.io/2018/09/02/weex-day1/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/weex/">weex</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    <!-- Leancloud Views -->
+        <a class="post_share-link" href="#">
+            <li class="mdl-menu__item">
+                <span id="/2018/09/02/weex-day1/" class="leancloud-views_num" data-flag-title="weex踩坑第一天">
+     &nbsp;浏览量
+</span>
+
+            </li>
+        </a>
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=weex踩坑第一天&url=http://zc95.github.io/2018/09/02/weex-day1/index.html&pic=http://zc95.github.io/img/favicon .ico&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://zc95.github.io/2018/09/02/weex-day1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张成的学习笔记&title=weex踩坑第一天&summary=&pics=http://zc95.github.io/img/favicon .ico&url=http://zc95.github.io/2018/09/02/weex-day1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="什么是-Weex-？"><a href="#什么是-Weex-？" class="headerlink" title="什么是 Weex ？"></a>什么是 Weex ？</h2><blockquote>
+<p>Weex 是一个使用 Web 开发体验来开发高性能原生应用的框架。</p>
+</blockquote>
+<p>Weex 致力于使开发者能基于当代先进的 Web 开发技术，使用同一套代码来构建 Android、iOS 和 Web 应用。具体来讲，在集成了 WeexSDK 之后，你可以使用 JavaScript 和现代流行的前端框架来开发移动应用。</p>
+<p>Weex 的结构是解耦的，渲染引擎与语法层是分开的，也不依赖任何特定的前端框架，目前主要支持 Vue.js 和 Rax 这两个前端框架。</p>
+<p>Weex 的另一个主要目标是跟进当代先进的 Web 开发和原生开发的技术，使生产力和性能共存。在开发 Weex 页面就像开发普通网页一样；在渲染 Weex 页面时和渲染原生页面一样。</p>
+<h2 id="weex与vue的异同"><a href="#weex与vue的异同" class="headerlink" title="weex与vue的异同"></a>weex与vue的异同</h2><ol>
+<li>不推荐使用vue-router，weex编译出的页面不再是一个SPA（单页面应用），而是多页应用，如果组件层级嵌套过深或者路由过多很容易造成性能问题</li>
+<li>weex中使用vuex和在vue中类似，但是weex是多页应用，多个页面之间的store是不同的，不能跨页面使用</li>
+</ol>
+<h2 id="css知识点，为了适配三端有很多约束"><a href="#css知识点，为了适配三端有很多约束" class="headerlink" title="css知识点，为了适配三端有很多约束"></a>css知识点，为了适配三端有很多约束</h2><ol>
+<li><p>weex中所有样式都是自带scoped，不存在全局污染，强制只对本页有效</p>
+</li>
+<li><p>不支持百分比布局，用px比较合适，默认750px是100%宽度，会根据不同手机自动适配</p>
+</li>
+<li><p>npm start之后在浏览器中预览的效果并不正确，因为weex构建的是原生应用，只有在真机或者Android Studio/Xcode 上看到的才是最终效果</p>
+</li>
+<li><p>不支持类似 border: 1px solid #ccc; 的组合写法，拆分成：</p>
+<blockquote>
+<p>border-width border-style border-color</p>
+</blockquote>
+</li>
+<li><p>支持flexbox:  flex-direction justify-content align-items flex</p>
+</li>
+<li><p>支持position定位，但是不支持z-index,元素层级按照先后顺序，越靠后层级越高</p>
+</li>
+<li><p>伪类只支持active。有个特例就是input和textaraea，支持focus，enabled，disabled来设置样式</p>
+</li>
+</ol>
+<h2 id="内置组件"><a href="#内置组件" class="headerlink" title="内置组件"></a>内置组件</h2><ol>
+<li>所有的能看到文字都必须放在 <code>text</code> 组件中</li>
+<li>尽量避免使用 <code>a</code> 标签，用了之后只能在native端运行，在web端会打开一堆代码</li>
+<li><code>div</code> 中不能放置文字</li>
+</ol>
+<h2 id="使用字体图标"><a href="#使用字体图标" class="headerlink" title="使用字体图标"></a>使用字体图标</h2><p><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fuv2p3q7nzj31k00xegrz.jpg" alt=""></p>
+<h3 id="src-index-vue"><a href="#src-index-vue" class="headerlink" title="src/index.vue"></a>src/index.vue</h3><pre><code class="javascript">export default {
+  name: &quot;App&quot;,
+  beforeCreate() {
+    const domModule = weex.requireModule(&quot;dom&quot;);
+    domModule.addRule(&quot;fontFace&quot;, {
+      fontFamily: &quot;iconfont&quot;,
+      src: &quot;url(&#39;http://at.alicdn.com/t/font_544044_k9kgix8mzs.ttf&#39;)&quot;
+    })
+  }
+}
+</code></pre>
+<pre><code class="css">.iconfont{
+  font-family: iconfont;
+}
+</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            深自缄默，如云漂泊
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://zc95.github.io/2018/09/02/weex-day1/">http://zc95.github.io/2018/09/02/weex-day1/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" style='padding:10px;' class="vcomment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'true' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "M4JRRhRlkwfwk4yluOeQYctL-gzGzoHsz",
+        appKey: "fvlhBW5UGPEBJeIH70tpAFkf",
+        placeholder: "快来评论吧～",
+        pageSize:'10',
+        avatar:'wavatar',
+        lang:'zh-cn'
+    });
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/09/01/ali/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -617,6 +858,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

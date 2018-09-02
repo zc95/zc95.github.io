@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/09/02/weex-day1/</loc>
+    <lastmod>2018-09-02T05:00:42.270Z</lastmod>
+    <data>
+        <display>
+        <title>weex踩坑第一天</title>
+        <pubTime>2018-09-02T04:58:58.000Z</pubTime>
+        
+        <tag>weex</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/09/01/ali/</loc>
     <lastmod>2018-09-01T15:29:15.534Z</lastmod>
     <data>
@@ -857,9 +877,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>hosts</tag>
-         
         <tag>github</tag>
+         
+        <tag>hosts</tag>
          
          
            
