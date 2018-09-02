@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-09-02T05:00:42.270Z</updated>
+  <updated>2018-09-02T17:04:56.874Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Doraemons-Pocket</title>
+    <link href="http://zc95.github.io/2018/09/03/Doraemons-Pocket/"/>
+    <id>http://zc95.github.io/2018/09/03/Doraemons-Pocket/</id>
+    <published>2018-09-02T17:03:14.000Z</published>
+    <updated>2018-09-02T17:04:56.874Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Doraemons-Pocket"><a href="#Doraemons-Pocket" class="headerlink" title="Doraemons-Pocket"></a>Doraemons-Pocket</h2><p><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Build Status"><br><img src="https://api.travis-ci.org/alibaba/ice.svg?branch=master" alt="Build Status"></p><blockquote><p>一个可以通过扫码将书籍加入到书架的小程序，有空会加入分享心得、二手书籍交易功能</p><p>项目名称的意思是 哆啦A梦的口袋🤪</p></blockquote><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">https://github.com/zc95/Doraemons-Pocket</a></p><h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><ul><li><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">中文</a></li><li><a href="https://github.com/zc95/Doraemons-Pocket/blob/master/README-en.md" target="_blank" rel="external">English</a></li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>目前已有页面：首页，书籍页，书籍详细信息页，还都是demo状态，以后有时间再完善。。</p><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>主要功能：通过扫描书籍后面的ISBN码查询到相关书籍，并加入到自己的书架中</p><p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fuvna8tekgj30u01hchc3.jpg" style="height: 800px;"></p><h3 id="书籍页"><a href="#书籍页" class="headerlink" title="书籍页"></a>书籍页</h3><p>主要功能：查询到书名、作者、简介（点击封面跳转到书籍的详细信息页），从书架中移除，写读书卡片</p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fuvnf06q6dj30u01hc7dg.jpg" style="height: 800px;"></p><h3 id="书籍详细信息"><a href="#书籍详细信息" class="headerlink" title="书籍详细信息"></a>书籍详细信息</h3><p>主要功能：查询到本书的所有信息，包括封面、作者、出版社、出版时间、装帧、页数、ISBN、定价、评分、标签、作者简介、书籍简介、目录</p><p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fuvng78blrj30u01hcnae.jpg" style="height: 800px;"></p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>小程序还未上线，请clone到本地用微信开发者工具打开</p><pre><code class="shell">git clone https://github.com/zc95/Doraemons-Pocket.git</code></pre><h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><ul><li>遵循 <a href="http://opensource.org/licenses/MIT" target="_blank" rel="external">MIT 协议</a></li><li>请自由地享受和参与开源</li></ul><h1 id="目标功能"><a href="#目标功能" class="headerlink" title="目标功能"></a>目标功能</h1><ul><li style="list-style: none"><input type="checkbox" checked> 扫码加入书架 – 完成</li><li style="list-style: none"><input type="checkbox" checked> 删除书架中的书 – 完成</li><li style="list-style: none"><input type="checkbox" checked> 获取书籍详情 – 完成</li><li style="list-style: none"><input type="checkbox"> 首页批量删除、调整位置</li><li style="list-style: none"><input type="checkbox"> 拍照并发布心得</li><li style="list-style: none"><input type="checkbox"> 点赞、评论？</li><li style="list-style: none"><input type="checkbox"> 微信登录</li><li style="list-style: none"><input type="checkbox"> 可以访问他人的书架</li><li style="list-style: none"><input type="checkbox"> 二手交易功能（要写东西比较多）</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Doraemons-Pocket&quot;&gt;&lt;a href=&quot;#Doraemons-Pocket&quot; class=&quot;headerlink&quot; title=&quot;Doraemons-Pocket&quot;&gt;&lt;/a&gt;Doraemons-Pocket&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="微信小程序" scheme="http://zc95.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>weex踩坑第一天</title>
@@ -47,7 +72,7 @@
     <link href="http://zc95.github.io/2018/09/01/ali/"/>
     <id>http://zc95.github.io/2018/09/01/ali/</id>
     <published>2018-09-01T15:19:52.000Z</published>
-    <updated>2018-09-01T15:29:15.534Z</updated>
+    <updated>2018-09-02T17:04:02.326Z</updated>
     
     <content type="html"><![CDATA[<p>昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。<br>今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只是偶尔听说。。<br>还是赶紧学习吧！无论是RN，还是weex，都要开始学起来了。</p><p>附上面试邀请勉励自己一下哈哈，加油！！<br><img src="https://i.loli.net/2018/09/01/5b8aae86e2e7e.png" alt=""></p>]]></content>
     
@@ -60,10 +85,10 @@
     
     </summary>
     
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+      <category term="杂谈篇" scheme="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
     
     
-      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+      <category term="阿里巴巴" scheme="http://zc95.github.io/tags/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4/"/>
     
   </entry>
   
@@ -548,30 +573,6 @@ npm start
     
     
       <category term="material design" scheme="http://zc95.github.io/tags/material-design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>教你下载会员歌曲</title>
-    <link href="http://zc95.github.io/2018/02/19/musicLink/"/>
-    <id>http://zc95.github.io/2018/02/19/musicLink/</id>
-    <published>2018-02-19T15:19:04.000Z</published>
-    <updated>2018-03-31T04:48:47.851Z</updated>
-    
-    <content type="html"><![CDATA[<p>教你找歌曲的外链（要会员的歌曲都能下载🤪）</p><h2 id="什么是歌曲的外链？"><a href="#什么是歌曲的外链？" class="headerlink" title="什么是歌曲的外链？"></a>什么是歌曲的外链？</h2><p>我们手机里的歌曲都是下载好的mp3文件，比如说散就散.mp3，</p><p>而外链就比如 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> 这样链接的形式。</p><a id="more"></a><h2 id="怎么免费下载会员歌曲？"><a href="#怎么免费下载会员歌曲？" class="headerlink" title="怎么免费下载会员歌曲？"></a>怎么免费下载会员歌曲？</h2><p>你应该注意到了《说散就散》在qq音乐和网易云都是要vip才能下载</p><p><img style="height:400px; display:inline-block;" src="https://ws4.sinaimg.cn/large/006tNc79gy1fom4irp01wj30nq1600x0.jpg"></p><p><img style="height:400px; display:inline-block;" src="https://ws1.sinaimg.cn/large/006tNc79gy1fom4m03u1bj30no15y77v.jpg"></p><p>这里以网易云音乐的网页版为例说一下”破解“的方法</p><p>这个外链下载会员歌曲的方法也是最近撸一个播放器的时候发现的 <a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> （还在改进，下次再说吧 ，逃。。。）</p><h2 id="废话少说，开始了"><a href="#废话少说，开始了" class="headerlink" title="废话少说，开始了"></a>废话少说，开始了</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>打开你电脑上的浏览器，输入 <a href="http://music.163.com" target="_blank" rel="external">http://music.163.com</a> ，网易云音乐官网，输入 “说散就散” 搜索，点第一个要钱的原唱！</p><h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>到了 <a href="http://music.163.com/#/song?id=523251118" target="_blank" rel="external">http://music.163.com/#/song?id=523251118</a> 这个页面</p><ol><li>这个什么 <code>生成外链播放器</code> 不用管，就是个iframe（一般用来博客里），点了提示没版权，放弃。。。</li><li>还有下载按钮，点了提示下载PC端和app，肯定还是要会员。。。放弃</li><li><strong>重点是url，有个?id = xxxxx ，原来百度云网页版的每首歌都有自己的id标识</strong></li></ol><p><img style="height:400px;" src="https://ws2.sinaimg.cn/large/006tNc79gy1fom543cxz3j317i0tgq8q.jpg"></p><h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>从url得到这首歌的id是 <code>523251118</code></p><p>所以这首歌的外链就是 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> ，之后找到别的歌，把这个链接的id替换了就行，除了那种网易云没播放版权的，所有的都可以。</p><h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>打开电脑里的浏览器，输入 <a href="https://music.163.com/song/media/outer/url?id=523251118.mp3" target="_blank" rel="external">https://music.163.com/song/media/outer/url?id=523251118.mp3</a> 回车，这时候url被解析成好长的一段，不用管它，有上面的链接就足够了，点html5 video标签上的下载按钮就行啦（如下），移动端和Safari的video应该是没有下载按钮的。。。</p><video controls name="media"><source src="https://music.163.com/song/media/outer/url?id=523251118.mp3" type="audio/mpeg"></video><h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>如果是安卓机的就直接把这首歌导入到手机里去，qq音乐、网易云都会自动加到列表里去。</p><p>如果是iphone，，，那就没啥吊用了。。。。</p><hr><p>最后说一下，有很多方法下载这种会员歌曲，，发现这种方法是因为最近在手撸一个音乐播放器，需要用到这样的链接<a href="https://zc95.github.io/demo/music">https://zc95.github.io/demo/music</a> </p><p>不然才不费这么大劲。。毕竟我有破解版😂😂😂</p><p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg" alt="https://ws1.sinaimg.cn/large/006tNc79gy1fom5ymxc3aj31ik11egs4.jpg"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;教你找歌曲的外链（要会员的歌曲都能下载🤪）&lt;/p&gt;
-&lt;h2 id=&quot;什么是歌曲的外链？&quot;&gt;&lt;a href=&quot;#什么是歌曲的外链？&quot; class=&quot;headerlink&quot; title=&quot;什么是歌曲的外链？&quot;&gt;&lt;/a&gt;什么是歌曲的外链？&lt;/h2&gt;&lt;p&gt;我们手机里的歌曲都是下载好的mp3文件，比如说散就散.mp3，&lt;/p&gt;
-&lt;p&gt;而外链就比如 &lt;a href=&quot;https://music.163.com/song/media/outer/url?id=523251118.mp3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://music.163.com/song/media/outer/url?id=523251118.mp3&lt;/a&gt; 这样链接的形式。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="歌曲" scheme="http://zc95.github.io/tags/%E6%AD%8C%E6%9B%B2/"/>
     
   </entry>
   

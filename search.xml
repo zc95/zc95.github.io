@@ -3,6 +3,61 @@
   
     
     <entry>
+      <title><![CDATA[Doraemons-Pocket]]></title>
+      <url>/2018/09/03/Doraemons-Pocket/</url>
+      <content type="html"><![CDATA[<h2 id="Doraemons-Pocket"><a href="#Doraemons-Pocket" class="headerlink" title="Doraemons-Pocket"></a>Doraemons-Pocket</h2><p><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Build Status"><br><img src="https://api.travis-ci.org/alibaba/ice.svg?branch=master" alt="Build Status"></p>
+<blockquote>
+<p>一个可以通过扫码将书籍加入到书架的小程序，有空会加入分享心得、二手书籍交易功能</p>
+<p>项目名称的意思是 哆啦A梦的口袋🤪</p>
+</blockquote>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">https://github.com/zc95/Doraemons-Pocket</a></p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><ul>
+<li><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">中文</a></li>
+<li><a href="https://github.com/zc95/Doraemons-Pocket/blob/master/README-en.md" target="_blank" rel="external">English</a></li>
+</ul>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>目前已有页面：首页，书籍页，书籍详细信息页，还都是demo状态，以后有时间再完善。。</p>
+<h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>主要功能：通过扫描书籍后面的ISBN码查询到相关书籍，并加入到自己的书架中</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fuvna8tekgj30u01hchc3.jpg" style="height: 800px;"></p>
+<h3 id="书籍页"><a href="#书籍页" class="headerlink" title="书籍页"></a>书籍页</h3><p>主要功能：查询到书名、作者、简介（点击封面跳转到书籍的详细信息页），从书架中移除，写读书卡片</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fuvnf06q6dj30u01hc7dg.jpg" style="height: 800px;"></p>
+<h3 id="书籍详细信息"><a href="#书籍详细信息" class="headerlink" title="书籍详细信息"></a>书籍详细信息</h3><p>主要功能：查询到本书的所有信息，包括封面、作者、出版社、出版时间、装帧、页数、ISBN、定价、评分、标签、作者简介、书籍简介、目录</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fuvng78blrj30u01hcnae.jpg" style="height: 800px;"></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>小程序还未上线，请clone到本地用微信开发者工具打开</p>
+<pre><code class="shell">git clone https://github.com/zc95/Doraemons-Pocket.git
+</code></pre>
+<h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><ul>
+<li>遵循 <a href="http://opensource.org/licenses/MIT" target="_blank" rel="external">MIT 协议</a></li>
+<li>请自由地享受和参与开源</li>
+</ul>
+<h1 id="目标功能"><a href="#目标功能" class="headerlink" title="目标功能"></a>目标功能</h1><ul>
+<li style="list-style: none"><input type="checkbox" checked> 扫码加入书架 – 完成</li>
+<li style="list-style: none"><input type="checkbox" checked> 删除书架中的书 – 完成</li>
+<li style="list-style: none"><input type="checkbox" checked> 获取书籍详情 – 完成</li>
+<li style="list-style: none"><input type="checkbox"> 首页批量删除、调整位置</li>
+<li style="list-style: none"><input type="checkbox"> 拍照并发布心得</li>
+<li style="list-style: none"><input type="checkbox"> 点赞、评论？</li>
+<li style="list-style: none"><input type="checkbox"> 微信登录</li>
+<li style="list-style: none"><input type="checkbox"> 可以访问他人的书架</li>
+<li style="list-style: none"><input type="checkbox"> 二手交易功能（要写东西比较多）</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 微信小程序 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[weex踩坑第一天]]></title>
       <url>/2018/09/02/weex-day1/</url>
       <content type="html"><![CDATA[<h2 id="什么是-Weex-？"><a href="#什么是-Weex-？" class="headerlink" title="什么是 Weex ？"></a>什么是 Weex ？</h2><blockquote>
@@ -81,14 +136,14 @@
       
         <categories>
             
-            <category> 技术篇 </category>
+            <category> 杂谈篇 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> html </tag>
+            <tag> 阿里巴巴 </tag>
             
         </tags>
         
