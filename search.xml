@@ -10,7 +10,7 @@
 <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>像window对象的onresize事件（监听浏览器窗口的变化）、onscroll事件（监听滚动事件），onmousemove（监听鼠标移动）、oninput（监听input变化）、onkeydown（按下键盘）、onkeypress（按住键盘）、onkeyup（释放键盘）等频繁的事件触发。</p>
 <p>函数节流与都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。</p>
 <p>可以提高用户体验，减少请求次数，优化产品性能。</p>
-<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p><a href="demo.nimius.net/debounce_throttle/">demo.nimius.net/debounce_throttle/</a></p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p><a href="http://demo.nimius.net/debounce_throttle/" target="_blank" rel="external">http://demo.nimius.net/debounce_throttle/</a></p>
 <h2 id="防抖代码"><a href="#防抖代码" class="headerlink" title="防抖代码"></a>防抖代码</h2><pre><code class="javascript">// 第四版
 function debounce(func, wait, immediate) {
     var timeout, result;
@@ -3269,9 +3269,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> hosts </tag>
-            
             <tag> github </tag>
+            
+            <tag> hosts </tag>
             
         </tags>
         
