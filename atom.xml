@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-09-02T17:04:56.874Z</updated>
+  <updated>2018-11-29T12:34:19.377Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Doraemons-Pocket</title>
+    <title>javascript防抖和节流</title>
+    <link href="http://zc95.github.io/2018/11/29/debounce-throttle/"/>
+    <id>http://zc95.github.io/2018/11/29/debounce-throttle/</id>
+    <published>2018-11-29T12:31:23.000Z</published>
+    <updated>2018-11-29T12:34:19.377Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>函数防抖（debounce）：是指在一定时间内，在动作被连续频繁触发的情况下，动作只会被执行一次，也就是说当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间，所以短时间内的连续动作永远只会触发一次，比如说用手指一直按住一个弹簧，它将不会弹起直到你松手为止 。</p><p>函数节流（throttle）：函数节流是指一定时间内执行的操作只执行一次，也就是说即预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期，一个比较形象的例子是如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现每隔一段时间，就会有一滴水流出 。</p><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>像window对象的onresize事件（监听浏览器窗口的变化）、onscroll事件（监听滚动事件），onmousemove（监听鼠标移动）、oninput（监听input变化）、onkeydown（按下键盘）、onkeypress（按住键盘）、onkeyup（释放键盘）等频繁的事件触发。</p><p>函数节流与都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。</p><p>可以提高用户体验，减少请求次数，优化产品性能。</p><h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p><a href="demo.nimius.net/debounce_throttle/">demo.nimius.net/debounce_throttle/</a></p><h2 id="防抖代码"><a href="#防抖代码" class="headerlink" title="防抖代码"></a>防抖代码</h2><pre><code class="javascript">// 第四版function debounce(func, wait, immediate) {    var timeout, result;    return function () {        var context = this;        var args = arguments;        if (timeout) clearTimeout(timeout);        if (immediate) {            // 如果已经执行过，不再执行            var callNow = !timeout;            timeout = setTimeout(function(){                timeout = null;            }, wait)            if (callNow) result = func.apply(context, args)        }        else {            timeout = setTimeout(function(){                func.apply(context, args)            }, wait);        }        return result;    }}</code></pre><h2 id="节流代码"><a href="#节流代码" class="headerlink" title="节流代码"></a>节流代码</h2><pre><code class="javascript">function throttle(func, wait, options) {// leading：false 表示禁用第一次执行  trailing: false 表示禁用停止触发的回调    var timeout, context, args, result;    var previous = 0;    if (!options) options = {};    var later = function() {        previous = options.leading === false ? 0 : new Date().getTime();        timeout = null;        func.apply(context, args);        if (!timeout) context = args = null;    };    var throttled = function() {        var now = new Date().getTime();        if (!previous &amp;&amp; options.leading === false) previous = now;        var remaining = wait - (now - previous);        context = this;        args = arguments;        if (remaining &lt;= 0 || remaining &gt; wait) {            if (timeout) {                clearTimeout(timeout);                timeout = null;            }            previous = now;            func.apply(context, args);            if (!timeout) context = args = null;        } else if (!timeout &amp;&amp; options.trailing !== false) {            timeout = setTimeout(later, remaining);        }    };    return throttled;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;函数防抖（debounce）：是指在一定时间内，在动作被连续频繁触发的情况下，动作只会被执行一次，也就是说当调用动作过n毫秒后，才会执行该动
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="javascript" scheme="http://zc95.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sticky Footer布局</title>
+    <link href="http://zc95.github.io/2018/11/29/StickyFooter/"/>
+    <id>http://zc95.github.io/2018/11/29/StickyFooter/</id>
+    <published>2018-11-29T12:22:09.000Z</published>
+    <updated>2018-11-29T12:30:32.902Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sticky-Footer布局"><a href="#Sticky-Footer布局" class="headerlink" title="Sticky Footer布局"></a>Sticky Footer布局</h1><h2 id="什么是-“Sticky-Footer”"><a href="#什么是-“Sticky-Footer”" class="headerlink" title="什么是 “Sticky Footer”"></a>什么是 “Sticky Footer”</h2><p><strong>所谓 “Sticky Footer”，并不是什么新的前端概念和技术，它指的就是一种网页效果： 如果页面内容不足够长时，页脚固定在浏览器窗口的底部；如果内容足够长时，页脚跟随内容后面。</strong></p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwswrikfbpj30ju0e4jrt.jpg" alt="img"></p><p><a href="https://jsrun.net/KLiKp/show" target="_blank" rel="external">https://jsrun.net/KLiKp/show</a></p><h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="1-将内容部分的底部外边距设为负数"><a href="#1-将内容部分的底部外边距设为负数" class="headerlink" title="1. 将内容部分的底部外边距设为负数"></a>1. 将内容部分的底部外边距设为负数</h2><p>这是个比较主流的用法，把内容部分最小高度设为100%，再利用内容部分的负底部外边距值来达到当高度不满时，页脚固定在窗口底部，当高度超出则随之推出的效果。</p><pre><code class="css">.content {    min-height: 100%;    /* 等于footer的高度 */    margin-bottom: -50px;}.footer,.push {    height: 50px;}</code></pre><pre><code class="html">&lt;div class=&quot;content&quot;&gt;    .....      .....    &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;footer class=&quot;footer&quot;&gt;    我知道了&lt;/footer&gt;</code></pre><p>这个方法需要容器里有额外的占位元素（如 <code>.push</code>）</p><p>需要注意的是 <code>.wrapper</code>的margin-bottom值需要和 <code>.footer</code>的负的height值保持一致，这一点不太友好。</p><h2 id="2-calc"><a href="#2-calc" class="headerlink" title="2. calc"></a>2. calc</h2><p>通过计算函数 calc 计算（视窗高度 - 页脚高度）赋予内容区最小高度，不需要任何额外样式处理，代码量最少、最简单。</p><pre><code class="css">.content {    min-height: calc(100% - 50px);}.footer {    height: 50px;}</code></pre><pre><code class="html">&lt;div class=&quot;content&quot;&gt;    .....&lt;/div&gt; &lt;footer class=&quot;footer&quot;&gt;    我知道了&lt;/footer&gt;</code></pre><p>如果不需考虑 calc() 以及 vh 单位的兼容情况，这是个很理想的实现方案。同样的问题是 footer 的高度值需要与 content 其中的计算值一致。</p><h2 id="3-flex弹性布局"><a href="#3-flex弹性布局" class="headerlink" title="3. flex弹性布局"></a>3. flex弹性布局</h2><pre><code class="css">.wrapper {    min-height: 100vh;    display: flex;    flex-direction: column;}.content {    flex: 1;}</code></pre><pre><code class="html">&lt;div class=&quot;wrapper&quot;&gt;  &lt;div class=&quot;content&quot;&gt;          ....  &lt;/div&gt;  &lt;footer class=&quot;footer&quot;&gt;      &lt;p&gt;我知道了&lt;/p&gt;      &lt;p&gt;我知道了&lt;/p&gt;      &lt;p&gt;我知道了&lt;/p&gt;  &lt;/footer&gt;&lt;/div&gt;</code></pre><h1 id="vw和vh视口单位"><a href="#vw和vh视口单位" class="headerlink" title="vw和vh视口单位"></a>vw和vh视口单位</h1><h2 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h2><p>首先，我们要了解什么是视口。在桌面端，视口指的是在桌面端，指的是浏览器的可视区域；而在移动端较为复杂，它涉及到三个视口：分别是 Layout Viewport（布局视口）、 Visual Viewport（视觉视口）、Ideal Viewport。</p><p>而视口单位中的“视口”，在桌面端，毫无疑问指的就是浏览器的可视区域；但是在移动端，它指的则是三个 Viewport 中的 Layout Viewport 。</p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwtdjhd1vuj30lu0ab752.jpg" alt=""></p><p>根据CSS3规范，视口单位主要包括以下4个：</p><ul><li>vw : 1vw 等于视口宽度的1%</li><li>vh : 1vh 等于视口高度的1%</li><li>vmin : 选取 vw 和 vh 中最小的那个</li><li>vmax : 选取 vw 和 vh 中最大的那个</li></ul><p>视口单位区别于%单位，视口单位是依赖于视口的尺寸，根据视口尺寸的百分比来定义的；而%单位则是依赖于元素的祖先元素。</p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwtdmpbj8oj30hp098q2w.jpg" alt=""></p><h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>虽然现在的兼容性还没法完全能够接受，但不妨碍你认识vw和vh的强大。</p><p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fwtdndcexyj30vg0fhjrr.jpg" alt=""></p><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>假如说有一个设计师做了一张1334 x 750的页面，这长页面是针对iPhone6的屏幕设计的。 前端开发工程师将这张设计稿转换成网页， 网页中所有的元素尺寸都用px硬编码， 那么这张网页在iPhone6中能跑的好好的，但是到了其他手机中会容易出问题， 毕竟很多手机的屏幕尺寸和iPhone6是不一样的。</p><p>这给html设置自适应尺寸提供了很大的便利，要为html文档树某处枝叶的一个元素设置相对于屏幕的百分比，在以前， 只能用JavaScript动态计算，现在使用vw和vh两个单位就可以解决问题。</p><p>假定有一张psd设计稿， 宽度为1334px， 高度为750px， 设计稿中有一个按钮， 宽为100px， 高位40px， 如何把这个按钮的宽高从px转换为vw和vh。</p><blockquote><p>宽度(vw) =  100 / 1334 * 100;</p><p>高度(vh) = 100 / 750 * 40;</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Sticky-Footer布局&quot;&gt;&lt;a href=&quot;#Sticky-Footer布局&quot; class=&quot;headerlink&quot; title=&quot;Sticky Footer布局&quot;&gt;&lt;/a&gt;Sticky Footer布局&lt;/h1&gt;&lt;h2 id=&quot;什么是-“Sticky-F
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="css" scheme="http://zc95.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序 我的书架</title>
     <link href="http://zc95.github.io/2018/09/03/Doraemons-Pocket/"/>
     <id>http://zc95.github.io/2018/09/03/Doraemons-Pocket/</id>
     <published>2018-09-02T17:03:14.000Z</published>
-    <updated>2018-09-02T17:04:56.874Z</updated>
+    <updated>2018-09-02T17:06:13.292Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Doraemons-Pocket"><a href="#Doraemons-Pocket" class="headerlink" title="Doraemons-Pocket"></a>Doraemons-Pocket</h2><p><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Build Status"><br><img src="https://api.travis-ci.org/alibaba/ice.svg?branch=master" alt="Build Status"></p><blockquote><p>一个可以通过扫码将书籍加入到书架的小程序，有空会加入分享心得、二手书籍交易功能</p><p>项目名称的意思是 哆啦A梦的口袋🤪</p></blockquote><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">https://github.com/zc95/Doraemons-Pocket</a></p><h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><ul><li><a href="https://github.com/zc95/Doraemons-Pocket" target="_blank" rel="external">中文</a></li><li><a href="https://github.com/zc95/Doraemons-Pocket/blob/master/README-en.md" target="_blank" rel="external">English</a></li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>目前已有页面：首页，书籍页，书籍详细信息页，还都是demo状态，以后有时间再完善。。</p><h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>主要功能：通过扫描书籍后面的ISBN码查询到相关书籍，并加入到自己的书架中</p><p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fuvna8tekgj30u01hchc3.jpg" style="height: 800px;"></p><h3 id="书籍页"><a href="#书籍页" class="headerlink" title="书籍页"></a>书籍页</h3><p>主要功能：查询到书名、作者、简介（点击封面跳转到书籍的详细信息页），从书架中移除，写读书卡片</p><p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fuvnf06q6dj30u01hc7dg.jpg" style="height: 800px;"></p><h3 id="书籍详细信息"><a href="#书籍详细信息" class="headerlink" title="书籍详细信息"></a>书籍详细信息</h3><p>主要功能：查询到本书的所有信息，包括封面、作者、出版社、出版时间、装帧、页数、ISBN、定价、评分、标签、作者简介、书籍简介、目录</p><p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fuvng78blrj30u01hcnae.jpg" style="height: 800px;"></p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>小程序还未上线，请clone到本地用微信开发者工具打开</p><pre><code class="shell">git clone https://github.com/zc95/Doraemons-Pocket.git</code></pre><h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><ul><li>遵循 <a href="http://opensource.org/licenses/MIT" target="_blank" rel="external">MIT 协议</a></li><li>请自由地享受和参与开源</li></ul><h1 id="目标功能"><a href="#目标功能" class="headerlink" title="目标功能"></a>目标功能</h1><ul><li style="list-style: none"><input type="checkbox" checked> 扫码加入书架 – 完成</li><li style="list-style: none"><input type="checkbox" checked> 删除书架中的书 – 完成</li><li style="list-style: none"><input type="checkbox" checked> 获取书籍详情 – 完成</li><li style="list-style: none"><input type="checkbox"> 首页批量删除、调整位置</li><li style="list-style: none"><input type="checkbox"> 拍照并发布心得</li><li style="list-style: none"><input type="checkbox"> 点赞、评论？</li><li style="list-style: none"><input type="checkbox"> 微信登录</li><li style="list-style: none"><input type="checkbox"> 可以访问他人的书架</li><li style="list-style: none"><input type="checkbox"> 二手交易功能（要写东西比较多）</li></ul>]]></content>
     
@@ -522,57 +572,6 @@ npm start
       <category term="ES6" scheme="http://zc95.github.io/tags/ES6/"/>
     
       <category term="webpack" scheme="http://zc95.github.io/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>撸了一个canvas手写板</title>
-    <link href="http://zc95.github.io/2018/03/08/canvasPalette/"/>
-    <id>http://zc95.github.io/2018/03/08/canvasPalette/</id>
-    <published>2018-03-08T15:15:11.000Z</published>
-    <updated>2018-03-31T04:47:20.741Z</updated>
-    
-    <content type="html"><![CDATA[<p>用 canvas 写了一个手写板，功能：画笔粗细、橡皮擦大小、画笔颜色、清空画布、历史操作等</p><h2 id="canvas手写板"><a href="#canvas手写板" class="headerlink" title="canvas手写板"></a>canvas手写板</h2><ul><li><a href="https://zc95.github.io/demo/canvas.html">demo</a></li><li><a href="https://github.com/zc95/canvas" target="_blank" rel="external">github</a><a id="more"></a><h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2></li></ul><p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fp5r4kgijtj307s07st9m.jpg"></p><hr><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tb8a00yj31401z40vt.jpg" height="600"></p><hr><p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fp5tb8s4tgj31401z4wjo.jpg" height="600"></p><hr><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fp5tbmm3ytj31401z4wj1.jpg" height="600"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用 canvas 写了一个手写板，功能：画笔粗细、橡皮擦大小、画笔颜色、清空画布、历史操作等&lt;/p&gt;
-&lt;h2 id=&quot;canvas手写板&quot;&gt;&lt;a href=&quot;#canvas手写板&quot; class=&quot;headerlink&quot; title=&quot;canvas手写板&quot;&gt;&lt;/a&gt;canvas手写板&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zc95.github.io/demo/canvas.html&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zc95/canvas&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="demo" scheme="http://zc95.github.io/categories/demo/"/>
-    
-    
-      <category term="canvas" scheme="http://zc95.github.io/tags/canvas/"/>
-    
-      <category term="material design" scheme="http://zc95.github.io/tags/material-design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自己写了个音乐播放器</title>
-    <link href="http://zc95.github.io/2018/02/21/musicPlayer/"/>
-    <id>http://zc95.github.io/2018/02/21/musicPlayer/</id>
-    <published>2018-02-21T04:45:29.000Z</published>
-    <updated>2018-03-31T04:48:24.864Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="material-design风格的音乐播放器"><a href="#material-design风格的音乐播放器" class="headerlink" title="material design风格的音乐播放器"></a>material design风格的音乐播放器</h2><ul><li><a href="https://zc95.github.io/demo/music.html">demo</a></li><li><a href="https://github.com/zc95/music" target="_blank" rel="external">github</a><a id="more"></a><h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2></li></ul><p><img width="150" src="https://ws3.sinaimg.cn/large/006tNc79gy1fonxkcugj3j307s07sq2p.jpg"></p><hr><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony99p9rfj30u01hcmzd.jpg" height="600"></p><hr><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fony8j721lj30u01hcwhv.jpg" height="600"></p><h2 id="HTML-5-audio标签"><a href="#HTML-5-audio标签" class="headerlink" title="HTML 5 audio标签"></a>HTML 5 audio标签</h2><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p> 标签定义声音，比如音乐或其他音频流，是 HTML 5 的新标签。</p><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><pre><code class="html">&lt;audio src=&quot;https://music.163.com/song/media/outer/url?id=451703096.mp3&quot;&gt;您的浏览器不支持 audio 标签。&lt;/audio&gt;</code></pre><h3 id="提示和注释"><a href="#提示和注释" class="headerlink" title="提示和注释"></a>提示和注释</h3><p>可以在开始标签和结束标签之间放置文本内容，这样老的浏览器就可以显示出不支持该标签的信息。</p><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><table><thead><tr><th>属性</th><th>值</th><th>描述</th></tr></thead><tbody><tr><td><a href="http://www.w3school.com.cn/html5/att_audio_autoplay.asp" target="_blank" rel="external">autoplay</a></td><td>autoplay</td><td>如果出现该属性，则音频在就绪后马上播放。</td></tr><tr><td><a href="http://www.w3school.com.cn/html5/att_audio_controls.asp" target="_blank" rel="external">controls</a></td><td>controls</td><td>如果出现该属性，则向用户显示控件，比如播放按钮。</td></tr><tr><td><a href="http://www.w3school.com.cn/html5/att_audio_loop.asp" target="_blank" rel="external">loop</a></td><td>loop</td><td>如果出现该属性，则每当音频结束时重新开始播放。</td></tr><tr><td><a href="http://www.w3school.com.cn/html5/att_audio_preload.asp" target="_blank" rel="external">preload</a></td><td>preload</td><td>如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td></tr><tr><td><a href="http://www.w3school.com.cn/html5/att_audio_src.asp" target="_blank" rel="external">src</a></td><td><em>url</em></td><td>要播放的音频的 URL。</td></tr></tbody></table><h2 id="Javascript控制html5-Audio标签"><a href="#Javascript控制html5-Audio标签" class="headerlink" title="Javascript控制html5 Audio标签"></a>Javascript控制html5 Audio标签</h2><h3 id="javascript动态创建audio标签"><a href="#javascript动态创建audio标签" class="headerlink" title="javascript动态创建audio标签"></a>javascript动态创建audio标签</h3><pre><code class="javascript">var audio=document.creatElement(&quot;audio&quot;);audio.src=&quot;audio/source.ogg&quot;;//路径audio.play();</code></pre><p>or</p><pre><code class="javascript">audio=new Audio(&quot;audio/source.ogg&quot;);//路径audio.play();</code></pre><h3 id="预加载"><a href="#预加载" class="headerlink" title="预加载"></a>预加载</h3><p>我们可以通过preload=”auto”来实现音频的自动加载，但是我们无法知道音频加载的进度</p><p>这时候可以用canplaythrough来完成</p><pre><code class="javascript">var audio = document.createElement(&quot;audio&quot;);audio.src = &quot;https://music.163.com/song/media/outer/url?id=451703096.mp3&quot;;audio.addEventListener(&quot;canplaythrough&quot;, function () {    alert(&#39;音频文件已经准备好，随时待命&#39;);}, false);</code></pre><p>第一次运行时间会长一些，第二次运行由于文件已经缓存到本地，所以会直接弹出提示框。</p><h3 id="javascript控制audio的播放，暂停，停止"><a href="#javascript控制audio的播放，暂停，停止" class="headerlink" title="javascript控制audio的播放，暂停，停止"></a>javascript控制audio的播放，暂停，停止</h3><pre><code class="javascript">function aPlay() {    audio.play();}function aPause() {    audio.pause();}function aStop() {    audio.currentTime = 0;    audio.pause();}function aSkip() {    audio.currentTime = 50;    audio.play(); }</code></pre><pre><code class="javascript">&lt;input type=&quot;button&quot; onclick=&quot;aPlay();&quot; value=&quot;播放音频&quot;&gt;&lt;input type=&quot;button&quot; onclick=&quot;aPause();&quot; value=&quot;暂停音频&quot;&gt;&lt;input type=&quot;button&quot; onclick=&quot;aStop();&quot; value=&quot;停止音频&quot;&gt;&lt;input type=&quot;button&quot; onclick=&quot;aSkip();&quot; value=&quot;跳到第50秒&quot;&gt;</code></pre><h3 id="javascript控制audio的声音大小"><a href="#javascript控制audio的声音大小" class="headerlink" title="javascript控制audio的声音大小"></a>javascript控制audio的声音大小</h3><blockquote><p>audio.volume = 0;//表示静音  </p><p>audio.volume = 1; //表示声音最大</p><p>audio.volume //返回当前音量，声音值在0-1之间</p></blockquote><h3 id="javascript控制audio的快进，快退，以及显示进度与时长"><a href="#javascript控制audio的快进，快退，以及显示进度与时长" class="headerlink" title="javascript控制audio的快进，快退，以及显示进度与时长"></a>javascript控制audio的快进，快退，以及显示进度与时长</h3><blockquote><p>audio.currentTime //控制audio的进度</p><p>audio.duration //返回当前音量的总时长</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;material-design风格的音乐播放器&quot;&gt;&lt;a href=&quot;#material-design风格的音乐播放器&quot; class=&quot;headerlink&quot; title=&quot;material design风格的音乐播放器&quot;&gt;&lt;/a&gt;material design风格的音乐播放器&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zc95.github.io/demo/music.html&quot;&gt;demo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zc95/music&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="demo" scheme="http://zc95.github.io/categories/demo/"/>
-    
-    
-      <category term="material design" scheme="http://zc95.github.io/tags/material-design/"/>
     
   </entry>
   

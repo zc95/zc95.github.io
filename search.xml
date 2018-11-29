@@ -3,7 +3,194 @@
   
     
     <entry>
-      <title><![CDATA[Doraemons-Pocket]]></title>
+      <title><![CDATA[javascript防抖和节流]]></title>
+      <url>/2018/11/29/debounce-throttle/</url>
+      <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>函数防抖（debounce）：是指在一定时间内，在动作被连续频繁触发的情况下，动作只会被执行一次，也就是说当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间，所以短时间内的连续动作永远只会触发一次，比如说用手指一直按住一个弹簧，它将不会弹起直到你松手为止 。</p>
+<p>函数节流（throttle）：函数节流是指一定时间内执行的操作只执行一次，也就是说即预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期，一个比较形象的例子是如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现每隔一段时间，就会有一滴水流出 。</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>像window对象的onresize事件（监听浏览器窗口的变化）、onscroll事件（监听滚动事件），onmousemove（监听鼠标移动）、oninput（监听input变化）、onkeydown（按下键盘）、onkeypress（按住键盘）、onkeyup（释放键盘）等频繁的事件触发。</p>
+<p>函数节流与都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。</p>
+<p>可以提高用户体验，减少请求次数，优化产品性能。</p>
+<h2 id="在线体验"><a href="#在线体验" class="headerlink" title="在线体验"></a>在线体验</h2><p><a href="demo.nimius.net/debounce_throttle/">demo.nimius.net/debounce_throttle/</a></p>
+<h2 id="防抖代码"><a href="#防抖代码" class="headerlink" title="防抖代码"></a>防抖代码</h2><pre><code class="javascript">// 第四版
+function debounce(func, wait, immediate) {
+    var timeout, result;
+    return function () {
+        var context = this;
+        var args = arguments;
+
+        if (timeout) clearTimeout(timeout);
+        if (immediate) {
+            // 如果已经执行过，不再执行
+            var callNow = !timeout;
+            timeout = setTimeout(function(){
+                timeout = null;
+            }, wait)
+            if (callNow) result = func.apply(context, args)
+        }
+        else {
+            timeout = setTimeout(function(){
+                func.apply(context, args)
+            }, wait);
+        }
+        return result;
+    }
+}
+</code></pre>
+<h2 id="节流代码"><a href="#节流代码" class="headerlink" title="节流代码"></a>节流代码</h2><pre><code class="javascript">function throttle(func, wait, options) {
+// leading：false 表示禁用第一次执行  trailing: false 表示禁用停止触发的回调
+    var timeout, context, args, result;
+    var previous = 0;
+    if (!options) options = {};
+
+    var later = function() {
+        previous = options.leading === false ? 0 : new Date().getTime();
+        timeout = null;
+        func.apply(context, args);
+        if (!timeout) context = args = null;
+    };
+
+    var throttled = function() {
+        var now = new Date().getTime();
+        if (!previous &amp;&amp; options.leading === false) previous = now;
+        var remaining = wait - (now - previous);
+        context = this;
+        args = arguments;
+        if (remaining &lt;= 0 || remaining &gt; wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = now;
+            func.apply(context, args);
+            if (!timeout) context = args = null;
+        } else if (!timeout &amp;&amp; options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+        }
+    };
+    return throttled;
+}
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Sticky Footer布局]]></title>
+      <url>/2018/11/29/StickyFooter/</url>
+      <content type="html"><![CDATA[<h1 id="Sticky-Footer布局"><a href="#Sticky-Footer布局" class="headerlink" title="Sticky Footer布局"></a>Sticky Footer布局</h1><h2 id="什么是-“Sticky-Footer”"><a href="#什么是-“Sticky-Footer”" class="headerlink" title="什么是 “Sticky Footer”"></a>什么是 “Sticky Footer”</h2><p><strong>所谓 “Sticky Footer”，并不是什么新的前端概念和技术，它指的就是一种网页效果： 如果页面内容不足够长时，页脚固定在浏览器窗口的底部；如果内容足够长时，页脚跟随内容后面。</strong></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwswrikfbpj30ju0e4jrt.jpg" alt="img"></p>
+<p><a href="https://jsrun.net/KLiKp/show" target="_blank" rel="external">https://jsrun.net/KLiKp/show</a></p>
+<h1 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h1><h2 id="1-将内容部分的底部外边距设为负数"><a href="#1-将内容部分的底部外边距设为负数" class="headerlink" title="1. 将内容部分的底部外边距设为负数"></a>1. 将内容部分的底部外边距设为负数</h2><p>这是个比较主流的用法，把内容部分最小高度设为100%，再利用内容部分的负底部外边距值来达到当高度不满时，页脚固定在窗口底部，当高度超出则随之推出的效果。</p>
+<pre><code class="css">.content {
+    min-height: 100%;
+    /* 等于footer的高度 */
+    margin-bottom: -50px;
+}
+.footer,.push {
+    height: 50px;
+}
+</code></pre>
+<pre><code class="html">&lt;div class=&quot;content&quot;&gt;
+    .....
+      .....
+    &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;footer class=&quot;footer&quot;&gt;
+    我知道了
+&lt;/footer&gt;
+</code></pre>
+<p>这个方法需要容器里有额外的占位元素（如 <code>.push</code>）</p>
+<p>需要注意的是 <code>.wrapper</code>的margin-bottom值需要和 <code>.footer</code>的负的height值保持一致，这一点不太友好。</p>
+<h2 id="2-calc"><a href="#2-calc" class="headerlink" title="2. calc"></a>2. calc</h2><p>通过计算函数 calc 计算（视窗高度 - 页脚高度）赋予内容区最小高度，不需要任何额外样式处理，代码量最少、最简单。</p>
+<pre><code class="css">.content {
+    min-height: calc(100% - 50px);
+}
+.footer {
+    height: 50px;
+}
+</code></pre>
+<pre><code class="html">&lt;div class=&quot;content&quot;&gt; 
+   .....
+&lt;/div&gt; 
+&lt;footer class=&quot;footer&quot;&gt; 
+   我知道了
+&lt;/footer&gt;
+</code></pre>
+<p>如果不需考虑 calc() 以及 vh 单位的兼容情况，这是个很理想的实现方案。同样的问题是 footer 的高度值需要与 content 其中的计算值一致。</p>
+<h2 id="3-flex弹性布局"><a href="#3-flex弹性布局" class="headerlink" title="3. flex弹性布局"></a>3. flex弹性布局</h2><pre><code class="css">.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+</code></pre>
+<pre><code class="html">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;
+          ....
+  &lt;/div&gt;
+  &lt;footer class=&quot;footer&quot;&gt;
+      &lt;p&gt;我知道了&lt;/p&gt;
+      &lt;p&gt;我知道了&lt;/p&gt;
+      &lt;p&gt;我知道了&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+<h1 id="vw和vh视口单位"><a href="#vw和vh视口单位" class="headerlink" title="vw和vh视口单位"></a>vw和vh视口单位</h1><h2 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h2><p>首先，我们要了解什么是视口。在桌面端，视口指的是在桌面端，指的是浏览器的可视区域；而在移动端较为复杂，它涉及到三个视口：分别是 Layout Viewport（布局视口）、 Visual Viewport（视觉视口）、Ideal Viewport。</p>
+<p>而视口单位中的“视口”，在桌面端，毫无疑问指的就是浏览器的可视区域；但是在移动端，它指的则是三个 Viewport 中的 Layout Viewport 。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwtdjhd1vuj30lu0ab752.jpg" alt=""></p>
+<p>根据CSS3规范，视口单位主要包括以下4个：</p>
+<ul>
+<li>vw : 1vw 等于视口宽度的1%</li>
+<li>vh : 1vh 等于视口高度的1%</li>
+<li>vmin : 选取 vw 和 vh 中最小的那个</li>
+<li>vmax : 选取 vw 和 vh 中最大的那个</li>
+</ul>
+<p>视口单位区别于%单位，视口单位是依赖于视口的尺寸，根据视口尺寸的百分比来定义的；而%单位则是依赖于元素的祖先元素。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fwtdmpbj8oj30hp098q2w.jpg" alt=""></p>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>虽然现在的兼容性还没法完全能够接受，但不妨碍你认识vw和vh的强大。</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fwtdndcexyj30vg0fhjrr.jpg" alt=""></p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>假如说有一个设计师做了一张1334 x 750的页面，这长页面是针对iPhone6的屏幕设计的。 前端开发工程师将这张设计稿转换成网页， 网页中所有的元素尺寸都用px硬编码， 那么这张网页在iPhone6中能跑的好好的，但是到了其他手机中会容易出问题， 毕竟很多手机的屏幕尺寸和iPhone6是不一样的。</p>
+<p>这给html设置自适应尺寸提供了很大的便利，要为html文档树某处枝叶的一个元素设置相对于屏幕的百分比，在以前， 只能用JavaScript动态计算，现在使用vw和vh两个单位就可以解决问题。</p>
+<p>假定有一张psd设计稿， 宽度为1334px， 高度为750px， 设计稿中有一个按钮， 宽为100px， 高位40px， 如何把这个按钮的宽高从px转换为vw和vh。</p>
+<blockquote>
+<p>宽度(vw) =  100 / 1334 * 100;</p>
+<p>高度(vh) = 100 / 750 * 40;</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[微信小程序 我的书架]]></title>
       <url>/2018/09/03/Doraemons-Pocket/</url>
       <content type="html"><![CDATA[<h2 id="Doraemons-Pocket"><a href="#Doraemons-Pocket" class="headerlink" title="Doraemons-Pocket"></a>Doraemons-Pocket</h2><p><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Build Status"><br><img src="https://api.travis-ci.org/alibaba/ice.svg?branch=master" alt="Build Status"></p>
 <blockquote>
@@ -3082,9 +3269,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         
