@@ -3,6 +3,90 @@
   
     
     <entry>
+      <title><![CDATA[用骨架屏干掉传统loading和白屏]]></title>
+      <url>/2018/12/04/skeletonScreen/</url>
+      <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>骨架屏 Skeleton Screen Loading 也叫加载占位图，是近年流行的加载控件，通常表现形式是在界面上待加载区域填充灰色的占位图，与线框图的效果非常相似。Skeleton Screen本质上是界面加载过程中的过渡效果。</p>
+<h2 id="知乎-列表-、豆瓣-列表-终页-骨架屏"><a href="#知乎-列表-、豆瓣-列表-终页-骨架屏" class="headerlink" title="知乎(列表)、豆瓣(列表/终页) 骨架屏"></a>知乎(列表)、豆瓣(列表/终页) 骨架屏</h2><table>
+<thead>
+<tr>
+<th>骨架图</th>
+<th>实际页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxtvk5e9mcj30ku112dgl.jpg" alt=""></td>
+<td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxtvkauzktj30ku112n2t.jpg" alt=""></td>
+</tr>
+<tr>
+<td><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxtw65fppjj30ku112q5y.jpg" alt=""></td>
+<td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxtw6eiu4fj30ku1127rs.jpg" alt=""></td>
+</tr>
+<tr>
+<td><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxtw6l0w9bj30ku112dg6.jpg" alt=""></td>
+<td><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fxtw6rq57vj30ku112gpf.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>基本上骨架屏和实际页面都有差距，感觉都是随便画画。。</p>
+<p>知乎只有部分终页用了骨架屏，简单灰色，没有动画</p>
+<p>豆瓣的列表和终页都用了，画的很随意。。。但是列表页的骨架屏有至上而下的动画效果</p>
+</blockquote>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="适用于布局排版固定的内容区域"><a href="#适用于布局排版固定的内容区域" class="headerlink" title="适用于布局排版固定的内容区域"></a>适用于布局排版固定的内容区域</h3><p>骨架屏所展现的是内容的大概轮廓，如果内容布局和排版不是固定的，那么轮廓和内容布局的巨大差异，不仅不能给用户顺畅和期待感，反倒会造成落差。因此骨架屏适用于布局排版固定的内容区域，例如列表、文章、个人信息。注意：如果内容区域有空页面的情况，也不建议使用骨架屏。</p>
+<h3 id="建议配合其他加载技术一起使用"><a href="#建议配合其他加载技术一起使用" class="headerlink" title="建议配合其他加载技术一起使用"></a>建议配合其他加载技术一起使用</h3><p>用户的网络环境是复杂的，如果加载持续时间很久，单凭骨架屏起不到流畅过渡的效果，建议配合懒加载（先文字后图片）、逐条加载、预加载等技术，以达到更出色的体验。</p>
+<h1 id="其他部门是怎么实现的"><a href="#其他部门是怎么实现的" class="headerlink" title="其他部门是怎么实现的"></a>其他部门是怎么实现的</h1><h2 id="周边自由行的首页"><a href="#周边自由行的首页" class="headerlink" title="周边自由行的首页"></a>周边自由行的首页</h2><p>链接：<a href="https://m.ly.com/zby/home" target="_blank" rel="external">https://m.ly.com/zby/home</a></p>
+<blockquote>
+<p>开发者模式将network改成slow 3G 效果比较明显</p>
+</blockquote>
+<p>翻了源码发现是用一张骨架图片代替的loading动画。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxtsdtmzkcj316c0u0wu1.jpg" alt=""></p>
+<p>缺点就是如果布局设计变了，这个骨架图也要重新设计，很明显这个页面的骨架图和页面已经不一致了，其实不刻意去感受，体验也不是很糟糕。</p>
+<blockquote>
+<p>备注：图片编译成 base64 编码格式可以节省网络请求，会使得骨架屏更快展现</p>
+</blockquote>
+<h2 id="除了用图片替换还有什么方式？"><a href="#除了用图片替换还有什么方式？" class="headerlink" title="除了用图片替换还有什么方式？"></a>除了用图片替换还有什么方式？</h2><p>基本就是html结构 + css背景色来堆砌骨架，一样也是等待的时候显示，加载完毕移除。这种情况下大概分为三种：</p>
+<ol>
+<li>简单的html+css，堆砌出元素结构</li>
+<li>背景loading动画，html结构相同，修改部分css样式 <a href="https://codepen.io/janily/pen/rGqQgJ" target="_blank" rel="external">参考</a></li>
+<li>元素结构长度反复变化（变长。。变短。。变长。。）</li>
+</ol>
+<blockquote>
+<p>其实2和3也就是为了让骨架图更生动一些</p>
+</blockquote>
+<h2 id="做了个简单的样品"><a href="#做了个简单的样品" class="headerlink" title="做了个简单的样品"></a>做了个简单的样品</h2><table>
+<thead>
+<tr>
+<th>骨架图</th>
+<th>实际页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxv476kjccj30ch0m8wey.jpg" alt=""></td>
+<td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxv47es9daj30ch0m80ts.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>实现了大部分内容。稍微有点缺点就是不知道为啥动画效果出来的慢点，除非网速很慢才能看到。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 技术篇 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[javascript防抖和节流]]></title>
       <url>/2018/11/29/debounce-throttle/</url>
       <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>函数防抖（debounce）：是指在一定时间内，在动作被连续频繁触发的情况下，动作只会被执行一次，也就是说当调用动作过n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间，所以短时间内的连续动作永远只会触发一次，比如说用手指一直按住一个弹簧，它将不会弹起直到你松手为止 。</p>
@@ -3269,9 +3353,9 @@ Windows:C:/windows/System32/drivers/etc/hosts
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hosts </tag>
+            
+            <tag> github </tag>
             
         </tags>
         

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zc95.github.io/"/>
-  <updated>2018-11-29T12:36:52.818Z</updated>
+  <updated>2018-12-04T15:15:47.797Z</updated>
   <id>http://zc95.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用骨架屏干掉传统loading和白屏</title>
+    <link href="http://zc95.github.io/2018/12/04/skeletonScreen/"/>
+    <id>http://zc95.github.io/2018/12/04/skeletonScreen/</id>
+    <published>2018-12-04T15:12:34.000Z</published>
+    <updated>2018-12-04T15:15:47.797Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>骨架屏 Skeleton Screen Loading 也叫加载占位图，是近年流行的加载控件，通常表现形式是在界面上待加载区域填充灰色的占位图，与线框图的效果非常相似。Skeleton Screen本质上是界面加载过程中的过渡效果。</p><h2 id="知乎-列表-、豆瓣-列表-终页-骨架屏"><a href="#知乎-列表-、豆瓣-列表-终页-骨架屏" class="headerlink" title="知乎(列表)、豆瓣(列表/终页) 骨架屏"></a>知乎(列表)、豆瓣(列表/终页) 骨架屏</h2><table><thead><tr><th>骨架图</th><th>实际页面</th></tr></thead><tbody><tr><td><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxtvk5e9mcj30ku112dgl.jpg" alt=""></td><td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxtvkauzktj30ku112n2t.jpg" alt=""></td></tr><tr><td><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fxtw65fppjj30ku112q5y.jpg" alt=""></td><td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxtw6eiu4fj30ku1127rs.jpg" alt=""></td></tr><tr><td><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxtw6l0w9bj30ku112dg6.jpg" alt=""></td><td><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fxtw6rq57vj30ku112gpf.jpg" alt=""></td></tr></tbody></table><blockquote><p>基本上骨架屏和实际页面都有差距，感觉都是随便画画。。</p><p>知乎只有部分终页用了骨架屏，简单灰色，没有动画</p><p>豆瓣的列表和终页都用了，画的很随意。。。但是列表页的骨架屏有至上而下的动画效果</p></blockquote><h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><h3 id="适用于布局排版固定的内容区域"><a href="#适用于布局排版固定的内容区域" class="headerlink" title="适用于布局排版固定的内容区域"></a>适用于布局排版固定的内容区域</h3><p>骨架屏所展现的是内容的大概轮廓，如果内容布局和排版不是固定的，那么轮廓和内容布局的巨大差异，不仅不能给用户顺畅和期待感，反倒会造成落差。因此骨架屏适用于布局排版固定的内容区域，例如列表、文章、个人信息。注意：如果内容区域有空页面的情况，也不建议使用骨架屏。</p><h3 id="建议配合其他加载技术一起使用"><a href="#建议配合其他加载技术一起使用" class="headerlink" title="建议配合其他加载技术一起使用"></a>建议配合其他加载技术一起使用</h3><p>用户的网络环境是复杂的，如果加载持续时间很久，单凭骨架屏起不到流畅过渡的效果，建议配合懒加载（先文字后图片）、逐条加载、预加载等技术，以达到更出色的体验。</p><h1 id="其他部门是怎么实现的"><a href="#其他部门是怎么实现的" class="headerlink" title="其他部门是怎么实现的"></a>其他部门是怎么实现的</h1><h2 id="周边自由行的首页"><a href="#周边自由行的首页" class="headerlink" title="周边自由行的首页"></a>周边自由行的首页</h2><p>链接：<a href="https://m.ly.com/zby/home" target="_blank" rel="external">https://m.ly.com/zby/home</a></p><blockquote><p>开发者模式将network改成slow 3G 效果比较明显</p></blockquote><p>翻了源码发现是用一张骨架图片代替的loading动画。</p><p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxtsdtmzkcj316c0u0wu1.jpg" alt=""></p><p>缺点就是如果布局设计变了，这个骨架图也要重新设计，很明显这个页面的骨架图和页面已经不一致了，其实不刻意去感受，体验也不是很糟糕。</p><blockquote><p>备注：图片编译成 base64 编码格式可以节省网络请求，会使得骨架屏更快展现</p></blockquote><h2 id="除了用图片替换还有什么方式？"><a href="#除了用图片替换还有什么方式？" class="headerlink" title="除了用图片替换还有什么方式？"></a>除了用图片替换还有什么方式？</h2><p>基本就是html结构 + css背景色来堆砌骨架，一样也是等待的时候显示，加载完毕移除。这种情况下大概分为三种：</p><ol><li>简单的html+css，堆砌出元素结构</li><li>背景loading动画，html结构相同，修改部分css样式 <a href="https://codepen.io/janily/pen/rGqQgJ" target="_blank" rel="external">参考</a></li><li>元素结构长度反复变化（变长。。变短。。变长。。）</li></ol><blockquote><p>其实2和3也就是为了让骨架图更生动一些</p></blockquote><h2 id="做了个简单的样品"><a href="#做了个简单的样品" class="headerlink" title="做了个简单的样品"></a>做了个简单的样品</h2><table><thead><tr><th>骨架图</th><th>实际页面</th></tr></thead><tbody><tr><td><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fxv476kjccj30ch0m8wey.jpg" alt=""></td><td><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fxv47es9daj30ch0m80ts.jpg" alt=""></td></tr></tbody></table><p>实现了大部分内容。稍微有点缺点就是不知道为啥动画效果出来的慢点，除非网速很慢才能看到。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;骨架屏 Skeleton Screen Loading 也叫加载占位图，是近年流行的加载控件，通常表现形式是在界面上待加载区域填充灰色的占位
+      
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="html" scheme="http://zc95.github.io/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript防抖和节流</title>
@@ -535,43 +560,6 @@
       <category term="Node.js" scheme="http://zc95.github.io/tags/Node-js/"/>
     
       <category term="本地服务器" scheme="http://zc95.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6入门</title>
-    <link href="http://zc95.github.io/2018/03/13/es6-webpack/"/>
-    <id>http://zc95.github.io/2018/03/13/es6-webpack/</id>
-    <published>2018-03-13T13:42:52.000Z</published>
-    <updated>2018-03-20T13:32:31.633Z</updated>
-    
-    <content type="html"><![CDATA[<p>github：<a href="https://github.com/zc95/es6-webpack" target="_blank" rel="external">https://github.com/zc95/es6-webpack</a></p><h2 id="webpack搭建ES6环境"><a href="#webpack搭建ES6环境" class="headerlink" title="webpack搭建ES6环境"></a>webpack搭建ES6环境</h2><p>首先下载源码</p><pre><code class="shell">git clone https://github.com/zc95/es6-webpack.git</code></pre><p>然后安装</p><pre><code class="shell">cd es6-webpacknpm installnpm install webpack -gnpm install webpack-dev-server -g</code></pre><p>最后运行</p><pre><code class="shell">cd es6-webpacknpm start</code></pre><a id="more"></a><h2 id="es6基础"><a href="#es6基础" class="headerlink" title="es6基础"></a>es6基础</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><pre><code class="javascript">// ES5 中常量的写法Object.defineProperty(window, &quot;PI2&quot;, {    value: 3.1415926,    writable: false,})</code></pre><pre><code class="javascript">// ES6 的常量写法const PI = 3.1415926</code></pre><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><pre><code class="javascript">// ES3,ES5var evens = [1, 2, 3, 4, 5];var odds = evens.map(function(v) {  return v + 1});  console.log(evens, odds);};</code></pre><pre><code class="javascript">// ES6let evens = [1, 2, 3, 4, 5];let odds = evens.map(v =&gt; v + 1);console.log(evens, odds);</code></pre><p><strong>this的指向</strong></p><pre><code class="javascript">// ES3,ES5中 this 的指向是 该函数被调用的对象  var factory = function() {    this.a = &#39;a&#39;;    this.b = &#39;b&#39;;    this.c = {      a: &#39;a+&#39;,      b: function() {        return this.a      }    }  }  console.log(new factory().c.b());};</code></pre><pre><code class="javascript">// ES6箭头函数中 this 的指向是 定义时this的指向var factory = function() {    this.a = &#39;a&#39;;    this.b = &#39;b&#39;;    this.c = {      a: &#39;a+&#39;,      b: () =&gt; {        return this.a      }    }  }  console.log(new factory().c.b());</code></pre><h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p><strong>默认参数</strong></p><pre><code class="javascript">// ES5\ES3 默认参数的写法  function f(x, y, z) {    if (y === undefined) {      y = 7;    }    if (z === undefined) {      z = 42    }    return x + y + z  }  console.log(f(1, 3));</code></pre><pre><code class="javascript">// ES6 默认参数  function f(x, y = 7, z = 42) {    return x + y + z  }  console.log(f(1, 3));</code></pre><p><strong>可变参数</strong></p><pre><code class="javascript">// ES3,ES5 可变参数  function f() {    var a = Array.prototype.slice.call(arguments);    var sum = 0;    a.forEach(function(item) {      sum += item * 1;    })    return sum  }  console.log(f(1, 2, 3, 6));</code></pre><pre><code class="javascript">// ES6 可变参数function f(...a) {    var sum = 0;    a.forEach(item =&gt; {      sum += item * 1    });    return sum  }  console.log(f(1, 2, 3, 6));</code></pre><p><strong>合并数组</strong></p><pre><code class="javascript">// ES5 合并数组  var params = [&#39;hello&#39;, true, 7];  var other = [1, 2].concat(params);  console.log(other);</code></pre><pre><code class="javascript">// ES6 利用扩展运算符合并数组  var params = [&#39;hello&#39;, true, 7];  var other = [    1, 2, ...params  ];  console.log(other);</code></pre><h3 id="对象代理"><a href="#对象代理" class="headerlink" title="对象代理"></a>对象代理</h3><pre><code class="javascript">// ES3,ES5 数据保护  var Person = function() {    var data = {      name: &#39;es3&#39;,      sex: &#39;male&#39;,      age: 15    }    this.get = function(key) {      return data[key]    }    this.set = function(key, value) {      if (key !== &#39;sex&#39;) {        data[key] = value      }    }  }  // 声明一个实例  var person = new Person();  // 读取  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});  // 修改  person.set(&#39;name&#39;, &#39;es3-cname&#39;);  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});  person.set(&#39;sex&#39;, &#39;female&#39;);  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});</code></pre><pre><code class="javascript">// ES5  var Person = {    name: &#39;es5&#39;,    age: 15  };  Object.defineProperty(Person, &#39;sex&#39;, {    writable: false,    value: &#39;male&#39;  });  console.table({name: Person.name, age: Person.age, sex: Person.sex});  Person.name = &#39;es5-cname&#39;;  console.table({name: Person.name, age: Person.age, sex: Person.sex});  try {    Person.sex = &#39;female&#39;;    console.table({name: Person.name, age: Person.age, sex: Person.sex});  } catch (e) {    console.log(e);  }</code></pre><pre><code class="javascript">// ES6  let Person = {    name: &#39;es6&#39;,    sex: &#39;male&#39;,    age: 15  };  let person = new Proxy(Person, {    get(target, key) {      return target[key]    },    set(target,key,value){      if(key!==&#39;sex&#39;){        target[key]=value;      }    }  });  console.table({    name:person.name,    sex:person.sex,    age:person.age  });  try {    person.sex=&#39;female&#39;;  } catch (e) {    console.log(e);  } finally {  }</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;github：&lt;a href=&quot;https://github.com/zc95/es6-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/zc95/es6-webpack&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;webpack搭建ES6环境&quot;&gt;&lt;a href=&quot;#webpack搭建ES6环境&quot; class=&quot;headerlink&quot; title=&quot;webpack搭建ES6环境&quot;&gt;&lt;/a&gt;webpack搭建ES6环境&lt;/h2&gt;&lt;p&gt;首先下载源码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;git clone https://github.com/zc95/es6-webpack.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后安装&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;cd es6-webpack
-npm install
-npm install webpack -g
-npm install webpack-dev-server -g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最后运行&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;cd es6-webpack
-npm start
-&lt;/code&gt;&lt;/pre&gt;
-    
-    </summary>
-    
-      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-    
-    
-      <category term="ES6" scheme="http://zc95.github.io/tags/ES6/"/>
-    
-      <category term="webpack" scheme="http://zc95.github.io/tags/webpack/"/>
     
   </entry>
   
