@@ -143,31 +143,6 @@
   </entry>
   
   <entry>
-    <title>阿里的面试邀请</title>
-    <link href="http://zc95.github.io/2018/09/01/ali/"/>
-    <id>http://zc95.github.io/2018/09/01/ali/</id>
-    <published>2018-09-01T15:19:52.000Z</published>
-    <updated>2018-09-02T17:04:02.326Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。<br>今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只是偶尔听说。。<br>还是赶紧学习吧！无论是RN，还是weex，都要开始学起来了。</p><p>附上面试邀请勉励自己一下哈哈，加油！！<br><img src="https://i.loli.net/2018/09/01/5b8aae86e2e7e.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;昨天收到阿里的面试邀请，第一感受就是大厂也这么缺人？饥不择食嘛哈哈，不过也可能是爬虫群发之类的东西，没有想太多（深知自己欠缺太多太多…）。&lt;br&gt;今天上海的朋友回苏州，聊了很久，果然大都市用的技术都先进，什么weex，react native，只能说自己压根没有接触过，也只
-      
-    
-    </summary>
-    
-      <category term="杂谈篇" scheme="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
-    
-    
-      <category term="阿里巴巴" scheme="http://zc95.github.io/tags/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4/"/>
-    
-  </entry>
-  
-  <entry>
     <title>qrcode和Websocket实现在线支付</title>
     <link href="http://zc95.github.io/2018/08/16/qrcodeAndWebsocket/"/>
     <id>http://zc95.github.io/2018/08/16/qrcodeAndWebsocket/</id>
@@ -560,6 +535,43 @@
       <category term="Node.js" scheme="http://zc95.github.io/tags/Node-js/"/>
     
       <category term="本地服务器" scheme="http://zc95.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6入门</title>
+    <link href="http://zc95.github.io/2018/03/13/es6-webpack/"/>
+    <id>http://zc95.github.io/2018/03/13/es6-webpack/</id>
+    <published>2018-03-13T13:42:52.000Z</published>
+    <updated>2018-03-20T13:32:31.633Z</updated>
+    
+    <content type="html"><![CDATA[<p>github：<a href="https://github.com/zc95/es6-webpack" target="_blank" rel="external">https://github.com/zc95/es6-webpack</a></p><h2 id="webpack搭建ES6环境"><a href="#webpack搭建ES6环境" class="headerlink" title="webpack搭建ES6环境"></a>webpack搭建ES6环境</h2><p>首先下载源码</p><pre><code class="shell">git clone https://github.com/zc95/es6-webpack.git</code></pre><p>然后安装</p><pre><code class="shell">cd es6-webpacknpm installnpm install webpack -gnpm install webpack-dev-server -g</code></pre><p>最后运行</p><pre><code class="shell">cd es6-webpacknpm start</code></pre><a id="more"></a><h2 id="es6基础"><a href="#es6基础" class="headerlink" title="es6基础"></a>es6基础</h2><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><pre><code class="javascript">// ES5 中常量的写法Object.defineProperty(window, &quot;PI2&quot;, {    value: 3.1415926,    writable: false,})</code></pre><pre><code class="javascript">// ES6 的常量写法const PI = 3.1415926</code></pre><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><pre><code class="javascript">// ES3,ES5var evens = [1, 2, 3, 4, 5];var odds = evens.map(function(v) {  return v + 1});  console.log(evens, odds);};</code></pre><pre><code class="javascript">// ES6let evens = [1, 2, 3, 4, 5];let odds = evens.map(v =&gt; v + 1);console.log(evens, odds);</code></pre><p><strong>this的指向</strong></p><pre><code class="javascript">// ES3,ES5中 this 的指向是 该函数被调用的对象  var factory = function() {    this.a = &#39;a&#39;;    this.b = &#39;b&#39;;    this.c = {      a: &#39;a+&#39;,      b: function() {        return this.a      }    }  }  console.log(new factory().c.b());};</code></pre><pre><code class="javascript">// ES6箭头函数中 this 的指向是 定义时this的指向var factory = function() {    this.a = &#39;a&#39;;    this.b = &#39;b&#39;;    this.c = {      a: &#39;a+&#39;,      b: () =&gt; {        return this.a      }    }  }  console.log(new factory().c.b());</code></pre><h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p><strong>默认参数</strong></p><pre><code class="javascript">// ES5\ES3 默认参数的写法  function f(x, y, z) {    if (y === undefined) {      y = 7;    }    if (z === undefined) {      z = 42    }    return x + y + z  }  console.log(f(1, 3));</code></pre><pre><code class="javascript">// ES6 默认参数  function f(x, y = 7, z = 42) {    return x + y + z  }  console.log(f(1, 3));</code></pre><p><strong>可变参数</strong></p><pre><code class="javascript">// ES3,ES5 可变参数  function f() {    var a = Array.prototype.slice.call(arguments);    var sum = 0;    a.forEach(function(item) {      sum += item * 1;    })    return sum  }  console.log(f(1, 2, 3, 6));</code></pre><pre><code class="javascript">// ES6 可变参数function f(...a) {    var sum = 0;    a.forEach(item =&gt; {      sum += item * 1    });    return sum  }  console.log(f(1, 2, 3, 6));</code></pre><p><strong>合并数组</strong></p><pre><code class="javascript">// ES5 合并数组  var params = [&#39;hello&#39;, true, 7];  var other = [1, 2].concat(params);  console.log(other);</code></pre><pre><code class="javascript">// ES6 利用扩展运算符合并数组  var params = [&#39;hello&#39;, true, 7];  var other = [    1, 2, ...params  ];  console.log(other);</code></pre><h3 id="对象代理"><a href="#对象代理" class="headerlink" title="对象代理"></a>对象代理</h3><pre><code class="javascript">// ES3,ES5 数据保护  var Person = function() {    var data = {      name: &#39;es3&#39;,      sex: &#39;male&#39;,      age: 15    }    this.get = function(key) {      return data[key]    }    this.set = function(key, value) {      if (key !== &#39;sex&#39;) {        data[key] = value      }    }  }  // 声明一个实例  var person = new Person();  // 读取  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});  // 修改  person.set(&#39;name&#39;, &#39;es3-cname&#39;);  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});  person.set(&#39;sex&#39;, &#39;female&#39;);  console.table({name: person.get(&#39;name&#39;), sex: person.get(&#39;sex&#39;), age: person.get(&#39;age&#39;)});</code></pre><pre><code class="javascript">// ES5  var Person = {    name: &#39;es5&#39;,    age: 15  };  Object.defineProperty(Person, &#39;sex&#39;, {    writable: false,    value: &#39;male&#39;  });  console.table({name: Person.name, age: Person.age, sex: Person.sex});  Person.name = &#39;es5-cname&#39;;  console.table({name: Person.name, age: Person.age, sex: Person.sex});  try {    Person.sex = &#39;female&#39;;    console.table({name: Person.name, age: Person.age, sex: Person.sex});  } catch (e) {    console.log(e);  }</code></pre><pre><code class="javascript">// ES6  let Person = {    name: &#39;es6&#39;,    sex: &#39;male&#39;,    age: 15  };  let person = new Proxy(Person, {    get(target, key) {      return target[key]    },    set(target,key,value){      if(key!==&#39;sex&#39;){        target[key]=value;      }    }  });  console.table({    name:person.name,    sex:person.sex,    age:person.age  });  try {    person.sex=&#39;female&#39;;  } catch (e) {    console.log(e);  } finally {  }</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;github：&lt;a href=&quot;https://github.com/zc95/es6-webpack&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/zc95/es6-webpack&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;webpack搭建ES6环境&quot;&gt;&lt;a href=&quot;#webpack搭建ES6环境&quot; class=&quot;headerlink&quot; title=&quot;webpack搭建ES6环境&quot;&gt;&lt;/a&gt;webpack搭建ES6环境&lt;/h2&gt;&lt;p&gt;首先下载源码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;git clone https://github.com/zc95/es6-webpack.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后安装&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;cd es6-webpack
+npm install
+npm install webpack -g
+npm install webpack-dev-server -g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后运行&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;cd es6-webpack
+npm start
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="技术篇" scheme="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+    
+    
+      <category term="ES6" scheme="http://zc95.github.io/tags/ES6/"/>
+    
+      <category term="webpack" scheme="http://zc95.github.io/tags/webpack/"/>
     
   </entry>
   

@@ -84,26 +84,6 @@
 
     
   <url>
-    <loc>http://zc95.github.io/2018/09/01/ali/</loc>
-    <lastmod>2018-09-02T17:04:02.326Z</lastmod>
-    <data>
-        <display>
-        <title>阿里的面试邀请</title>
-        <pubTime>2018-09-01T15:19:52.000Z</pubTime>
-        
-        <tag>阿里巴巴</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂谈篇" url="http://zc95.github.io/categories/%E6%9D%82%E8%B0%88%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://zc95.github.io/2018/09/02/weex-day1/</loc>
     <lastmod>2018-09-02T05:00:42.270Z</lastmod>
     <data>
@@ -957,9 +937,9 @@
         <title>更改hosts文件来更好地使用github</title>
         <pubTime>2017-11-28T15:49:00.000Z</pubTime>
         
-        <tag>hosts</tag>
-         
         <tag>github</tag>
+         
+        <tag>hosts</tag>
          
          
            
