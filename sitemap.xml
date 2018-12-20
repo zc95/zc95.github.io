@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
+    
+    <lastmod>2018-12-20T14:48:05.309Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zc95.github.io/2018/12/04/skeletonScreen/</loc>
     
     <lastmod>2018-12-04T15:15:47.797Z</lastmod>
@@ -152,13 +159,6 @@
     <loc>http://zc95.github.io/2018/02/21/musicPlayer/</loc>
     
     <lastmod>2018-03-31T04:48:24.864Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
-    
-    <lastmod>2018-03-31T04:47:20.741Z</lastmod>
     
   </url>
   

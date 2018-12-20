@@ -2257,7 +2257,7 @@ function f(...a) {
       <content type="html"><![CDATA[<p>用 canvas 写了一个手写板，功能：画笔粗细、橡皮擦大小、画笔颜色、清空画布、历史操作等</p>
 <h2 id="canvas手写板"><a href="#canvas手写板" class="headerlink" title="canvas手写板"></a>canvas手写板</h2><ul>
 <li><a href="https://zc95.github.io/demo/canvas.html">demo</a></li>
-<li><a href="https://github.com/zc95/canvas" target="_blank" rel="external">github</a><a id="more"></a>
+<li><a href="https://github.com/zc95/canvas-palette" target="_blank" rel="external">github</a><a id="more"></a>
 <h2 id="扫一扫"><a href="#扫一扫" class="headerlink" title="扫一扫"></a>扫一扫</h2></li>
 </ul>
 <p><img width="150" src="https://ws4.sinaimg.cn/large/006tNc79gy1fp5r4kgijtj307s07st9m.jpg"></p>
