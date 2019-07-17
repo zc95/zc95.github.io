@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
+    <lastmod>2019-07-17T13:40:40.620Z</lastmod>
+    <data>
+        <display>
+        <title>如何把你的demo打包成一个app</title>
+        <pubTime>2018-05-27T06:52:16.000Z</pubTime>
+        
+        <tag>app</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zc95.github.io/2018/03/08/canvasPalette/</loc>
     <lastmod>2018-12-20T14:48:05.309Z</lastmod>
     <data>
@@ -273,26 +293,6 @@
         <tag>localhost</tag>
          
         <tag>ifconfig</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术篇" url="http://zc95.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AF%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zc95.github.io/2018/05/27/package-app/</loc>
-    <lastmod>2018-05-27T06:57:11.539Z</lastmod>
-    <data>
-        <display>
-        <title>如何把你的demo打包成一个app</title>
-        <pubTime>2018-05-27T06:52:16.000Z</pubTime>
-        
-        <tag>app</tag>
          
          
            
